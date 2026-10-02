@@ -1,0 +1,69 @@
+# 매일 07:00 · 14:00 (한국 시간) 수학 뉴스를 수집하고 GitHub Pages 에 배포합니다.
+# 저장소 Settings → Pages → Source 를 "GitHub Actions" 로 한 번만 바꿔 주면 됩니다.
+# (선택) Settings → Secrets 에 ANTHROPIC_API_KEY 를 넣으면 해외 기사를 Claude 가 번역·요약합니다.
+name: Collect & Publish
+
+on:
+  schedule:
+    - cron: '0 22 * * *' # 07:00 KST
+    - cron: '0 5 * * *'  # 14:00 KST
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: 수학 뉴스 수집 (번역 · 섬네일 포함)
+        if: github.event_name != 'push'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TZ: Asia/Seoul
+        run: npm run collect
+
+      - name: 수집 결과 저장
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/feed.json
+          git diff --cached --quiet || git commit -m "chore: 뉴스 수집 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git push
+
+      - name: 정적 사이트 빌드
+        env:
+          STATIC_EXPORT: '1'
+          BASE_PATH: /${{ github.event.repository.name }}
+          TZ: Asia/Seoul
+        run: |
+          npm run build
+          touch out/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - id: deploy
+        uses: actions/deploy-pages@v4

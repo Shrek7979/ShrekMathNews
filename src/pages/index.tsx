@@ -1,0 +1,355 @@
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import type { GetStaticProps } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { readFile } from 'fs/promises'
+import path from 'path'
+import Briefing from '@/components/feed/Briefing'
+import { EndCard, NewsCard, TopicCard } from '@/components/feed/ReelCard'
+import {
+  CATEGORY_ORDER,
+  Feed,
+  FeedItem,
+  SITE_NAME,
+  TOPIC_CATEGORY,
+  Topic,
+  editionLabel,
+  shareLink,
+  useStoredSet,
+} from '@/lib/feed'
+
+type Props = { feed: Feed; topics: Topic[]; dayIndex: number }
+type Card = { key: string; item?: FeedItem; topic?: Topic }
+
+const ALL = '전체'
+const SAVED = '★ 저장'
+const TOPIC_EVERY = 5
+const AUTO_SECONDS = 8
+const LOCAL_COLLECT_URL = 'http://localhost:3001/collect'
+
+// 빌드(배포) 시점의 data/feed.json 을 읽음. 로컬 개발 서버에서는 요청마다 다시 읽음
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const read = async <T,>(file: string, fallback: T): Promise<T> => {
+    try {
+      return JSON.parse(await readFile(path.join(process.cwd(), 'data', file), 'utf8'))
+    } catch {
+      return fallback
+    }
+  }
+  return {
+    props: {
+      feed: await read<Feed>('feed.json', { updatedAt: null, items: [] }),
+      topics: await read<Topic[]>('topics.json', []),
+      dayIndex: Math.floor(Date.now() / (24 * 60 * 60 * 1000)),
+    },
+  }
+}
+
+export default function ReelsPage({ feed, topics, dayIndex }: Props) {
+  const router = useRouter()
+  const scrollerRef = useRef<HTMLDivElement>(null)
+  const [view, setView] = useState<'reels' | 'briefing'>('reels')
+  const [category, setCategory] = useState(ALL)
+  const [active, setActive] = useState(0)
+  const [auto, setAuto] = useState(false)
+  const [toast, setToast] = useState('')
+  const [refreshing, setRefreshing] = useState(false)
+  const [isLocal, setIsLocal] = useState(false)
+  const [now, setNow] = useState<number | null>(null)
+  const saved = useStoredSet('math-hub:saved')
+  const read = useStoredSet('math-hub:read')
+
+  useEffect(() => {
+    setNow(Date.now())
+    setIsLocal(window.location.hostname === 'localhost')
+  }, [feed.updatedAt])
+
+  // 주제 카드는 날마다 다른 것부터 시작
+  const rotatedTopics = useMemo(
+    () => topics.map((_, i) => topics[(i + dayIndex) % topics.length]),
+    [topics, dayIndex]
+  )
+  const latestBatch = useMemo(
+    () => feed.items.reduce<string | null>((max, i) => (!max || i.collectedAt > max ? i.collectedAt : max), null),
+    [feed.items]
+  )
+
+  const visibleItems = useMemo(() => {
+    if (category === ALL) return feed.items
+    if (category === SAVED) return feed.items.filter((item) => saved.ids.has(item.id))
+    return feed.items.filter((item) => item.category === category)
+  }, [feed.items, category, saved.ids])
+
+  const cards = useMemo<Card[]>(() => {
+    if (category === TOPIC_CATEGORY) return rotatedTopics.map((topic) => ({ key: topic.id, topic }))
+    const newsCards: Card[] = visibleItems.map((item) => ({ key: item.id, item }))
+    if (category === SAVED) {
+      const savedTopics = rotatedTopics.filter((topic) => saved.ids.has(topic.id))
+      return [...newsCards, ...savedTopics.map((topic) => ({ key: topic.id, topic }))]
+    }
+    if (category !== ALL) return newsCards
+    // 전체 보기에서는 뉴스 5장마다 주제 카드를 한 장씩 끼워 넣음
+    const mixed: Card[] = []
+    newsCards.forEach((card, i) => {
+      mixed.push(card)
+      const topic = rotatedTopics[Math.floor(i / TOPIC_EVERY)]
+      if ((i + 1) % TOPIC_EVERY === 0 && topic) mixed.push({ key: topic.id, topic })
+    })
+    return mixed
+    // 저장 목록은 탭을 바꿀 때만 다시 계산해, 저장 해제 시 카드가 바로 사라지지 않게 함
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visibleItems, rotatedTopics, category])
+
+  const categories = useMemo(() => {
+    const present = CATEGORY_ORDER.filter((c) => feed.items.some((item) => item.category === c))
+    return [ALL, ...present, TOPIC_CATEGORY, SAVED]
+  }, [feed.items])
+
+  // 부드러운 스크롤이 끝나기 전에 키를 연달아 눌러도 밀리지 않도록 목표 위치를 따로 기억
+  const target = useRef(0)
+  const goTo = useCallback((index: number, smooth = true) => {
+    const el = scrollerRef.current
+    if (!el) return
+    target.current = Math.max(0, Math.min(index, el.children.length - 1))
+    el.scrollTo({ top: el.clientHeight * target.current, behavior: smooth ? 'smooth' : 'auto' })
+  }, [])
+
+  const onScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget
+    const index = Math.round(el.scrollTop / el.clientHeight)
+    setActive(index)
+    // 손가락/휠로 직접 넘긴 경우: 스크롤이 카드 경계에 멈추면 목표도 따라감
+    if (Math.abs(el.scrollTop - el.clientHeight * index) < 2) target.current = index
+  }
+
+  const showToast = (message: string) => {
+    setToast(message)
+    setTimeout(() => setToast(''), 2500)
+  }
+
+  const selectCategory = (next: string) => {
+    setCategory(next)
+    setActive(0)
+    goTo(0, false)
+  }
+
+  const openTopic = () => {
+    setView('reels')
+    selectCategory(TOPIC_CATEGORY)
+  }
+
+  // 지금 보고 있는 카드를 읽음 처리
+  const activeKey = view === 'reels' ? cards[active]?.item?.id : undefined
+  const markRead = read.add
+  useEffect(() => {
+    if (activeKey) markRead(activeKey)
+  }, [activeKey, markRead])
+
+  // 자동 넘김
+  useEffect(() => {
+    if (!auto || view !== 'reels') return
+    if (active >= cards.length) return setAuto(false)
+    const timer = setTimeout(() => goTo(active + 1), AUTO_SECONDS * 1000)
+    return () => clearTimeout(timer)
+  }, [auto, view, active, cards.length, goTo])
+
+  // 키보드: ↑↓ 또는 j/k 로 이동, 스페이스로 자동 넘김
+  useEffect(() => {
+    if (view !== 'reels') return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowDown' || e.key === 'j') goTo(target.current + 1)
+      else if (e.key === 'ArrowUp' || e.key === 'k') goTo(target.current - 1)
+      else if (e.key === ' ') setAuto((on) => !on)
+      else return
+      e.preventDefault()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [view, goTo])
+
+  // 로컬에서만: npm run local 이 띄운 수집 엔드포인트를 호출해 지금 수집
+  const refresh = async () => {
+    setRefreshing(true)
+    try {
+      const res = await fetch(LOCAL_COLLECT_URL, { method: 'POST' })
+      const data = await res.json()
+      showToast(res.ok ? `새 카드 ${data.added}건을 가져왔어요` : data.error)
+      if (res.ok) await router.replace(router.asPath, undefined, { scroll: false })
+    } catch {
+      showToast('수집에 실패했어요 (npm run local 로 실행했는지 확인)')
+    }
+    setRefreshing(false)
+  }
+
+  const unreadCount = feed.items.filter((item) => !read.ids.has(item.id)).length
+  const edition = feed.updatedAt ? editionLabel(feed.updatedAt) : '아직 수집 전'
+
+  return (
+    <>
+      <Head>
+        <title>{SITE_NAME}</title>
+        <meta name="description" content="수학 교사를 위한 하루 두 번의 수학 뉴스 릴스" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
+        <link rel="manifest" href={`${router.basePath}/manifest.json`} />
+        <link rel="icon" href={`${router.basePath}/icon.svg`} type="image/svg+xml" />
+        <link rel="apple-touch-icon" href={`${router.basePath}/icon.svg`} />
+      </Head>
+
+      <div className="fixed inset-0 flex flex-col bg-neutral-950 text-white [padding-top:env(safe-area-inset-top)]">
+        <header className="mx-auto w-full max-w-2xl shrink-0 px-4 pt-2">
+          <div className="flex items-center gap-2">
+            <div className="min-w-0 flex-1">
+              <h1 className="truncate text-[17px] font-extrabold leading-tight">
+                <span className="text-emerald-400">Shrek</span> Math News
+              </h1>
+              <p className="truncate text-[11px] text-white/60">
+                {edition}
+                {feed.updatedAt && ` · 안 읽음 ${unreadCount}`}
+              </p>
+            </div>
+            <div className="flex rounded-full bg-white/10 p-0.5 text-[13px] font-bold">
+              {(['reels', 'briefing'] as const).map((v) => (
+                <button
+                  key={v}
+                  onClick={() => setView(v)}
+                  className={`min-h-[36px] rounded-full px-3 transition ${
+                    view === v ? 'bg-white text-neutral-900' : 'text-white/70'
+                  }`}
+                >
+                  {v === 'reels' ? '릴스' : '한눈에'}
+                </button>
+              ))}
+            </div>
+            {isLocal && (
+              <button
+                onClick={refresh}
+                disabled={refreshing}
+                title="지금 새 소식 수집"
+                aria-label="지금 새 소식 수집"
+                className="min-h-[36px] min-w-[36px] rounded-full bg-white/10 text-sm font-bold hover:bg-white/20 disabled:opacity-50"
+              >
+                <span className={refreshing ? 'inline-block animate-spin' : ''}>↻</span>
+              </button>
+            )}
+            <Link href="/portal" className="hidden text-sm font-semibold text-white/60 hover:text-white sm:block">
+              메뉴
+            </Link>
+          </div>
+
+          <nav className="no-scrollbar -mx-4 mt-2 flex gap-1.5 overflow-x-auto px-4 pb-2">
+            {categories.map((c) => (
+              <button
+                key={c}
+                onClick={() => selectCategory(c)}
+                className={`min-h-[34px] shrink-0 rounded-full px-3.5 text-[13px] font-bold transition ${
+                  category === c ? 'bg-white text-neutral-900' : 'bg-white/10 text-white/80 hover:bg-white/20'
+                }`}
+              >
+                {c}
+              </button>
+            ))}
+          </nav>
+        </header>
+
+        <main className="relative min-h-0 flex-1">
+          {view === 'briefing' ? (
+            <Briefing
+              items={category === TOPIC_CATEGORY ? [] : visibleItems}
+              topic={rotatedTopics[0]}
+              latestBatch={latestBatch}
+              now={now}
+              savedIds={saved.ids}
+              readIds={read.ids}
+              onSave={saved.toggle}
+              onRead={read.add}
+              onOpenTopic={openTopic}
+            />
+          ) : (
+            <div className="relative mx-auto flex h-full max-h-[900px] w-full max-w-[460px] flex-col pb-[env(safe-area-inset-bottom)]">
+              {/* 진행 표시: 카드 위치 + 자동 넘김 타이머 */}
+              <div className="shrink-0 px-3 sm:px-5">
+                <div className="flex items-center justify-between pb-1 text-[11px] font-bold text-white/70">
+                  <span>
+                    {Math.min(active + 1, cards.length)} / {cards.length}
+                  </span>
+                  <button
+                    onClick={() => setAuto((on) => !on)}
+                    title="자동 넘김 (스페이스)"
+                    className={`min-h-[28px] rounded-full px-2.5 ${
+                      auto ? 'bg-white text-neutral-900' : 'bg-white/10 text-white hover:bg-white/20'
+                    }`}
+                  >
+                    {auto ? '❚❚ 자동 넘김 중' : '▶ 자동 넘김'}
+                  </button>
+                </div>
+                <div className="h-1 overflow-hidden rounded-full bg-white/20">
+                  {auto ? (
+                    <div key={active} className="reel-timer h-full bg-white" style={{ animationDuration: `${AUTO_SECONDS}s` }} />
+                  ) : (
+                    <div
+                      className="h-full bg-white transition-all"
+                      style={{ width: `${(Math.min(active + 1, cards.length) / Math.max(cards.length, 1)) * 100}%` }}
+                    />
+                  )}
+                </div>
+              </div>
+
+              <div
+                ref={scrollerRef}
+                onScroll={onScroll}
+                className="no-scrollbar min-h-0 flex-1 snap-y snap-mandatory overflow-y-auto overscroll-contain"
+              >
+                {cards.map((card) =>
+                  card.item ? (
+                    <NewsCard
+                      key={card.key}
+                      item={card.item}
+                      isNew={card.item.collectedAt === latestBatch && !read.ids.has(card.key)}
+                      saved={saved.ids.has(card.key)}
+                      onSave={() => saved.toggle(card.key)}
+                      onShare={async () => {
+                        const message = await shareLink(card.item!.titleKo || card.item!.title, card.item!.link)
+                        if (message) showToast(message)
+                      }}
+                    />
+                  ) : (
+                    <TopicCard
+                      key={card.key}
+                      topic={card.topic!}
+                      saved={saved.ids.has(card.key)}
+                      onSave={() => saved.toggle(card.key)}
+                    />
+                  )
+                )}
+                <EndCard empty={cards.length === 0} onRestart={() => goTo(0)} />
+              </div>
+
+              {/* 넓은 화면용 이동 버튼 */}
+              <div className="absolute -right-16 bottom-6 hidden flex-col gap-2 md:flex">
+                <button onClick={() => goTo(active - 1)} title="이전 (↑)" className="h-12 w-12 rounded-full bg-white/10 text-lg hover:bg-white/20">
+                  ↑
+                </button>
+                <button onClick={() => goTo(active + 1)} title="다음 (↓)" className="h-12 w-12 rounded-full bg-white/10 text-lg hover:bg-white/20">
+                  ↓
+                </button>
+              </div>
+            </div>
+          )}
+
+          {toast && (
+            <p className="absolute bottom-24 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-4 py-2 text-sm font-bold text-neutral-900 shadow-lg">
+              {toast}
+            </p>
+          )}
+        </main>
+      </div>
+    </>
+  )
+}
+
+ReelsPage.fullscreen = true
