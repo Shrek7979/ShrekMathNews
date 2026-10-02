@@ -37,14 +37,12 @@ jobs:
       - run: npm ci
 
       - name: 수학 뉴스 수집 (번역 · 섬네일 포함)
-        if: github.event_name != 'push'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TZ: Asia/Seoul
         run: npm run collect
 
       - name: 수집 결과 저장
-        if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -62,6 +60,8 @@ jobs:
           touch out/.nojekyll
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true # 저장소에 Pages 가 아직 안 켜져 있으면 자동으로 켬
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
