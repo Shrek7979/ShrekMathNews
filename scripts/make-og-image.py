@@ -80,7 +80,7 @@ def og_image():
 
     # 하단 카테고리 칩 (반투명)
     card_font = font(FONT_BOLD, 26)
-    labels = ['교육', '입시', 'AI·에듀테크', '연구', '해외', '★ 인기']
+    labels = ['교육', '입시', '에듀테크', '연구', '해외', '★ 인기']
 
     def chips(d):
         for i, label in enumerate(labels):
@@ -110,7 +110,7 @@ def og_image():
     sub_font = font(FONT_BOLD, 40)
     draw.text((x, y + 250), '수학 교사를 위한 수학 뉴스 릴스', font=sub_font, fill=(220, 235, 210))
     small_font = font(FONT_REG, 30)
-    draw.text((x, y + 310), '매일 07:00 · 14:00 업데이트 · 뉴스 · 유튜브 인기 · 수학 주제', font=small_font, fill=(170, 200, 160))
+    draw.text((x, y + 310), '매일 07:00 · 14:00 업데이트  ·  뉴스 · 유튜브 인기 · 주제', font=small_font, fill=(170, 200, 160))
 
     img.convert('RGB').save(os.path.join(ROOT, 'og.png'), optimize=True)
 
