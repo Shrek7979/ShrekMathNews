@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T00:38:43.798Z",
+  "updatedAt": "2026-10-03T00:42:23.989Z",
   "items": [
     {
       "id": "2c62b4c78e9e",
@@ -29,7 +29,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "다면체의 빅 뉴스",
       "summaryKo": "\"귀족 다면체\" 의 세계에서 엄청난 발전은 Richard Elwes가 설명합니다. 코너 힐과의 전체 보너스 인터뷰는 Numberphile2에 있습니다: …",
-      "thumb": "/thumbs/7dd53dd4955b.jpg"
+      "thumb": "/thumbs/7dd53dd4955b.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "eb72b30987ed",
@@ -60,22 +61,6 @@
       "thumb": "/thumbs/c7410e5ac63c.jpg"
     },
     {
-      "id": "8a6f74dce9ce",
-      "kind": "news",
-      "lang": "en",
-      "title": "Data scientist vs pure mathematician meme",
-      "summary": "",
-      "link": "https://www.reddit.com/r/mathmemes/comments/1wv309i/data_scientist_vs_pure_mathematician_meme/",
-      "source": "Reddit r/mathmemes",
-      "image": "https://preview.redd.it/6zv0syfbnvsh1.jpeg?width=640&crop=smart&auto=webp&s=08be3d36e4089d32e1d2f4fc30a0c75ee865e495",
-      "category": "인기",
-      "publishedAt": "2026-10-01T15:49:44.000Z",
-      "collectedAt": "2026-10-03T00:20:00.887Z",
-      "titleKo": "데이터 과학자 vs 순수 수학자 밈",
-      "summaryKo": "",
-      "thumb": "/thumbs/8a6f74dce9ce.jpg"
-    },
-    {
       "id": "ab0451c9824a",
       "kind": "news",
       "lang": "en",
@@ -89,7 +74,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "4차원은 실제로 어떤 모습일까요?",
       "summaryKo": "매기 밀러 (Maggie Miller) 는 3차원에 대한 직관이 왜 4차원으로 나누어지는지, 4D 공간을 3차원 스냅샷의 릴로 시각화하는 방법을 설명합니다.",
-      "thumb": "/thumbs/ab0451c9824a.jpg"
+      "thumb": "/thumbs/ab0451c9824a.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "bf751846afb9",
@@ -146,21 +132,8 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "수학 물리학에서 가장 활발한 주제는 무엇입니까?",
       "summaryKo": "저는 수학 학부생입니다. Alain Conne의 Noncommutative Geometry and Differential Geometry in Mathematical...",
-      "thumb": "/thumbs/a3a258c100f3.png"
-    },
-    {
-      "id": "af5022d6da66",
-      "kind": "news",
-      "lang": "ko",
-      "title": "천재교육, 11월 14일 HME 학력평가…초등 국어·초중 수학 대상",
-      "summary": "천재교육이 오는 11월 14일 초·중학생을 대상으로 '2026 하반기 HME 전국 해법수학·해법국어 학력평가'를 실시한다. 국어는 초등학교 1~6학년, 수학은 초등학교 1학년부터 중학교 3학년까지 응시할 수 있으며 온라인과 오프라인 가운데 원하는 방식을 선택해 시험을 치를 수 있다.…",
-      "link": "https://www.msn.com/ko-kr/news/other/%EC%B2%9C%EC%9E%AC%EA%B5%90%EC%9C%A1-11%EC%9B%94-14%EC%9D%BC-hme-%ED%95%99%EB%A0%A5%ED%8F%89%EA%B0%80-%EC%B4%88%EB%93%B1-%EA%B5%AD%EC%96%B4-%EC%B4%88%EC%A4%91-%EC%88%98%ED%95%99-%EB%8C%80%EC%83%81/ar-AA2diAjW",
-      "source": "파이낸셜뉴스",
-      "image": "http://www.bing.com/th?id=ONUT.Ofn6_AxTDn3G3Ct9i7ppWQ&pid=News",
-      "publishedAt": "2026-09-30T17:03:30.000Z",
-      "category": "교육",
-      "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/af5022d6da66.png"
+      "thumb": "/thumbs/a3a258c100f3.png",
+      "translator": "mymemory"
     },
     {
       "id": "d1d902dfdc13",
@@ -189,7 +162,8 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "The Deranged Mathematician: An Introduction to Differential Geometry (미분 기하학 입문)",
       "summaryKo": "미분 기하학과 같은 필드를 어떻게 요약합니까? 1년 전쯤, 그냥 그렇게 해달라는 부탁을 받았다. 내 첫 번째 생각은 이게 그냥 똑바르다는 것이 었습니다...",
-      "thumb": "/thumbs/80250a50c3b5.png"
+      "thumb": "/thumbs/80250a50c3b5.png",
+      "translator": "mymemory"
     },
     {
       "id": "b43bf69f5b09",
@@ -220,7 +194,8 @@
       "collectedAt": "2026-10-03T00:20:00.887Z",
       "titleKo": "Babish의 15,000% 주장을 테스트했습니다!",
       "summaryKo": "이 동영상을 후원해 주신 Private Internet Access에게 감사드립니다! 여기에서 내 맞춤 링크를 사용하여 할인을 받으실 수 있습니다.",
-      "thumb": "/thumbs/54ece73965a1.jpg"
+      "thumb": "/thumbs/54ece73965a1.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "87fc97cffe58",
@@ -237,36 +212,6 @@
       "thumb": "/thumbs/87fc97cffe58.png"
     },
     {
-      "id": "6a2af40ef76c",
-      "kind": "news",
-      "lang": "ko",
-      "title": "수학 능력, 그게 중요한가… 젠슨 황·머스크의 AI 교육론 보니",
-      "summary": "아시아투데이 정아름 기자 = 빅테크 수장인 젠슨 황 엔비디아 최고경영자(CEO)와 일론 머스크 테슬라 CEO가 AI·로봇의 발전에 따라 인간이 배워야 할 지식과 교육 방식도 달라져야 한다고 입을 모았다. 단순히 지식을 습득하는 것보다 종합적으로 사고하고 질문을 구성하는 ...",
-      "link": "https://www.msn.com/ko-kr/%EA%B8%B0%EC%88%A0/%EA%B8%B0%EC%88%A0-%EB%A6%AC%EB%8D%94/%EC%88%98%ED%95%99-%EB%8A%A5%EB%A0%A5-%EA%B7%B8%EA%B2%8C-%EC%A4%91%EC%9A%94%ED%95%9C%EA%B0%80-%EC%A0%A0%EC%8A%A8-%ED%99%A9-%EB%A8%B8%EC%8A%A4%ED%81%AC%EC%9D%98-ai-%EA%B5%90%EC%9C%A1%EB%A1%A0-%EB%B3%B4%EB%8B%88/ar-AA2df4dr",
-      "source": "아시아투데이",
-      "image": "http://www.bing.com/th?id=ONUT.f4QvRkqiSFam41t4kUcV8Q&pid=News",
-      "category": "AI·에듀테크",
-      "publishedAt": "2026-09-30T00:56:17.000Z",
-      "collectedAt": "2026-10-03T00:38:43.798Z",
-      "thumb": "/thumbs/6a2af40ef76c.png"
-    },
-    {
-      "id": "e535ca10fc63",
-      "kind": "news",
-      "lang": "en",
-      "title": "My little maths",
-      "summary": "",
-      "link": "https://www.reddit.com/r/mathmemes/comments/1wtn8vh/my_little_maths/",
-      "source": "Reddit r/mathmemes",
-      "image": "https://preview.redd.it/vq08uihq5jsh1.jpeg?width=320&crop=smart&auto=webp&s=682d9ac494b7e57fd5cf8094573eb77299265bed",
-      "category": "인기",
-      "publishedAt": "2026-09-29T21:49:46.000Z",
-      "collectedAt": "2026-10-03T00:20:00.887Z",
-      "titleKo": "나의 작은 수학",
-      "summaryKo": "",
-      "thumb": "/thumbs/e535ca10fc63.png"
-    },
-    {
       "id": "9bfe74474119",
       "kind": "video",
       "lang": "en",
@@ -280,7 +225,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "벅마스터 인터뷰 (나비어-스토크스)",
       "summaryKo": "트리스탄 벅마스터 (Tristan Buckmaster) 는 논란의 여지가 있는 Navier-Stokes 솔루션에서 자신의 역할에 대해 이야기합니다. 우리는 OpenAI와의 인터뷰도 구하고 있습니다. 더 많은 링크 및 중요…",
-      "thumb": "/thumbs/9bfe74474119.jpg"
+      "thumb": "/thumbs/9bfe74474119.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "ab6642bdf4b6",
@@ -295,7 +241,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계적 방법은 과학적 데이터 세트의 숨겨진 이상 징후를 표시할 수 있습니다.",
       "summaryKo": "제약 화학자 요하네스 키르히마이어 (Johannes Kirchmair) 가 이끄는 빈 대학교 (University of Vienna) 의 연구팀은 숨겨진 이상을 식별하는 통계적 방법을 개발했습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.png"
+      "thumb": "/thumbs/ab6642bdf4b6.png",
+      "translator": "mymemory"
     },
     {
       "id": "540471ab00f6",
@@ -327,7 +274,8 @@
       "collectedAt": "2026-10-03T00:20:00.887Z",
       "titleKo": "이제 수학을 위해 (3Blue1Brown 포함)",
       "summaryKo": "다음은 3Blue1Brown의 제작자인 그랜트 샌더슨 (Grant Sanderson) 과의 AI에 대한 더 긴 인터뷰에서 얻은 몇 가지 하이라이트 클립입니다. 전체 동영상 주소: https://youtu.be/CBYhaKgah5U",
-      "thumb": "/thumbs/42c067a473bd.jpg"
+      "thumb": "/thumbs/42c067a473bd.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "e523a6fd7011",
@@ -343,23 +291,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "수학자들은 55세 추측을 해독하기 위해 무작위성을 활용합니다.",
       "summaryKo": "긴 공백 끝에 저글링에서 영감을 얻은 이 문제는 마침내 젊은 수학자 그룹에 의해 해결되었습니다.",
-      "thumb": "/thumbs/e523a6fd7011.jpg"
-    },
-    {
-      "id": "7f9a8501ef1f",
-      "kind": "news",
-      "lang": "en",
-      "title": "The future of mathematics",
-      "summary": "",
-      "link": "https://www.reddit.com/r/mathmemes/comments/1wrpb8d/the_future_of_mathematics/",
-      "source": "Reddit r/mathmemes",
-      "image": "https://preview.redd.it/1239tlckf3sh1.jpeg?width=640&crop=smart&auto=webp&s=fb0d999c7329c617933ca9909605e745f3839ccf",
-      "category": "인기",
-      "publishedAt": "2026-09-27T16:56:21.000Z",
-      "collectedAt": "2026-10-03T00:20:00.887Z",
-      "titleKo": "수학의 미래",
-      "summaryKo": "",
-      "thumb": "/thumbs/7f9a8501ef1f.jpg"
+      "thumb": "/thumbs/e523a6fd7011.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "c1f5099ea178",
@@ -374,7 +307,8 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "Gelfand 이중성 및 대수 기하학",
       "summaryKo": "https://hidden-phenomena.com/articles/gelfand 모양을 어떻게 정의하나요? 일반적인 정의는 도형의 모든 점의 집합부터 시작합니다. …",
-      "thumb": "/thumbs/c1f5099ea178.png"
+      "thumb": "/thumbs/c1f5099ea178.png",
+      "translator": "mymemory"
     },
     {
       "id": "3ea7d0dc7051",
@@ -389,7 +323,8 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "AI 수학: 2026년 9월 26일",
       "summaryKo": "이 반복되는 스레드는 수학에서 AI에 대한 논의를 위한 것입니다. 여기에는 다음이 포함되지만 이에 국한되지는 않습니다. AI 지원 비공식 발표...",
-      "thumb": "/thumbs/3ea7d0dc7051.png"
+      "thumb": "/thumbs/3ea7d0dc7051.png",
+      "translator": "mymemory"
     },
     {
       "id": "51feef5f1bf4",
@@ -405,7 +340,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "전화번호 퍼즐",
       "summaryKo": "월간 퍼즐 시리즈의 일부: https://momath.org/mindbenders/",
-      "thumb": "/thumbs/51feef5f1bf4.jpg"
+      "thumb": "/thumbs/51feef5f1bf4.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "530f8ffbb583",
@@ -422,22 +358,8 @@
       "collectedAt": "2026-10-03T00:20:00.887Z",
       "titleKo": "블라인드 랭킹 번호 (James Grime)",
       "summaryKo": "James Grime 블라인드는 5개의 숫자와 상수의 순위를 매깁니다. 자세한 링크 및 자세한 내용은 아래에서 확인하실 수 있습니다. ↓↓↓",
-      "thumb": "/thumbs/530f8ffbb583.jpg"
-    },
-    {
-      "id": "f697d6ebb877",
-      "kind": "video",
-      "lang": "ko",
-      "title": "보조선이 뭐길래｜요원K｜#ebsmath #중학수학",
-      "summary": "",
-      "link": "https://www.youtube.com/shorts/OcgEn9NykwQ",
-      "source": "EBSMath",
-      "image": "https://i4.ytimg.com/vi/OcgEn9NykwQ/hqdefault.jpg",
-      "views": 1098,
-      "category": "영상",
-      "publishedAt": "2026-09-22T00:00:24.000Z",
-      "collectedAt": "2026-10-03T00:20:00.887Z",
-      "thumb": "/thumbs/f697d6ebb877.jpg"
+      "thumb": "/thumbs/530f8ffbb583.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "25a6523880a1",
@@ -454,7 +376,8 @@
       "collectedAt": "2026-10-03T00:20:00.887Z",
       "titleKo": "AI에 의해 밀레니엄 상금 문제가 해결되었습니까?",
       "summaryKo": "더 많은 매트가 휴가를 떠나기를 원한다면, 이쪽으로 오십시오:",
-      "thumb": "/thumbs/25a6523880a1.jpg"
+      "thumb": "/thumbs/25a6523880a1.jpg",
+      "translator": "mymemory"
     },
     {
       "id": "8f18232c6ac4",
@@ -470,7 +393,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "AI가 해결할 수 없는 마지막 IMO 문제",
       "summaryKo": "전체 동영상: https://youtu.be/Nbwv5wHQoj0",
-      "thumb": "/thumbs/8f18232c6ac4.jpg"
+      "thumb": "/thumbs/8f18232c6ac4.jpg",
+      "translator": "mymemory"
     }
   ]
 }

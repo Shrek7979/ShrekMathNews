@@ -40,7 +40,7 @@ const similarity = (a, b) => {
   for (const gram of a) if (b.has(gram)) common++
   return common / (a.size + b.size - common || 1)
 }
-const SIMILAR_THRESHOLD = 0.4
+const SIMILAR_THRESHOLD = 0.33
 
 function categorize(item) {
   if (item.category) return item.category

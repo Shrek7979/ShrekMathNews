@@ -99,7 +99,7 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
         <div className="flex flex-wrap items-center gap-1.5">
           <Chip>{item.category === '인기' ? '🔥 인기' : item.category}</Chip>
           {item.views && <Chip>조회 {formatViews(item.views)}</Chip>}
-          {item.lang === 'en' && <Chip>{translated ? '번역' : 'EN'}</Chip>}
+          {item.lang === 'en' && <Chip>{translated ? (item.translator === 'mymemory' ? '자동 번역' : '번역') : 'EN'}</Chip>}
           {isNew && <Chip solid>NEW</Chip>}
         </div>
 

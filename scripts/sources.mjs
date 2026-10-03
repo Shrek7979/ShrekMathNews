@@ -45,8 +45,6 @@ export const SOURCES = [
     ],
   },
   { type: 'rss', lang: 'en', name: 'Reddit r/math', category: '인기', url: 'https://www.reddit.com/r/math/top/.rss?t=week', limit: 5, maxAgeDays: 8 },
-  // 레딧은 같은 시각에 두 번 부르면 429 를 내므로 두 번째 요청을 몇 초 늦춤
-  { type: 'rss', lang: 'en', name: 'Reddit r/mathmemes', category: '인기', url: 'https://www.reddit.com/r/mathmemes/top/.rss?t=week', limit: 3, maxAgeDays: 8, delayMs: 4000 },
 
   // 유튜브 채널 최신 영상
   { type: 'youtube', lang: 'en', name: 'Numberphile', url: youtube('UCoxcjq-8xIDTYp3uz647V5A'), limit: 2, maxAgeDays: 30 },

@@ -65,7 +65,18 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
   useEffect(() => {
     setNow(Date.now())
     setIsLocal(window.location.hostname === 'localhost')
+    try {
+      const last = localStorage.getItem('math-hub:view')
+      if (last === 'briefing') setView('briefing')
+    } catch {}
   }, [feed.updatedAt])
+
+  const switchView = (next: 'reels' | 'briefing') => {
+    setView(next)
+    try {
+      localStorage.setItem('math-hub:view', next)
+    } catch {}
+  }
 
   // 주제 카드는 날마다 다른 것부터 시작
   const rotatedTopics = useMemo(
@@ -137,7 +148,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
   }
 
   const openTopic = () => {
-    setView('reels')
+    switchView('reels')
     selectCategory(TOPIC_CATEGORY)
   }
 
@@ -230,7 +241,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
               {(['reels', 'briefing'] as const).map((v) => (
                 <button
                   key={v}
-                  onClick={() => setView(v)}
+                  onClick={() => switchView(v)}
                   className={`min-h-[36px] rounded-full px-3 transition ${
                     view === v ? 'bg-white text-neutral-900' : 'text-white/70'
                   }`}

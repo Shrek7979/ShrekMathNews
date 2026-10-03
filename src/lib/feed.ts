@@ -16,6 +16,7 @@ export type FeedItem = {
   thumb?: string | null
   titleKo?: string
   summaryKo?: string
+  translator?: 'claude' | 'mymemory'
 }
 
 export type Feed = { updatedAt: string | null; items: FeedItem[] }

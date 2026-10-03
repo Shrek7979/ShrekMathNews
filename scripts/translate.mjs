@@ -65,7 +65,7 @@ export async function translateItems(items) {
     const result = await translateWithClaude(targets)
     for (const item of targets) {
       const t = result.get(item.id)
-      if (t) Object.assign(item, { titleKo: t.titleKo, summaryKo: t.summaryKo })
+      if (t) Object.assign(item, { titleKo: t.titleKo, summaryKo: t.summaryKo, translator: 'claude' })
     }
     return { translated: result.size, provider: 'claude' }
   }
@@ -75,6 +75,7 @@ export async function translateItems(items) {
     try {
       item.titleKo = await translateWithMyMemory(item.title)
       item.summaryKo = item.summary ? await translateWithMyMemory(item.summary) : ''
+      item.translator = 'mymemory'
       translated++
     } catch (error) {
       console.warn(`  번역 보류: ${item.title.slice(0, 40)}… (${error.message})`)
