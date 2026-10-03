@@ -27,6 +27,13 @@ export const SOURCES = [
   { type: 'rss', lang: 'en', name: 'ScienceDaily', url: 'https://www.sciencedaily.com/rss/computers_math/mathematics.xml', limit: 3, maxAgeDays: 7 },
   { type: 'rss', lang: 'en', name: 'Plus Magazine', url: 'https://plus.maths.org/content/rss.xml', limit: 2, maxAgeDays: 30 },
 
+  // 미국 수학 단체: NCTM(전미수학교사협의회) 학술지 MTLT, AMS(미국수학회) 소식·칼럼.
+  // (MAA 는 자동 접속을 차단(403)해서 제외)
+  // trusted: 수학 전문 매체라 키워드 필터를 건너뜀
+  { type: 'rss', lang: 'en', name: 'NCTM', trusted: true, url: 'https://pubs.nctm.org/journalissuetocrss/journals/mtlt/mtlt-overview.xml', limit: 4, maxAgeDays: 45 },
+  { type: 'rss', lang: 'en', name: 'AMS', trusted: true, url: 'https://www.ams.org/cgi-bin/content/news_items.cgi?rss=1', limit: 3, maxAgeDays: 30 },
+  { type: 'rss', lang: 'en', name: 'AMS Feature Column', trusted: true, url: 'https://mathvoices.ams.org/featurecolumn/feed/', limit: 2, maxAgeDays: 45 },
+
   // SNS 인기 게시물: 수학 유튜브 채널들의 최근 2주 영상 중 조회수 상위 + 레딧 r/math 주간 인기글
   {
     type: 'youtube-top',
@@ -46,7 +53,8 @@ export const SOURCES = [
       ['Mathologer', 'UC1_uAIS3r8Vu6JjXWvastJg', 'en'],
     ],
   },
-  { type: 'rss', lang: 'en', name: 'Reddit r/math', category: '인기', url: 'https://www.reddit.com/r/math/top/.rss?t=week', limit: 5, maxAgeDays: 8 },
+  // requireImage: 이미지가 없는 글(텍스트만 있는 글)은 제외
+  { type: 'rss', lang: 'en', name: 'Reddit r/math', category: '인기', requireImage: true, url: 'https://www.reddit.com/r/math/top/.rss?t=week', limit: 5, maxAgeDays: 8 },
 
   // 유튜브 채널 최신 영상
   { type: 'youtube', lang: 'en', name: 'Numberphile', url: youtube('UCoxcjq-8xIDTYp3uz647V5A'), limit: 2, maxAgeDays: 30 },
@@ -63,6 +71,14 @@ export const INSTAGRAM_ACCOUNTS = [
   ['3blue1brown', 'en'],
   ['fermatslibrary', 'en'],
   ['geogebra', 'en'],
+]
+
+// 페이스북: 최신 게시물을 카드로 보여 줄 수학 페이지 [주소 이름, 표시 이름, 언어]. scripts/collect-facebook.mjs 가 사용
+export const FACEBOOK_PAGES = [
+  ['numberphile', 'Numberphile', 'en'],
+  ['QuantaNews', 'Quanta Magazine', 'en'],
+  ['geogebra', 'GeoGebra', 'en'],
+  ['fermatslibrary', "Fermat's Library", 'en'],
 ]
 
 // 국내 기사: 제목에 반드시 포함해야 할 것 / 걸러낼 것

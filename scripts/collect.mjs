@@ -142,8 +142,9 @@ async function collectSource(source, now) {
     .filter((item) => now - new Date(item.publishedAt) <= source.maxAgeDays * DAY)
     .filter((item) => !source.requireCategory || item.feedCategories.includes(source.requireCategory))
     .filter((item) => !BLOCKED_SOURCES.includes(item.source))
+    .filter((item) => !source.requireImage || item.image)
     .filter((item) => {
-      if (source.type === 'youtube' || source.requireCategory) return true
+      if (source.type === 'youtube' || source.requireCategory || source.trusted) return true
       if (source.lang !== 'ko') return EN_REQUIRE.test(`${item.title} ${item.summary}`)
       return KO_REQUIRE.test(item.title) && !KO_EXCLUDE.test(item.title)
     })
@@ -183,6 +184,7 @@ export async function collect() {
   const kept = []
   const items = [...previous, ...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
     .filter((item) => now - new Date(item.collectedAt) <= KEEP_DAYS * DAY)
+    .filter((item) => !(/^Reddit/.test(item.source || '') && !item.image)) // 텍스트만 있는 레딧 글 제외
     .filter((item) => {
       const grams = bigrams(item.title)
       if (kept.some((other) => similarity(grams, other) >= SIMILAR_THRESHOLD)) return false

@@ -160,6 +160,8 @@ export function capturePage(url, outPath, { settleMs = 3500, require } = {}) {
 export function evalOnPage(url, expression, { settleMs = 5000 } = {}) {
   return withPage(url, settleMs, async (send) => {
     const result = await send('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true })
+    const failure = result.result?.exceptionDetails
+    if (failure) throw new Error(`페이지 스크립트 오류: ${failure.exception?.description || failure.text}`)
     return result.result?.result?.value
   })
 }

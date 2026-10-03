@@ -58,12 +58,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     thumb: existsSync(path.join(process.cwd(), 'public/social', `${s.id}.cap.jpg`)) ? `/social/${s.id}.cap.jpg` : `/social/${s.id}.jpg`,
     evergreen: true,
   }))
-  // 인스타그램 게시물(data/instagram.json)도 뉴스와 같은 규칙으로 섞음: 새로 가져온 것이 앞
-  const instagram = (await read<{ items: FeedItem[] }>('instagram.json', { items: [] })).items.map((item) => ({
-    ...item,
-    collectedAt: item.collectedAt || item.publishedAt,
-  }))
-  const dated = [...feed.items, ...instagram].sort(
+  // 인스타그램·페이스북 게시물도 뉴스와 같은 규칙으로 섞음: 새로 가져온 것이 앞
+  const posts: FeedItem[] = []
+  for (const file of ['instagram.json', 'facebook.json']) {
+    const { items } = await read<{ items: FeedItem[] }>(file, { items: [] })
+    posts.push(...items.map((item) => ({ ...item, collectedAt: item.collectedAt || item.publishedAt })))
+  }
+  const dated = [...feed.items, ...posts].sort(
     (a, b) => b.collectedAt.localeCompare(a.collectedAt) || b.publishedAt.localeCompare(a.publishedAt)
   )
   return {

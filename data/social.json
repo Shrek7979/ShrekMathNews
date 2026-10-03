@@ -30,37 +30,5 @@
     "title": "인스타그램 #수학교육 게시물",
     "summary": "교사들이 올리는 수업 활동·교구·판서 사진을 한곳에서",
     "link": "https://www.instagram.com/explore/tags/%EC%88%98%ED%95%99%EA%B5%90%EC%9C%A1/"
-  },
-  {
-    "id": "fb-numberphile",
-    "platform": "Facebook",
-    "label": "Numberphile",
-    "title": "Numberphile 페이스북",
-    "summary": "세계에서 가장 유명한 수 이야기 채널의 새 영상과 소식",
-    "link": "https://www.facebook.com/numberphile"
-  },
-  {
-    "id": "fb-quanta",
-    "platform": "Facebook",
-    "label": "Quanta Magazine",
-    "title": "Quanta Magazine 페이스북",
-    "summary": "최신 수학 연구를 쉽게 풀어 주는 과학 매체의 기사 소식",
-    "link": "https://www.facebook.com/QuantaNews"
-  },
-  {
-    "id": "fb-geogebra",
-    "platform": "Facebook",
-    "label": "GeoGebra",
-    "title": "GeoGebra 페이스북",
-    "summary": "지오지브라 새 기능과 교사들이 만든 수업 자료 소개",
-    "link": "https://www.facebook.com/geogebra"
-  },
-  {
-    "id": "fb-fermatslibrary",
-    "platform": "Facebook",
-    "label": "Fermat's Library",
-    "title": "Fermat's Library 페이스북",
-    "summary": "주석이 달린 유명 논문과 수학 이야기를 매주 소개",
-    "link": "https://www.facebook.com/fermatslibrary"
   }
 ]
