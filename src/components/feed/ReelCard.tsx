@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import { CATEGORY_STYLE, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatViews, symbolFor } from '@/lib/feed'
+import TopicVisual, { hasTopicVisual } from './TopicVisual'
 
 function CardShell({ category, symbol, children }: { category: string; symbol: string; children: React.ReactNode }) {
   return (
@@ -140,6 +141,7 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
   const slidesRef = useRef<HTMLDivElement>(null)
   const [slide, setSlide] = useState(0)
   const last = topic.slides.length - 1
+  const animated = hasTopicVisual(topic.id)
 
   const goTo = (index: number) => {
     const el = slidesRef.current
@@ -148,12 +150,23 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
 
   return (
     <CardShell category={TOPIC_CATEGORY} symbol={symbolFor(topic.id)}>
-      <div className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-4">
+      {animated && (
+        <div className="h-[34%] max-h-[300px] min-h-[130px] shrink-0 bg-black/30 px-2 pt-2">
+          <TopicVisual topicId={topic.id} />
+        </div>
+      )}
+      <div className={`flex min-h-0 flex-1 flex-col px-5 pb-3 ${animated ? 'pt-3' : 'pt-4'}`}>
         <div className="flex flex-wrap items-center gap-1.5">
           <Chip>{TOPIC_CATEGORY}</Chip>
           <Chip>{topic.tag}</Chip>
         </div>
-        <h2 className="mt-3 break-keep text-[1.45rem] font-extrabold leading-[1.3] [text-wrap:balance]">{topic.title}</h2>
+        <h2
+          className={`break-keep font-extrabold leading-[1.3] [text-wrap:balance] ${
+            animated ? 'mt-2 text-[1.25rem]' : 'mt-3 text-[1.45rem]'
+          }`}
+        >
+          {topic.title}
+        </h2>
 
         <div
           ref={slidesRef}
@@ -162,12 +175,22 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
         >
           {topic.slides.map((s, i) => (
             <div key={i} className="w-full shrink-0 snap-center px-5">
-              <div className="no-scrollbar flex h-full flex-col justify-center overflow-y-auto rounded-2xl bg-black/25 p-5">
-                <p className="text-xs font-bold text-white/60">
-                  {i + 1} / {topic.slides.length}
+              <div
+                className={`no-scrollbar flex h-full flex-col justify-center overflow-y-auto rounded-2xl bg-black/25 ${
+                  animated ? 'p-4' : 'p-5'
+                }`}
+              >
+                {!animated && (
+                  <p className="mb-2 text-xs font-bold text-white/60">
+                    {i + 1} / {topic.slides.length}
+                  </p>
+                )}
+                <h3 className={`break-keep font-bold leading-snug text-yellow-200 ${animated ? 'text-lg' : 'text-xl'}`}>
+                  {s.heading}
+                </h3>
+                <p className={`break-keep text-white/90 ${animated ? 'mt-2 text-[15px] leading-normal' : 'mt-3 text-[1rem] leading-relaxed'}`}>
+                  {s.body}
                 </p>
-                <h3 className="mt-2 break-keep text-xl font-bold leading-snug text-yellow-200">{s.heading}</h3>
-                <p className="mt-3 break-keep text-[1rem] leading-relaxed text-white/90">{s.body}</p>
               </div>
             </div>
           ))}
