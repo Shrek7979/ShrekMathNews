@@ -14,7 +14,7 @@ export const FEED_PATH = resolve(process.cwd(), 'data/feed.json')
 const KEEP_DAYS = 7
 const MAX_ITEMS = 150
 const TITLE_LENGTH = 90
-const SUMMARY_LENGTH = 160
+const SUMMARY_LENGTH = 56 // 제목 밑 설명은 한 줄(한 문장)만
 const DAY = 24 * 60 * 60 * 1000
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
@@ -24,6 +24,12 @@ const stripHtml = (html) => clean(cheerio.load(`<div>${html || ''}</div>`)('div'
 // 요약 앞의 "[매체명]" / "(지역=매체) ○○○ 기자 =" 같은 바이라인 제거
 const stripByline = (s) =>
   s.replace(/^\[[^\]]{1,30}\]\s*/, '').replace(/^\([^)]{1,40}\)\s*(?:[^=]{0,25}=\s*)?/, '')
+// 첫 문장만 남기고, 그래도 길면 단어 경계에서 자름 → 카드의 '한 줄 설명'
+export const oneLine = (s, n = SUMMARY_LENGTH) => {
+  const text = clean(s)
+  const first = text.match(/^.*?(?:[.!?]|다\.|요\.)(?=\s|$)/)?.[0] || text
+  return truncate(first.replace(/[.]$/, ''), n)
+}
 const truncate = (s, n) => (s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s)
 const titleKey = (title) => title.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '')
 const makeId = (title) => createHash('sha1').update(titleKey(title)).digest('hex').slice(0, 12)
@@ -94,7 +100,7 @@ function parseEntry($, el, source) {
     kind: source.type === 'youtube' ? 'video' : 'news',
     lang: source.lang,
     title: truncate(title, TITLE_LENGTH),
-    summary: truncate(stripByline(summary), SUMMARY_LENGTH),
+    summary: oneLine(stripByline(summary)),
     link,
     source: sourceName || new URL(link).hostname,
     image,
@@ -187,6 +193,10 @@ export async function collect() {
     .slice(0, MAX_ITEMS)
 
   const added = items.filter((item) => item.collectedAt === now.toISOString()).length
+  for (const item of items) {
+    item.summary = oneLine(item.summary)
+    if (item.summaryKo) item.summaryKo = oneLine(item.summaryKo)
+  }
 
   console.log('\n번역 중…')
   try {
@@ -206,7 +216,7 @@ export async function collect() {
   return { added, total: items.length }
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   collect().catch((error) => {
     console.error(error.message)
     process.exit(1)

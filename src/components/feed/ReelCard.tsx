@@ -108,7 +108,7 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
             {title}
           </h2>
           {translated && <p className="mt-1.5 line-clamp-2 text-[13px] leading-snug text-white/55">{item.title}</p>}
-          {summary && <p className="mt-3 break-keep text-[1rem] leading-relaxed text-white/85">{summary}</p>}
+          {summary && <p className="mt-3 line-clamp-2 break-keep text-[1rem] leading-relaxed text-white/85">{summary}</p>}
           <p className="mt-3 text-[13px] font-medium text-white/60">
             {item.source} · {formatDate(item.publishedAt)}
           </p>
