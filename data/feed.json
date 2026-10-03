@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T00:30:33.891Z",
+  "updatedAt": "2026-10-03T00:38:43.798Z",
   "items": [
     {
       "id": "2c62b4c78e9e",
@@ -160,7 +160,7 @@
       "publishedAt": "2026-09-30T17:03:30.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/af5022d6da66.jpg"
+      "thumb": "/thumbs/af5022d6da66.png"
     },
     {
       "id": "d1d902dfdc13",
@@ -235,6 +235,20 @@
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "thumb": "/thumbs/87fc97cffe58.png"
+    },
+    {
+      "id": "6a2af40ef76c",
+      "kind": "news",
+      "lang": "ko",
+      "title": "수학 능력, 그게 중요한가… 젠슨 황·머스크의 AI 교육론 보니",
+      "summary": "아시아투데이 정아름 기자 = 빅테크 수장인 젠슨 황 엔비디아 최고경영자(CEO)와 일론 머스크 테슬라 CEO가 AI·로봇의 발전에 따라 인간이 배워야 할 지식과 교육 방식도 달라져야 한다고 입을 모았다. 단순히 지식을 습득하는 것보다 종합적으로 사고하고 질문을 구성하는 ...",
+      "link": "https://www.msn.com/ko-kr/%EA%B8%B0%EC%88%A0/%EA%B8%B0%EC%88%A0-%EB%A6%AC%EB%8D%94/%EC%88%98%ED%95%99-%EB%8A%A5%EB%A0%A5-%EA%B7%B8%EA%B2%8C-%EC%A4%91%EC%9A%94%ED%95%9C%EA%B0%80-%EC%A0%A0%EC%8A%A8-%ED%99%A9-%EB%A8%B8%EC%8A%A4%ED%81%AC%EC%9D%98-ai-%EA%B5%90%EC%9C%A1%EB%A1%A0-%EB%B3%B4%EB%8B%88/ar-AA2df4dr",
+      "source": "아시아투데이",
+      "image": "http://www.bing.com/th?id=ONUT.f4QvRkqiSFam41t4kUcV8Q&pid=News",
+      "category": "AI·에듀테크",
+      "publishedAt": "2026-09-30T00:56:17.000Z",
+      "collectedAt": "2026-10-03T00:38:43.798Z",
+      "thumb": "/thumbs/6a2af40ef76c.png"
     },
     {
       "id": "e535ca10fc63",
