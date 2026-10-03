@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-03T05:06:50.861Z",
+  "updatedAt": "2026-10-03T05:45:18.091Z",
   "items": [
+    {
+      "id": "7a02811b771b",
+      "kind": "news",
+      "lang": "ko",
+      "title": "[심층] 2027학년도 9월 모평 '변별력 떨어져'···국어만 '불', 수학·영어는 '물'",
+      "summary": "2027학년도 대학수학능력시험 9월 모의평가는 2026학년도 수능과 비교해 국어를 제외한 수학과…",
+      "link": "https://v.daum.net/v/20261003134436946",
+      "source": "다음 뉴스",
+      "category": "입시",
+      "publishedAt": "2026-10-02T16:44:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/7a02811b771b.jpg"
+    },
     {
       "id": "2c62b4c78e9e",
       "kind": "news",
@@ -14,6 +27,20 @@
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "thumb": "/thumbs/2c62b4c78e9e.jpg"
+    },
+    {
+      "id": "1d39d3424101",
+      "kind": "news",
+      "lang": "ko",
+      "title": "이투스247학원, 통합형 수능 변화 대응 ‘2027 윈터스쿨’ 선봬",
+      "summary": "대학입시 전문 독학재수학원 이투스247학원이 현 중3~고2 학생들을 대상으로 ‘2027 윈터스쿨’을…",
+      "link": "http://segyefn.com/newsView/20261002506609",
+      "source": "세계비즈",
+      "image": "http://www.bing.com/th?id=ONUT.YSHrQcgYUXpo56JJNvzHwA&pid=News",
+      "category": "입시",
+      "publishedAt": "2026-10-02T12:00:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/1d39d3424101.png"
     },
     {
       "id": "7dd53dd4955b",
@@ -31,6 +58,33 @@
       "summaryKo": "\"귀족 다면체\" 의 세계에서 엄청난 발전은 Richard Elwes가 설명합니다",
       "thumb": "/thumbs/7dd53dd4955b.jpg",
       "translator": "mymemory"
+    },
+    {
+      "id": "32b18c8a465f",
+      "kind": "news",
+      "lang": "ko",
+      "title": "\"카프라로 만나는 아름다운 수학 세계\"",
+      "summary": "세종시교육청이 정부세종컨벤션센터에서 ‘제13회 수학 구조물 대회’가 성료했다고 2일 밝혔다.이번…",
+      "link": "https://www.dtnews24.com/news/articleView.html?idxno=815753",
+      "source": "디트NEWS24",
+      "category": "대회·행사",
+      "publishedAt": "2026-10-02T08:56:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/32b18c8a465f.jpg"
+    },
+    {
+      "id": "65074147b7e2",
+      "kind": "news",
+      "lang": "ko",
+      "title": "나무 조각 위에 쌓아 올린 세종시 학생들의 수학",
+      "summary": "나무 조각 하나를 올릴 때마다 균형과 비율, 무게중심을 계산하는 손끝의 탐구가 이어졌다",
+      "link": "https://www.ccdailynews.com/news/articleView.html?idxno=2444386",
+      "source": "충청일보",
+      "image": "http://www.bing.com/th?id=ONUT.RWYumm_B0g0F02F9P5fpyw&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-02T03:54:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/65074147b7e2.jpg"
     },
     {
       "id": "eb72b30987ed",
@@ -61,6 +115,48 @@
       "thumb": "/thumbs/c7410e5ac63c.jpg"
     },
     {
+      "id": "1a664b41be37",
+      "kind": "news",
+      "lang": "ko",
+      "title": "EBS, ‘수능특강’ 표지 투표 진행",
+      "summary": "EBS가 2028학년도 대학수학능력시험 연계교재 ‘EBS 수능특강’ 표지를 수험생 투표로 선정한다",
+      "link": "https://www.bntnews.co.kr/Hot%20Issue/article/view/bnt202610020095",
+      "source": "bntnews",
+      "image": "http://www.bing.com/th?id=ONUT.P2zotSCXToT3be_752LH2g&pid=News",
+      "category": "입시",
+      "publishedAt": "2026-10-02T01:28:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/1a664b41be37.png"
+    },
+    {
+      "id": "0695a7e8144d",
+      "kind": "news",
+      "lang": "ko",
+      "title": "「일본 교육은 중산층 이하를 버리기 시작했다」―― 퇴직 교사의 탄식은 사실일까. 그리고 국어·수학 시간 축소가 의미하는 것",
+      "summary": "서론9월 30일, 퇴직 교사라고 밝힌 인물(치 씨라고 하겠습니다)이 이렇게 적었습니다.일본 교육은…",
+      "link": "https://note.com/panzer03/n/n165f4bca5f78?hl=ko",
+      "source": "note",
+      "image": "http://www.bing.com/th?id=ONUT.aufB73TOed2Gxd1sOgN_6g&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-02T00:29:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/0695a7e8144d.png"
+    },
+    {
+      "id": "19c65c3c48c8",
+      "kind": "news",
+      "lang": "ko",
+      "title": "세종교육청, 수학 구조물 대회…학생들 수학적 상상력 펼치다",
+      "summary": "학생들이 수학을 쉽고 즐겁게 탐구할 수 있도록 원목 교구인 '카프라'를 활용해 창의적이고 아름다운…",
+      "link": "https://www.msn.com/ko-kr/news/other/%EC%84%B8%EC%A2%85%EA%B5%90%EC%9C%A1%EC%B2%AD-%EC%88%98%ED%95%99-%EA%B5%AC%EC%A1%B0%EB%AC%BC-%EB%8C%80%ED%9A%8C-%ED%95%99%EC%83%9D%EB%93%A4-%EC%88%98%ED%95%99%EC%A0%81-%EC%83%81%EC%83%81%EB%A0%A5-%ED%8E%BC%EC%B9%98%EB%8B%A4/ar-AA2dqufV",
+      "source": "대전일보",
+      "image": "http://www.bing.com/th?id=ONUT.41KbcdBUUyyF4e6kchOFuA&pid=News",
+      "category": "대회·행사",
+      "publishedAt": "2026-10-01T21:51:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/19c65c3c48c8.png"
+    },
+    {
       "id": "ab0451c9824a",
       "kind": "news",
       "lang": "en",
@@ -76,6 +172,20 @@
       "summaryKo": "매기 밀러 (Maggie Miller) 는 3차원에 대한 직관이 왜 4차원으로 나누어지는지, 4D…",
       "thumb": "/thumbs/ab0451c9824a.jpg",
       "translator": "mymemory"
+    },
+    {
+      "id": "1f9591edea61",
+      "kind": "news",
+      "lang": "ko",
+      "title": "이지수능교육, 약술형 논술 대비 신규 교재 출시",
+      "summary": "입시교육 전문기업 이지수능교육이 2027학년도 대입을 준비하는 수험생을 대상으로 약술형 논술 대비…",
+      "link": "https://www.mt.co.kr/industry/2026/10/01/2026100111161680818",
+      "source": "머니투데이",
+      "image": "http://www.bing.com/th?id=ONUT.huFkoXwQdI4tjg-WBiNCbw&pid=News",
+      "category": "입시",
+      "publishedAt": "2026-10-01T10:46:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/1f9591edea61.jpg"
     },
     {
       "id": "bf751846afb9",
@@ -118,6 +228,20 @@
       "category": "연구",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "thumb": "/thumbs/69452290cfd6.png"
+    },
+    {
+      "id": "c8b2557965fc",
+      "kind": "news",
+      "lang": "ko",
+      "title": "‘동남아 수학·과학 인재 1000명 고양에 모인다’…고양박람회재단, 사전답사 성료",
+      "summary": "동남아시아 초·중등 수학·과학 인재 1000여명이 참가하는 대규모 국제 학술 경시대회가 오는 12월…",
+      "link": "https://www.bizwnews.com/news/articleView.html?idxno=147770",
+      "source": "비즈월드",
+      "image": "http://www.bing.com/th?id=ONUT.so7Tqd5IPhEznR0mEmiYxA&pid=News",
+      "category": "대회·행사",
+      "publishedAt": "2026-09-30T20:42:00.000Z",
+      "collectedAt": "2026-10-03T05:45:18.091Z",
+      "thumb": "/thumbs/c8b2557965fc.png"
     },
     {
       "id": "a3a258c100f3",

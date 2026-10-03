@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { CATEGORY_ACCENT, CATEGORY_ORDER, FeedItem, Topic, formatViews, timeAgo } from '@/lib/feed'
+import { CATEGORY_ACCENT, FeedItem, Topic, formatViews, timeAgo } from '@/lib/feed'
 
 type BriefingProps = {
   items: FeedItem[]
@@ -14,14 +14,14 @@ type BriefingProps = {
   onOpenTopic: () => void
 }
 
-// 한눈에 보기: 카테고리별로 제목만 빠르게 훑는 목록
+// 한눈에 보기: 최신 순으로 제목만 빠르게 훑는 목록
 export default function Briefing(props: BriefingProps) {
   const { items, topic, latestBatch, now, savedIds, readIds, onSave, onRead, onOpenTopic } = props
   const { basePath } = useRouter()
-  const groups = CATEGORY_ORDER.map((category) => ({
-    category,
-    items: items.filter((item) => item.category === category),
-  })).filter((group) => group.items.length > 0)
+  // 최신 글이 맨 위. 날짜가 없는 바로가기 카드(인스타·페이스북)는 맨 아래
+  const sorted = [...items].sort(
+    (a, b) => Number(a.evergreen || false) - Number(b.evergreen || false) || b.publishedAt.localeCompare(a.publishedAt)
+  )
 
   return (
     <div className="h-full overflow-y-auto overscroll-contain">
@@ -36,16 +36,10 @@ export default function Briefing(props: BriefingProps) {
           </button>
         )}
 
-        {groups.length === 0 && <p className="py-20 text-center text-white/60">표시할 소식이 없어요.</p>}
+        {sorted.length === 0 && <p className="py-20 text-center text-white/60">표시할 소식이 없어요.</p>}
 
-        {groups.map((group) => (
-          <section key={group.category} className="mb-6">
-            <h2 className={`mb-1 flex items-baseline gap-2 border-b border-white/15 pb-2 text-[15px] font-bold ${CATEGORY_ACCENT[group.category] || ''}`}>
-              {group.category}
-              <span className="text-sm font-medium text-white/50">{group.items.length}</span>
-            </h2>
-            <ul>
-              {group.items.map((item) => {
+        <ul className="border-t border-white/10">
+              {sorted.map((item) => {
                 const read = readIds.has(item.id)
                 const title = item.lang === 'en' && item.titleKo ? item.titleKo : item.title
                 return (
@@ -75,6 +69,8 @@ export default function Briefing(props: BriefingProps) {
                           {title}
                         </span>
                         <span className="mt-1 block text-xs text-white/50">
+                          <span className={`font-semibold ${CATEGORY_ACCENT[item.category] || ''}`}>{item.category}</span>
+                          {' · '}
                           {item.source}
                           {item.views && ` · 조회 ${formatViews(item.views)}`}
                           {item.lang === 'en' && ' · 번역'}
@@ -95,9 +91,7 @@ export default function Briefing(props: BriefingProps) {
                   </li>
                 )
               })}
-            </ul>
-          </section>
-        ))}
+        </ul>
       </div>
     </div>
   )

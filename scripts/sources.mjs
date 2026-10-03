@@ -2,13 +2,15 @@
 // type: bing(빙 뉴스 검색) | rss(일반 RSS/Atom) | youtube(채널 최신) | youtube-top(여러 채널 중 조회수 상위)
 // category 를 적으면 키워드 분류 대신 그 카테고리로 고정
 
+// qft=sortbydate="1": 관련도순이 아니라 최신순으로 받아 방금 나온 기사부터 수집
 const bing = (q) =>
-  `https://www.bing.com/news/search?q=${encodeURIComponent(q)}&format=rss&mkt=ko-KR`
+  `https://www.bing.com/news/search?q=${encodeURIComponent(q)}&format=rss&mkt=ko-KR&qft=${encodeURIComponent('sortbydate="1"')}`
 const youtube = (channelId) =>
   `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`
 
 export const SOURCES = [
   // 국내 뉴스 (빙 뉴스 검색: 기사 원문 링크 + 섬네일 제공. 구글 뉴스는 원문 링크를 숨겨 섬네일을 못 얻으므로 제외)
+  { type: 'bing', lang: 'ko', url: bing('수학'), limit: 8, maxAgeDays: 3 },
   { type: 'bing', lang: 'ko', url: bing('수학 교육'), limit: 8, maxAgeDays: 3 },
   { type: 'bing', lang: 'ko', url: bing('수학 교사'), limit: 6, maxAgeDays: 3 },
   { type: 'bing', lang: 'ko', url: bing('수학 수업'), limit: 6, maxAgeDays: 3 },
