@@ -50,11 +50,17 @@ def make(card):
         d.text((x, y), sym, font=font(300), fill=(255, 255, 255, 30))
     img = Image.alpha_composite(img, layer)
 
+    # 카드에서는 세로로 긴 칸에 맞춰 좌우가 잘리므로, 글자는 가운데 760px 안에만 둠
     draw = ImageDraw.Draw(img)
-    draw.text((80, 90), card['platform'], font=font(64), fill=(255, 255, 255))
-    label_font = fit(draw, card['label'], W - 160, 170)
-    draw.text((80, 230), card['label'], font=label_font, fill=(255, 255, 255))
-    draw.text((80, 540), 'Shrek Math News · 인기 수학 콘텐츠', font=font(44), fill=(255, 255, 255))
+    SAFE = 760
+
+    def centered(text, y, f):
+        draw.text(((W - draw.textlength(text, font=f)) / 2, y), text, font=f, fill=(255, 255, 255))
+
+    centered(card['platform'], 110, font(64))
+    label_font = fit(draw, card['label'], SAFE, 170)
+    centered(card['label'], 250 + (170 - label_font.size) / 2, label_font)
+    centered('인기 수학 콘텐츠', 500, font(46))
 
     img.convert('RGB').save(os.path.join(OUT, card['id'] + '.jpg'), quality=88, optimize=True)
 
