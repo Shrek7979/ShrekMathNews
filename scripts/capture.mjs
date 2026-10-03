@@ -59,8 +59,8 @@ const REMOVE_OVERLAYS = `(() => {
   return document.title
 })()`
 
-// require: 이 CSS 선택자에 맞는 요소가 없으면 실패로 처리 (차단·로그인 화면을 섬네일로 쓰지 않기 위함)
-export async function capturePage(url, outPath, { settleMs = 3500, require } = {}) {
+// 헤드리스 브라우저로 페이지를 연 뒤 work(send) 를 실행. send 는 DevTools 프로토콜 명령을 보내는 함수
+async function withPage(url, settleMs, work) {
   const browser = BROWSERS.find((path) => existsSync(path))
   if (!browser) throw new Error('헤드리스 브라우저 없음')
 
@@ -125,17 +125,7 @@ export async function capturePage(url, outPath, { settleMs = 3500, require } = {
     await send('Page.navigate', { url })
     for (let i = 0; i < 48 && !loaded; i++) await sleep(250) // 최대 12초까지 로딩 대기
     await sleep(settleMs)
-    await send('Runtime.evaluate', { expression: REMOVE_OVERLAYS })
-    await sleep(600)
-    await send('Runtime.evaluate', { expression: REMOVE_OVERLAYS }) // 지운 뒤 다시 뜨는 팝업 한 번 더
-    await sleep(400)
-    if (require) {
-      const found = await send('Runtime.evaluate', { expression: `!!document.querySelector(${JSON.stringify(require)})` })
-      if (!found.result?.result?.value) throw new Error(`필요한 내용이 없음: ${require}`)
-    }
-    const shot = await send('Page.captureScreenshot', { format: 'png' })
-    if (!shot.result?.data) throw new Error('캡처 실패')
-    await writeFile(outPath, Buffer.from(shot.result.data, 'base64'))
+    return await work(send)
   } finally {
     clearTimeout(killTimer)
     try {
@@ -147,6 +137,31 @@ export async function capturePage(url, outPath, { settleMs = 3500, require } = {
       rmSync(profile, { recursive: true, force: true })
     } catch {}
   }
+}
+
+// require: 이 CSS 선택자에 맞는 요소가 없으면 실패로 처리 (차단·로그인 화면을 섬네일로 쓰지 않기 위함)
+export function capturePage(url, outPath, { settleMs = 3500, require } = {}) {
+  return withPage(url, settleMs, async (send) => {
+    await send('Runtime.evaluate', { expression: REMOVE_OVERLAYS })
+    await sleep(600)
+    await send('Runtime.evaluate', { expression: REMOVE_OVERLAYS }) // 지운 뒤 다시 뜨는 팝업 한 번 더
+    await sleep(400)
+    if (require) {
+      const found = await send('Runtime.evaluate', { expression: `!!document.querySelector(${JSON.stringify(require)})` })
+      if (!found.result?.result?.value) throw new Error(`필요한 내용이 없음: ${require}`)
+    }
+    const shot = await send('Page.captureScreenshot', { format: 'png' })
+    if (!shot.result?.data) throw new Error('캡처 실패')
+    await writeFile(outPath, Buffer.from(shot.result.data, 'base64'))
+  })
+}
+
+// 페이지 안에서 자바스크립트 식을 실행하고 그 값을 돌려줌 (화면에 보이는 목록을 읽어 올 때 사용)
+export function evalOnPage(url, expression, { settleMs = 5000 } = {}) {
+  return withPage(url, settleMs, async (send) => {
+    const result = await send('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true })
+    return result.result?.result?.value
+  })
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

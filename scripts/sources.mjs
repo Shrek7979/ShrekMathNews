@@ -57,6 +57,14 @@ export const SOURCES = [
 
 export const youtubeFeed = youtube
 
+// 인스타그램: 최근 게시물을 카드로 보여 줄 수학 계정 [계정, 언어]. scripts/collect-instagram.mjs 가 사용
+export const INSTAGRAM_ACCOUNTS = [
+  ['ebsmath', 'ko'],
+  ['3blue1brown', 'en'],
+  ['fermatslibrary', 'en'],
+  ['geogebra', 'en'],
+]
+
 // 국내 기사: 제목에 반드시 포함해야 할 것 / 걸러낼 것
 export const KO_REQUIRE = /수학|수능|필즈상|올림피아드/
 export const KO_EXCLUDE = /수학여행|수학 여행|연예인|포토뉴스/

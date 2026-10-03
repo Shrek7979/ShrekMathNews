@@ -13,6 +13,7 @@ export type FeedItem = {
   publishedAt: string
   collectedAt: string
   views?: number
+  likes?: string
   thumb?: string | null
   titleKo?: string
   summaryKo?: string

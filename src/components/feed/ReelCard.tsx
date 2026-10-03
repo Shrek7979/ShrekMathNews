@@ -86,6 +86,7 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
     item.source,
     !item.evergreen && formatDate(item.publishedAt),
     item.views && `조회 ${formatViews(item.views)}`,
+    item.likes && `좋아요 ${item.likes}`,
     item.lang === 'en' && (translated ? (item.translator === 'mymemory' ? '자동 번역' : '번역') : '영문'),
   ].filter(Boolean) as string[]
 
