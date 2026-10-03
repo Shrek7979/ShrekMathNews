@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T07:44:38.241Z",
+  "updatedAt": "2026-10-03T07:45:21.723Z",
   "items": [
     {
       "id": "a6d660ae0441",
@@ -169,7 +169,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.png"
+      "thumb": "/thumbs/19c65c3c48c8.jpg"
     },
     {
       "id": "ab0451c9824a",
@@ -270,7 +270,7 @@
       "publishedAt": "2026-09-30T19:44:10.000Z",
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "수학 물리학에서 가장 활발한 주제는 무엇입니까?",
-      "thumb": "/thumbs/a3a258c100f3.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory",
       "summaryKo": "저는 수학 학부생입니다"
     },
@@ -300,7 +300,7 @@
       "publishedAt": "2026-09-30T15:03:44.000Z",
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "The Deranged Mathematician: An Introduction to Differential Geometry (미분 기하학 입문)",
-      "thumb": "/thumbs/80250a50c3b5.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory",
       "summaryKo": "미분 기하학과 같은 필드를 어떻게 요약합니까?"
     },
@@ -460,7 +460,7 @@
       "publishedAt": "2026-09-26T18:27:15.000Z",
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "Gelfand 이중성 및 대수 기하학",
-      "thumb": "/thumbs/c1f5099ea178.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory",
       "summaryKo": "https://hidden-phenomena.com/articles/gelfand 모양을 어떻게…"
     },
@@ -476,7 +476,7 @@
       "publishedAt": "2026-09-26T16:05:10.000Z",
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "AI 수학: 2026년 9월 26일",
-      "thumb": "/thumbs/3ea7d0dc7051.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory",
       "summaryKo": "이 반복되는 스레드는 수학에서 AI에 대한 논의를 위한 것입니다"
     },
