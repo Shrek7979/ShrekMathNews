@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T06:12:57.954Z",
+  "updatedAt": "2026-10-03T06:14:29.033Z",
   "items": [
     {
       "id": "7a02811b771b",
@@ -26,7 +26,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.jpg"
+      "thumb": "/thumbs/2c62b4c78e9e.png"
     },
     {
       "id": "1d39d3424101",
@@ -256,7 +256,7 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "수학 물리학에서 가장 활발한 주제는 무엇입니까?",
       "summaryKo": "저는 수학 학부생입니다",
-      "thumb": "/thumbs/a3a258c100f3.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory"
     },
     {
@@ -271,7 +271,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.jpg"
+      "thumb": "/thumbs/d1d902dfdc13.png"
     },
     {
       "id": "80250a50c3b5",
@@ -286,7 +286,7 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "The Deranged Mathematician: An Introduction to Differential Geometry (미분 기하학 입문)",
       "summaryKo": "미분 기하학과 같은 필드를 어떻게 요약합니까?",
-      "thumb": "/thumbs/80250a50c3b5.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory"
     },
     {
@@ -379,7 +379,7 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계적 방법은 과학적 데이터 세트의 숨겨진 이상 징후를 표시할 수 있습니다.",
       "summaryKo": "제약 화학자 요하네스 키르히마이어 (Johannes Kirchmair) 가 이끄는 빈 대학교…",
-      "thumb": "/thumbs/ab6642bdf4b6.png",
+      "thumb": "/thumbs/ab6642bdf4b6.jpg",
       "translator": "mymemory"
     },
     {
@@ -445,7 +445,7 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "Gelfand 이중성 및 대수 기하학",
       "summaryKo": "https://hidden-phenomena.com/articles/gelfand 모양을 어떻게…",
-      "thumb": "/thumbs/c1f5099ea178.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory"
     },
     {
@@ -461,7 +461,7 @@
       "collectedAt": "2026-10-03T00:24:30.635Z",
       "titleKo": "AI 수학: 2026년 9월 26일",
       "summaryKo": "이 반복되는 스레드는 수학에서 AI에 대한 논의를 위한 것입니다",
-      "thumb": "/thumbs/3ea7d0dc7051.png",
+      "thumb": "/social/reddit.jpg",
       "translator": "mymemory"
     },
     {
