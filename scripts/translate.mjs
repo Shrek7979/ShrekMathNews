@@ -41,7 +41,7 @@ async function translateWithClaude(items) {
     system:
       '당신은 한국 중·고등학교 수학 교사들을 위한 뉴스 큐레이터입니다. ' +
       '영어 기사 제목과 요약을 자연스러운 한국어로 옮기되, 제목은 40자 이내로 간결하게, ' +
-      '요약은 한 문장(50자 이내)으로 핵심만 담아 주세요. 수학 용어는 한국 교육과정 표기를 따릅니다.',
+      '요약은 두세 문장(150자 이내)으로 핵심만 담아 주세요. 수학 용어는 한국 교육과정 표기를 따릅니다.',
     messages: [
       {
         role: 'user',
@@ -58,7 +58,8 @@ async function translateWithClaude(items) {
 
 // lang === 'en' 이고 아직 titleKo 가 없는 항목만 번역해서 titleKo / summaryKo 를 채움
 export async function translateItems(items) {
-  const targets = items.filter((item) => item.lang === 'en' && !item.titleKo)
+  // 제목이 아직 번역되지 않았거나, 설명이 새로 길어져 번역이 비어 있는 항목
+  const targets = items.filter((item) => item.lang === 'en' && (!item.titleKo || (item.summary && !item.summaryKo)))
   if (targets.length === 0) return { translated: 0, provider: null }
 
   if (hasClaudeKey()) {
@@ -73,7 +74,7 @@ export async function translateItems(items) {
   let translated = 0
   for (const item of targets) {
     try {
-      item.titleKo = await translateWithMyMemory(item.title)
+      if (!item.titleKo) item.titleKo = await translateWithMyMemory(item.title)
       item.summaryKo = item.summary ? await translateWithMyMemory(item.summary) : ''
       item.translator = 'mymemory'
       translated++

@@ -14,7 +14,7 @@ export const FEED_PATH = resolve(process.cwd(), 'data/feed.json')
 const KEEP_DAYS = 7
 const MAX_ITEMS = 150
 const TITLE_LENGTH = 90
-const SUMMARY_LENGTH = 56 // 제목 밑 설명은 한 줄(한 문장)만
+const SUMMARY_LENGTH = 220 // 카드 설명: 두세 문장. 화면에 몇 줄 보일지는 카드 높이에 따라 CSS 가 정함
 const DAY = 24 * 60 * 60 * 1000
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
@@ -24,11 +24,17 @@ const stripHtml = (html) => clean(cheerio.load(`<div>${html || ''}</div>`)('div'
 // 요약 앞의 "[매체명]" / "(지역=매체) ○○○ 기자 =" 같은 바이라인 제거
 const stripByline = (s) =>
   s.replace(/^\[[^\]]{1,30}\]\s*/, '').replace(/^\([^)]{1,40}\)\s*(?:[^=]{0,25}=\s*)?/, '')
-// 첫 문장만 남기고, 그래도 길면 단어 경계에서 자름 → 카드의 '한 줄 설명'
-export const oneLine = (s, n = SUMMARY_LENGTH) => {
-  const text = clean(s)
-  const first = text.match(/^.*?(?:[.!?]|다\.|요\.)(?=\s|$)/)?.[0] || text
-  return truncate(first.replace(/[.]$/, ''), n)
+// 카드 설명: 최대 n자. 되도록 문장이 끝나는 곳에서 자르고, 마땅한 곳이 없으면 단어 경계에서 … 로 끝냄
+export const brief = (s, n = SUMMARY_LENGTH) => {
+  const source = clean(s)
+  const text = source.replace(/\s*(\.{3}|…)$/, '') // 피드가 붙인 말줄임표 제거
+  if (text.length <= n && text === source) return text
+  const cut = text.slice(0, n)
+  // 문장 끝: 마침표·물음표·느낌표 뒤가 공백/끝이거나, "했다.충남대는" 처럼 띄어쓰기 없이 이어진 경우
+  const ends = [...cut.matchAll(/[.!?](?=\s|$)|(?<=[다요])\.(?=[가-힣])/g)]
+  const lastEnd = ends.length ? ends[ends.length - 1].index + 1 : 0
+  if (lastEnd >= cut.length * 0.5) return cut.slice(0, lastEnd)
+  return cut.replace(/\s+\S*$/, '') + '…'
 }
 const truncate = (s, n) => (s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s)
 const titleKey = (title) => title.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '')
@@ -77,7 +83,17 @@ function parseEntry($, el, source) {
   } else if (source.type === 'youtube') {
     const group = $el.children('media\\:group')
     image = group.children('media\\:thumbnail').attr('url')
-    summary = clean(group.children('media\\:description').text().split('\n')[0])
+    // 영상 설명의 앞쪽 몇 줄 (링크·해시태그 줄은 제외)
+    summary = clean(
+      group
+        .children('media\\:description')
+        .text()
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((line) => line && !/https?:\/\/|^#|↓/.test(line))
+        .slice(0, 3)
+        .join(' ')
+    )
     title = title.replace(new RegExp(` - ${source.name}$`), '')
     views = Number(group.find('media\\:statistics').attr('views') || 0) || undefined
   } else if (/reddit\.com/.test(source.url)) {
@@ -100,7 +116,7 @@ function parseEntry($, el, source) {
     kind: source.type === 'youtube' ? 'video' : 'news',
     lang: source.lang,
     title: truncate(title, TITLE_LENGTH),
-    summary: oneLine(stripByline(summary)),
+    summary: brief(stripByline(summary)),
     link,
     source: sourceName || new URL(link).hostname,
     image,
@@ -151,6 +167,14 @@ async function collectSource(source, now) {
     .map(({ feedCategories, ...item }) => ({ ...item, category: categorize(item) }))
 }
 
+// 기사 페이지의 소개문 (og:description → meta description)
+async function fetchDescription(url) {
+  const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'text/html' }, signal: AbortSignal.timeout(15000) })
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  const $ = cheerio.load(await res.text())
+  return clean($('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content') || '')
+}
+
 export async function collect() {
   const now = new Date()
   let previous = []
@@ -179,6 +203,18 @@ export async function collect() {
     throw new Error('모든 소스 수집에 실패했습니다. 기존 feed.json 을 유지합니다.')
   }
 
+  // 이미 있던 카드라도 이번에 더 긴 설명·새 조회수를 받았으면 갱신 (설명이 바뀌면 번역도 다시 함)
+  const freshById = new Map(fresh.map((item) => [item.id, item]))
+  for (const old of previous) {
+    const latest = freshById.get(old.id)
+    if (!latest) continue
+    if (latest.views) old.views = latest.views
+    if ((latest.summary || '').length > (old.summary || '').length + 20) {
+      old.summary = latest.summary
+      delete old.summaryKo
+    }
+  }
+
   // 이전 수집분이 먼저 오도록 합쳐서, 이미 있던 기사는 처음 수집된 시각(collectedAt)을 유지
   const kept = []
   const items = [...previous, ...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
@@ -194,6 +230,18 @@ export async function collect() {
 
   const added = items.filter((item) => item.collectedAt === now.toISOString()).length
 
+  // 설명이 없거나 너무 짧은 기사는 기사 페이지의 소개문(og:description)으로 보강
+  const thin = items.filter((item) => item.kind === 'news' && !/reddit\.com/.test(item.link) && (item.summary || '').length < 80)
+  await Promise.allSettled(
+    thin.map(async (item) => {
+      const description = brief(stripByline(await fetchDescription(item.link)))
+      if (description.length > (item.summary || '').length + 20) {
+        item.summary = description
+        delete item.summaryKo
+      }
+    })
+  )
+
   console.log('\n번역 중…')
   try {
     const { translated, provider } = await translateItems(items)
@@ -202,10 +250,10 @@ export async function collect() {
     console.warn(`✗ 번역 실패: ${error.message}`)
   }
 
-  // 번역문은 원문보다 길어질 수 있어 번역 뒤에 한 줄로 다시 맞춤
+  // 번역문은 원문보다 길어질 수 있어 번역 뒤에 길이를 다시 맞춤
   for (const item of items) {
-    item.summary = oneLine(item.summary)
-    if (item.summaryKo) item.summaryKo = oneLine(item.summaryKo)
+    item.summary = brief(item.summary)
+    if (item.summaryKo) item.summaryKo = brief(item.summaryKo, SUMMARY_LENGTH + 40)
   }
 
   console.log('섬네일 확보 중…')

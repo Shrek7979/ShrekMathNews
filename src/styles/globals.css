@@ -46,7 +46,7 @@ body {
 
 /* 수학 주제 카드: 카드 높이가 낮을 때(작은 폰에서 상단 메뉴가 보이는 상태)는
    그림을 줄이고 제목을 한 줄로 해서 설명 글이 카드 안에 다 들어가게 함 */
-.topic-card {
+.reel-card {
   container-type: size;
 }
 @container (max-height: 560px) {
@@ -70,5 +70,34 @@ body {
     font-size: 16px;
     line-height: 1.7;
     margin-top: 0.7rem;
+  }
+}
+
+/* 뉴스 카드 설명: 카드가 높을수록 더 많은 줄을 보여 줘 아래 빈 공간을 채움 */
+.reel-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+@container (min-height: 560px) {
+  .reel-summary {
+    -webkit-line-clamp: 4;
+  }
+}
+@container (min-height: 640px) {
+  .reel-summary {
+    -webkit-line-clamp: 5;
+  }
+}
+@container (min-height: 720px) {
+  .reel-summary {
+    -webkit-line-clamp: 7;
+  }
+}
+@container (min-height: 820px) {
+  .reel-summary {
+    -webkit-line-clamp: 9;
+    font-size: 16px;
   }
 }
