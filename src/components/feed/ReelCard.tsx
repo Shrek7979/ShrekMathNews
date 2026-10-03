@@ -4,10 +4,10 @@ import { CATEGORY_ACCENT, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatVie
 import TopicVisual, { hasTopicVisual } from './TopicVisual'
 
 // 카드 바탕은 모두 같은 어두운 단색. 카테고리는 글자 색 하나로만 구분해 읽는 데 집중하게 함
-function CardShell({ children }: { children: React.ReactNode }) {
+function CardShell({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
     <section className="h-full snap-start snap-always sm:py-2">
-      <div className="flex h-full flex-col overflow-hidden bg-neutral-900 sm:rounded-3xl">{children}</div>
+      <div className={`flex h-full flex-col overflow-hidden bg-neutral-900 sm:rounded-3xl ${className}`}>{children}</div>
     </section>
   )
 }
@@ -138,15 +138,15 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
   }
 
   return (
-    <CardShell>
+    <CardShell className="topic-card">
       {animated && (
-        <div className="h-[36%] max-h-[320px] min-h-[130px] shrink-0 bg-indigo-950 px-2 pt-2">
+        <div className="topic-visual h-[30%] max-h-[300px] min-h-[130px] shrink-0 bg-indigo-950 px-2 pt-2">
           <TopicVisual topicId={topic.id} />
         </div>
       )}
       <div className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-4">
         <MetaLine category={TOPIC_CATEGORY} details={[topic.tag]} />
-        <h2 className="mt-2 break-keep text-[1.35rem] font-bold leading-[1.35] [text-wrap:balance]">{topic.title}</h2>
+        <h2 className="topic-title mt-1.5 break-keep text-[1.25rem] font-bold leading-[1.3] [text-wrap:balance]">{topic.title}</h2>
 
         <div
           ref={slidesRef}
@@ -155,12 +155,14 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
         >
           {topic.slides.map((s, i) => (
             <div key={i} className="w-full shrink-0 snap-center px-5">
-              <div className="no-scrollbar flex h-full flex-col overflow-y-auto rounded-2xl bg-white/[0.06] p-4">
-                {/* my-auto: 공간이 남으면 가운데, 모자라면 위에서부터 (가운데 정렬로 윗줄이 잘리는 것 방지) */}
-                <div className="my-auto">
-                  <h3 className="break-keep text-lg font-bold leading-snug">{s.heading}</h3>
-                  <p className="mt-2 break-keep text-[15px] leading-relaxed text-white/70">{s.body}</p>
-                </div>
+              {/* 설명은 위에서부터 채움. 본문의 빈 줄은 문단으로 나눔 */}
+              <div className="no-scrollbar h-full overflow-y-auto rounded-2xl bg-white/[0.06] p-4">
+                <h3 className="break-keep text-[17px] font-bold leading-snug sm:text-xl">{s.heading}</h3>
+                {s.body.split(/\n{2,}/).map((paragraph, k) => (
+                  <p key={k} className="mt-2 whitespace-pre-line break-keep text-[14px] leading-[1.6] text-white/70 sm:mt-3 sm:text-[17px] sm:leading-[1.7]">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
           ))}

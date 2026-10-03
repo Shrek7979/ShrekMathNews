@@ -44,3 +44,20 @@ body {
   }
 }
 
+/* 수학 주제 카드: 카드 높이가 낮을 때(작은 폰에서 상단 메뉴가 보이는 상태)는
+   그림을 줄이고 제목을 한 줄로 해서 설명 글이 카드 안에 다 들어가게 함 */
+.topic-card {
+  container-type: size;
+}
+@container (max-height: 560px) {
+  .topic-visual {
+    height: 18%;
+    min-height: 92px;
+  }
+  .topic-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+}
