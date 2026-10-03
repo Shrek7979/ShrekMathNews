@@ -12,6 +12,7 @@ import {
   Feed,
   FeedItem,
   SITE_NAME,
+  SocialLink,
   TOPIC_CATEGORY,
   Topic,
   editionLabel,
@@ -39,9 +40,25 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       return fallback
     }
   }
+  const feed = await read<Feed>('feed.json', { updatedAt: null, items: [] })
+  // 인스타그램·페이스북 바로가기는 '인기' 카드로 뒤에 붙임
+  const social = (await read<SocialLink[]>('social.json', [])).map<FeedItem>((s) => ({
+    id: s.id,
+    kind: 'news',
+    lang: 'ko',
+    title: s.title,
+    summary: s.summary,
+    link: s.link,
+    source: s.platform,
+    category: '인기',
+    publishedAt: '2000-01-01T00:00:00.000Z',
+    collectedAt: '2000-01-01T00:00:00.000Z',
+    thumb: `/social/${s.id}.jpg`,
+    evergreen: true,
+  }))
   return {
     props: {
-      feed: await read<Feed>('feed.json', { updatedAt: null, items: [] }),
+      feed: { ...feed, items: [...feed.items, ...social] },
       topics: await read<Topic[]>('topics.json', []),
       dayIndex: Math.floor(Date.now() / (24 * 60 * 60 * 1000)),
     },
@@ -236,7 +253,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
   }
 
   const fullscreen = immersive && view === 'reels'
-  const unreadCount = feed.items.filter((item) => !read.ids.has(item.id)).length
+  const unreadCount = feed.items.filter((item) => !item.evergreen && !read.ids.has(item.id)).length
   const edition = feed.updatedAt ? editionLabel(feed.updatedAt) : '아직 수집 전'
 
   return (

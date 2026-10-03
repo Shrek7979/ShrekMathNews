@@ -111,7 +111,8 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
           {translated && <p className="mt-1.5 line-clamp-1 text-[13px] leading-snug text-white/55">{item.title}</p>}
           {summary && <p className="mt-3 line-clamp-2 break-keep text-[1rem] leading-relaxed text-white/85">{summary}</p>}
           <p className="mt-3 text-[13px] font-medium text-white/60">
-            {item.source} · {formatDate(item.publishedAt)}
+            {item.source}
+            {!item.evergreen && ` · ${formatDate(item.publishedAt)}`}
           </p>
         </div>
 
@@ -122,7 +123,7 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
             rel="noopener noreferrer"
             className="flex min-h-[48px] flex-1 items-center justify-center rounded-2xl bg-white text-[15px] font-bold text-neutral-900 transition hover:bg-white/90"
           >
-            {isVideo ? '영상 보기' : '원문 보기'} →
+            {isVideo ? '영상 보기' : item.evergreen ? `${item.source}에서 보기` : '원문 보기'} →
           </a>
           <ActionButton onClick={onSave} active={saved} label="저장">
             {saved ? '★' : '☆'}

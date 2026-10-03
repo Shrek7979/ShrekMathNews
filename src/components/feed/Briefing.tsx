@@ -79,7 +79,7 @@ export default function Briefing(props: BriefingProps) {
                           {item.source}
                           {item.views && ` · 조회 ${formatViews(item.views)}`}
                           {item.lang === 'en' && ' · 번역'}
-                          {now && ` · ${timeAgo(item.publishedAt, now)}`}
+                          {now && !item.evergreen && ` · ${timeAgo(item.publishedAt, now)}`}
                         </span>
                       </span>
                     </a>

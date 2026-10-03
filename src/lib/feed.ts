@@ -17,9 +17,21 @@ export type FeedItem = {
   titleKo?: string
   summaryKo?: string
   translator?: 'claude' | 'mymemory'
+  // 날짜가 의미 없는 고정 카드 (인스타·페이스북 바로가기 등)
+  evergreen?: boolean
 }
 
 export type Feed = { updatedAt: string | null; items: FeedItem[] }
+
+// data/social.json — 자동 수집이 불가능한 인스타그램·페이스북은 직접 고른 바로가기로 제공
+export type SocialLink = {
+  id: string
+  platform: 'Instagram' | 'Facebook'
+  label: string
+  title: string
+  summary: string
+  link: string
+}
 
 export type Topic = {
   id: string

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "ig-tag-math",
+    "platform": "Instagram",
+    "label": "#수학",
+    "title": "인스타그램 #수학 인기 게시물",
+    "summary": "지금 인스타그램에서 #수학 태그로 인기 있는 게시물 모아보기",
+    "link": "https://www.instagram.com/explore/tags/%EC%88%98%ED%95%99/"
+  },
+  {
+    "id": "fb-tag-math",
+    "platform": "Facebook",
+    "label": "#수학",
+    "title": "페이스북 #수학 인기 게시물",
+    "summary": "페이스북에서 #수학 해시태그가 달린 최신·인기 글 둘러보기",
+    "link": "https://www.facebook.com/hashtag/%EC%88%98%ED%95%99"
+  },
+  {
+    "id": "ig-ebsmath",
+    "platform": "Instagram",
+    "label": "@ebsmath",
+    "title": "EBSMath 인스타그램",
+    "summary": "EBS 수학의 개념 영상과 카드뉴스 — 수업 도입 자료로 쓰기 좋다",
+    "link": "https://www.instagram.com/ebsmath/"
+  },
+  {
+    "id": "fb-tag-mathedu",
+    "platform": "Facebook",
+    "label": "#수학교육",
+    "title": "페이스북 #수학교육 게시물",
+    "summary": "수학교육 관련 연수·행사·수업 사례가 올라오는 해시태그",
+    "link": "https://www.facebook.com/hashtag/%EC%88%98%ED%95%99%EA%B5%90%EC%9C%A1"
+  },
+  {
+    "id": "ig-tag-mathedu",
+    "platform": "Instagram",
+    "label": "#수학교육",
+    "title": "인스타그램 #수학교육 게시물",
+    "summary": "교사들이 올리는 수업 활동·교구·판서 사진을 한곳에서",
+    "link": "https://www.instagram.com/explore/tags/%EC%88%98%ED%95%99%EA%B5%90%EC%9C%A1/"
+  },
+  {
+    "id": "fb-numberphile",
+    "platform": "Facebook",
+    "label": "Numberphile",
+    "title": "Numberphile 페이스북",
+    "summary": "세계에서 가장 유명한 수 이야기 채널의 새 영상과 소식",
+    "link": "https://www.facebook.com/numberphile"
+  },
+  {
+    "id": "ig-3blue1brown",
+    "platform": "Instagram",
+    "label": "@3blue1brown",
+    "title": "3Blue1Brown 인스타그램",
+    "summary": "수학을 그림으로 설명하는 짧은 애니메이션과 퍼즐",
+    "link": "https://www.instagram.com/3blue1brown/"
+  },
+  {
+    "id": "fb-quanta",
+    "platform": "Facebook",
+    "label": "Quanta Magazine",
+    "title": "Quanta Magazine 페이스북",
+    "summary": "최신 수학 연구를 쉽게 풀어 주는 과학 매체의 기사 소식",
+    "link": "https://www.facebook.com/QuantaNews"
+  },
+  {
+    "id": "ig-fermatslibrary",
+    "platform": "Instagram",
+    "label": "@fermatslibrary",
+    "title": "Fermat's Library 인스타그램",
+    "summary": "매일 한 장씩 올라오는 수학·과학의 흥미로운 사실과 증명",
+    "link": "https://www.instagram.com/fermatslibrary/"
+  },
+  {
+    "id": "fb-geogebra",
+    "platform": "Facebook",
+    "label": "GeoGebra",
+    "title": "GeoGebra 페이스북",
+    "summary": "지오지브라 새 기능과 교사들이 만든 수업 자료 소개",
+    "link": "https://www.facebook.com/geogebra"
+  },
+  {
+    "id": "ig-geogebra",
+    "platform": "Instagram",
+    "label": "@geogebra",
+    "title": "GeoGebra 인스타그램",
+    "summary": "움직이는 기하·그래프 예시 — 수업에 바로 쓸 아이디어",
+    "link": "https://www.instagram.com/geogebra/"
+  },
+  {
+    "id": "ig-dongascience",
+    "platform": "Instagram",
+    "label": "@dongascience",
+    "title": "동아사이언스 인스타그램",
+    "summary": "수학동아·과학동아의 카드뉴스와 과학 소식",
+    "link": "https://www.instagram.com/dongascience/"
+  },
+  {
+    "id": "fb-fermatslibrary",
+    "platform": "Facebook",
+    "label": "Fermat's Library",
+    "title": "Fermat's Library 페이스북",
+    "summary": "주석이 달린 유명 논문과 수학 이야기를 매주 소개",
+    "link": "https://www.facebook.com/fermatslibrary"
+  }
+]
