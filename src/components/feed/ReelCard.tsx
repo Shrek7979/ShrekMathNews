@@ -176,21 +176,24 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
           {topic.slides.map((s, i) => (
             <div key={i} className="w-full shrink-0 snap-center px-5">
               <div
-                className={`no-scrollbar flex h-full flex-col justify-center overflow-y-auto rounded-2xl bg-black/25 ${
+                className={`no-scrollbar flex h-full flex-col overflow-y-auto rounded-2xl bg-black/25 ${
                   animated ? 'p-4' : 'p-5'
                 }`}
               >
-                {!animated && (
-                  <p className="mb-2 text-xs font-bold text-white/60">
-                    {i + 1} / {topic.slides.length}
+                {/* my-auto: 공간이 남으면 가운데, 모자라면 위에서부터 (가운데 정렬로 윗줄이 잘리는 것 방지) */}
+                <div className="my-auto">
+                  {!animated && (
+                    <p className="mb-2 text-xs font-bold text-white/60">
+                      {i + 1} / {topic.slides.length}
+                    </p>
+                  )}
+                  <h3 className={`break-keep font-bold leading-snug text-yellow-200 ${animated ? 'text-lg' : 'text-xl'}`}>
+                    {s.heading}
+                  </h3>
+                  <p className={`break-keep text-white/90 ${animated ? 'mt-2 text-[15px] leading-normal' : 'mt-3 text-[1rem] leading-relaxed'}`}>
+                    {s.body}
                   </p>
-                )}
-                <h3 className={`break-keep font-bold leading-snug text-yellow-200 ${animated ? 'text-lg' : 'text-xl'}`}>
-                  {s.heading}
-                </h3>
-                <p className={`break-keep text-white/90 ${animated ? 'mt-2 text-[15px] leading-normal' : 'mt-3 text-[1rem] leading-relaxed'}`}>
-                  {s.body}
-                </p>
+                </div>
               </div>
             </div>
           ))}
