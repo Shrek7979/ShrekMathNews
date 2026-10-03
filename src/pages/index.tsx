@@ -27,6 +27,8 @@ const SAVED = '★ 저장'
 const TOPIC_EVERY = 5
 const AUTO_SECONDS = 8
 const LOCAL_COLLECT_URL = 'http://localhost:3001/collect'
+// 공유 미리보기 이미지는 절대 주소여야 함. 배포 워크플로가 NEXT_PUBLIC_SITE_URL 을 넣어 줌
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '')
 
 // 빌드(배포) 시점의 data/feed.json 을 읽음. 로컬 개발 서버에서는 요청마다 다시 읽음
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -195,9 +197,21 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
+        {/* 카톡·슬랙·페북 등에 링크를 올렸을 때 보이는 미리보기 */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={`${SITE_NAME} — 수학 교사를 위한 수학 뉴스 릴스`} />
+        <meta property="og:description" content="매일 07:00 · 14:00, 수학 뉴스와 유튜브 인기 영상, 수업에 쓸 수학 주제를 카드로." />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={`${SITE_URL}/`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={SITE_NAME} />
+        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
         <link rel="manifest" href={`${router.basePath}/manifest.json`} />
-        <link rel="icon" href={`${router.basePath}/icon.svg`} type="image/svg+xml" />
-        <link rel="apple-touch-icon" href={`${router.basePath}/icon.svg`} />
+        <link rel="icon" href={`${router.basePath}/icon-180.png`} type="image/png" />
+        <link rel="apple-touch-icon" href={`${router.basePath}/icon-180.png`} />
       </Head>
 
       <div className="fixed inset-0 flex flex-col bg-neutral-950 text-white [padding-top:env(safe-area-inset-top)]">

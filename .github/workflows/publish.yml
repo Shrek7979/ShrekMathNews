@@ -56,6 +56,8 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}
           TZ: Asia/Seoul
         run: |
+          # GitHub Pages 주소는 소문자 (Shrek7979 → shrek7979.github.io)
+          export NEXT_PUBLIC_SITE_URL="https://$(echo '${{ github.repository_owner }}' | tr 'A-Z' 'a-z').github.io/${{ github.event.repository.name }}"
           npm run build
           touch out/.nojekyll
 
