@@ -112,7 +112,10 @@ def og_image():
     small_font = font(FONT_REG, 30)
     draw.text((x, y + 310), '매일 07:00 · 14:00 업데이트  ·  뉴스 · 유튜브 인기 · 주제', font=small_font, fill=(170, 200, 160))
 
-    img.convert('RGB').save(os.path.join(ROOT, 'og.png'), optimize=True)
+    rgb = img.convert('RGB')
+    rgb.save(os.path.join(ROOT, 'og.png'), optimize=True)
+    # 카카오톡 등 일부 미리보기 봇은 JPG 를 더 안정적으로 가져옴
+    rgb.save(os.path.join(ROOT, 'og.jpg'), quality=90, optimize=True)
 
 
 def icon(size):

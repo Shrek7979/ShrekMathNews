@@ -213,13 +213,16 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:title" content={`${SITE_NAME} — 수학 교사를 위한 수학 뉴스 릴스`} />
         <meta property="og:description" content="매일 07:00 · 14:00, 수학 뉴스와 유튜브 인기 영상, 수업에 쓸 수학 주제를 카드로." />
-        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta property="og:image" content={`${SITE_URL}/og.jpg`} />
+        <meta property="og:image:secure_url" content={`${SITE_URL}/og.jpg`} />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Shrek Math News — 수학 교사를 위한 수학 뉴스 릴스" />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={SITE_NAME} />
-        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:image" content={`${SITE_URL}/og.jpg`} />
         <link rel="manifest" href={`${router.basePath}/manifest.json`} />
         <link rel="icon" href={`${router.basePath}/icon-180.png`} type="image/png" />
         <link rel="apple-touch-icon" href={`${router.basePath}/icon-180.png`} />
