@@ -189,7 +189,8 @@ export async function collect() {
       kept.push(grams)
       return true
     })
-    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+    // 방금 새로 들어온 카드가 맨 앞, 같은 회차 안에서는 최신 발행순
+    .sort((a, b) => b.collectedAt.localeCompare(a.collectedAt) || new Date(b.publishedAt) - new Date(a.publishedAt))
     .slice(0, MAX_ITEMS)
 
   const added = items.filter((item) => item.collectedAt === now.toISOString()).length

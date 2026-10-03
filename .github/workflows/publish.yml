@@ -1,12 +1,12 @@
-# 매일 07:00 · 14:00 (한국 시간) 수학 뉴스를 수집하고 GitHub Pages 에 배포합니다.
+# 2시간마다 수학 뉴스를 수집하고 GitHub Pages 에 배포합니다.
 # 저장소 Settings → Pages → Source 를 "GitHub Actions" 로 한 번만 바꿔 주면 됩니다.
 # (선택) Settings → Secrets 에 ANTHROPIC_API_KEY 를 넣으면 해외 기사를 Claude 가 번역·요약합니다.
 name: Collect & Publish
 
 on:
   schedule:
-    - cron: '0 22 * * *' # 07:00 KST
-    - cron: '0 5 * * *'  # 14:00 KST
+    # 2시간마다. 정각은 GitHub 예약이 몰려 몇 시간씩 밀리므로 17분에 실행
+    - cron: '17 */2 * * *'
   workflow_dispatch:
   push:
     branches: [main]

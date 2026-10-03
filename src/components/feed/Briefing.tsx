@@ -18,10 +18,8 @@ type BriefingProps = {
 export default function Briefing(props: BriefingProps) {
   const { items, topic, latestBatch, now, savedIds, readIds, onSave, onRead, onOpenTopic } = props
   const { basePath } = useRouter()
-  // 최신 글이 맨 위. 날짜가 없는 바로가기 카드(인스타·페이스북)는 맨 아래
-  const sorted = [...items].sort(
-    (a, b) => Number(a.evergreen || false) - Number(b.evergreen || false) || b.publishedAt.localeCompare(a.publishedAt)
-  )
+  // 릴스와 같은 순서(새로 들어온 카드가 맨 위). 날짜가 없는 바로가기 카드(인스타·페이스북)는 맨 아래
+  const sorted = [...items].sort((a, b) => Number(a.evergreen || false) - Number(b.evergreen || false))
 
   return (
     <div className="h-full overflow-y-auto overscroll-contain">

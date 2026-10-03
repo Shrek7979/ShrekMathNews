@@ -262,7 +262,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     <>
       <Head>
         <title>{SITE_NAME}</title>
-        <meta name="description" content="수학 교사를 위한 하루 2번 수학 뉴스·영상·수업 주제" />
+        <meta name="description" content="수학 교사를 위한 수학 뉴스·영상·수업 주제, 2시간마다 업데이트" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#0a0a0a" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -272,7 +272,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:title" content={SITE_NAME} />
-        <meta property="og:description" content="수학 교사를 위한 하루 2번 수학 뉴스·영상·수업 주제" />
+        <meta property="og:description" content="수학 교사를 위한 수학 뉴스·영상·수업 주제, 2시간마다 업데이트" />
         <meta property="og:image" content={`${SITE_URL}/og.jpg`} />
         <meta property="og:image:secure_url" content={`${SITE_URL}/og.jpg`} />
         <meta property="og:image:type" content="image/jpeg" />
@@ -282,7 +282,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={SITE_NAME} />
-        <meta name="twitter:description" content="수학 교사를 위한 하루 2번 수학 뉴스·영상·수업 주제" />
+        <meta name="twitter:description" content="수학 교사를 위한 수학 뉴스·영상·수업 주제, 2시간마다 업데이트" />
         <meta name="twitter:image" content={`${SITE_URL}/og.jpg`} />
         <link rel="manifest" href={`${router.basePath}/manifest.json`} />
         <link rel="icon" href={`${router.basePath}/icon-180.png`} type="image/png" />

@@ -60,14 +60,14 @@ export const CATEGORY_ACCENT: Record<string, string> = {
 const KST = 'Asia/Seoul'
 const dateFormat = new Intl.DateTimeFormat('ko-KR', { timeZone: KST, month: 'numeric', day: 'numeric', weekday: 'short' })
 const shortDateFormat = new Intl.DateTimeFormat('ko-KR', { timeZone: KST, month: 'numeric', day: 'numeric' })
-const hourFormat = new Intl.DateTimeFormat('en-US', { timeZone: KST, hour: 'numeric', hourCycle: 'h23' })
 
 export const formatDate = (iso: string) => dateFormat.format(new Date(iso))
 
-// "10. 2. 오후판" — 하루 2번 수집되는 판 이름
+const timeFormat = new Intl.DateTimeFormat('ko-KR', { timeZone: KST, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+
+// "10. 4. 05:20 업데이트" — 마지막으로 수집한 시각
 export function editionLabel(iso: string) {
-  const edition = Number(hourFormat.format(new Date(iso))) < 12 ? '오전판' : '오후판'
-  return `${shortDateFormat.format(new Date(iso))} ${edition}`
+  return `${shortDateFormat.format(new Date(iso))} ${timeFormat.format(new Date(iso))} 업데이트`
 }
 
 // 조회수를 '12.3만' 처럼 짧게
