@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T20:54:43.077Z",
+  "updatedAt": "2026-10-03T21:15:44.791Z",
   "items": [
     {
       "id": "56e538c482e1",
@@ -59,7 +59,7 @@
       "publishedAt": "2026-09-08T05:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
       "titleKo": "Navier-Stokes 문제에 대한 AMS 리더십의 진술",
-      "summaryKo": "발표된 Navier–Stokes 돌파구에 대한 응답으로.",
+      "summaryKo": "발표된 Navier–Stokes 돌파구에 대한 응답으로",
       "translator": "mymemory",
       "thumb": "/thumbs/ddcadfd42261.png"
     },
@@ -76,7 +76,7 @@
       "publishedAt": "2026-09-01T09:00:58.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
       "titleKo": "골든 포멀 파워 시리즈",
-      "summaryKo": "다행히도, 그러한 공식이 존재하며, 많은.",
+      "summaryKo": "다행히도, 그러한 공식이 존재하며, 많은",
       "translator": "mymemory",
       "thumb": "/thumbs/d5843ccc329a.png"
     },
