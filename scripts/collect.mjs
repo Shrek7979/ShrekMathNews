@@ -193,10 +193,6 @@ export async function collect() {
     .slice(0, MAX_ITEMS)
 
   const added = items.filter((item) => item.collectedAt === now.toISOString()).length
-  for (const item of items) {
-    item.summary = oneLine(item.summary)
-    if (item.summaryKo) item.summaryKo = oneLine(item.summaryKo)
-  }
 
   console.log('\n번역 중…')
   try {
@@ -204,6 +200,12 @@ export async function collect() {
     if (provider) console.log(`✓ 해외 기사 ${translated}건 번역 (${provider})`)
   } catch (error) {
     console.warn(`✗ 번역 실패: ${error.message}`)
+  }
+
+  // 번역문은 원문보다 길어질 수 있어 번역 뒤에 한 줄로 다시 맞춤
+  for (const item of items) {
+    item.summary = oneLine(item.summary)
+    if (item.summaryKo) item.summaryKo = oneLine(item.summaryKo)
   }
 
   console.log('섬네일 확보 중…')
