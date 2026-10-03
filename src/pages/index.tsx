@@ -58,10 +58,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     thumb: existsSync(path.join(process.cwd(), 'public/social', `${s.id}.cap.jpg`)) ? `/social/${s.id}.cap.jpg` : `/social/${s.id}.jpg`,
     evergreen: true,
   }))
-  // 인스타그램 게시물(data/instagram.json)은 올라온 날짜 자리에 끼워 넣음
+  // 인스타그램 게시물(data/instagram.json)도 뉴스와 같은 규칙으로 섞음: 새로 가져온 것이 앞
   const instagram = (await read<{ items: FeedItem[] }>('instagram.json', { items: [] })).items.map((item) => ({
     ...item,
-    collectedAt: item.publishedAt,
+    collectedAt: item.collectedAt || item.publishedAt,
   }))
   const dated = [...feed.items, ...instagram].sort(
     (a, b) => b.collectedAt.localeCompare(a.collectedAt) || b.publishedAt.localeCompare(a.publishedAt)

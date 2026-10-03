@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T20:30:37.645Z",
+  "updatedAt": "2026-10-03T20:37:33.742Z",
   "items": [
     {
       "id": "ig-DeB1dafF2l1",
@@ -11,8 +11,9 @@
       "source": "Instagram @fermatslibrary",
       "category": "인기",
       "publishedAt": "2026-10-02T15:00:00.000Z",
-      "likes": "761",
+      "likes": "762",
       "thumb": "/social/ig/DeB1dafF2l1.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z",
       "titleKo": "\"폰 노이만은 3살짜리 아들과 대화를 계속할 것이고…….",
       "summaryKo": "두 사람은 동등하게 이야기할 것이고, 나는 때때로…",
       "translator": "mymemory"
@@ -29,6 +30,7 @@
       "publishedAt": "2026-10-01T15:00:00.000Z",
       "likes": "238",
       "thumb": "/social/ig/Dd_Phh3ipSp.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z",
       "titleKo": "1 ³ +2 ³ +3 ³ + ³ + n ³ = (1 +2 +3 + ³ + n) ² 이라는 시각적 증거",
       "summaryKo": "",
       "translator": "mymemory"
@@ -44,7 +46,8 @@
       "category": "인기",
       "publishedAt": "2026-09-29T15:00:00.000Z",
       "likes": "12",
-      "thumb": "/social/ig/Dd7kp6qk54S.jpg"
+      "thumb": "/social/ig/Dd7kp6qk54S.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z"
     },
     {
       "id": "ig-Dd6YoDEl2QF",
@@ -56,8 +59,9 @@
       "source": "Instagram @fermatslibrary",
       "category": "인기",
       "publishedAt": "2026-09-29T15:00:00.000Z",
-      "likes": "857",
+      "likes": "858",
       "thumb": "/social/ig/Dd6YoDEl2QF.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z",
       "titleKo": "바르샤바, 1962.",
       "summaryKo": "정원을 느긋하게 걷는다고 상상해 보세요...",
       "translator": "mymemory"
@@ -74,6 +78,7 @@
       "publishedAt": "2026-09-24T15:00:00.000Z",
       "likes": "105K",
       "thumb": "/social/ig/Ddtk_sOR3zU.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z",
       "titleKo": "전화번호 퍼즐",
       "summaryKo": "",
       "translator": "mymemory"
@@ -89,7 +94,8 @@
       "category": "인기",
       "publishedAt": "2026-09-22T15:00:00.000Z",
       "likes": "7",
-      "thumb": "/social/ig/DdaGSyeE5Gb.jpg"
+      "thumb": "/social/ig/DdaGSyeE5Gb.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z"
     },
     {
       "id": "ig-DdcBG_2xepl",
@@ -103,6 +109,7 @@
       "publishedAt": "2026-09-17T15:00:00.000Z",
       "likes": "150K",
       "thumb": "/social/ig/DdcBG_2xepl.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z",
       "titleKo": "AI가 해결할 수 없는 마지막 IMO 문제",
       "summaryKo": "",
       "translator": "mymemory"
@@ -118,7 +125,8 @@
       "category": "인기",
       "publishedAt": "2026-09-15T15:00:00.000Z",
       "likes": "10",
-      "thumb": "/social/ig/DdFshSqk8wF.jpg"
+      "thumb": "/social/ig/DdFshSqk8wF.jpg",
+      "collectedAt": "2026-10-03T20:37:26.037Z"
     }
   ]
 }

@@ -111,15 +111,21 @@ if (items.length === 0) {
   process.exit(1)
 }
 
-// 이번에 못 읽은 계정이 있어도 카드가 사라지지 않게, 아직 기간이 남은 이전 게시물은 유지
+// 이번에 못 읽은 계정이 있어도 카드가 사라지지 않게, 아직 기간이 남은 이전 게시물은 유지.
+// collectedAt(처음 가져온 시각)은 한 번 정해지면 그대로 둠 → 새로 올라온 게시물만 피드 맨 앞에 나옴
+const now = new Date().toISOString()
 try {
   const previous = JSON.parse(await readFile(OUT_JSON, 'utf8')).items || []
+  const firstSeen = new Map(previous.map((old) => [old.id, old.collectedAt || old.publishedAt]))
+  for (const item of items) item.collectedAt = firstSeen.get(item.id) || now
   const ids = new Set(items.map((item) => item.id))
   for (const old of previous) {
     const fresh = Date.now() - new Date(old.publishedAt) <= MAX_AGE_DAYS * DAY
     if (!ids.has(old.id) && fresh && !SKIP.test(`${old.title} ${old.summary}`)) items.push(old)
   }
-} catch {}
+} catch {
+  for (const item of items) item.collectedAt = now
+}
 
 try {
   const { translated } = await translateItems(items)
