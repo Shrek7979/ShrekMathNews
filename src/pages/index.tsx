@@ -136,6 +136,23 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     if (Math.abs(el.scrollTop - el.clientHeight * index) < 2) target.current = index
   }
 
+  // 마우스 휠/트랙패드: 한 번 굴리면 정확히 카드 한 장만 이동 (브라우저 기본 동작은 조금씩 밀려 여러 번 굴려야 함)
+  useEffect(() => {
+    const el = scrollerRef.current
+    if (!el || view !== 'reels') return
+    let lockedUntil = 0
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaY) < 4) return
+      e.preventDefault()
+      const now = Date.now()
+      if (now < lockedUntil) return
+      lockedUntil = now + 800
+      goTo(target.current + (e.deltaY > 0 ? 1 : -1))
+    }
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => el.removeEventListener('wheel', onWheel)
+  }, [view, goTo])
+
   const showToast = (message: string) => {
     setToast(message)
     setTimeout(() => setToast(''), 2500)

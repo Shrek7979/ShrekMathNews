@@ -64,7 +64,7 @@ function Thumbnail({ item }: { item: FeedItem }) {
   const { basePath } = useRouter()
   if (!item.thumb) return null
   return (
-    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[40%] shrink-0">
+    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[38%] max-h-[340px] min-h-[140px] shrink-0">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={`${basePath}${item.thumb}`} alt="" className="h-full w-full object-cover" loading="lazy" />
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
@@ -103,11 +103,11 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
           {isNew && <Chip solid>NEW</Chip>}
         </div>
 
-        <div className="no-scrollbar mt-3 min-h-0 flex-1 overflow-y-auto">
-          <h2 className="break-keep text-[1.45rem] font-extrabold leading-[1.3] tracking-tight [text-wrap:balance]">
+        <div className="mt-3 min-h-0 flex-1 overflow-hidden">
+          <h2 className="line-clamp-3 break-keep text-[1.45rem] font-extrabold leading-[1.3] tracking-tight [text-wrap:balance]">
             {title}
           </h2>
-          {translated && <p className="mt-1.5 line-clamp-2 text-[13px] leading-snug text-white/55">{item.title}</p>}
+          {translated && <p className="mt-1.5 line-clamp-1 text-[13px] leading-snug text-white/55">{item.title}</p>}
           {summary && <p className="mt-3 line-clamp-2 break-keep text-[1rem] leading-relaxed text-white/85">{summary}</p>}
           <p className="mt-3 text-[13px] font-medium text-white/60">
             {item.source} · {formatDate(item.publishedAt)}
