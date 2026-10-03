@@ -88,14 +88,6 @@
     "link": "https://www.instagram.com/geogebra/"
   },
   {
-    "id": "ig-dongascience",
-    "platform": "Instagram",
-    "label": "@dongascience",
-    "title": "동아사이언스 인스타그램",
-    "summary": "수학동아·과학동아의 카드뉴스와 과학 소식",
-    "link": "https://www.instagram.com/dongascience/"
-  },
-  {
     "id": "fb-fermatslibrary",
     "platform": "Facebook",
     "label": "Fermat's Library",

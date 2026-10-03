@@ -3,6 +3,7 @@ import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { existsSync } from 'fs'
 import { readFile } from 'fs/promises'
 import path from 'path'
 import Briefing from '@/components/feed/Briefing'
@@ -53,7 +54,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     category: '인기',
     publishedAt: '2000-01-01T00:00:00.000Z',
     collectedAt: '2000-01-01T00:00:00.000Z',
-    thumb: `/social/${s.id}.jpg`,
+    // 실제 화면 캡처(<id>.cap.jpg)가 있으면 그것을, 없으면 글자 섬네일(<id>.jpg)을 사용
+    thumb: existsSync(path.join(process.cwd(), 'public/social', `${s.id}.cap.jpg`)) ? `/social/${s.id}.cap.jpg` : `/social/${s.id}.jpg`,
     evergreen: true,
   }))
   return {

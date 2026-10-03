@@ -1,12 +1,10 @@
 // 카드 섬네일 확보: 고해상도 후보(유튜브 maxres, 기사 og:image 원본)부터 받아 보고,
 // 폭 900px 이상이면 바로 채택, 아니면 가장 큰 것을 쓰되 너무 작으면 헤드리스 브라우저로 2배 캡처.
 // public/thumbs/<id>.<ext> 로 저장하고 item.thumb 에 경로를 기록합니다.
-import { execFile } from 'node:child_process'
-import { existsSync } from 'node:fs'
 import { mkdir, readdir, stat, unlink, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
-import { promisify } from 'node:util'
 import * as cheerio from 'cheerio'
+import { capturePage } from './capture.mjs'
 
 const THUMB_DIR = resolve(process.cwd(), 'public/thumbs')
 const MIN_BYTES = 3000
@@ -14,16 +12,6 @@ const GOOD_WIDTH = 900 // 이 폭 이상이면 더 찾지 않음 (폰 3배 화�
 const WEAK_WIDTH = 500 // 이 폭 미만이면 화면 캡처가 더 낫다고 봄
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
-const BROWSERS = [
-  'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
-  'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
-  'C:/Program Files/Google/Chrome/Application/chrome.exe',
-  'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
-  '/usr/bin/google-chrome',
-  '/usr/bin/chromium-browser',
-  '/usr/bin/chromium',
-]
-const run = promisify(execFile)
 
 const extFor = (type) => ({ 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/gif': 'gif' })[type]
 
@@ -95,34 +83,28 @@ function upscaleVariants(url) {
   return variants
 }
 
-async function screenshot(pageUrl, id) {
-  const browser = BROWSERS.find((path) => existsSync(path))
-  if (!browser) throw new Error('헤드리스 브라우저 없음')
+// 기사 화면 캡처 (로그인·쿠키 팝업은 scripts/capture.mjs 가 걷어냄)
+async function screenshot(pageUrl, id, options) {
   const out = resolve(THUMB_DIR, `${id}.png`)
-  // 브라우저가 동기화 오류 등으로 0이 아닌 코드로 끝나도 파일만 생겼으면 성공으로 봄
-  await run(
-    browser,
-    [
-      '--headless=new',
-      '--disable-gpu',
-      '--hide-scrollbars',
-      '--no-first-run',
-      '--disable-sync',
-      `--user-data-dir=${resolve(process.cwd(), '.cache/headless-profile')}`,
-      '--window-size=1200,675',
-      '--force-device-scale-factor=1.5',
-      '--virtual-time-budget=8000',
-      '--timeout=15000', // 광고·영상이 계속 로딩돼도 15초 뒤엔 찍음
-      `--screenshot=${out}`,
-      pageUrl,
-    ],
-    { timeout: 90000, windowsHide: true }
-  ).catch(() => {})
-  if (!existsSync(out) || (await stat(out)).size < MIN_BYTES) throw new Error('캡처 실패')
+  await capturePage(pageUrl, out, options)
+  if ((await stat(out)).size < MIN_BYTES) throw new Error('캡처 실패')
   return `/thumbs/${id}.png`
 }
 
+const isReddit = (item) => /^Reddit/.test(item.source || '')
+const REDDIT_FALLBACK = '/social/reddit.jpg'
+
 async function ensureThumb(item) {
+  // 레딧 글: og:image 가 모든 글에 똑같은 로고라 쓸모없음 → 글 화면을 캡처.
+  // 서버 IP 가 차단돼 글 본문이 안 보이면(shreddit-post 없음) 공용 섬네일로 대체
+  if (isReddit(item) && !item.image) {
+    try {
+      return await screenshot(item.link, item.id, { require: 'shreddit-post' })
+    } catch {
+      return REDDIT_FALLBACK
+    }
+  }
+
   // 고해상도일 가능성이 높은 순서로 후보를 모음
   const urls = []
   if (item.image) urls.push(...upscaleVariants(item.image))
@@ -154,9 +136,6 @@ async function ensureThumb(item) {
   return `/thumbs/${item.id}.${best.ext}`
 }
 
-// 이미지가 없는 레딧 글은 페이지를 캡처해도 로그인/차단 화면만 찍히므로 공용 섬네일을 씀
-const staticThumbFor = (item) => (/^Reddit/.test(item.source || '') && !item.image ? '/social/reddit.jpg' : null)
-
 // 피드 항목마다 섬네일을 채우고, 피드에서 사라진 항목의 파일은 정리
 export async function ensureThumbs(items) {
   await mkdir(THUMB_DIR, { recursive: true })
@@ -164,18 +143,13 @@ export async function ensureThumbs(items) {
   let added = 0
 
   for (const item of items) {
-    const fixed = staticThumbFor(item)
-    if (fixed) {
-      item.thumb = fixed
-      continue
-    }
     const found = Array.from(existing).find((file) => file.startsWith(`${item.id}.`))
     if (found) {
       item.thumb = `/thumbs/${found}`
       continue
     }
     item.thumb = await ensureThumb(item)
-    if (item.thumb) {
+    if (item.thumb?.startsWith('/thumbs/')) {
       existing.add(item.thumb.replace('/thumbs/', ''))
       added++
     }

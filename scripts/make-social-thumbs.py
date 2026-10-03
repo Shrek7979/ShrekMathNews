@@ -72,4 +72,9 @@ cards = json.load(open(os.path.join(ROOT, 'data', 'social.json'), encoding='utf8
 cards.append({'id': 'reddit', 'platform': 'Reddit', 'label': 'r/math'})
 for card in cards:
     make(card)
+# capture-social.mjs 가 찍어 둔 화면 캡처(PNG)가 있으면 가벼운 JPG(<id>.cap.jpg)로 바꿔 둠
+import glob
+for png in glob.glob(os.path.join(OUT, '*.png')):
+    Image.open(png).convert('RGB').resize((W, H), Image.LANCZOS).save(png[:-4] + '.cap.jpg', quality=85, optimize=True)
+    os.remove(png)
 print(len(cards), 'thumbnails ->', 'public/social/')
