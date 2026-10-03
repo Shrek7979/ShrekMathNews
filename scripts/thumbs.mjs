@@ -154,6 +154,9 @@ async function ensureThumb(item) {
   return `/thumbs/${item.id}.${best.ext}`
 }
 
+// 이미지가 없는 레딧 글은 페이지를 캡처해도 로그인/차단 화면만 찍히므로 공용 섬네일을 씀
+const staticThumbFor = (item) => (/^Reddit/.test(item.source || '') && !item.image ? '/social/reddit.jpg' : null)
+
 // 피드 항목마다 섬네일을 채우고, 피드에서 사라진 항목의 파일은 정리
 export async function ensureThumbs(items) {
   await mkdir(THUMB_DIR, { recursive: true })
@@ -161,6 +164,11 @@ export async function ensureThumbs(items) {
   let added = 0
 
   for (const item of items) {
+    const fixed = staticThumbFor(item)
+    if (fixed) {
+      item.thumb = fixed
+      continue
+    }
     const found = Array.from(existing).find((file) => file.startsWith(`${item.id}.`))
     if (found) {
       item.thumb = `/thumbs/${found}`

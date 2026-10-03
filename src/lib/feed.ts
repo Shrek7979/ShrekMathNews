@@ -44,22 +44,18 @@ export const SITE_NAME = 'Shrek Math News'
 export const TOPIC_CATEGORY = '수학'
 export const CATEGORY_ORDER = ['인기', '교육', '입시', 'AI·에듀테크', '연구', '대회·행사', '해외', '영상']
 
-// 카테고리별 카드 배경 (Tailwind 가 인식하도록 전체 클래스명을 그대로 적음)
-export const CATEGORY_STYLE: Record<string, string> = {
-  교육: 'from-sky-600 to-indigo-950',
-  입시: 'from-rose-600 to-purple-950',
-  'AI·에듀테크': 'from-emerald-600 to-teal-950',
-  연구: 'from-violet-600 to-slate-950',
-  '대회·행사': 'from-amber-600 to-orange-950',
-  해외: 'from-cyan-600 to-blue-950',
-  영상: 'from-neutral-700 to-neutral-950',
-  인기: 'from-orange-500 to-rose-950',
-  [TOPIC_CATEGORY]: 'from-fuchsia-600 to-indigo-950',
+// 카테고리는 글자 색 하나로만 구분 (Tailwind 가 인식하도록 전체 클래스명을 그대로 적음)
+export const CATEGORY_ACCENT: Record<string, string> = {
+  교육: 'text-sky-400',
+  입시: 'text-rose-400',
+  'AI·에듀테크': 'text-emerald-400',
+  연구: 'text-violet-400',
+  '대회·행사': 'text-amber-400',
+  해외: 'text-cyan-400',
+  영상: 'text-neutral-300',
+  인기: 'text-orange-400',
+  [TOPIC_CATEGORY]: 'text-fuchsia-400',
 }
-
-const SYMBOLS = ['∑', 'π', '∫', '∞', '√', 'Δ', 'θ', '∂', 'φ', '≡']
-export const symbolFor = (id: string) =>
-  SYMBOLS[id.split('').reduce((sum, ch) => sum + ch.charCodeAt(0), 0) % SYMBOLS.length]
 
 const KST = 'Asia/Seoul'
 const dateFormat = new Intl.DateTimeFormat('ko-KR', { timeZone: KST, month: 'numeric', day: 'numeric', weekday: 'short' })

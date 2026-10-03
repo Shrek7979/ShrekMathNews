@@ -1,37 +1,29 @@
 import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-import { CATEGORY_STYLE, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatViews, symbolFor } from '@/lib/feed'
+import { CATEGORY_ACCENT, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatViews } from '@/lib/feed'
 import TopicVisual, { hasTopicVisual } from './TopicVisual'
 
-function CardShell({ category, symbol, children }: { category: string; symbol: string; children: React.ReactNode }) {
+// 카드 바탕은 모두 같은 어두운 단색. 카테고리는 글자 색 하나로만 구분해 읽는 데 집중하게 함
+function CardShell({ children }: { children: React.ReactNode }) {
   return (
     <section className="h-full snap-start snap-always sm:py-2">
-      <div
-        className={`relative h-full overflow-hidden bg-gradient-to-b sm:rounded-3xl ${
-          CATEGORY_STYLE[category] || CATEGORY_STYLE['교육']
-        }`}
-      >
-        <span
-          aria-hidden
-          className="pointer-events-none absolute -right-6 -top-10 select-none font-serif text-[15rem] leading-none text-white/10"
-        >
-          {symbol}
-        </span>
-        <div className="relative flex h-full flex-col">{children}</div>
-      </div>
+      <div className="flex h-full flex-col overflow-hidden bg-neutral-900 sm:rounded-3xl">{children}</div>
     </section>
   )
 }
 
-function Chip({ children, solid }: { children: React.ReactNode; solid?: boolean }) {
+// "교육 · 충남일보 · 10. 2. (금)" 한 줄
+function MetaLine({ category, details, isNew }: { category: string; details: string[]; isNew?: boolean }) {
   return (
-    <span
-      className={`rounded-full px-2.5 py-1 text-xs font-bold backdrop-blur ${
-        solid ? 'bg-yellow-300 text-neutral-900' : 'bg-black/35 text-white'
-      }`}
-    >
-      {children}
-    </span>
+    <p className="flex flex-wrap items-center gap-x-1.5 text-[13px] font-semibold">
+      <span className={CATEGORY_ACCENT[category] || 'text-white'}>{category}</span>
+      {details.map((detail) => (
+        <span key={detail} className="text-white/45">
+          · {detail}
+        </span>
+      ))}
+      {isNew && <span className="ml-1 rounded bg-yellow-300 px-1.5 text-[11px] font-bold text-neutral-900">NEW</span>}
+    </p>
   )
 }
 
@@ -51,8 +43,8 @@ function ActionButton({
       onClick={onClick}
       aria-pressed={active}
       aria-label={label}
-      className={`min-h-[48px] rounded-2xl px-4 text-[15px] font-bold transition ${
-        active ? 'bg-yellow-300 text-neutral-900' : 'bg-white/15 hover:bg-white/25'
+      className={`min-h-[48px] rounded-xl px-4 text-[15px] font-semibold transition ${
+        active ? 'bg-yellow-300 text-neutral-900' : 'bg-white/10 hover:bg-white/20'
       }`}
     >
       {children}
@@ -60,7 +52,7 @@ function ActionButton({
   )
 }
 
-// 섬네일: 카드 위쪽 42% 를 차지. 없으면 카테고리 그라디언트가 그대로 보임
+// 섬네일: 카드 위쪽 42% 를 차지
 function Thumbnail({ item }: { item: FeedItem }) {
   const { basePath } = useRouter()
   if (!item.thumb) return null
@@ -68,7 +60,6 @@ function Thumbnail({ item }: { item: FeedItem }) {
     <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={`${basePath}${item.thumb}`} alt="" className="h-full w-full object-cover" loading="lazy" />
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
       {item.kind === 'video' && (
         <span className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 pl-1 text-3xl">
           ▶
@@ -91,29 +82,26 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
   const translated = item.lang === 'en' && item.titleKo
   const title = translated ? item.titleKo! : item.title
   const summary = translated ? item.summaryKo || item.summary : item.summary
+  const details = [
+    item.source,
+    !item.evergreen && formatDate(item.publishedAt),
+    item.views && `조회 ${formatViews(item.views)}`,
+    item.lang === 'en' && (translated ? (item.translator === 'mymemory' ? '자동 번역' : '번역') : '영문'),
+  ].filter(Boolean) as string[]
 
   return (
-    <CardShell category={item.category} symbol={symbolFor(item.id)}>
+    <CardShell>
       <Thumbnail item={item} />
 
-      <div className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-3">
-        <div className="flex flex-wrap items-center gap-1.5">
-          <Chip>{item.category === '인기' ? '🔥 인기' : item.category}</Chip>
-          {item.views && <Chip>조회 {formatViews(item.views)}</Chip>}
-          {item.lang === 'en' && <Chip>{translated ? (item.translator === 'mymemory' ? '자동 번역' : '번역') : 'EN'}</Chip>}
-          {isNew && <Chip solid>NEW</Chip>}
-        </div>
+      <div className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-4">
+        <MetaLine category={item.category} details={details} isNew={isNew} />
 
-        <div className="mt-3 min-h-0 flex-1 overflow-hidden">
-          <h2 className="line-clamp-3 break-keep text-[1.45rem] font-extrabold leading-[1.3] tracking-tight [text-wrap:balance]">
+        <div className="mt-2 min-h-0 flex-1 overflow-hidden">
+          <h2 className="line-clamp-3 break-keep text-[1.5rem] font-bold leading-[1.35] tracking-tight [text-wrap:balance]">
             {title}
           </h2>
-          {translated && <p className="mt-1.5 line-clamp-1 text-[13px] leading-snug text-white/55">{item.title}</p>}
-          {summary && <p className="mt-3 line-clamp-2 break-keep text-[1rem] leading-relaxed text-white/85">{summary}</p>}
-          <p className="mt-3 text-[13px] font-medium text-white/60">
-            {item.source}
-            {!item.evergreen && ` · ${formatDate(item.publishedAt)}`}
-          </p>
+          {translated && <p className="mt-1.5 line-clamp-1 text-[13px] text-white/40">{item.title}</p>}
+          {summary && <p className="mt-3 line-clamp-2 break-keep text-[15px] leading-relaxed text-white/65">{summary}</p>}
         </div>
 
         <div className="mt-3 flex items-center gap-2">
@@ -121,9 +109,9 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-h-[48px] flex-1 items-center justify-center rounded-2xl bg-white text-[15px] font-bold text-neutral-900 transition hover:bg-white/90"
+            className="flex min-h-[48px] flex-1 items-center justify-center rounded-xl bg-white text-[15px] font-bold text-neutral-900 transition hover:bg-white/90"
           >
-            {isVideo ? '영상 보기' : item.evergreen ? `${item.source}에서 보기` : '원문 보기'} →
+            {isVideo ? '영상 보기' : item.evergreen ? `${item.source}에서 보기` : '원문 보기'}
           </a>
           <ActionButton onClick={onSave} active={saved} label="저장">
             {saved ? '★' : '☆'}
@@ -150,24 +138,15 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
   }
 
   return (
-    <CardShell category={TOPIC_CATEGORY} symbol={symbolFor(topic.id)}>
+    <CardShell>
       {animated && (
-        <div className="h-[34%] max-h-[300px] min-h-[130px] shrink-0 bg-black/30 px-2 pt-2">
+        <div className="h-[36%] max-h-[320px] min-h-[130px] shrink-0 bg-indigo-950 px-2 pt-2">
           <TopicVisual topicId={topic.id} />
         </div>
       )}
-      <div className={`flex min-h-0 flex-1 flex-col px-5 pb-3 ${animated ? 'pt-3' : 'pt-4'}`}>
-        <div className="flex flex-wrap items-center gap-1.5">
-          <Chip>{TOPIC_CATEGORY}</Chip>
-          <Chip>{topic.tag}</Chip>
-        </div>
-        <h2
-          className={`break-keep font-extrabold leading-[1.3] [text-wrap:balance] ${
-            animated ? 'mt-2 text-[1.25rem]' : 'mt-3 text-[1.45rem]'
-          }`}
-        >
-          {topic.title}
-        </h2>
+      <div className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-4">
+        <MetaLine category={TOPIC_CATEGORY} details={[topic.tag]} />
+        <h2 className="mt-2 break-keep text-[1.35rem] font-bold leading-[1.35] [text-wrap:balance]">{topic.title}</h2>
 
         <div
           ref={slidesRef}
@@ -176,24 +155,11 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
         >
           {topic.slides.map((s, i) => (
             <div key={i} className="w-full shrink-0 snap-center px-5">
-              <div
-                className={`no-scrollbar flex h-full flex-col overflow-y-auto rounded-2xl bg-black/25 ${
-                  animated ? 'p-4' : 'p-5'
-                }`}
-              >
+              <div className="no-scrollbar flex h-full flex-col overflow-y-auto rounded-2xl bg-white/[0.06] p-4">
                 {/* my-auto: 공간이 남으면 가운데, 모자라면 위에서부터 (가운데 정렬로 윗줄이 잘리는 것 방지) */}
                 <div className="my-auto">
-                  {!animated && (
-                    <p className="mb-2 text-xs font-bold text-white/60">
-                      {i + 1} / {topic.slides.length}
-                    </p>
-                  )}
-                  <h3 className={`break-keep font-bold leading-snug text-yellow-200 ${animated ? 'text-lg' : 'text-xl'}`}>
-                    {s.heading}
-                  </h3>
-                  <p className={`break-keep text-white/90 ${animated ? 'mt-2 text-[15px] leading-normal' : 'mt-3 text-[1rem] leading-relaxed'}`}>
-                    {s.body}
-                  </p>
+                  <h3 className="break-keep text-lg font-bold leading-snug">{s.heading}</h3>
+                  <p className="mt-2 break-keep text-[15px] leading-relaxed text-white/70">{s.body}</p>
                 </div>
               </div>
             </div>
@@ -202,7 +168,7 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
 
         <div className="mt-3 flex items-center justify-center gap-1.5">
           {topic.slides.map((_, i) => (
-            <span key={i} className={`h-1.5 rounded-full transition-all ${i === slide ? 'w-5 bg-white' : 'w-1.5 bg-white/40'}`} />
+            <span key={i} className={`h-1.5 rounded-full transition-all ${i === slide ? 'w-5 bg-white' : 'w-1.5 bg-white/30'}`} />
           ))}
         </div>
 
@@ -212,9 +178,9 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
           </ActionButton>
           <button
             onClick={() => goTo(slide === last ? 0 : slide + 1)}
-            className="min-h-[48px] flex-1 rounded-2xl bg-white text-[15px] font-bold text-neutral-900 transition hover:bg-white/90"
+            className="min-h-[48px] flex-1 rounded-xl bg-white text-[15px] font-bold text-neutral-900 transition hover:bg-white/90"
           >
-            {slide === last ? '처음으로' : '다음 →'}
+            {slide === last ? '처음으로' : '다음'}
           </button>
           <ActionButton onClick={onSave} active={saved} label="저장">
             {saved ? '★' : '☆'}
@@ -229,14 +195,13 @@ export function EndCard({ onRestart, empty }: { onRestart: () => void; empty: bo
   return (
     <section className="h-full snap-start sm:py-2">
       <div className="flex h-full flex-col items-center justify-center gap-4 bg-neutral-900 p-8 text-center sm:rounded-3xl">
-        <span className="font-serif text-7xl text-white/30">∎</span>
-        <h2 className="text-2xl font-extrabold">{empty ? '아직 카드가 없어요' : '오늘 소식은 여기까지'}</h2>
-        <p className="break-keep leading-relaxed text-white/70">
+        <h2 className="text-2xl font-bold">{empty ? '아직 카드가 없어요' : '오늘 소식은 여기까지'}</h2>
+        <p className="break-keep leading-relaxed text-white/60">
           {empty ? '다른 카테고리를 골라 보세요.' : '매일 오전 7시 · 오후 2시에 새 카드가 들어옵니다.'}
         </p>
         {!empty && (
-          <button onClick={onRestart} className="min-h-[48px] rounded-2xl bg-white px-6 font-bold text-neutral-900">
-            ↑ 처음부터 다시 보기
+          <button onClick={onRestart} className="min-h-[48px] rounded-xl bg-white px-6 font-bold text-neutral-900">
+            처음부터 다시 보기
           </button>
         )}
       </div>

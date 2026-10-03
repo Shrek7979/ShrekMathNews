@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { CATEGORY_ORDER, FeedItem, Topic, formatViews, timeAgo } from '@/lib/feed'
+import { CATEGORY_ACCENT, CATEGORY_ORDER, FeedItem, Topic, formatViews, timeAgo } from '@/lib/feed'
 
 type BriefingProps = {
   items: FeedItem[]
@@ -29,11 +29,10 @@ export default function Briefing(props: BriefingProps) {
         {topic && (
           <button
             onClick={onOpenTopic}
-            className="mb-5 w-full rounded-2xl bg-gradient-to-br from-fuchsia-600 to-indigo-900 p-4 text-left"
+            className="mb-5 w-full rounded-2xl bg-white/[0.06] p-4 text-left"
           >
-            <p className="text-xs font-bold text-white/70">오늘의 수학 주제 · {topic.tag}</p>
-            <p className="mt-1 break-keep text-[17px] font-extrabold leading-snug">{topic.title}</p>
-            <p className="mt-1.5 text-sm font-semibold text-yellow-200">카드로 보기 →</p>
+            <p className="text-xs font-semibold text-fuchsia-400">오늘의 수학 · {topic.tag}</p>
+            <p className="mt-1 break-keep text-[17px] font-bold leading-snug">{topic.title}</p>
           </button>
         )}
 
@@ -41,7 +40,7 @@ export default function Briefing(props: BriefingProps) {
 
         {groups.map((group) => (
           <section key={group.category} className="mb-6">
-            <h2 className="mb-1 flex items-baseline gap-2 border-b border-white/15 pb-2 text-[17px] font-extrabold">
+            <h2 className={`mb-1 flex items-baseline gap-2 border-b border-white/15 pb-2 text-[15px] font-bold ${CATEGORY_ACCENT[group.category] || ''}`}>
               {group.category}
               <span className="text-sm font-medium text-white/50">{group.items.length}</span>
             </h2>

@@ -13,6 +13,7 @@ W, H = 1200, 675
 PALETTE = {
     'Instagram': [(131, 58, 180), (253, 29, 29), (252, 176, 69)],
     'Facebook': [(24, 119, 242), (11, 61, 145), (8, 30, 80)],
+    'Reddit': [(255, 87, 0), (200, 50, 0), (90, 20, 0)],
 }
 
 
@@ -67,6 +68,8 @@ def make(card):
 
 os.makedirs(OUT, exist_ok=True)
 cards = json.load(open(os.path.join(ROOT, 'data', 'social.json'), encoding='utf8'))
+# 레딧 글은 대부분 이미지가 없어 공용 섬네일 한 장을 씀 (scripts/thumbs.mjs 참고)
+cards.append({'id': 'reddit', 'platform': 'Reddit', 'label': 'r/math'})
 for card in cards:
     make(card)
 print(len(cards), 'thumbnails ->', 'public/social/')
