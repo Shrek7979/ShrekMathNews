@@ -7,7 +7,7 @@ import TopicVisual, { hasTopicVisual } from './TopicVisual'
 function CardShell({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
     <section className="h-full snap-start snap-always sm:py-2">
-      <div className={`reel-card flex h-full flex-col overflow-hidden bg-neutral-900 sm:rounded-3xl ${className}`}>{children}</div>
+      <div className={`flex h-full flex-col overflow-hidden bg-neutral-900 sm:rounded-3xl ${className}`}>{children}</div>
     </section>
   )
 }
@@ -52,21 +52,14 @@ function ActionButton({
   )
 }
 
-// 섬네일: 글이 차지하고 남은 공간을 전부 채움 → 글이 짧아도 아래가 비지 않음
+// 섬네일: 카드 위쪽 42% 를 차지
 function Thumbnail({ item }: { item: FeedItem }) {
   const { basePath } = useRouter()
-  if (!item.thumb) return <div className="min-h-[30%] flex-1 basis-0 bg-neutral-800" />
-  const src = `${basePath}${item.thumb}`
-  // 화면 캡처·글자 섬네일은 잘리면 내용을 알아볼 수 없으므로 전체를 보여 주고, 남는 자리는 흐린 배경으로 채움
-  const contain = item.thumb.endsWith('.png') || item.thumb.startsWith('/social/')
+  if (!item.thumb) return null
   return (
-    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block min-h-[30%] flex-1 basis-0 overflow-hidden bg-black">
-      {contain && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt="" aria-hidden className="absolute inset-0 h-full w-full scale-125 object-cover opacity-50 blur-2xl" />
-      )}
+    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt="" loading="lazy" className={`absolute inset-0 h-full w-full ${contain ? 'object-contain' : 'object-cover'}`} />
+      <img src={`${basePath}${item.thumb}`} alt="" className="h-full w-full object-cover" loading="lazy" />
       {item.kind === 'video' && (
         <span className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 pl-1 text-3xl">
           ▶
@@ -100,15 +93,15 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
     <CardShell>
       <Thumbnail item={item} />
 
-      <div className="flex shrink-0 flex-col px-5 pb-3 pt-4">
+      <div className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-4">
         <MetaLine category={item.category} details={details} isNew={isNew} />
 
-        <div className="mt-2">
+        <div className="mt-2 min-h-0 flex-1 overflow-hidden">
           <h2 className="line-clamp-3 break-keep text-[1.5rem] font-bold leading-[1.35] tracking-tight [text-wrap:balance]">
             {title}
           </h2>
           {translated && <p className="mt-1.5 line-clamp-1 text-[13px] text-white/40">{item.title}</p>}
-          {summary && <p className="reel-summary mt-3 break-keep text-[15px] leading-relaxed text-white/65">{summary}</p>}
+          {summary && <p className="mt-3 line-clamp-2 break-keep text-[15px] leading-relaxed text-white/65">{summary}</p>}
         </div>
 
         <div className="mt-3 flex items-center gap-2">
