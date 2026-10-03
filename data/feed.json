@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T20:31:09.712Z",
+  "updatedAt": "2026-10-03T20:38:08.584Z",
   "items": [
     {
       "id": "86cb727a6849",
@@ -13,7 +13,7 @@
       "publishedAt": "2026-10-03T13:27:27.000Z",
       "collectedAt": "2026-10-03T20:23:53.433Z",
       "titleKo": "\"커리어 문제\" 를 해결한 후 수학자들은 어떻게 되었습니까?",
-      "summaryKo": "많은 수학자들이 자신의.",
+      "summaryKo": "많은 수학자들이 자신의",
       "translator": "mymemory",
       "thumb": "/social/reddit.jpg"
     },
@@ -436,7 +436,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.png"
+      "thumb": "/thumbs/2c62b4c78e9e.jpg"
     },
     {
       "id": "7dd53dd4955b",
@@ -541,7 +541,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.png"
+      "thumb": "/thumbs/d1d902dfdc13.jpg"
     },
     {
       "id": "b43bf69f5b09",
@@ -601,7 +601,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계적 방법은 과학적 데이터 세트의 숨겨진 이상 징후를 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.jpg",
+      "thumb": "/thumbs/ab6642bdf4b6.png",
       "translator": "mymemory",
       "summaryKo": "제약 화학자 요하네스 키르히마이어 (Johannes Kirchmair) 가 이끄는 빈 대학교…"
     },
