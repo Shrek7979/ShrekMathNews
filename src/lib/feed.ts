@@ -12,6 +12,7 @@ export type FeedItem = {
   category: string
   publishedAt: string
   collectedAt: string
+  views?: number
   thumb?: string | null
   titleKo?: string
   summaryKo?: string
@@ -28,7 +29,7 @@ export type Topic = {
 
 export const SITE_NAME = 'Shrek Math News'
 export const TOPIC_CATEGORY = '수학 주제'
-export const CATEGORY_ORDER = ['교육', '입시', 'AI·에듀테크', '연구', '대회·행사', '해외', '영상']
+export const CATEGORY_ORDER = ['인기', '교육', '입시', 'AI·에듀테크', '연구', '대회·행사', '해외', '영상']
 
 // 카테고리별 카드 배경 (Tailwind 가 인식하도록 전체 클래스명을 그대로 적음)
 export const CATEGORY_STYLE: Record<string, string> = {
@@ -39,6 +40,7 @@ export const CATEGORY_STYLE: Record<string, string> = {
   '대회·행사': 'from-amber-600 to-orange-950',
   해외: 'from-cyan-600 to-blue-950',
   영상: 'from-neutral-700 to-neutral-950',
+  인기: 'from-orange-500 to-rose-950',
   [TOPIC_CATEGORY]: 'from-fuchsia-600 to-indigo-950',
 }
 
@@ -57,6 +59,14 @@ export const formatDate = (iso: string) => dateFormat.format(new Date(iso))
 export function editionLabel(iso: string) {
   const edition = Number(hourFormat.format(new Date(iso))) < 12 ? '오전판' : '오후판'
   return `${shortDateFormat.format(new Date(iso))} ${edition}`
+}
+
+// 조회수를 '12.3만' 처럼 짧게
+export function formatViews(views: number) {
+  if (views >= 100_000_000) return `${(views / 100_000_000).toFixed(1)}억`
+  if (views >= 10_000) return `${(views / 10_000).toFixed(views >= 1_000_000 ? 0 : 1)}만`
+  if (views >= 1_000) return `${(views / 1_000).toFixed(1)}천`
+  return String(views)
 }
 
 export function timeAgo(iso: string, now: number) {

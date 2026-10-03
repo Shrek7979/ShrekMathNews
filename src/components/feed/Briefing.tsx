@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { CATEGORY_ORDER, FeedItem, Topic, timeAgo } from '@/lib/feed'
+import { CATEGORY_ORDER, FeedItem, Topic, formatViews, timeAgo } from '@/lib/feed'
 
 type BriefingProps = {
   items: FeedItem[]
@@ -77,6 +77,7 @@ export default function Briefing(props: BriefingProps) {
                         </span>
                         <span className="mt-1 block text-xs text-white/50">
                           {item.source}
+                          {item.views && ` · 조회 ${formatViews(item.views)}`}
                           {item.lang === 'en' && ' · 번역'}
                           {now && ` · ${timeAgo(item.publishedAt, now)}`}
                         </span>

@@ -1,5 +1,6 @@
 // 수집 대상 목록. 여기에 항목을 추가/삭제하면 다음 수집부터 반영됩니다.
-// type: bing(빙 뉴스 검색) | rss(일반 RSS/Atom) | youtube(채널 피드)
+// type: bing(빙 뉴스 검색) | rss(일반 RSS/Atom) | youtube(채널 최신) | youtube-top(여러 채널 중 조회수 상위)
+// category 를 적으면 키워드 분류 대신 그 카테고리로 고정
 
 const bing = (q) =>
   `https://www.bing.com/news/search?q=${encodeURIComponent(q)}&format=rss&mkt=ko-KR`
@@ -24,10 +25,37 @@ export const SOURCES = [
   { type: 'rss', lang: 'en', name: 'ScienceDaily', url: 'https://www.sciencedaily.com/rss/computers_math/mathematics.xml', limit: 3, maxAgeDays: 7 },
   { type: 'rss', lang: 'en', name: 'Plus Magazine', url: 'https://plus.maths.org/content/rss.xml', limit: 2, maxAgeDays: 30 },
 
-  // 유튜브 채널
+  // SNS 인기 게시물: 수학 유튜브 채널들의 최근 2주 영상 중 조회수 상위 + 레딧 r/math 주간 인기글
+  {
+    type: 'youtube-top',
+    lang: 'en',
+    category: '인기',
+    limit: 8,
+    maxAgeDays: 14,
+    minViews: 5000, // 이 조회수 미만이면 '인기'로 치지 않음
+    channels: [
+      ['EBSMath', 'UCP7KQPL8aAvMnRI_rGLwONA', 'ko'],
+      ['쓸모있는 수학', 'UCNgC_RnWEi_NI-5vKMdGTFQ', 'ko'],
+      ['12 Math', 'UCIeGcgo2NLHwYV5_NHuOwgg', 'ko'],
+      ['enjoying math', 'UCWCeUXIAm_2skU3QwJJziNg', 'ko'],
+      ['Numberphile', 'UCoxcjq-8xIDTYp3uz647V5A', 'en'],
+      ['3Blue1Brown', 'UCYO_jab_esuFRV4b17AJtAw', 'en'],
+      ['Stand-up Maths', 'UCSju5G2aFaWMqn-_0YBtq5A', 'en'],
+      ['Mathologer', 'UC1_uAIS3r8Vu6JjXWvastJg', 'en'],
+    ],
+  },
+  { type: 'rss', lang: 'en', name: 'Reddit r/math', category: '인기', url: 'https://www.reddit.com/r/math/top/.rss?t=week', limit: 5, maxAgeDays: 8 },
+  // 레딧은 같은 시각에 두 번 부르면 429 를 내므로 두 번째 요청을 몇 초 늦춤
+  { type: 'rss', lang: 'en', name: 'Reddit r/mathmemes', category: '인기', url: 'https://www.reddit.com/r/mathmemes/top/.rss?t=week', limit: 3, maxAgeDays: 8, delayMs: 4000 },
+
+  // 유튜브 채널 최신 영상
   { type: 'youtube', lang: 'en', name: 'Numberphile', url: youtube('UCoxcjq-8xIDTYp3uz647V5A'), limit: 2, maxAgeDays: 30 },
   { type: 'youtube', lang: 'en', name: '3Blue1Brown', url: youtube('UCYO_jab_esuFRV4b17AJtAw'), limit: 2, maxAgeDays: 60 },
+  { type: 'youtube', lang: 'ko', name: 'EBSMath', url: youtube('UCP7KQPL8aAvMnRI_rGLwONA'), limit: 2, maxAgeDays: 30 },
+  { type: 'youtube', lang: 'ko', name: '쓸모있는 수학', url: youtube('UCNgC_RnWEi_NI-5vKMdGTFQ'), limit: 2, maxAgeDays: 30 },
 ]
+
+export const youtubeFeed = youtube
 
 // 국내 기사: 제목에 반드시 포함해야 할 것 / 걸러낼 것
 export const KO_REQUIRE = /수학|수능|필즈상|올림피아드/

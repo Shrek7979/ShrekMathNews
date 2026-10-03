@@ -7,7 +7,7 @@ import * as cheerio from 'cheerio'
 import { pathToFileURL } from 'node:url'
 import { ensureThumbs } from './thumbs.mjs'
 import { translateItems } from './translate.mjs'
-import { SOURCES, KO_REQUIRE, KO_EXCLUDE, EN_REQUIRE, BLOCKED_SOURCES, KO_CATEGORIES } from './sources.mjs'
+import { youtubeFeed, SOURCES, KO_REQUIRE, KO_EXCLUDE, EN_REQUIRE, BLOCKED_SOURCES, KO_CATEGORIES } from './sources.mjs'
 
 // npm 스크립트와 Next.js 서버 모두 프로젝트 루트에서 실행됨
 export const FEED_PATH = resolve(process.cwd(), 'data/feed.json')
@@ -43,6 +43,7 @@ const similarity = (a, b) => {
 const SIMILAR_THRESHOLD = 0.4
 
 function categorize(item) {
+  if (item.category) return item.category
   if (item.kind === 'video') return '영상'
   if (item.lang !== 'ko') return '해외'
   const text = `${item.title} ${item.summary}`
@@ -57,8 +58,9 @@ function parseEntry($, el, source) {
   let title = text('title')
   let link = $el.children('link').first().attr('href') || text('link')
   let sourceName = source.name
-  let summary = stripHtml(text('description') || text('summary'))
+  let summary = stripHtml(text('description') || text('summary') || text('content'))
   let image
+  let views
 
   if (source.type === 'bing') {
     sourceName = text('News\\:Source').replace(/ on MSN$/, '')
@@ -71,6 +73,11 @@ function parseEntry($, el, source) {
     image = group.children('media\\:thumbnail').attr('url')
     summary = clean(group.children('media\\:description').text().split('\n')[0])
     title = title.replace(new RegExp(` - ${source.name}$`), '')
+    views = Number(group.find('media\\:statistics').attr('views') || 0) || undefined
+  } else if (/reddit\.com/.test(source.url)) {
+    // 레딧 Atom: 본문 끝의 "submitted by /u/…" 꼬리표 제거, 링크 글이면 섬네일 사용
+    summary = summary.replace(/\s*submitted by.*$/i, '').replace(/\[link\]|\[comments\]/g, '').trim()
+    image = $el.children('media\\:thumbnail').attr('url') || undefined
   } else {
     summary = summary.replace(/\s*The post .* first appeared on .*$/, '')
     // 피드가 주는 대표 이미지 (90px 짜리 아이콘은 건너뛰고 기사 og:image 를 쓰게 함)
@@ -91,12 +98,30 @@ function parseEntry($, el, source) {
     link,
     source: sourceName || new URL(link).hostname,
     image,
+    views,
+    category: source.category,
     publishedAt: isNaN(published) ? null : published.toISOString(),
     feedCategories: categories,
   }
 }
 
+// 여러 채널의 최근 영상을 모아 조회수 순으로 상위만 고름
+async function collectYoutubeTop(source, now) {
+  const feeds = await Promise.allSettled(
+    source.channels.map(([name, channelId, lang]) =>
+      collectSource({ type: 'youtube', name, lang, url: youtubeFeed(channelId), limit: 50, maxAgeDays: source.maxAgeDays }, now)
+    )
+  )
+  return feeds
+    .flatMap((r) => (r.status === 'fulfilled' ? r.value : []))
+    .filter((item) => item.views >= (source.minViews || 1))
+    .sort((a, b) => b.views - a.views)
+    .slice(0, source.limit)
+    .map((item) => ({ ...item, category: source.category }))
+}
+
 async function collectSource(source, now) {
+  if (source.type === 'youtube-top') return collectYoutubeTop(source, now)
   const res = await fetch(source.url, {
     headers: { 'User-Agent': UA },
     signal: AbortSignal.timeout(20000),
@@ -127,11 +152,14 @@ export async function collect() {
     previous = JSON.parse(await readFile(FEED_PATH, 'utf8')).items || []
   } catch {}
 
-  const results = await Promise.allSettled(SOURCES.map((s) => collectSource(s, now)))
+  const delay = (ms) => new Promise((r) => setTimeout(r, ms))
+  const results = await Promise.allSettled(
+    SOURCES.map((s) => delay(s.delayMs || 0).then(() => collectSource(s, now)))
+  )
   const fresh = []
   let failed = 0
   results.forEach((result, i) => {
-    const label = SOURCES[i].name || decodeURIComponent(SOURCES[i].url).slice(0, 80)
+    const label = SOURCES[i].name || (SOURCES[i].url ? decodeURIComponent(SOURCES[i].url).slice(0, 80) : `유튜브 인기 (${SOURCES[i].channels.length}개 채널)`)
     if (result.status === 'fulfilled') {
       console.log(`✓ ${String(result.value.length).padStart(2)}건  ${label}`)
       fresh.push(...result.value)

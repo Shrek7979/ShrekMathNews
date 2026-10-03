@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-import { CATEGORY_STYLE, FeedItem, TOPIC_CATEGORY, Topic, formatDate, symbolFor } from '@/lib/feed'
+import { CATEGORY_STYLE, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatViews, symbolFor } from '@/lib/feed'
 
 function CardShell({ category, symbol, children }: { category: string; symbol: string; children: React.ReactNode }) {
   return (
@@ -97,7 +97,8 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
 
       <div className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-3">
         <div className="flex flex-wrap items-center gap-1.5">
-          <Chip>{item.category}</Chip>
+          <Chip>{item.category === '인기' ? '🔥 인기' : item.category}</Chip>
+          {item.views && <Chip>조회 {formatViews(item.views)}</Chip>}
           {item.lang === 'en' && <Chip>{translated ? '번역' : 'EN'}</Chip>}
           {isNew && <Chip solid>NEW</Chip>}
         </div>

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T00:08:17.001Z",
+  "updatedAt": "2026-10-03T00:24:30.635Z",
   "items": [
     {
       "id": "2c62b4c78e9e",
@@ -60,6 +60,22 @@
       "thumb": "/thumbs/c7410e5ac63c.jpg"
     },
     {
+      "id": "8a6f74dce9ce",
+      "kind": "news",
+      "lang": "en",
+      "title": "Data scientist vs pure mathematician meme",
+      "summary": "",
+      "link": "https://www.reddit.com/r/mathmemes/comments/1wv309i/data_scientist_vs_pure_mathematician_meme/",
+      "source": "Reddit r/mathmemes",
+      "image": "https://preview.redd.it/6zv0syfbnvsh1.jpeg?width=640&crop=smart&auto=webp&s=08be3d36e4089d32e1d2f4fc30a0c75ee865e495",
+      "category": "인기",
+      "publishedAt": "2026-10-01T15:49:44.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "titleKo": "데이터 과학자 vs 순수 수학자 밈",
+      "summaryKo": "",
+      "thumb": "/thumbs/8a6f74dce9ce.jpg"
+    },
+    {
       "id": "ab0451c9824a",
       "kind": "news",
       "lang": "en",
@@ -73,7 +89,7 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "4차원은 실제로 어떤 모습일까요?",
       "summaryKo": "매기 밀러 (Maggie Miller) 는 3차원에 대한 직관이 왜 4차원으로 나누어지는지, 4D 공간을 3차원 스냅샷의 릴로 시각화하는 방법을 설명합니다.",
-      "thumb": "/thumbs/ab0451c9824a.webp"
+      "thumb": "/thumbs/ab0451c9824a.jpg"
     },
     {
       "id": "bf751846afb9",
@@ -115,7 +131,22 @@
       "publishedAt": "2026-10-01T02:55:00.000Z",
       "category": "연구",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/69452290cfd6.jpg"
+      "thumb": "/thumbs/69452290cfd6.png"
+    },
+    {
+      "id": "a3a258c100f3",
+      "kind": "news",
+      "lang": "en",
+      "title": "What are the coolest active topics in Mathematical Physics?",
+      "summary": "I'm a math undergrad student, and I've been getting interested in Alain Conne's work in Noncommutative Geometry and Differential Geometry in Mathematical…",
+      "link": "https://www.reddit.com/r/math/comments/1wuer2g/what_are_the_coolest_active_topics_in/",
+      "source": "Reddit r/math",
+      "category": "인기",
+      "publishedAt": "2026-09-30T19:44:10.000Z",
+      "collectedAt": "2026-10-03T00:24:30.635Z",
+      "titleKo": "수학 물리학에서 가장 활발한 주제는 무엇입니까?",
+      "summaryKo": "저는 수학 학부생입니다. Alain Conne의 Noncommutative Geometry and Differential Geometry in Mathematical...",
+      "thumb": "/thumbs/a3a258c100f3.png"
     },
     {
       "id": "af5022d6da66",
@@ -143,7 +174,22 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.png"
+      "thumb": "/thumbs/d1d902dfdc13.jpg"
+    },
+    {
+      "id": "80250a50c3b5",
+      "kind": "news",
+      "lang": "en",
+      "title": "The Deranged Mathematician: An Introduction to Differential Geometry",
+      "summary": "How do you summarize a field like differential geometry? A year or so ago, I was asked to do just that. My first thought was that this is just straight-up…",
+      "link": "https://www.reddit.com/r/math/comments/1wu7b3g/the_deranged_mathematician_an_introduction_to/",
+      "source": "Reddit r/math",
+      "category": "인기",
+      "publishedAt": "2026-09-30T15:03:44.000Z",
+      "collectedAt": "2026-10-03T00:24:30.635Z",
+      "titleKo": "The Deranged Mathematician: An Introduction to Differential Geometry (미분 기하학 입문)",
+      "summaryKo": "미분 기하학과 같은 필드를 어떻게 요약합니까? 1년 전쯤, 그냥 그렇게 해달라는 부탁을 받았다. 내 첫 번째 생각은 이게 그냥 똑바르다는 것이 었습니다...",
+      "thumb": "/thumbs/80250a50c3b5.png"
     },
     {
       "id": "b43bf69f5b09",
@@ -157,7 +203,24 @@
       "publishedAt": "2026-09-30T14:55:00.000Z",
       "category": "AI·에듀테크",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/b43bf69f5b09.jpg"
+      "thumb": "/thumbs/b43bf69f5b09.png"
+    },
+    {
+      "id": "54ece73965a1",
+      "kind": "video",
+      "lang": "en",
+      "title": "We tested Babish's 15,000% claim!",
+      "summary": "Thanks to Private Internet Access for sponsoring this video! You can use my personalised link for your discount here:",
+      "link": "https://www.youtube.com/watch?v=9xwU-ochogk",
+      "source": "Stand-up Maths",
+      "image": "https://i2.ytimg.com/vi/9xwU-ochogk/hqdefault.jpg",
+      "views": 726364,
+      "category": "인기",
+      "publishedAt": "2026-09-30T14:30:51.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "titleKo": "Babish의 15,000% 주장을 테스트했습니다!",
+      "summaryKo": "이 동영상을 후원해 주신 Private Internet Access에게 감사드립니다! 여기에서 내 맞춤 링크를 사용하여 할인을 받으실 수 있습니다.",
+      "thumb": "/thumbs/54ece73965a1.jpg"
     },
     {
       "id": "87fc97cffe58",
@@ -171,7 +234,23 @@
       "publishedAt": "2026-09-30T08:53:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/87fc97cffe58.jpg"
+      "thumb": "/thumbs/87fc97cffe58.png"
+    },
+    {
+      "id": "e535ca10fc63",
+      "kind": "news",
+      "lang": "en",
+      "title": "My little maths",
+      "summary": "",
+      "link": "https://www.reddit.com/r/mathmemes/comments/1wtn8vh/my_little_maths/",
+      "source": "Reddit r/mathmemes",
+      "image": "https://preview.redd.it/vq08uihq5jsh1.jpeg?width=320&crop=smart&auto=webp&s=682d9ac494b7e57fd5cf8094573eb77299265bed",
+      "category": "인기",
+      "publishedAt": "2026-09-29T21:49:46.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "titleKo": "나의 작은 수학",
+      "summaryKo": "",
+      "thumb": "/thumbs/e535ca10fc63.png"
     },
     {
       "id": "9bfe74474119",
@@ -202,7 +281,39 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계적 방법은 과학적 데이터 세트의 숨겨진 이상 징후를 표시할 수 있습니다.",
       "summaryKo": "제약 화학자 요하네스 키르히마이어 (Johannes Kirchmair) 가 이끄는 빈 대학교 (University of Vienna) 의 연구팀은 숨겨진 이상을 식별하는 통계적 방법을 개발했습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.jpg"
+      "thumb": "/thumbs/ab6642bdf4b6.png"
+    },
+    {
+      "id": "540471ab00f6",
+      "kind": "video",
+      "lang": "ko",
+      "title": "직각삼각형의 높이가 구해져요｜요원K｜#ebsmath #중학수학",
+      "summary": "",
+      "link": "https://www.youtube.com/shorts/jFDUElEpilo",
+      "source": "EBSMath",
+      "image": "https://i3.ytimg.com/vi/jFDUElEpilo/hqdefault.jpg",
+      "views": 1549,
+      "category": "영상",
+      "publishedAt": "2026-09-29T00:00:02.000Z",
+      "collectedAt": "2026-10-03T00:24:30.635Z",
+      "thumb": "/thumbs/540471ab00f6.jpg"
+    },
+    {
+      "id": "42c067a473bd",
+      "kind": "video",
+      "lang": "en",
+      "title": "What now for Mathematics (with 3Blue1Brown)",
+      "summary": "These are a few highlight clips from a longer interview about AI with Grant Sanderson, creator of 3Blue1Brown. Full video is at: https://youtu.be/CBYhaKgah5U",
+      "link": "https://www.youtube.com/watch?v=9HlIuxnuTKQ",
+      "source": "Numberphile",
+      "image": "https://i2.ytimg.com/vi/9HlIuxnuTKQ/hqdefault.jpg",
+      "views": 243968,
+      "category": "인기",
+      "publishedAt": "2026-09-28T15:42:59.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "titleKo": "이제 수학을 위해 (3Blue1Brown 포함)",
+      "summaryKo": "다음은 3Blue1Brown의 제작자인 그랜트 샌더슨 (Grant Sanderson) 과의 AI에 대한 더 긴 인터뷰에서 얻은 몇 가지 하이라이트 클립입니다. 전체 동영상 주소: https://youtu.be/CBYhaKgah5U",
+      "thumb": "/thumbs/42c067a473bd.jpg"
     },
     {
       "id": "e523a6fd7011",
@@ -218,7 +329,53 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "수학자들은 55세 추측을 해독하기 위해 무작위성을 활용합니다.",
       "summaryKo": "긴 공백 끝에 저글링에서 영감을 얻은 이 문제는 마침내 젊은 수학자 그룹에 의해 해결되었습니다.",
-      "thumb": "/thumbs/e523a6fd7011.webp"
+      "thumb": "/thumbs/e523a6fd7011.jpg"
+    },
+    {
+      "id": "7f9a8501ef1f",
+      "kind": "news",
+      "lang": "en",
+      "title": "The future of mathematics",
+      "summary": "",
+      "link": "https://www.reddit.com/r/mathmemes/comments/1wrpb8d/the_future_of_mathematics/",
+      "source": "Reddit r/mathmemes",
+      "image": "https://preview.redd.it/1239tlckf3sh1.jpeg?width=640&crop=smart&auto=webp&s=fb0d999c7329c617933ca9909605e745f3839ccf",
+      "category": "인기",
+      "publishedAt": "2026-09-27T16:56:21.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "titleKo": "수학의 미래",
+      "summaryKo": "",
+      "thumb": "/thumbs/7f9a8501ef1f.jpg"
+    },
+    {
+      "id": "c1f5099ea178",
+      "kind": "news",
+      "lang": "en",
+      "title": "Gelfand duality and algebraic geometry",
+      "summary": "https://hidden-phenomena.com/articles/gelfand How does one define a shape? The usual definitions are based on starting with the set of all points of a shape.…",
+      "link": "https://www.reddit.com/r/math/comments/1wqxrkd/gelfand_duality_and_algebraic_geometry/",
+      "source": "Reddit r/math",
+      "category": "인기",
+      "publishedAt": "2026-09-26T18:27:15.000Z",
+      "collectedAt": "2026-10-03T00:24:30.635Z",
+      "titleKo": "Gelfand 이중성 및 대수 기하학",
+      "summaryKo": "https://hidden-phenomena.com/articles/gelfand 모양을 어떻게 정의하나요? 일반적인 정의는 도형의 모든 점의 집합부터 시작합니다. …",
+      "thumb": "/thumbs/c1f5099ea178.png"
+    },
+    {
+      "id": "3ea7d0dc7051",
+      "kind": "news",
+      "lang": "en",
+      "title": "AI In Mathematics: September 26, 2026",
+      "summary": "This recurring thread will be for discussion of AI in mathematics. This includes, but is not limited to, the following: informal announcements of AI-assisted…",
+      "link": "https://www.reddit.com/r/math/comments/1wqu8pa/ai_in_mathematics_september_26_2026/",
+      "source": "Reddit r/math",
+      "category": "인기",
+      "publishedAt": "2026-09-26T16:05:10.000Z",
+      "collectedAt": "2026-10-03T00:24:30.635Z",
+      "titleKo": "AI 수학: 2026년 9월 26일",
+      "summaryKo": "이 반복되는 스레드는 수학에서 AI에 대한 논의를 위한 것입니다. 여기에는 다음이 포함되지만 이에 국한되지는 않습니다. AI 지원 비공식 발표...",
+      "thumb": "/thumbs/3ea7d0dc7051.png"
     },
     {
       "id": "51feef5f1bf4",
@@ -235,6 +392,55 @@
       "titleKo": "전화번호 퍼즐",
       "summaryKo": "월간 퍼즐 시리즈의 일부: https://momath.org/mindbenders/",
       "thumb": "/thumbs/51feef5f1bf4.jpg"
+    },
+    {
+      "id": "530f8ffbb583",
+      "kind": "video",
+      "lang": "en",
+      "title": "Blind Ranking Numbers (James Grime)",
+      "summary": "James Grime blind ranks five numbers and constants. More links & stuff in full description below ↓↓↓",
+      "link": "https://www.youtube.com/shorts/UmuMgA_RxnU",
+      "source": "Numberphile",
+      "image": "https://i2.ytimg.com/vi/UmuMgA_RxnU/hqdefault.jpg",
+      "views": 457927,
+      "category": "인기",
+      "publishedAt": "2026-09-22T12:34:02.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "titleKo": "블라인드 랭킹 번호 (James Grime)",
+      "summaryKo": "James Grime 블라인드는 5개의 숫자와 상수의 순위를 매깁니다. 자세한 링크 및 자세한 내용은 아래에서 확인하실 수 있습니다. ↓↓↓",
+      "thumb": "/thumbs/530f8ffbb583.jpg"
+    },
+    {
+      "id": "f697d6ebb877",
+      "kind": "video",
+      "lang": "ko",
+      "title": "보조선이 뭐길래｜요원K｜#ebsmath #중학수학",
+      "summary": "",
+      "link": "https://www.youtube.com/shorts/OcgEn9NykwQ",
+      "source": "EBSMath",
+      "image": "https://i4.ytimg.com/vi/OcgEn9NykwQ/hqdefault.jpg",
+      "views": 1098,
+      "category": "영상",
+      "publishedAt": "2026-09-22T00:00:24.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "thumb": "/thumbs/f697d6ebb877.jpg"
+    },
+    {
+      "id": "25a6523880a1",
+      "kind": "video",
+      "lang": "en",
+      "title": "Has a Millennium Prize Problem been solved by AI?",
+      "summary": "Want more of the Matt tries to go on vacation saga, come right this way:",
+      "link": "https://www.youtube.com/watch?v=c79PsbkHw4A",
+      "source": "Stand-up Maths",
+      "image": "https://i4.ytimg.com/vi/c79PsbkHw4A/hqdefault.jpg",
+      "views": 1229591,
+      "category": "인기",
+      "publishedAt": "2026-09-21T12:00:07.000Z",
+      "collectedAt": "2026-10-03T00:20:00.887Z",
+      "titleKo": "AI에 의해 밀레니엄 상금 문제가 해결되었습니까?",
+      "summaryKo": "더 많은 매트가 휴가를 떠나기를 원한다면, 이쪽으로 오십시오:",
+      "thumb": "/thumbs/25a6523880a1.jpg"
     },
     {
       "id": "8f18232c6ac4",
