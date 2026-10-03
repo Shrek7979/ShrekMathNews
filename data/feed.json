@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T23:42:21.906Z",
+  "updatedAt": "2026-10-03T00:01:26.022Z",
   "items": [
     {
       "id": "2c62b4c78e9e",
@@ -90,6 +90,20 @@
       "thumb": "/thumbs/bf751846afb9.jpg"
     },
     {
+      "id": "19acb473ac0e",
+      "kind": "news",
+      "lang": "ko",
+      "title": "천재교육, ‘2026 하반기 HME 전국 해법수학·해법국어 학력평가’ 실시",
+      "summary": "천재교육이 오는 11월 14일 ‘2026 하반기 HME 전국 해법수학·해법국어 학력평가’를 진행한다. HME 전국 해법수학·해법국어 학력평가는 지난 2003년 처음 시행된 이후 누적 응시생 245만 명이 참여한 전국 최대 규모의 수학학력평가다. 이번 평가에서는 국어와 ...",
+      "link": "https://www.dt.co.kr/article/12087003",
+      "source": "디지털타임스",
+      "image": "http://www.bing.com/th?id=ONUT.4ypcfEbDOqS-s7rcgPN8CQ&pid=News",
+      "publishedAt": "2026-10-01T09:08:00.000Z",
+      "category": "교육",
+      "collectedAt": "2026-10-03T00:01:26.022Z",
+      "thumb": "/thumbs/19acb473ac0e.jpg"
+    },
+    {
       "id": "69452290cfd6",
       "kind": "news",
       "lang": "ko",
@@ -129,7 +143,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.jpg"
+      "thumb": "/thumbs/d1d902dfdc13.png"
     },
     {
       "id": "b43bf69f5b09",
@@ -188,7 +202,7 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계적 방법은 과학적 데이터 세트의 숨겨진 이상 징후를 표시할 수 있습니다.",
       "summaryKo": "제약 화학자 요하네스 키르히마이어 (Johannes Kirchmair) 가 이끄는 빈 대학교 (University of Vienna) 의 연구팀은 숨겨진 이상을 식별하는 통계적 방법을 개발했습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.png"
+      "thumb": "/thumbs/ab6642bdf4b6.jpg"
     },
     {
       "id": "e523a6fd7011",
