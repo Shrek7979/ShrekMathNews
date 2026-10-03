@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-10-03T20:53:01.598Z",
+  "updatedAt": "2026-10-03T20:54:43.077Z",
   "items": [
+    {
+      "id": "56e538c482e1",
+      "kind": "news",
+      "lang": "ko",
+      "title": "중학 수학 문장제 문제를 처음부터 다시 풀어보았다 5편(완결)",
+      "summary": "안녕하세요",
+      "link": "https://note.com/jolly_viola165/n/nee91f9cff055?hl=ko",
+      "source": "note",
+      "image": "http://www.bing.com/th?id=ONUT.a2SdjCAa-Mt5Pzg5Qc1Qzw&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-03T06:11:00.000Z",
+      "collectedAt": "2026-10-03T20:54:43.077Z",
+      "thumb": "/thumbs/56e538c482e1.png"
+    },
     {
       "id": "59786d5d52cc",
       "kind": "news",
@@ -45,7 +59,7 @@
       "publishedAt": "2026-09-08T05:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
       "titleKo": "Navier-Stokes 문제에 대한 AMS 리더십의 진술",
-      "summaryKo": "발표된 Navier–Stokes 돌파구에 대한 응답으로..",
+      "summaryKo": "발표된 Navier–Stokes 돌파구에 대한 응답으로.",
       "translator": "mymemory",
       "thumb": "/thumbs/ddcadfd42261.png"
     },
@@ -62,7 +76,7 @@
       "publishedAt": "2026-09-01T09:00:58.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
       "titleKo": "골든 포멀 파워 시리즈",
-      "summaryKo": "다행히도, 그러한 공식이 존재하며, 많은..",
+      "summaryKo": "다행히도, 그러한 공식이 존재하며, 많은.",
       "translator": "mymemory",
       "thumb": "/thumbs/d5843ccc329a.png"
     },
@@ -80,7 +94,7 @@
       "titleKo": "진정한 소속감을 위한 학생의 목소리 증폭",
       "summaryKo": "저널명: 수학 교사: 학습 및…",
       "translator": "mymemory",
-      "thumb": "/thumbs/6d6917e71bf3.jpg"
+      "thumb": "/thumbs/6d6917e71bf3.png"
     },
     {
       "id": "3c73391d2263",
@@ -96,7 +110,7 @@
       "titleKo": "수학 스토리텔링을 통해 교감하기",
       "summaryKo": "저널명: 수학 교사: 학습 및…",
       "translator": "mymemory",
-      "thumb": "/thumbs/3c73391d2263.jpg"
+      "thumb": "/thumbs/3c73391d2263.png"
     },
     {
       "id": "e01539b51fd3",
@@ -112,7 +126,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 가르치기",
       "summaryKo": "저널명: 수학 교사: 학습 및…",
       "translator": "mymemory",
-      "thumb": "/thumbs/e01539b51fd3.jpg"
+      "thumb": "/thumbs/e01539b51fd3.png"
     },
     {
       "id": "d2e592757594",
@@ -128,7 +142,7 @@
       "titleKo": "표현의 적절성 평가하기",
       "summaryKo": "저널명: 수학 교사: 학습 및…",
       "translator": "mymemory",
-      "thumb": "/thumbs/d2e592757594.jpg"
+      "thumb": "/thumbs/d2e592757594.png"
     },
     {
       "id": "46561d6b60c7",
