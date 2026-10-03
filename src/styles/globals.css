@@ -61,3 +61,14 @@ body {
     overflow: hidden;
   }
 }
+/* 카드가 충분히 높으면(큰 폰의 전체화면, PC) 설명 글자를 키워 빈 공간을 채움 */
+@container (min-height: 700px) {
+  .topic-slide-heading {
+    font-size: 19px;
+  }
+  .topic-slide-text {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 0.7rem;
+  }
+}

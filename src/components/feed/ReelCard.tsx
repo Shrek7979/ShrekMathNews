@@ -157,9 +157,9 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
             <div key={i} className="w-full shrink-0 snap-center px-5">
               {/* 설명은 위에서부터 채움. 본문의 빈 줄은 문단으로 나눔 */}
               <div className="no-scrollbar h-full overflow-y-auto rounded-2xl bg-white/[0.06] p-4">
-                <h3 className="break-keep text-[17px] font-bold leading-snug sm:text-xl">{s.heading}</h3>
+                <h3 className="topic-slide-heading break-keep text-[17px] font-bold leading-snug">{s.heading}</h3>
                 {s.body.split(/\n{2,}/).map((paragraph, k) => (
-                  <p key={k} className="mt-2 whitespace-pre-line break-keep text-[14px] leading-[1.6] text-white/70 sm:mt-3 sm:text-[17px] sm:leading-[1.7]">
+                  <p key={k} className="topic-slide-text mt-2 whitespace-pre-line break-keep text-[14px] leading-[1.6] text-white/70">
                     {paragraph}
                   </p>
                 ))}
