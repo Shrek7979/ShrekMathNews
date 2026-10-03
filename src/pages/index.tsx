@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -55,6 +55,8 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
   const [category, setCategory] = useState(ALL)
   const [active, setActive] = useState(0)
   const [auto, setAuto] = useState(false)
+  // 인스타 릴스처럼: 아래로 넘기기 시작하면 상단 메뉴를 숨겨 카드가 화면을 꽉 채움
+  const [immersive, setImmersive] = useState(false)
   const [toast, setToast] = useState('')
   const [refreshing, setRefreshing] = useState(false)
   const [isLocal, setIsLocal] = useState(false)
@@ -116,11 +118,15 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
 
   const categories = useMemo(() => {
     const present = CATEGORY_ORDER.filter((c) => feed.items.some((item) => item.category === c))
-    return [ALL, ...present, TOPIC_CATEGORY, SAVED]
+    const popular = present.filter((c) => c === '인기')
+    const rest = present.filter((c) => c !== '인기')
+    return [ALL, ...popular, TOPIC_CATEGORY, ...rest, SAVED]
   }, [feed.items])
 
   // 부드러운 스크롤이 끝나기 전에 키를 연달아 눌러도 밀리지 않도록 목표 위치를 따로 기억
   const target = useRef(0)
+  const settled = useRef(0) // 마지막으로 멈춰 선 카드 번호
+  const settleTimer = useRef<ReturnType<typeof setTimeout>>()
   const goTo = useCallback((index: number, smooth = true) => {
     const el = scrollerRef.current
     if (!el) return
@@ -134,7 +140,22 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     setActive(index)
     // 손가락/휠로 직접 넘긴 경우: 스크롤이 카드 경계에 멈추면 목표도 따라감
     if (Math.abs(el.scrollTop - el.clientHeight * index) < 2) target.current = index
+    // 스크롤이 완전히 멈춘 뒤에만 전체화면을 켜고 끔: 아래로 넘기면 켜지고, 위로 올리거나 첫 카드면 꺼짐
+    // (움직이는 도중에 메뉴를 숨기면 카드 높이가 바뀌어 스크롤이 튐)
+    clearTimeout(settleTimer.current)
+    settleTimer.current = setTimeout(() => {
+      const stopped = Math.round(el.scrollTop / el.clientHeight)
+      if (stopped === settled.current) return
+      setImmersive(stopped > settled.current && stopped > 0)
+      settled.current = stopped
+    }, 180)
   }
+
+  // 메뉴가 사라지거나 나타나면 카드 높이가 바뀌므로, 화면에 그리기 전에 스크롤 위치를 다시 맞춤
+  useLayoutEffect(() => {
+    const el = scrollerRef.current
+    if (el) el.scrollTo({ top: el.clientHeight * settled.current, behavior: 'auto' })
+  }, [immersive])
 
   // 마우스 휠/트랙패드: 한 번 굴리면 정확히 카드 한 장만 이동 (브라우저 기본 동작은 조금씩 밀려 여러 번 굴려야 함)
   useEffect(() => {
@@ -161,6 +182,8 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
   const selectCategory = (next: string) => {
     setCategory(next)
     setActive(0)
+    setImmersive(false)
+    settled.current = 0
     goTo(0, false)
   }
 
@@ -212,6 +235,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     setRefreshing(false)
   }
 
+  const fullscreen = immersive && view === 'reels'
   const unreadCount = feed.items.filter((item) => !read.ids.has(item.id)).length
   const edition = feed.updatedAt ? editionLabel(feed.updatedAt) : '아직 수집 전'
 
@@ -247,7 +271,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
       </Head>
 
       <div className="fixed inset-0 flex flex-col bg-neutral-950 text-white [padding-top:env(safe-area-inset-top)]">
-        <header className="mx-auto w-full max-w-2xl shrink-0 px-4 pt-2">
+        <header className={`mx-auto w-full max-w-2xl shrink-0 px-4 pt-2 ${fullscreen ? 'hidden' : ''}`}>
           <div className="flex items-center gap-2">
             <div className="min-w-0 flex-1">
               <h1 className="truncate text-[17px] font-extrabold leading-tight">
@@ -317,8 +341,26 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
             />
           ) : (
             <div className="relative mx-auto flex h-full max-h-[900px] w-full max-w-[460px] flex-col pb-[env(safe-area-inset-bottom)]">
+              {/* 전체화면일 때: 얇은 진행 선과 메뉴 다시 열기 버튼만 카드 위에 겹쳐 보여 줌 */}
+              {fullscreen && (
+                <>
+                  <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1 bg-white/20">
+                    <div
+                      className="h-full bg-white transition-all"
+                      style={{ width: `${(Math.min(active + 1, cards.length) / Math.max(cards.length, 1)) * 100}%` }}
+                    />
+                  </div>
+                  <button
+                    onClick={() => setImmersive(false)}
+                    aria-label="메뉴 보기"
+                    className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/45 text-lg font-bold backdrop-blur"
+                  >
+                    ☰
+                  </button>
+                </>
+              )}
               {/* 진행 표시: 카드 위치 + 자동 넘김 타이머 */}
-              <div className="shrink-0 px-3 sm:px-5">
+              <div className={`shrink-0 px-3 sm:px-5 ${fullscreen ? 'hidden' : ''}`}>
                 <div className="flex items-center justify-between pb-1 text-[11px] font-bold text-white/70">
                   <span>
                     {Math.min(active + 1, cards.length)} / {cards.length}

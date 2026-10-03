@@ -29,7 +29,7 @@ export type Topic = {
 }
 
 export const SITE_NAME = 'Shrek Math News'
-export const TOPIC_CATEGORY = '수학 주제'
+export const TOPIC_CATEGORY = '수학'
 export const CATEGORY_ORDER = ['인기', '교육', '입시', 'AI·에듀테크', '연구', '대회·행사', '해외', '영상']
 
 // 카테고리별 카드 배경 (Tailwind 가 인식하도록 전체 클래스명을 그대로 적음)

@@ -60,12 +60,12 @@ function ActionButton({
   )
 }
 
-// 섬네일: 카드 위쪽 40% 를 차지. 없으면 카테고리 그라디언트가 그대로 보임
+// 섬네일: 카드 위쪽 42% 를 차지. 없으면 카테고리 그라디언트가 그대로 보임
 function Thumbnail({ item }: { item: FeedItem }) {
   const { basePath } = useRouter()
   if (!item.thumb) return null
   return (
-    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[38%] max-h-[340px] min-h-[140px] shrink-0">
+    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={`${basePath}${item.thumb}`} alt="" className="h-full w-full object-cover" loading="lazy" />
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
