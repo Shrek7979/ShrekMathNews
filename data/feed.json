@@ -1,6 +1,47 @@
 {
-  "updatedAt": "2026-10-04T16:01:35.890Z",
+  "updatedAt": "2026-10-04T17:00:53.976Z",
   "items": [
+    {
+      "id": "943e2cf2aba7",
+      "kind": "news",
+      "lang": "ko",
+      "title": "오후도 승정의 만다라 수학⑤ 한 명은 모두를 위하여",
+      "summary": "지난번에는 무한히 작아지는 것을 무한히 더해도 답이 유한할 수 있다는 이야기를 했습니다",
+      "link": "https://note.com/yuken_miyasaka/n/n75ca200ed9d2?hl=ko",
+      "source": "note",
+      "image": "http://www.bing.com/th?id=ONUT.6HHpRqAUlz1guyfS13N_QA&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-04T06:24:00.000Z",
+      "collectedAt": "2026-10-04T17:00:53.976Z",
+      "thumb": "/thumbs/943e2cf2aba7.png"
+    },
+    {
+      "id": "69808a7542dd",
+      "kind": "news",
+      "lang": "ko",
+      "title": "인수분해는 여기서 쓰인다｜AI 시대의 고속화를 뒷받침하는 중학교 수학",
+      "summary": "생성형 AI가 등장하면서 코드를 한 줄도 작성하지 않고 소프트웨어가 작동하는 시대가…",
+      "link": "https://note.com/vivid_crocus8964/n/n46d7e127dc8a?hl=ko",
+      "source": "note",
+      "image": "http://www.bing.com/th?id=ONUT.WxAh5GmSK2jdn4fXG-TTIQ&pid=News",
+      "category": "AI·에듀테크",
+      "publishedAt": "2026-10-03T03:00:00.000Z",
+      "collectedAt": "2026-10-04T17:00:53.976Z",
+      "thumb": "/thumbs/69808a7542dd.png"
+    },
+    {
+      "id": "32199a03a2e3",
+      "kind": "news",
+      "lang": "ko",
+      "title": "수학 전공 대학원에 진학해야 할까[석사 이후를 돌아보며]",
+      "summary": "지금까지 대학원 입시 대책 기사를 써왔지만, 이번에는 조금 다른 이야기를 하려 한다",
+      "link": "https://note.com/math_ent_exam/n/nb509475c882b?hl=ko",
+      "source": "note",
+      "category": "입시",
+      "publishedAt": "2026-10-02T20:59:00.000Z",
+      "collectedAt": "2026-10-04T17:00:53.976Z",
+      "thumb": "/thumbs/32199a03a2e3.png"
+    },
     {
       "id": "97fdd482c054",
       "kind": "news",
@@ -177,7 +218,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.png"
+      "thumb": "/thumbs/6d6917e71bf3.jpg"
     },
     {
       "id": "3c73391d2263",
@@ -193,7 +234,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.png"
+      "thumb": "/thumbs/3c73391d2263.jpg"
     },
     {
       "id": "e01539b51fd3",
@@ -209,7 +250,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.png"
+      "thumb": "/thumbs/e01539b51fd3.jpg"
     },
     {
       "id": "d2e592757594",
@@ -225,7 +266,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.png"
+      "thumb": "/thumbs/d2e592757594.jpg"
     },
     {
       "id": "46561d6b60c7",
@@ -409,7 +450,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.jpg"
+      "thumb": "/thumbs/19c65c3c48c8.png"
     },
     {
       "id": "1f9591edea61",
