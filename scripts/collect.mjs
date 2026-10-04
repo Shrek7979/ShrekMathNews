@@ -188,6 +188,7 @@ export async function collect() {
   const items = [...previous, ...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
     .filter((item) => now - new Date(item.collectedAt) <= KEEP_DAYS * DAY)
     .filter((item) => !/^Reddit/.test(item.source || '')) // 레딧은 더 이상 싣지 않음
+    .filter((item) => !(item.kind === 'video' && item.category !== '인기')) // 영상은 조회수 상위(인기)만 싣기로 함
     .filter((item) => {
       const grams = bigrams(item.title)
       if (kept.some((other) => similarity(grams, other) >= SIMILAR_THRESHOLD)) return false

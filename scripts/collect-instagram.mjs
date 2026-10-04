@@ -1,4 +1,4 @@
-// 인스타그램 수학 계정의 최근 게시물을 카드로 만듭니다 → data/instagram.json + public/social/ig/<코드>.jpg
+// 인스타그램 수학 계정의 최근 게시물 중 좋아요가 많은 것을 카드로 만듭니다 → data/instagram.json + public/social/ig/<코드>.jpg
 // 로그인 없이 공개 프로필에 보이는 게시물만 읽습니다. GitHub 서버에서는 로그인 화면만 나오므로
 // 집 PC 에서 실행한 뒤 커밋해야 합니다:  node scripts/collect-instagram.mjs   (또는 인스타-업데이트.bat)
 import { mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises'
@@ -11,7 +11,8 @@ import { INSTAGRAM_ACCOUNTS } from './sources.mjs'
 
 const OUT_JSON = resolve(process.cwd(), 'data/instagram.json')
 const IMG_DIR = resolve(process.cwd(), 'public/social/ig')
-const PER_ACCOUNT = 3
+const PER_ACCOUNT = 3 // 계정마다 싣는 게시물 수 (좋아요 많은 순)
+const CANDIDATES = 9 // 계정마다 살펴보는 최근 게시물 수
 const MAX_AGE_DAYS = 45
 const DAY = 24 * 60 * 60 * 1000
 // 게시물의 캡션·대표 이미지는 링크 미리보기용 정보(og 태그)에서 읽음
@@ -82,26 +83,45 @@ async function readPost(post, account, lang) {
 }
 
 await mkdir(IMG_DIR, { recursive: true })
-const items = []
+
+// 지난번에 읽어 둔 게시물(pool)은 다시 내려받지 않고 그대로 씀 → 매시간 돌려도 인스타그램에 부담을 주지 않음
+let previous = { items: [], pool: [] }
+try {
+  previous = { items: [], pool: [], ...JSON.parse(await readFile(OUT_JSON, 'utf8')) }
+} catch {}
+const known = new Map([...previous.items, ...previous.pool].map((old) => [old.id, old]))
+
+// "105K" / "1.2M" / "761" → 숫자
+const likeCount = (item) => {
+  const match = String(item.likes || '').match(/^([\d.,]+)([KM]?)/)
+  return match ? Number(match[1].replace(/,/g, '')) * ({ K: 1e3, M: 1e6 }[match[2]] || 1) : 0
+}
+
+const now = new Date().toISOString()
+const items = [] // 화면에 싣는 것: 계정별 좋아요 상위
+const pool = [] // 후보 전체 (다음 실행 때 재사용)
+const failedSources = new Set()
 for (const [account, lang] of INSTAGRAM_ACCOUNTS) {
   try {
     const grid = await evalOnPage(`https://www.instagram.com/${account}/`, READ_GRID)
     if (!grid?.length) throw new Error('게시물을 읽지 못함 (로그인 화면일 수 있음)')
-    const posts = []
-    for (const post of grid) {
-      if (posts.length >= PER_ACCOUNT) break
+    const candidates = []
+    for (const post of grid.slice(0, CANDIDATES)) {
+      const code = post.href.match(/\/(?:p|reel)\/([^/]+)/)?.[1]
       try {
-        const item = await readPost(post, account, lang)
-        if (item) posts.push(item)
+        const item = known.get(`ig-${code}`) || (await readPost(post, account, lang))
+        if (item && Date.now() - new Date(item.publishedAt) <= MAX_AGE_DAYS * DAY) candidates.push(item)
       } catch (error) {
         console.warn(`  건너뜀 ${post.href}: ${error.message}`)
       }
     }
-    // 고정 게시물이 앞에 올 수 있어 날짜순으로 다시 정렬
-    posts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
-    items.push(...posts)
-    console.log(`✓ ${String(posts.length).padStart(2)}건  @${account}`)
+    // 인기 게시물: 좋아요가 많은 순으로 계정마다 PER_ACCOUNT 건
+    const top = [...candidates].sort((x, y) => likeCount(y) - likeCount(x)).slice(0, PER_ACCOUNT)
+    pool.push(...candidates)
+    items.push(...top)
+    console.log(`✓ ${String(top.length).padStart(2)}건  @${account} (후보 ${candidates.length}건 중 좋아요 상위: ${top.map((t) => t.likes || 0).join(', ')})`)
   } catch (error) {
+    failedSources.add(`Instagram @${account}`)
     console.warn(`✗ 실패  @${account}: ${error.message}`)
   }
 }
@@ -111,46 +131,35 @@ if (items.length === 0) {
   process.exit(1)
 }
 
-// 새 게시물이 없으면(목록이 지난번과 같으면) 아무것도 바꾸지 않고 끝냄 → 매시간 돌려도 불필요한 커밋이 안 생김
-try {
-  const before = JSON.parse(await readFile(OUT_JSON, 'utf8')).items || []
-  const ids = (list) => list.map((item) => item.id).sort().join(',')
-  const stillValid = before.filter((old) => Date.now() - new Date(old.publishedAt) <= MAX_AGE_DAYS * DAY)
-  const merged = new Set([...items.map((item) => item.id), ...stillValid.map((old) => old.id)])
-  if (ids(before) === [...merged].sort().join(',')) {
-    console.log('새 게시물 없음 — 변경하지 않습니다.')
-    process.exit(0)
-  }
-} catch {}
+// 이번에 못 읽은 계정의 카드는 사라지지 않게 지난번 것을 유지
+for (const old of previous.items) {
+  if (failedSources.has(old.source) && Date.now() - new Date(old.publishedAt) <= MAX_AGE_DAYS * DAY) items.push(old)
+}
+for (const old of previous.pool) if (failedSources.has(old.source)) pool.push(old)
 
-// 이번에 못 읽은 계정이 있어도 카드가 사라지지 않게, 아직 기간이 남은 이전 게시물은 유지.
-// collectedAt(처음 가져온 시각)은 한 번 정해지면 그대로 둠 → 새로 올라온 게시물만 피드 맨 앞에 나옴
-const now = new Date().toISOString()
-try {
-  const previous = JSON.parse(await readFile(OUT_JSON, 'utf8')).items || []
-  const firstSeen = new Map(previous.map((old) => [old.id, old.collectedAt || old.publishedAt]))
-  for (const item of items) item.collectedAt = firstSeen.get(item.id) || now
-  const ids = new Set(items.map((item) => item.id))
-  for (const old of previous) {
-    const fresh = Date.now() - new Date(old.publishedAt) <= MAX_AGE_DAYS * DAY
-    if (!ids.has(old.id) && fresh && !SKIP.test(`${old.title} ${old.summary}`)) items.push(old)
-  }
-} catch {
-  for (const item of items) item.collectedAt = now
+// 실리는 게시물이 지난번과 같으면 아무것도 바꾸지 않고 끝냄 → 불필요한 커밋·배포가 안 생김
+const ids = (list) => list.map((item) => item.id).sort().join(',')
+if (ids(items) === ids(previous.items) && ids(pool) === ids(previous.pool)) {
+  console.log('바뀐 게시물 없음 — 변경하지 않습니다.')
+  process.exit(0)
 }
 
+// collectedAt(처음 실린 시각)은 한 번 정해지면 그대로 둠 → 새로 실린 게시물만 피드 맨 앞에 나옴
+const firstSeen = new Map(previous.items.map((old) => [old.id, old.collectedAt]))
+for (const item of items) item.collectedAt = firstSeen.get(item.id) || now
+
 try {
-  const { translated } = await translateItems(items)
+  const { translated } = await translateItems([...items, ...pool])
   if (translated) console.log(`✓ 영어 게시물 ${translated}건 번역`)
 } catch (error) {
   console.warn(`✗ 번역 실패: ${error.message}`)
 }
 
-items.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
-await writeFile(OUT_JSON, JSON.stringify({ updatedAt: new Date().toISOString(), items }, null, 2) + '\n')
+items.sort((x, y) => likeCount(y) - likeCount(x))
+await writeFile(OUT_JSON, JSON.stringify({ updatedAt: now, items, pool }, null, 2) + '\n')
 
-// 더 이상 쓰지 않는 이미지 정리
-const keep = new Set(items.map((item) => item.thumb.split('/').pop()))
+// 더 이상 쓰지 않는 이미지 정리 (후보의 이미지는 남겨 둠)
+const keep = new Set(pool.concat(items).map((item) => item.thumb.split('/').pop()))
 for (const file of await readdir(IMG_DIR)) if (!keep.has(file)) await unlink(resolve(IMG_DIR, file))
 
-console.log(`\n인스타그램 게시물 ${items.length}건 → data/instagram.json`)
+console.log(`\n인스타그램 인기 게시물 ${items.length}건 → data/instagram.json`)

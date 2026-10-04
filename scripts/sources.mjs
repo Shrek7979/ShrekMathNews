@@ -1,5 +1,5 @@
 // 수집 대상 목록. 여기에 항목을 추가/삭제하면 다음 수집부터 반영됩니다.
-// type: bing(빙 뉴스 검색) | rss(일반 RSS/Atom) | youtube(채널 최신) | youtube-top(여러 채널 중 조회수 상위)
+// type: bing(빙 뉴스 검색) | rss(일반 RSS/Atom) | youtube(채널 최신) | youtube-top(여러 채널의 최근 영상 중 조회수 상위)
 // category 를 적으면 키워드 분류 대신 그 카테고리로 고정
 
 // qft=sortbydate="1": 관련도순이 아니라 최신순으로 받아 방금 나온 기사부터 수집
@@ -38,25 +38,39 @@ export const SOURCES = [
   { type: 'rss', lang: 'en', name: 'AMS', trusted: true, url: 'https://www.ams.org/cgi-bin/content/news_items.cgi?rss=1', limit: 3, maxAgeDays: 30 },
   { type: 'rss', lang: 'en', name: 'AMS Feature Column', trusted: true, url: 'https://mathvoices.ams.org/featurecolumn/feed/', limit: 2, maxAgeDays: 45 },
 
-  // SNS 인기 게시물: 수학 유튜브 채널들의 최근 2주 영상 중 조회수 상위
+  // SNS 인기 게시물: 수학 유튜브 채널들의 최근 영상 중 조회수가 많은 것만 싣습니다.
+  // 국내 채널은 조회수 규모가 작아 해외 채널과 따로 뽑습니다.
   {
     type: 'youtube-top',
-    lang: 'en',
+    name: '유튜브 인기 (국내)',
+    lang: 'ko',
     category: '인기',
-    limit: 14,
-    maxAgeDays: 14,
-    minViews: 5000, // 이 조회수 미만이면 '인기'로 치지 않음
+    limit: 6,
+    maxAgeDays: 30,
+    minViews: 1000, // 이 조회수 미만이면 싣지 않음
     channels: [
       ['EBSMath', 'UCP7KQPL8aAvMnRI_rGLwONA', 'ko'],
       ['쓸모있는 수학', 'UCNgC_RnWEi_NI-5vKMdGTFQ', 'ko'],
       ['12 Math', 'UCIeGcgo2NLHwYV5_NHuOwgg', 'ko'],
       ['enjoying math', 'UCWCeUXIAm_2skU3QwJJziNg', 'ko'],
+      ['인공지능수학 깨봉', 'UCufMvGtKg2hoTs0h1Ti5cxg', 'ko'],
+      ['Ray 수학', 'UCkzbCw-4lXOl4Gf-AOrI_gw', 'ko'],
+    ],
+  },
+  {
+    type: 'youtube-top',
+    name: '유튜브 인기 (해외)',
+    lang: 'en',
+    category: '인기',
+    limit: 14,
+    maxAgeDays: 21,
+    minViews: 20000,
+    channels: [
       ['Numberphile', 'UCoxcjq-8xIDTYp3uz647V5A', 'en'],
+      ['Numberphile2', 'UCyp1gCHZJU_fGWFf2rtMkCg', 'en'],
       ['3Blue1Brown', 'UCYO_jab_esuFRV4b17AJtAw', 'en'],
       ['Stand-up Maths', 'UCSju5G2aFaWMqn-_0YBtq5A', 'en'],
       ['Mathologer', 'UC1_uAIS3r8Vu6JjXWvastJg', 'en'],
-      ['인공지능수학 깨봉', 'UCufMvGtKg2hoTs0h1Ti5cxg', 'ko'],
-      ['Numberphile2', 'UCyp1gCHZJU_fGWFf2rtMkCg', 'en'],
       ['blackpenredpen', 'UC_SvYP0k05UKiJ_2ndB02IA', 'en'],
       ['MindYourDecisions', 'UCHnj59g7jezwTy5GeL8EA_g', 'en'],
       ['Eddie Woo', 'UCq0EGvLTyy-LLT1oUSO_0FQ', 'en'],
@@ -65,18 +79,6 @@ export const SOURCES = [
       ['The Math Sorcerer', 'UCr7lmzIk63PZnBw3bezl-Mg', 'en'],
     ],
   },
-
-  // 유튜브 채널 최신 영상
-  { type: 'youtube', lang: 'en', name: 'Numberphile', url: youtube('UCoxcjq-8xIDTYp3uz647V5A'), limit: 2, maxAgeDays: 30 },
-  { type: 'youtube', lang: 'en', name: '3Blue1Brown', url: youtube('UCYO_jab_esuFRV4b17AJtAw'), limit: 2, maxAgeDays: 60 },
-  { type: 'youtube', lang: 'ko', name: 'EBSMath', url: youtube('UCP7KQPL8aAvMnRI_rGLwONA'), limit: 2, maxAgeDays: 30 },
-  { type: 'youtube', lang: 'ko', name: '쓸모있는 수학', url: youtube('UCNgC_RnWEi_NI-5vKMdGTFQ'), limit: 2, maxAgeDays: 30 },
-  { type: 'youtube', lang: 'ko', name: '인공지능수학 깨봉', url: youtube('UCufMvGtKg2hoTs0h1Ti5cxg'), limit: 2, maxAgeDays: 30 },
-  { type: 'youtube', lang: 'en', name: 'Stand-up Maths', url: youtube('UCSju5G2aFaWMqn-_0YBtq5A'), limit: 1, maxAgeDays: 30 },
-  { type: 'youtube', lang: 'en', name: 'blackpenredpen', url: youtube('UC_SvYP0k05UKiJ_2ndB02IA'), limit: 1, maxAgeDays: 14 },
-  { type: 'youtube', lang: 'en', name: 'MindYourDecisions', url: youtube('UCHnj59g7jezwTy5GeL8EA_g'), limit: 1, maxAgeDays: 14 },
-  { type: 'youtube', lang: 'en', name: 'Dr. Trefor Bazett', url: youtube('UC9rTsvTxJnx1DNrDA3Rqa6A'), limit: 1, maxAgeDays: 14 },
-  { type: 'youtube', lang: 'en', name: 'Eddie Woo', url: youtube('UCq0EGvLTyy-LLT1oUSO_0FQ'), limit: 1, maxAgeDays: 30 },
 ]
 
 export const youtubeFeed = youtube
