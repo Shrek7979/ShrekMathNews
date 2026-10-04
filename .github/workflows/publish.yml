@@ -1,12 +1,12 @@
-# 2시간마다 수학 뉴스를 수집하고 GitHub Pages 에 배포합니다.
+# 약 2시간마다 수학 뉴스를 수집하고 GitHub Pages 에 배포합니다.
 # 저장소 Settings → Pages → Source 를 "GitHub Actions" 로 한 번만 바꿔 주면 됩니다.
 # (선택) Settings → Secrets 에 ANTHROPIC_API_KEY 를 넣으면 해외 기사를 Claude 가 번역·요약합니다.
 name: Collect & Publish
 
 on:
   schedule:
-    # 2시간마다. 정각은 GitHub 예약이 몰려 몇 시간씩 밀리므로 17분에 실행
-    - cron: '17 */2 * * *'
+    # GitHub 예약은 자주 밀리거나 건너뛰어짐 → 30분마다 깨워서, 마지막 수집 후 2시간쯤 지났을 때만 실제로 수집
+    - cron: '7,37 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -21,7 +21,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 예약 실행이면 마지막 수집 시각을 보고 할 때가 됐는지 판단 (코드를 올렸거나 수동 실행이면 항상 진행)
+  due:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then echo "run=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          age=$(node -e "const f=require('./data/feed.json');console.log(Math.round((Date.now()-new Date(f.updatedAt))/60000))")
+          echo "마지막 수집 후 ${age}분"
+          if [ "$age" -ge 110 ]; then echo "run=true" >> "$GITHUB_OUTPUT"; else echo "run=false" >> "$GITHUB_OUTPUT"; fi
+
   publish:
+    needs: due
+    if: needs.due.outputs.run == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -54,7 +70,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/feed.json data/instagram.json data/facebook.json public/social/ig public/social/fb
           git diff --cached --quiet || git commit -m "chore: 뉴스 수집 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
-          git push
+          # 그 사이 다른 커밋이 올라왔으면 그 위에 다시 얹어서 올림 (충돌 시 방금 수집한 쪽을 택함)
+          git push || (git pull --rebase -X theirs && git push)
 
       - name: 정적 사이트 빌드
         env:
