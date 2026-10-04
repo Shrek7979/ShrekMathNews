@@ -1,6 +1,33 @@
 {
-  "updatedAt": "2026-10-04T01:08:18.524Z",
+  "updatedAt": "2026-10-04T05:40:04.242Z",
   "items": [
+    {
+      "id": "e4e99c7c2a7d",
+      "kind": "news",
+      "lang": "ko",
+      "title": "수학의 유희: 퍼즐과 역설에 관한 위대한 문제들",
+      "summary": "수학은 풀어야 할 문제가 아니라, 놀아볼 세계다마틴 가드너 『수학의 유희』, 퍼즐과 역설로 만나는…",
+      "link": "https://www.kyosu.net/news/articleView.html?idxno=210901",
+      "source": "교수신문",
+      "category": "교육",
+      "publishedAt": "2026-10-04T02:34:08.000Z",
+      "collectedAt": "2026-10-04T05:40:04.242Z",
+      "thumb": "/thumbs/e4e99c7c2a7d.jpg"
+    },
+    {
+      "id": "bc87fc9d7eb7",
+      "kind": "news",
+      "lang": "ko",
+      "title": "'고교생 양극화' 수학 잘하는 학생, 국·영 낮은 학생으로 갈려",
+      "summary": "고등학생 성취수준 분석 결과 상위권 집단은 수학 성적을 축으로 형성되고, 하위권 집단은 국어와…",
+      "link": "https://www.fnnews.com/news/202610041102467926",
+      "source": "파이낸셜뉴스",
+      "image": "http://www.bing.com/th?id=ONUT.5UY5nEVDe1JNOezBCsYi-A&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-03T14:05:00.000Z",
+      "collectedAt": "2026-10-04T05:40:04.242Z",
+      "thumb": "/thumbs/bc87fc9d7eb7.jpg"
+    },
     {
       "id": "dce4698df6e9",
       "kind": "news",
@@ -691,7 +718,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.jpg",
+      "thumb": "/thumbs/ab6642bdf4b6.png",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…"
     },
