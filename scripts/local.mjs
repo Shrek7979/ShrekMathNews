@@ -1,4 +1,4 @@
-// 로컬 실행기: 사이트(Next.js)를 띄우고, 2시간마다(짝수 시 정각) 뉴스를 자동 수집합니다.
+// 로컬 실행기: 사이트(Next.js)를 띄우고, 1시간마다(매시 정각) 뉴스를 자동 수집합니다.
 // 화면의 ↻ 버튼이 호출하는 즉시 수집 엔드포인트(3001 포트)도 여기서 띄웁니다.
 // 실행: npm run local   (컴퓨터가 꺼져 있어 놓친 수집은 다음 실행 때 바로 보충)
 import { spawn } from 'node:child_process'
@@ -6,7 +6,7 @@ import { createServer } from 'node:http'
 import { readFile } from 'node:fs/promises'
 import { collect, FEED_PATH } from './collect.mjs'
 
-const COLLECT_HOURS = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
+const COLLECT_HOURS = Array.from({ length: 24 }, (_, hour) => hour)
 const CONTROL_PORT = 3001
 const MIN_MANUAL_INTERVAL = 10 * 60 * 1000
 const CHECK_INTERVAL = 60 * 1000

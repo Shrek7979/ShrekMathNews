@@ -111,6 +111,18 @@ if (items.length === 0) {
   process.exit(1)
 }
 
+// 새 게시물이 없으면(목록이 지난번과 같으면) 아무것도 바꾸지 않고 끝냄 → 매시간 돌려도 불필요한 커밋이 안 생김
+try {
+  const before = JSON.parse(await readFile(OUT_JSON, 'utf8')).items || []
+  const ids = (list) => list.map((item) => item.id).sort().join(',')
+  const stillValid = before.filter((old) => Date.now() - new Date(old.publishedAt) <= MAX_AGE_DAYS * DAY)
+  const merged = new Set([...items.map((item) => item.id), ...stillValid.map((old) => old.id)])
+  if (ids(before) === [...merged].sort().join(',')) {
+    console.log('새 게시물 없음 — 변경하지 않습니다.')
+    process.exit(0)
+  }
+} catch {}
+
 // 이번에 못 읽은 계정이 있어도 카드가 사라지지 않게, 아직 기간이 남은 이전 게시물은 유지.
 // collectedAt(처음 가져온 시각)은 한 번 정해지면 그대로 둠 → 새로 올라온 게시물만 피드 맨 앞에 나옴
 const now = new Date().toISOString()

@@ -208,7 +208,7 @@ export function EndCard({ onRestart, empty }: { onRestart: () => void; empty: bo
       <div className="flex h-full flex-col items-center justify-center gap-4 bg-neutral-900 p-8 text-center sm:rounded-3xl">
         <h2 className="text-2xl font-bold">{empty ? '아직 카드가 없어요' : '오늘 소식은 여기까지'}</h2>
         <p className="break-keep leading-relaxed text-white/60">
-          {empty ? '다른 카테고리를 골라 보세요.' : '2시간마다 새 카드가 들어옵니다.'}
+          {empty ? '다른 카테고리를 골라 보세요.' : '1시간마다 새 카드가 들어옵니다.'}
         </p>
         {!empty && (
           <button onClick={onRestart} className="min-h-[48px] rounded-xl bg-white px-6 font-bold text-neutral-900">
