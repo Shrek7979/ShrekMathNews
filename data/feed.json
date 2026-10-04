@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T14:01:31.060Z",
+  "updatedAt": "2026-10-04T16:00:54.142Z",
   "items": [
     {
       "id": "97fdd482c054",
@@ -26,7 +26,7 @@
       "category": "교육",
       "publishedAt": "2026-10-04T02:34:08.000Z",
       "collectedAt": "2026-10-04T05:40:04.242Z",
-      "thumb": "/thumbs/e4e99c7c2a7d.png"
+      "thumb": "/thumbs/e4e99c7c2a7d.jpg"
     },
     {
       "id": "bc87fc9d7eb7",
@@ -177,7 +177,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.png"
+      "thumb": "/thumbs/6d6917e71bf3.jpg"
     },
     {
       "id": "3c73391d2263",
@@ -193,7 +193,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.png"
+      "thumb": "/thumbs/3c73391d2263.jpg"
     },
     {
       "id": "e01539b51fd3",
@@ -209,7 +209,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.png"
+      "thumb": "/thumbs/e01539b51fd3.jpg"
     },
     {
       "id": "d2e592757594",
@@ -225,7 +225,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.png"
+      "thumb": "/thumbs/d2e592757594.jpg"
     },
     {
       "id": "46561d6b60c7",
@@ -567,7 +567,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.png"
+      "thumb": "/thumbs/2c62b4c78e9e.jpg"
     },
     {
       "id": "7dd53dd4955b",
@@ -672,7 +672,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.png"
+      "thumb": "/thumbs/d1d902dfdc13.jpg"
     },
     {
       "id": "b43bf69f5b09",
@@ -732,7 +732,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.jpg",
+      "thumb": "/thumbs/ab6642bdf4b6.png",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…"
     },
