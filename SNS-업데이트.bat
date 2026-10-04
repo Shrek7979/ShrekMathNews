@@ -6,6 +6,6 @@ call node scripts\collect-instagram.mjs
 call node scripts\collect-facebook.mjs
 git add data/instagram.json data/facebook.json public/social/ig public/social/fb
 git commit -m "chore: 인스타그램·페이스북 게시물 갱신"
-git pull --rebase
+git pull --rebase --autostash
 git push
 pause
