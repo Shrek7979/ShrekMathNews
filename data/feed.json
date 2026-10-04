@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-10-03T21:15:44.791Z",
+  "updatedAt": "2026-10-04T00:38:43.463Z",
   "items": [
+    {
+      "id": "0496434b2efb",
+      "kind": "news",
+      "lang": "ko",
+      "title": "한 문제 차이가 등급 가른다⋯수능 전 고쳐야 할 ‘실수 습관’",
+      "summary": "2027학년도 대학수학능력시험(수능)이 50일도 채 남지 않으면서 수험생들의 막판 준비도 본격화하고…",
+      "link": "https://www.etoday.co.kr/news/view/2632059",
+      "source": "이투데이",
+      "image": "http://www.bing.com/th?id=ONUT.qIEA4ME6FAfxdrrIIJ2YGw&pid=News",
+      "category": "입시",
+      "publishedAt": "2026-10-03T11:00:00.000Z",
+      "collectedAt": "2026-10-04T00:38:43.463Z",
+      "thumb": "/thumbs/0496434b2efb.jpg"
+    },
     {
       "id": "56e538c482e1",
       "kind": "news",
@@ -326,7 +340,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.png"
+      "thumb": "/thumbs/19c65c3c48c8.jpg"
     },
     {
       "id": "1f9591edea61",
