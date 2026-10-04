@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-04T18:01:37.801Z",
+  "updatedAt": "2026-10-04T21:43:26.485Z",
   "items": [
+    {
+      "id": "b74849fbca02",
+      "kind": "news",
+      "lang": "ko",
+      "title": "「수학 검정에서 시작했는데, 왜 한자 검정으로?」 손자병법에서 배우는 검정 선택법",
+      "summary": "안녕하세요.「손군(孫くん)의 병법 × 검정」을 운영하고 있는 손군입니다.「아이에게 무언가 검정…",
+      "link": "https://note.com/the_art_of_war13/n/n1192508b9291?hl=ko",
+      "source": "note",
+      "category": "교육",
+      "publishedAt": "2026-10-02T19:57:00.000Z",
+      "collectedAt": "2026-10-04T21:43:26.485Z",
+      "thumb": "/thumbs/b74849fbca02.png"
+    },
     {
       "id": "943e2cf2aba7",
       "kind": "news",
@@ -450,7 +463,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.png"
+      "thumb": "/thumbs/19c65c3c48c8.jpg"
     },
     {
       "id": "1f9591edea61",
