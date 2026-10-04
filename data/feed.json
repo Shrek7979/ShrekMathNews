@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-10-04T08:34:42.703Z",
+  "updatedAt": "2026-10-04T10:00:49.754Z",
   "items": [
+    {
+      "id": "97fdd482c054",
+      "kind": "news",
+      "lang": "ko",
+      "title": "수능장 ‘AI 글라스’ 비상… 부정행위 대응 매뉴얼 15일 내놓는다",
+      "summary": "인공지능(AI) 글라스를 이용한 대학수학능력시험 부정행위를 막기 위해 교육부와 한국교육과정평가원이…",
+      "link": "https://www.fnnews.com/news/202610041826047862",
+      "source": "파이낸셜뉴스",
+      "image": "http://www.bing.com/th?id=ONUT.A_gITqzfffx0EZBUjEPxfQ&pid=News",
+      "category": "입시",
+      "publishedAt": "2026-10-03T21:26:00.000Z",
+      "collectedAt": "2026-10-04T10:00:49.754Z",
+      "thumb": "/thumbs/97fdd482c054.jpg"
+    },
     {
       "id": "e4e99c7c2a7d",
       "kind": "news",
