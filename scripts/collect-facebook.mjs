@@ -84,6 +84,8 @@ for (const [slug, name, lang] of FACEBOOK_PAGES) {
     if ((imageSize(bytes)?.width || 0) < 300) throw new Error('이미지가 너무 작음')
     await writeFile(resolve(IMG_DIR, `${id}.jpg`), bytes)
 
+    // 글이 소개하는 유튜브 영상(있으면). 같은 영상이 이미 카드로 있으면 화면에서 이 글을 뺌
+    const refs = [...post.text.matchAll(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/))([\w-]{11})/g)].map((m) => m[1])
     // 본문에서 링크와 "더 보기"를 떼고, 첫 문장을 제목으로
     const text = post.text
       .replace(/https?:\/\/\S+/g, '')
@@ -104,6 +106,7 @@ for (const [slug, name, lang] of FACEBOOK_PAGES) {
       category: '인기',
       publishedAt: published.toISOString(),
       thumb: `/social/fb/${id}.jpg`,
+      refs,
     })
     console.log(`✓ ${name}: ${firstSentence.slice(0, 50)}`)
   } catch (error) {

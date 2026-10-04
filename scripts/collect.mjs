@@ -187,7 +187,7 @@ export async function collect() {
   const kept = []
   const items = [...previous, ...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
     .filter((item) => now - new Date(item.collectedAt) <= KEEP_DAYS * DAY)
-    .filter((item) => !(/^Reddit/.test(item.source || '') && !item.image)) // 텍스트만 있는 레딧 글 제외
+    .filter((item) => !/^Reddit/.test(item.source || '')) // 레딧은 더 이상 싣지 않음
     .filter((item) => {
       const grams = bigrams(item.title)
       if (kept.some((other) => similarity(grams, other) >= SIMILAR_THRESHOLD)) return false

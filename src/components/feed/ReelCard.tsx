@@ -57,12 +57,12 @@ function ActionButton({
 function Thumbnail({ item }: { item: FeedItem }) {
   const { basePath } = useRouter()
   if (!item.thumb) return null
-  // 인스타그램 사진은 정사각형·세로형이라 잘라 내면 얼굴·글자가 잘림 → 전체를 보여 줌
-  const whole = item.source.startsWith('Instagram @')
+  // 사진·섬네일을 잘라 내면 좁은 폰 화면에서 글자나 얼굴이 잘림 → 항상 그림 전체를 보여 줌
+  // (남는 자리는 카드와 같은 색이라 띠처럼 보이지 않음)
   return (
-    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0 bg-black">
+    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0 bg-neutral-900">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`${basePath}${item.thumb}`} alt="" className={`h-full w-full ${whole ? 'object-contain' : 'object-cover'}`} loading="lazy" />
+      <img src={`${basePath}${item.thumb}`} alt="" className="h-full w-full object-contain" loading="lazy" />
       {item.kind === 'video' && (
         <span className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 pl-1 text-3xl">
           ▶

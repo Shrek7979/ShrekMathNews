@@ -38,12 +38,12 @@ export const SOURCES = [
   { type: 'rss', lang: 'en', name: 'AMS', trusted: true, url: 'https://www.ams.org/cgi-bin/content/news_items.cgi?rss=1', limit: 3, maxAgeDays: 30 },
   { type: 'rss', lang: 'en', name: 'AMS Feature Column', trusted: true, url: 'https://mathvoices.ams.org/featurecolumn/feed/', limit: 2, maxAgeDays: 45 },
 
-  // SNS 인기 게시물: 수학 유튜브 채널들의 최근 2주 영상 중 조회수 상위 + 레딧 r/math 주간 인기글
+  // SNS 인기 게시물: 수학 유튜브 채널들의 최근 2주 영상 중 조회수 상위
   {
     type: 'youtube-top',
     lang: 'en',
     category: '인기',
-    limit: 8,
+    limit: 14,
     maxAgeDays: 14,
     minViews: 5000, // 이 조회수 미만이면 '인기'로 치지 않음
     channels: [
@@ -55,16 +55,28 @@ export const SOURCES = [
       ['3Blue1Brown', 'UCYO_jab_esuFRV4b17AJtAw', 'en'],
       ['Stand-up Maths', 'UCSju5G2aFaWMqn-_0YBtq5A', 'en'],
       ['Mathologer', 'UC1_uAIS3r8Vu6JjXWvastJg', 'en'],
+      ['인공지능수학 깨봉', 'UCufMvGtKg2hoTs0h1Ti5cxg', 'ko'],
+      ['Numberphile2', 'UCyp1gCHZJU_fGWFf2rtMkCg', 'en'],
+      ['blackpenredpen', 'UC_SvYP0k05UKiJ_2ndB02IA', 'en'],
+      ['MindYourDecisions', 'UCHnj59g7jezwTy5GeL8EA_g', 'en'],
+      ['Eddie Woo', 'UCq0EGvLTyy-LLT1oUSO_0FQ', 'en'],
+      ['Mathemaniac', 'UCrlZs71h3mTR45FgQNINfrg', 'en'],
+      ['Dr. Trefor Bazett', 'UC9rTsvTxJnx1DNrDA3Rqa6A', 'en'],
+      ['The Math Sorcerer', 'UCr7lmzIk63PZnBw3bezl-Mg', 'en'],
     ],
   },
-  // requireImage: 이미지가 없는 글(텍스트만 있는 글)은 제외
-  { type: 'rss', lang: 'en', name: 'Reddit r/math', category: '인기', requireImage: true, url: 'https://www.reddit.com/r/math/top/.rss?t=week', limit: 5, maxAgeDays: 8 },
 
   // 유튜브 채널 최신 영상
   { type: 'youtube', lang: 'en', name: 'Numberphile', url: youtube('UCoxcjq-8xIDTYp3uz647V5A'), limit: 2, maxAgeDays: 30 },
   { type: 'youtube', lang: 'en', name: '3Blue1Brown', url: youtube('UCYO_jab_esuFRV4b17AJtAw'), limit: 2, maxAgeDays: 60 },
   { type: 'youtube', lang: 'ko', name: 'EBSMath', url: youtube('UCP7KQPL8aAvMnRI_rGLwONA'), limit: 2, maxAgeDays: 30 },
   { type: 'youtube', lang: 'ko', name: '쓸모있는 수학', url: youtube('UCNgC_RnWEi_NI-5vKMdGTFQ'), limit: 2, maxAgeDays: 30 },
+  { type: 'youtube', lang: 'ko', name: '인공지능수학 깨봉', url: youtube('UCufMvGtKg2hoTs0h1Ti5cxg'), limit: 2, maxAgeDays: 30 },
+  { type: 'youtube', lang: 'en', name: 'Stand-up Maths', url: youtube('UCSju5G2aFaWMqn-_0YBtq5A'), limit: 1, maxAgeDays: 30 },
+  { type: 'youtube', lang: 'en', name: 'blackpenredpen', url: youtube('UC_SvYP0k05UKiJ_2ndB02IA'), limit: 1, maxAgeDays: 14 },
+  { type: 'youtube', lang: 'en', name: 'MindYourDecisions', url: youtube('UCHnj59g7jezwTy5GeL8EA_g'), limit: 1, maxAgeDays: 14 },
+  { type: 'youtube', lang: 'en', name: 'Dr. Trefor Bazett', url: youtube('UC9rTsvTxJnx1DNrDA3Rqa6A'), limit: 1, maxAgeDays: 14 },
+  { type: 'youtube', lang: 'en', name: 'Eddie Woo', url: youtube('UCq0EGvLTyy-LLT1oUSO_0FQ'), limit: 1, maxAgeDays: 30 },
 ]
 
 export const youtubeFeed = youtube
@@ -75,6 +87,7 @@ export const INSTAGRAM_ACCOUNTS = [
   ['3blue1brown', 'en'],
   ['fermatslibrary', 'en'],
   ['geogebra', 'en'],
+  ['standupmaths', 'en'],
 ]
 
 // 페이스북: 최신 게시물을 카드로 보여 줄 수학 페이지 [주소 이름, 표시 이름, 언어]. scripts/collect-facebook.mjs 가 사용

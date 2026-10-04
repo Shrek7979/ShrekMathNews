@@ -14,6 +14,8 @@ export type FeedItem = {
   collectedAt: string
   views?: number
   likes?: string
+  // 이 글이 소개하는 유튜브 영상 번호 (페이스북 게시물)
+  refs?: string[]
   thumb?: string | null
   titleKo?: string
   summaryKo?: string

@@ -66,7 +66,20 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const { items } = await read<{ items: FeedItem[] }>(file, { items: [] })
     posts.push(...items.map((item) => ({ ...item, collectedAt: item.collectedAt || item.publishedAt })))
   }
-  const dated = [...feed.items, ...posts].sort(
+  // 중복 제거: 같은 영상·같은 제목이 유튜브 카드로 이미 있으면 인스타그램·페이스북 쪽을 뺌
+  // (예: 3Blue1Brown 쇼츠와 같은 영상의 인스타 릴스, 새 영상을 알리는 페이스북 글)
+  const normalize = (text?: string) => (text || '').toLowerCase().replace(/[^0-9a-z가-힣]/g, '')
+  const seenTitles = new Set(feed.items.flatMap((item) => [normalize(item.title), normalize(item.titleKo)]).filter((t) => t.length >= 6))
+  const videoIds = new Set(
+    feed.items.map((item) => item.link.match(/(?:v=|shorts\/|youtu\.be\/)([\w-]{11})/)?.[1]).filter(Boolean)
+  )
+  const uniquePosts = posts.filter((post) => {
+    const titles = [normalize(post.title), normalize(post.titleKo)].filter((t) => t.length >= 6)
+    if (titles.some((t) => seenTitles.has(t)) || post.refs?.some((id) => videoIds.has(id))) return false
+    titles.forEach((t) => seenTitles.add(t))
+    return true
+  })
+  const dated = [...feed.items, ...uniquePosts].sort(
     (a, b) => b.collectedAt.localeCompare(a.collectedAt) || b.publishedAt.localeCompare(a.publishedAt)
   )
   return {
