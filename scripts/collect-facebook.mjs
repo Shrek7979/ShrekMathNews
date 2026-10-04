@@ -122,9 +122,11 @@ try {
   const previous = JSON.parse(await readFile(OUT_JSON, 'utf8')).items || []
   const firstSeen = new Map(previous.map((old) => [old.id, old.collectedAt]))
   for (const item of items) item.collectedAt = firstSeen.get(item.id) || now
-  const ids = new Set(items.map((item) => item.id))
+  // 같은 게시물이 주소만 달리 잡히는 경우가 있어, 같은 페이지의 같은 글이면 중복으로 봄
+  const seen = new Set(items.flatMap((item) => [item.id, `${item.source}|${item.title}`]))
   for (const old of previous) {
-    if (!ids.has(old.id) && Date.now() - new Date(old.publishedAt) <= MAX_AGE_DAYS * DAY) items.push(old)
+    const duplicate = seen.has(old.id) || seen.has(`${old.source}|${old.title}`)
+    if (!duplicate && Date.now() - new Date(old.publishedAt) <= MAX_AGE_DAYS * DAY) items.push(old)
   }
 } catch {
   for (const item of items) item.collectedAt = now

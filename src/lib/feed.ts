@@ -17,7 +17,7 @@ export type FeedItem = {
   thumb?: string | null
   titleKo?: string
   summaryKo?: string
-  translator?: 'claude' | 'mymemory'
+  translator?: 'claude' | 'google' | 'mymemory'
   // 날짜가 의미 없는 고정 카드 (인스타·페이스북 바로가기 등)
   evergreen?: boolean
 }
@@ -118,15 +118,43 @@ export function useStoredSet(key: string) {
   return { ids, add, toggle }
 }
 
-export async function shareLink(title: string, url: string): Promise<string | null> {
+// 단톡방에 바로 붙여 넣을 수 있게 "제목 + 한 줄 설명 + 링크" 로 공유
+export async function shareLink(title: string, summary: string, url: string): Promise<string | null> {
+  const text = [title, summary].filter(Boolean).join('\n')
   try {
     if (navigator.share) {
-      await navigator.share({ title, url })
+      await navigator.share({ title, text, url })
       return null
     }
-    await navigator.clipboard.writeText(url)
-    return '링크를 복사했어요'
+    await navigator.clipboard.writeText(`${text}\n${url}`)
+    return '제목과 링크를 복사했어요'
   } catch {
     return null
   }
+}
+
+// 인기 점수: 유튜브 조회수 또는 인스타그램 좋아요("105K", "1.2M", "761")
+export function popularity(item: FeedItem) {
+  if (item.views) return item.views
+  const likes = item.likes?.match(/^([\d.,]+)([KM]?)$/)
+  if (!likes) return 0
+  return Number(likes[1].replace(/,/g, '')) * ({ K: 1_000, M: 1_000_000 }[likes[2]] || 1)
+}
+
+// 학교급: 제목·설명의 낱말로 추정. 어느 학교급인지 알 수 없는 글(연구, 해외 소식 등)은 빈 집합
+export const LEVELS = ['초등', '중등', '고등'] as const
+const LEVEL_PATTERNS: [string, RegExp][] = [
+  ['초등', /초등|초[1-6]/],
+  ['중등', /중학|중등|중[1-3]/],
+  ['고등', /고등|고[1-3]|수능|모의고사|모평|대입|내신|입시/],
+]
+export function levelsOf(item: FeedItem) {
+  const text = `${item.title} ${item.summary} ${item.titleKo || ''}`
+  return new Set(LEVEL_PATTERNS.filter(([, pattern]) => pattern.test(text)).map(([level]) => level))
+}
+// 고른 학교급의 글 + 학교급과 무관한 글을 보여 주고, 다른 학교급 전용 글만 숨김
+export function matchesLevel(item: FeedItem, level: string) {
+  if (!level) return true
+  const levels = levelsOf(item)
+  return levels.size === 0 || levels.has(level)
 }

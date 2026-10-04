@@ -31,6 +31,8 @@ export const oneLine = (s, n = SUMMARY_LENGTH) => {
   return truncate(first.replace(/[.]$/, ''), n)
 }
 const truncate = (s, n) => (s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s)
+// 유튜브 설명란 첫 줄은 감사 인사·링크·구독 안내인 경우가 많아 카드 설명으로 쓰지 않음
+const isJunkVideoText = (s) => !s || s.length < 25 || /https?:|thanks|감사|patreon|subscribe|구독|podcast|팟캐스트|전체 동영상|full video/i.test(s)
 const titleKey = (title) => title.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '')
 const makeId = (title) => createHash('sha1').update(titleKey(title)).digest('hex').slice(0, 12)
 
@@ -80,6 +82,7 @@ function parseEntry($, el, source) {
     summary = clean(group.children('media\\:description').text().split('\n')[0])
     title = title.replace(new RegExp(` - ${source.name}$`), '')
     views = Number(group.find('media\\:statistics').attr('views') || 0) || undefined
+    if (isJunkVideoText(summary)) summary = ''
   } else if (/reddit\.com/.test(source.url)) {
     // 레딧 Atom: 본문 끝의 "submitted by /u/…" 꼬리표 제거, 링크 글이면 섬네일 사용
     summary = summary.replace(/\s*submitted by.*$/i, '').replace(/\[link\]|\[comments\]/g, '').trim()
@@ -207,6 +210,7 @@ export async function collect() {
 
   // 번역문은 원문보다 길어질 수 있어 번역 뒤에 한 줄로 다시 맞춤
   for (const item of items) {
+    if (item.kind === 'video' && isJunkVideoText(item.summary)) item.summary = item.summaryKo = ''
     item.summary = oneLine(item.summary)
     if (item.summaryKo) item.summaryKo = oneLine(item.summaryKo)
   }

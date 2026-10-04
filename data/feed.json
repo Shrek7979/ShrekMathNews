@@ -1,6 +1,34 @@
 {
-  "updatedAt": "2026-10-04T00:38:43.463Z",
+  "updatedAt": "2026-10-04T01:00:14.801Z",
   "items": [
+    {
+      "id": "dce4698df6e9",
+      "kind": "news",
+      "lang": "ko",
+      "title": "‘국어·수학 줄이고 정보 늘리기’는 단순한 뺄셈인가—생산가능곡선으로 읽어보는 차기 학습지도요령",
+      "summary": "차기 학습지도요령 등의 심의 정리(안)가 공개되어 저는 읽기 맵을 업데이트하고 있었는데, 세간에서는…",
+      "link": "https://note.com/u17da/n/n16b9a27c910e?hl=ko",
+      "source": "note",
+      "image": "http://www.bing.com/th?id=ONUT.pTJmBpfL-n4-XtCHXHAdVQ&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-03T17:56:00.000Z",
+      "collectedAt": "2026-10-04T00:56:53.933Z",
+      "thumb": "/thumbs/dce4698df6e9.png"
+    },
+    {
+      "id": "d06bc3b990ab",
+      "kind": "news",
+      "lang": "ko",
+      "title": "AI와 수학[1] 감정이 있을까? AI는 거대한 함수다!",
+      "summary": "AI 공부를 시작한 지 얼마 되지 않았을 무렵, \"아, AI는 함수의 덩어리야.\"라는 말을 들은…",
+      "link": "https://note.com/fond_cobra6179/n/n7e8fc4181780?hl=ko",
+      "source": "note",
+      "image": "http://www.bing.com/th?id=ONUT.chp1wo0k0_pTAcuV63OZaw&pid=News",
+      "category": "AI·에듀테크",
+      "publishedAt": "2026-10-03T17:56:00.000Z",
+      "collectedAt": "2026-10-04T00:56:53.933Z",
+      "thumb": "/thumbs/d06bc3b990ab.png"
+    },
     {
       "id": "0496434b2efb",
       "kind": "news",
@@ -40,9 +68,9 @@
       "category": "해외",
       "publishedAt": "2026-10-01T05:00:32.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "타원 곡선이 디지털 세상을 보호하는 방법",
-      "summaryKo": "오늘날, 타원 곡선 암호법은…",
-      "translator": "mymemory",
+      "titleKo": "타원 곡선이 디지털 세계를 보호하는 방법",
+      "summaryKo": "오늘날 타원곡선 암호화는 모든 분야에서 사용됩니다",
+      "translator": "google",
       "thumb": "/thumbs/59786d5d52cc.png"
     },
     {
@@ -57,8 +85,8 @@
       "publishedAt": "2026-09-17T05:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
       "titleKo": "장 피에르 세르 탄생 100주년 기념",
-      "summaryKo": "장 피에르 세르 (Jean-Pierre Serre) 미국 수학 협회 (American…",
-      "translator": "mymemory",
+      "summaryKo": "장 피에르 세르 미국수학회…",
+      "translator": "google",
       "thumb": "/thumbs/5754e969858f.png"
     },
     {
@@ -72,9 +100,9 @@
       "category": "해외",
       "publishedAt": "2026-09-08T05:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "Navier-Stokes 문제에 대한 AMS 리더십의 진술",
-      "summaryKo": "발표된 Navier–Stokes 돌파구에 대한 응답으로",
-      "translator": "mymemory",
+      "titleKo": "Navier-Stokes 문제에 대한 AMS 리더십의 성명",
+      "summaryKo": "Navier-Stokes의 획기적인 발표에 대한 응답으로…",
+      "translator": "google",
       "thumb": "/thumbs/ddcadfd42261.png"
     },
     {
@@ -90,8 +118,8 @@
       "publishedAt": "2026-09-01T09:00:58.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
       "titleKo": "골든 포멀 파워 시리즈",
-      "summaryKo": "다행히도, 그러한 공식이 존재하며, 많은",
-      "translator": "mymemory",
+      "summaryKo": "다행히도 그러한 공식이 존재하며, 많은…",
+      "translator": "google",
       "thumb": "/thumbs/d5843ccc329a.png"
     },
     {
@@ -105,10 +133,10 @@
       "category": "해외",
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "진정한 소속감을 위한 학생의 목소리 증폭",
-      "summaryKo": "저널명: 수학 교사: 학습 및…",
-      "translator": "mymemory",
-      "thumb": "/thumbs/6d6917e71bf3.png"
+      "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
+      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
+      "translator": "google",
+      "thumb": "/thumbs/6d6917e71bf3.jpg"
     },
     {
       "id": "3c73391d2263",
@@ -121,10 +149,10 @@
       "category": "해외",
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "수학 스토리텔링을 통해 교감하기",
-      "summaryKo": "저널명: 수학 교사: 학습 및…",
-      "translator": "mymemory",
-      "thumb": "/thumbs/3c73391d2263.png"
+      "titleKo": "수학 스토리텔링 중 연결 만들기",
+      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
+      "translator": "google",
+      "thumb": "/thumbs/3c73391d2263.jpg"
     },
     {
       "id": "e01539b51fd3",
@@ -137,10 +165,10 @@
       "category": "해외",
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "비판적 문해력 렌즈를 통해 수학 가르치기",
-      "summaryKo": "저널명: 수학 교사: 학습 및…",
-      "translator": "mymemory",
-      "thumb": "/thumbs/e01539b51fd3.png"
+      "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
+      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
+      "translator": "google",
+      "thumb": "/thumbs/e01539b51fd3.jpg"
     },
     {
       "id": "d2e592757594",
@@ -153,10 +181,10 @@
       "category": "해외",
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "표현의 적절성 평가하기",
-      "summaryKo": "저널명: 수학 교사: 학습 및…",
-      "translator": "mymemory",
-      "thumb": "/thumbs/d2e592757594.png"
+      "titleKo": "표현의 여유도 평가",
+      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
+      "translator": "google",
+      "thumb": "/thumbs/d2e592757594.jpg"
     },
     {
       "id": "46561d6b60c7",
@@ -171,9 +199,9 @@
       "category": "인기",
       "publishedAt": "2026-10-03T10:24:53.000Z",
       "collectedAt": "2026-10-03T20:23:53.433Z",
-      "titleKo": "모든 고귀한 다면체 # maths # math # animation",
-      "summaryKo": "다음 사이트에서 이 모든 것에 대한 Numberphile 동영상 전체를 시청하세요",
-      "translator": "mymemory",
+      "titleKo": "모든 고귀한 다면체 #수학 #수학 #애니메이션",
+      "summaryKo": "이 모든 것에 대한 전체 Numberphile 비디오를 시청하세요…",
+      "translator": "google",
       "thumb": "/thumbs/46561d6b60c7.jpg"
     },
     {
@@ -340,7 +368,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.jpg"
+      "thumb": "/thumbs/19c65c3c48c8.png"
     },
     {
       "id": "1f9591edea61",
@@ -397,14 +425,15 @@
       "category": "영상",
       "publishedAt": "2026-09-29T00:00:02.000Z",
       "collectedAt": "2026-10-03T00:24:30.635Z",
-      "thumb": "/thumbs/540471ab00f6.jpg"
+      "thumb": "/thumbs/540471ab00f6.jpg",
+      "summaryKo": ""
     },
     {
       "id": "54ece73965a1",
       "kind": "video",
       "lang": "en",
       "title": "We tested Babish's 15,000% claim!",
-      "summary": "Thanks to Private Internet Access for sponsoring this…",
+      "summary": "",
       "link": "https://www.youtube.com/watch?v=9xwU-ochogk",
       "source": "Stand-up Maths",
       "image": "https://i2.ytimg.com/vi/9xwU-ochogk/hqdefault.jpg",
@@ -414,15 +443,15 @@
       "collectedAt": "2026-10-03T00:20:00.887Z",
       "titleKo": "Babish의 15,000% 주장을 테스트했습니다!",
       "thumb": "/thumbs/54ece73965a1.jpg",
-      "translator": "mymemory",
-      "summaryKo": "이 동영상을 후원해 주신 Private Internet Access에게 감사드립니다!"
+      "translator": "google",
+      "summaryKo": ""
     },
     {
       "id": "42c067a473bd",
       "kind": "video",
       "lang": "en",
       "title": "What now for Mathematics (with 3Blue1Brown)",
-      "summary": "(or search Numberphile on your podcast player!)…",
+      "summary": "",
       "link": "https://www.youtube.com/watch?v=9HlIuxnuTKQ",
       "source": "Numberphile",
       "image": "https://i2.ytimg.com/vi/9HlIuxnuTKQ/hqdefault.jpg",
@@ -430,10 +459,10 @@
       "category": "인기",
       "publishedAt": "2026-09-28T15:42:59.000Z",
       "collectedAt": "2026-10-03T00:20:00.887Z",
-      "titleKo": "이제 수학을 위해 (3Blue1Brown 포함)",
+      "titleKo": "이제 수학은 어떻게 되나요?(3Blue1Brown 사용)",
       "thumb": "/thumbs/42c067a473bd.jpg",
-      "translator": "mymemory",
-      "summaryKo": "(또는 팟캐스트 플레이어에서 Numberphile을 검색하세요!) Brady Haran의…"
+      "translator": "google",
+      "summaryKo": ""
     },
     {
       "id": "530f8ffbb583",
@@ -448,10 +477,10 @@
       "category": "인기",
       "publishedAt": "2026-09-22T12:34:02.000Z",
       "collectedAt": "2026-10-03T00:20:00.887Z",
-      "titleKo": "블라인드 랭킹 번호 (James Grime)",
-      "summaryKo": "James Grime 블라인드는 5개의 숫자와 상수의 순위를 매깁니다",
+      "titleKo": "블라인드 순위 번호(James Grime)",
+      "summaryKo": "James Grime blind가 5개의 숫자와 상수 순위를 매겼습니다",
       "thumb": "/thumbs/530f8ffbb583.jpg",
-      "translator": "mymemory"
+      "translator": "google"
     },
     {
       "id": "25a6523880a1",
@@ -466,10 +495,10 @@
       "category": "인기",
       "publishedAt": "2026-09-21T12:00:07.000Z",
       "collectedAt": "2026-10-03T00:20:00.887Z",
-      "titleKo": "AI에 의해 밀레니엄 상금 문제가 해결되었습니까?",
+      "titleKo": "밀레니엄상 문제는 AI로 해결됐나?",
       "thumb": "/thumbs/25a6523880a1.jpg",
-      "translator": "mymemory",
-      "summaryKo": "더 많은 매트를 원한다면 이쪽으로 오세요: Navier Stokes에 대한 OpenAI 발표: 내…"
+      "translator": "google",
+      "summaryKo": "Matt가 휴가 여행을 떠나려고 시도하는 것을 더 원하십니까?"
     },
     {
       "id": "19acb473ac0e",
@@ -504,7 +533,7 @@
       "kind": "video",
       "lang": "en",
       "title": "Big News in Polyhedra",
-      "summary": "Special thanks to Connor Hill and Robert Webb",
+      "summary": "",
       "link": "https://www.youtube.com/watch?v=95335U-cUh8",
       "source": "Numberphile",
       "image": "https://i2.ytimg.com/vi/95335U-cUh8/hqdefault.jpg",
@@ -513,9 +542,9 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "다면체의 빅 뉴스",
       "thumb": "/thumbs/7dd53dd4955b.jpg",
-      "translator": "mymemory",
+      "translator": "google",
       "views": 165391,
-      "summaryKo": "코너 힐과 로버트 웹에게 특별히 감사드립니다"
+      "summaryKo": ""
     },
     {
       "id": "eb72b30987ed",
@@ -559,8 +588,8 @@
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "4차원은 실제로 어떤 모습일까요?",
       "thumb": "/thumbs/ab0451c9824a.jpg",
-      "translator": "mymemory",
-      "summaryKo": "매기 밀러 (Maggie Miller) 는 3차원에 대한 직관이 왜 4차원으로 나누어지는지, 4D…"
+      "translator": "google",
+      "summaryKo": "매기 밀러(Maggie Miller)가 세 가지에 대한 우리의 직관을 설명합니다…"
     },
     {
       "id": "bf751846afb9",
@@ -644,11 +673,11 @@
       "publishedAt": "2026-09-29T20:05:39.000Z",
       "category": "영상",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "titleKo": "벅마스터 인터뷰 (나비어-스토크스)",
+      "titleKo": "Buckmaster 인터뷰(Navier-Stokes)",
       "thumb": "/thumbs/9bfe74474119.jpg",
-      "translator": "mymemory",
+      "translator": "google",
       "views": 300473,
-      "summaryKo": "참고: 동영상이 최종 완성되어 업로드된 이후 OpenAI로부터 회신을 받았으며 인터뷰 일정을…"
+      "summaryKo": "참고: 영상이 완성되어 업로드되었기 때문에…"
     },
     {
       "id": "ab6642bdf4b6",
@@ -661,10 +690,10 @@
       "publishedAt": "2026-09-29T15:00:08.000Z",
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "titleKo": "새로운 통계적 방법은 과학적 데이터 세트의 숨겨진 이상 징후를 표시할 수 있습니다.",
+      "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
       "thumb": "/thumbs/ab6642bdf4b6.png",
-      "translator": "mymemory",
-      "summaryKo": "제약 화학자 요하네스 키르히마이어 (Johannes Kirchmair) 가 이끄는 빈 대학교…"
+      "translator": "google",
+      "summaryKo": "비엔나 대학교 연구팀이 이끄는…"
     },
     {
       "id": "e523a6fd7011",
@@ -678,17 +707,17 @@
       "publishedAt": "2026-09-28T14:35:21.000Z",
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "titleKo": "수학자들은 55세 추측을 해독하기 위해 무작위성을 활용합니다.",
+      "titleKo": "수학자들은 무작위성을 활용하여 55년 된 추측을 풀었습니다.",
       "thumb": "/thumbs/e523a6fd7011.jpg",
-      "translator": "mymemory",
-      "summaryKo": "긴 공백 끝에 저글링에서 영감을 얻은 이 문제는 마침내 젊은 수학자 그룹에 의해 해결되었습니다"
+      "translator": "google",
+      "summaryKo": "오랜 공백 끝에 발생한 문제는…"
     },
     {
       "id": "51feef5f1bf4",
       "kind": "video",
       "lang": "en",
       "title": "The Phone Number puzzle",
-      "summary": "Part of a monthly…",
+      "summary": "",
       "link": "https://www.youtube.com/shorts/ausLKMojXaY",
       "source": "3Blue1Brown",
       "image": "https://i2.ytimg.com/vi/ausLKMojXaY/hqdefault.jpg",
@@ -696,9 +725,9 @@
       "category": "영상",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "전화번호 퍼즐",
-      "summaryKo": "월간 퍼즐 시리즈의 일부: https://momath.org/mindbenders/",
+      "summaryKo": "",
       "thumb": "/thumbs/51feef5f1bf4.jpg",
-      "translator": "mymemory",
+      "translator": "google",
       "views": 652601
     },
     {
@@ -706,7 +735,7 @@
       "kind": "video",
       "lang": "en",
       "title": "The last IMO problem AI could not solve",
-      "summary": "Full video: https://youtu.be/Nbwv5wHQoj0",
+      "summary": "",
       "link": "https://www.youtube.com/shorts/bRQEWPA832A",
       "source": "3Blue1Brown",
       "image": "https://i3.ytimg.com/vi/bRQEWPA832A/hqdefault.jpg",
@@ -714,9 +743,9 @@
       "category": "영상",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "AI가 해결할 수 없는 마지막 IMO 문제",
-      "summaryKo": "전체 동영상: https://youtu.be/Nbwv5wHQoj0",
+      "summaryKo": "",
       "thumb": "/thumbs/8f18232c6ac4.jpg",
-      "translator": "mymemory",
+      "translator": "google",
       "views": 665910
     }
   ]

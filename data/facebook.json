@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T00:43:22.479Z",
+  "updatedAt": "2026-10-04T01:00:12.375Z",
   "items": [
     {
       "id": "fb-cea5f00774fd",
@@ -10,12 +10,12 @@
       "link": "https://www.facebook.com/QuantaNews/posts/pfbid072mpsZVmGC5vQFcPkpEWYDSGq4iDrwyGXAbHBWb9USeAUcWU3VmWLwAUq28aCZ1zl",
       "source": "Facebook Quanta Magazine",
       "category": "인기",
-      "publishedAt": "2026-10-03T20:43:00.416Z",
+      "publishedAt": "2026-10-03T20:59:46.532Z",
       "thumb": "/social/fb/fb-cea5f00774fd.jpg",
       "collectedAt": "2026-10-03T20:52:33.278Z",
       "titleKo": "이것은 Noperthedron입니다.",
-      "summaryKo": "\"아니오\" 와 \"루퍼트\" 의 포트맨토이며, 유일한...",
-      "translator": "mymemory"
+      "summaryKo": "\"아니오(nope)\"와 \"루퍼트(Rupert)\"의 합성어입니다.",
+      "translator": "google"
     },
     {
       "id": "fb-5b0796e09d4e",
@@ -26,12 +26,12 @@
       "link": "https://www.facebook.com/numberphile/posts/pfbid02sVsw9n4J3e7E5xinL5PbD5NYYo5XFGp6WK5dTRrJZ15T3YSwM7cXEVbzTcCDdcU4l",
       "source": "Facebook Numberphile",
       "category": "인기",
-      "publishedAt": "2026-10-03T00:42:49.668Z",
+      "publishedAt": "2026-10-03T00:59:33.859Z",
       "thumb": "/social/fb/fb-5b0796e09d4e.jpg",
       "collectedAt": "2026-10-03T20:52:33.278Z",
-      "titleKo": "이 새로운 동영상을 공유하게 되어 매우 기쁩니다",
+      "titleKo": "이 새로운 영상을 공유하게 되어 매우 기쁩니다",
       "summaryKo": "",
-      "translator": "mymemory"
+      "translator": "google"
     },
     {
       "id": "fb-87000074e67f",
@@ -42,28 +42,12 @@
       "link": "https://www.facebook.com/geogebra/posts/pfbid02eDQFTxQJQ6SRHZieDkSPC7h5sy26CEwqi2GRSCKMxqg8kA8JhcgbA8AMnaGTwecCl",
       "source": "Facebook GeoGebra",
       "category": "인기",
-      "publishedAt": "2026-09-14T12:00:00.000Z",
+      "publishedAt": "2026-09-14T03:00:00.000Z",
       "thumb": "/social/fb/fb-87000074e67f.jpg",
       "collectedAt": "2026-10-04T00:43:22.479Z",
-      "titleKo": "수학을 진정으로 볼 수 있는 가장 쉬운 방법인 SketchMath를 소개합니다.",
-      "summaryKo": "geoGebra ® 의 동적 형상에 의해 빨간색",
-      "translator": "mymemory"
-    },
-    {
-      "id": "fb-22ede1e72c61",
-      "kind": "news",
-      "lang": "en",
-      "title": "Introducing SketchMath, the easiest way to truly see mathematics, powe",
-      "summary": "red by the dynamic geometry of GeoGebra®",
-      "link": "https://www.facebook.com/geogebra/posts/pfbid0aMxYHHUUYk3SiSLj9nojBEBLJM7D4pgukG31hFicY61XHrtKQYuzzxNYpnq8sk76l",
-      "source": "Facebook GeoGebra",
-      "category": "인기",
-      "publishedAt": "2026-09-14T12:00:00.000Z",
-      "thumb": "/social/fb/fb-22ede1e72c61.jpg",
-      "collectedAt": "2026-10-03T20:52:33.278Z",
-      "titleKo": "수학을 진정으로 볼 수 있는 가장 쉬운 방법인 SketchMath를 소개합니다.",
-      "summaryKo": "geoGebra ® 의 동적 형상에 의해 빨간색",
-      "translator": "mymemory"
+      "titleKo": "수학을 진정으로 보는 가장 쉬운 방법, SketchMath를 소개합니다.",
+      "summaryKo": "GeoGebra®의 동적 기하학으로 빨간색",
+      "translator": "google"
     }
   ]
 }

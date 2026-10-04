@@ -19,7 +19,11 @@ export const SOURCES = [
   { type: 'bing', lang: 'ko', url: bing('수학 올림피아드'), limit: 4, maxAgeDays: 3 },
   { type: 'bing', lang: 'ko', url: bing('수학 AI'), limit: 5, maxAgeDays: 3 },
 
+  // 교육 전문지 전체 기사 피드 (제목에 '수학' 등이 들어간 기사만 통과)
   { type: 'rss', lang: 'ko', name: '에듀프레스', url: 'https://www.edupress.kr/rss/allArticle.xml', limit: 4, maxAgeDays: 5 },
+  { type: 'rss', lang: 'ko', name: '베리타스알파', url: 'https://www.veritas-a.com/rss/allArticle.xml', limit: 3, maxAgeDays: 5 },
+  { type: 'rss', lang: 'ko', name: '에듀인뉴스', url: 'https://www.eduinnews.co.kr/rss/allArticle.xml', limit: 3, maxAgeDays: 5 },
+  { type: 'rss', lang: 'ko', name: '교수신문', url: 'https://www.kyosu.net/rss/allArticle.xml', limit: 3, maxAgeDays: 5 },
 
   // 해외 수학 매체
   { type: 'rss', lang: 'en', name: 'Quanta Magazine', url: 'https://www.quantamagazine.org/feed/', requireCategory: 'Mathematics', limit: 3, maxAgeDays: 14 },

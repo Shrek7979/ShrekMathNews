@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import { CATEGORY_ACCENT, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatViews } from '@/lib/feed'
+import { saveTopicImage } from '@/lib/topicImage'
 import TopicVisual, { hasTopicVisual } from './TopicVisual'
 
 // 카드 바탕은 모두 같은 어두운 단색. 카테고리는 글자 색 하나로만 구분해 읽는 데 집중하게 함
@@ -56,10 +57,12 @@ function ActionButton({
 function Thumbnail({ item }: { item: FeedItem }) {
   const { basePath } = useRouter()
   if (!item.thumb) return null
+  // 인스타그램 사진은 정사각형·세로형이라 잘라 내면 얼굴·글자가 잘림 → 전체를 보여 줌
+  const whole = item.source.startsWith('Instagram @')
   return (
-    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0">
+    <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0 bg-black">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`${basePath}${item.thumb}`} alt="" className="h-full w-full object-cover" loading="lazy" />
+      <img src={`${basePath}${item.thumb}`} alt="" className={`h-full w-full ${whole ? 'object-contain' : 'object-cover'}`} loading="lazy" />
       {item.kind === 'video' && (
         <span className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 pl-1 text-3xl">
           ▶
@@ -87,7 +90,7 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
     !item.evergreen && formatDate(item.publishedAt),
     item.views && `조회 ${formatViews(item.views)}`,
     item.likes && `좋아요 ${item.likes}`,
-    item.lang === 'en' && (translated ? (item.translator === 'mymemory' ? '자동 번역' : '번역') : '영문'),
+    item.lang === 'en' && (translated ? (item.translator === 'claude' ? '번역' : '자동 번역') : '영문'),
   ].filter(Boolean) as string[]
 
   return (
@@ -129,6 +132,7 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
 // 수학 주제 카드: 좌우로 넘기는 카드뉴스
 export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boolean; onSave: () => void }) {
   const slidesRef = useRef<HTMLDivElement>(null)
+  const visualRef = useRef<HTMLDivElement>(null)
   const [slide, setSlide] = useState(0)
   const last = topic.slides.length - 1
   const animated = hasTopicVisual(topic.id)
@@ -141,7 +145,7 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
   return (
     <CardShell className="topic-card">
       {animated && (
-        <div className="topic-visual h-[30%] max-h-[300px] min-h-[130px] shrink-0 bg-indigo-950 px-2 pt-2">
+        <div ref={visualRef} className="topic-visual h-[30%] max-h-[300px] min-h-[130px] shrink-0 bg-indigo-950 px-2 pt-2">
           <TopicVisual topicId={topic.id} />
         </div>
       )}
@@ -187,6 +191,10 @@ export function TopicCard({ topic, saved, onSave }: { topic: Topic; saved: boole
           </button>
           <ActionButton onClick={onSave} active={saved} label="저장">
             {saved ? '★' : '☆'}
+          </ActionButton>
+          {/* 지금 보이는 그림과 설명을 PNG 한 장으로 저장 (학습지·수업 자료용) */}
+          <ActionButton onClick={() => saveTopicImage(topic, slide, visualRef.current?.querySelector('svg') ?? null)} label="이미지로 저장">
+            ⤓
           </ActionButton>
         </div>
       </div>

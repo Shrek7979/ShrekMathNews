@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { existsSync } from 'fs'
 import { readFile } from 'fs/promises'
@@ -15,8 +14,11 @@ import {
   SITE_NAME,
   SocialLink,
   TOPIC_CATEGORY,
+  LEVELS,
   Topic,
   editionLabel,
+  matchesLevel,
+  popularity,
   shareLink,
   useStoredSet,
 } from '@/lib/feed'
@@ -86,6 +88,10 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
   // 인스타 릴스처럼: 아래로 넘기기 시작하면 상단 메뉴를 숨겨 카드가 화면을 꽉 채움
   const [immersive, setImmersive] = useState(false)
   const [toast, setToast] = useState('')
+  // 검색·학교급 필터 (돋보기 버튼으로 여닫음)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [query, setQuery] = useState('')
+  const [level, setLevel] = useState('')
   const [refreshing, setRefreshing] = useState(false)
   const [isLocal, setIsLocal] = useState(false)
   const [now, setNow] = useState<number | null>(null)
@@ -98,6 +104,11 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     try {
       const last = localStorage.getItem('math-hub:view')
       if (last === 'briefing') setView('briefing')
+      const lastLevel = localStorage.getItem('math-hub:level')
+      if (lastLevel) {
+        setLevel(lastLevel)
+        setSearchOpen(true)
+      }
     } catch {}
   }, [feed.updatedAt])
 
@@ -118,15 +129,32 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     [feed.items]
   )
 
+  const keyword = query.trim().toLowerCase()
   const visibleItems = useMemo(() => {
-    if (category === ALL) return feed.items
-    if (category === SAVED) return feed.items.filter((item) => saved.ids.has(item.id))
-    return feed.items.filter((item) => item.category === category)
-  }, [feed.items, category, saved.ids])
+    const inLevel = feed.items.filter((item) => matchesLevel(item, level))
+    // 검색어가 있으면 카테고리와 상관없이 전체에서 찾음
+    if (keyword) {
+      return inLevel.filter((item) =>
+        `${item.title} ${item.titleKo || ''} ${item.summary} ${item.summaryKo || ''} ${item.source}`.toLowerCase().includes(keyword)
+      )
+    }
+    if (category === ALL) return inLevel
+    if (category === SAVED) return inLevel.filter((item) => saved.ids.has(item.id))
+    const inCategory = inLevel.filter((item) => item.category === category)
+    // 인기: 조회수·좋아요가 많은 순 (숫자가 없는 카드는 뒤로)
+    if (category === '인기') return [...inCategory].sort((a, b) => popularity(b) - popularity(a))
+    return inCategory
+  }, [feed.items, category, saved.ids, keyword, level])
 
   const cards = useMemo<Card[]>(() => {
-    if (category === TOPIC_CATEGORY) return rotatedTopics.map((topic) => ({ key: topic.id, topic }))
     const newsCards: Card[] = visibleItems.map((item) => ({ key: item.id, item }))
+    if (keyword) {
+      const found = rotatedTopics.filter((topic) =>
+        `${topic.title} ${topic.tag} ${topic.slides.map((s) => `${s.heading} ${s.body}`).join(' ')}`.toLowerCase().includes(keyword)
+      )
+      return [...found.map((topic) => ({ key: topic.id, topic })), ...newsCards]
+    }
+    if (category === TOPIC_CATEGORY) return rotatedTopics.map((topic) => ({ key: topic.id, topic }))
     if (category === SAVED) {
       const savedTopics = rotatedTopics.filter((topic) => saved.ids.has(topic.id))
       return [...newsCards, ...savedTopics.map((topic) => ({ key: topic.id, topic }))]
@@ -142,7 +170,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     return mixed
     // 저장 목록은 탭을 바꿀 때만 다시 계산해, 저장 해제 시 카드가 바로 사라지지 않게 함
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [visibleItems, rotatedTopics, category])
+  }, [visibleItems, rotatedTopics, category, keyword])
 
   const categories = useMemo(() => {
     const present = CATEGORY_ORDER.filter((c) => feed.items.some((item) => item.category === c))
@@ -207,7 +235,23 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     setTimeout(() => setToast(''), 2500)
   }
 
+  const selectLevel = (next: string) => {
+    setLevel(next)
+    try {
+      localStorage.setItem('math-hub:level', next)
+    } catch {}
+  }
+
+  // 검색어·학교급이 바뀌면 목록이 달라지므로 첫 카드로 돌아감
+  useEffect(() => {
+    setActive(0)
+    setImmersive(false)
+    settled.current = 0
+    goTo(0, false)
+  }, [keyword, level, goTo])
+
   const selectCategory = (next: string) => {
+    setQuery('')
     setCategory(next)
     setActive(0)
     setImmersive(false)
@@ -334,10 +378,41 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
                 <span className={refreshing ? 'inline-block animate-spin' : ''}>↻</span>
               </button>
             )}
-            <Link href="/portal" className="hidden text-sm font-semibold text-white/60 hover:text-white sm:block">
-              메뉴
-            </Link>
+            <button
+              onClick={() => setSearchOpen((open) => !open)}
+              aria-label="검색·학교급"
+              aria-pressed={searchOpen}
+              className={`min-h-[36px] rounded-full px-3 text-[13px] font-bold ${
+                searchOpen || keyword || level ? 'bg-white text-neutral-900' : 'bg-white/10 hover:bg-white/20'
+              }`}
+            >
+              검색
+            </button>
           </div>
+
+          {searchOpen && (
+            <div className="mt-2 flex items-center gap-1.5">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="제목·출처 검색"
+                aria-label="검색어"
+                className="min-h-[36px] min-w-0 flex-1 rounded-full bg-white/10 px-4 text-[14px] text-white placeholder-white/40 outline-none focus:bg-white/15"
+              />
+              {['', ...LEVELS].map((l) => (
+                <button
+                  key={l}
+                  onClick={() => selectLevel(l)}
+                  aria-pressed={level === l}
+                  className={`min-h-[36px] shrink-0 rounded-full px-2.5 text-[13px] font-bold ${
+                    level === l ? 'bg-white text-neutral-900' : 'bg-white/10 text-white/70 hover:bg-white/20'
+                  }`}
+                >
+                  {l || '모두'}
+                </button>
+              ))}
+            </div>
+          )}
 
           <nav className="no-scrollbar -mx-4 mt-2 flex gap-1.5 overflow-x-auto px-4 pb-2">
             {categories.map((c) => (
@@ -345,7 +420,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
                 key={c}
                 onClick={() => selectCategory(c)}
                 className={`min-h-[34px] shrink-0 rounded-full px-3.5 text-[13px] font-bold transition ${
-                  category === c ? 'bg-white text-neutral-900' : 'bg-white/10 text-white/80 hover:bg-white/20'
+                  category === c && !keyword ? 'bg-white text-neutral-900' : 'bg-white/10 text-white/80 hover:bg-white/20'
                 }`}
               >
                 {c}
@@ -357,7 +432,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
         <main className="relative min-h-0 flex-1">
           {view === 'briefing' ? (
             <Briefing
-              items={category === TOPIC_CATEGORY ? [] : visibleItems}
+              items={category === TOPIC_CATEGORY && !keyword ? [] : visibleItems}
               topic={rotatedTopics[0]}
               latestBatch={latestBatch}
               now={now}
@@ -429,7 +504,13 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
                       saved={saved.ids.has(card.key)}
                       onSave={() => saved.toggle(card.key)}
                       onShare={async () => {
-                        const message = await shareLink(card.item!.titleKo || card.item!.title, card.item!.link)
+                        const item = card.item!
+                        const translated = item.lang === 'en' && item.titleKo
+                        const message = await shareLink(
+                          translated ? item.titleKo! : item.title,
+                          (translated ? item.summaryKo : item.summary) || '',
+                          item.link
+                        )
                         if (message) showToast(message)
                       }}
                     />
@@ -467,5 +548,3 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     </>
   )
 }
-
-ReelsPage.fullscreen = true
