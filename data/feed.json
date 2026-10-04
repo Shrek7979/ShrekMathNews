@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T05:53:55.427Z",
+  "updatedAt": "2026-10-04T08:23:02.097Z",
   "items": [
     {
       "id": "e4e99c7c2a7d",
@@ -395,7 +395,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.png"
+      "thumb": "/thumbs/19c65c3c48c8.jpg"
     },
     {
       "id": "1f9591edea61",
@@ -553,7 +553,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.png"
+      "thumb": "/thumbs/2c62b4c78e9e.jpg"
     },
     {
       "id": "7dd53dd4955b",
@@ -658,7 +658,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.png"
+      "thumb": "/thumbs/d1d902dfdc13.jpg"
     },
     {
       "id": "b43bf69f5b09",
@@ -718,7 +718,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.jpg",
+      "thumb": "/thumbs/ab6642bdf4b6.png",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…"
     },
