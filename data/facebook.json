@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T23:19:28.069Z",
+  "updatedAt": "2026-10-04T23:25:46.807Z",
   "items": [
     {
       "id": "fb-7a5224532b24",
@@ -33,6 +33,23 @@
       ],
       "collectedAt": "2026-10-04T16:05:45.370Z",
       "titleKo": "이 새로운 영상을 공유하게 되어 매우 기쁩니다",
+      "summaryKo": "",
+      "translator": "google"
+    },
+    {
+      "id": "fb-d15308bc1d83",
+      "kind": "video",
+      "lang": "en",
+      "title": "Patrons can watch a bit extra from our Buckmaster interview here",
+      "summary": "",
+      "link": "https://www.facebook.com/reel/28858490810413940/",
+      "source": "Facebook Numberphile",
+      "category": "인기",
+      "publishedAt": "2026-09-30T23:25:16.332Z",
+      "thumb": "/social/fb/fb-d15308bc1d83.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-04T23:25:46.807Z",
+      "titleKo": "후원자는 여기에서 Buckmaster 인터뷰를 추가로 시청할 수 있습니다.",
       "summaryKo": "",
       "translator": "google"
     },
