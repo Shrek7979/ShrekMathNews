@@ -120,8 +120,13 @@ if (items.length === 0) {
 const now = new Date().toISOString()
 try {
   const previous = JSON.parse(await readFile(OUT_JSON, 'utf8')).items || []
-  const firstSeen = new Map(previous.map((old) => [old.id, old.collectedAt]))
-  for (const item of items) item.collectedAt = firstSeen.get(item.id) || now
+  const known = new Map(previous.map((old) => [old.id, old]))
+  for (const item of items) {
+    const old = known.get(item.id)
+    item.collectedAt = old?.collectedAt || now
+    // 게시 시각은 "1일 전" 같은 상대 표현에서 계산하므로, 이미 아는 글은 처음 계산한 값을 유지
+    if (old?.publishedAt) item.publishedAt = old.publishedAt
+  }
   // 같은 게시물이 주소만 달리 잡히는 경우가 있어, 같은 페이지의 같은 글이면 중복으로 봄
   const seen = new Set(items.flatMap((item) => [item.id, `${item.source}|${item.title}`]))
   for (const old of previous) {
