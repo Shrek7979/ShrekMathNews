@@ -16,7 +16,7 @@ const KEEP_DAYS = 7
 const MAX_ITEMS = 150
 const TITLE_LENGTH = 90
 const SUMMARY_LENGTH = 56 // 제목 밑 설명은 한 줄(한 문장)만
-const DETAIL_LENGTH = 140 // 통합 사이트(Shrek Edu Insight) 카드용 긴 설명 (2~3줄). 이 사이트 화면에는 쓰지 않음
+const DETAIL_LENGTH = 140 // 카드에 보여 주는 긴 설명 (2~3줄). 통합 사이트(Shrek Edu Insight)도 씀
 const DAY = 24 * 60 * 60 * 1000
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'

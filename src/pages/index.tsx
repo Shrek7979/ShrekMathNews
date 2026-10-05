@@ -155,7 +155,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     // 검색어가 있으면 카테고리와 상관없이 전체에서 찾음
     if (keyword) {
       return inLevel.filter((item) =>
-        `${item.title} ${item.titleKo || ''} ${item.summary} ${item.summaryKo || ''} ${item.source}`.toLowerCase().includes(keyword)
+        `${item.title} ${item.titleKo || ''} ${item.summary} ${item.summaryKo || ''} ${item.detail || ''} ${item.detailKo || ''} ${item.source}`.toLowerCase().includes(keyword)
       )
     }
     if (category === ALL) return inLevel

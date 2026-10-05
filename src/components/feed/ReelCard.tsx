@@ -84,7 +84,8 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
   const isVideo = item.kind === 'video'
   const translated = item.lang === 'en' && item.titleKo
   const title = translated ? item.titleKo! : item.title
-  const summary = translated ? item.summaryKo || item.summary : item.summary
+  // 긴 설명(2~3줄)이 있으면 그것을, 없으면 한 줄 설명
+  const summary = translated ? item.detailKo || item.summaryKo || item.summary : item.detail || item.summary
   const details = [
     item.source,
     !item.evergreen && formatDate(item.publishedAt),
@@ -105,7 +106,7 @@ export function NewsCard({ item, isNew, saved, onSave, onShare }: NewsCardProps)
             {title}
           </h2>
           {translated && <p className="mt-1.5 line-clamp-1 text-[13px] text-white/40">{item.title}</p>}
-          {summary && <p className="mt-3 line-clamp-2 break-keep text-[15px] leading-relaxed text-white/65">{summary}</p>}
+          {summary && <p className="mt-3 line-clamp-3 break-keep text-[15px] leading-relaxed text-white/65">{summary}</p>}
         </div>
 
         <div className="mt-3 flex items-center gap-2">
