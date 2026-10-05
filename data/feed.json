@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T18:02:24.932Z",
+  "updatedAt": "2026-10-05T18:03:23.796Z",
   "items": [
     {
       "id": "3f755786d02a",
@@ -125,7 +125,7 @@
       "link": "https://www.youtube.com/watch?v=oUZCjrOZVVk",
       "source": "blackpenredpen",
       "image": "https://i4.ytimg.com/vi/oUZCjrOZVVk/hqdefault.jpg",
-      "views": 55312,
+      "views": 55333,
       "category": "문제·증명",
       "publishedAt": "2026-09-26T11:43:09.000Z",
       "collectedAt": "2026-10-05T11:04:31.859Z",
@@ -205,7 +205,7 @@
       "link": "https://www.youtube.com/watch?v=Cfs0Ta62Qn8",
       "source": "bprp calculus basics",
       "image": "https://i4.ytimg.com/vi/Cfs0Ta62Qn8/hqdefault.jpg",
-      "views": 58519,
+      "views": 58550,
       "category": "문제·증명",
       "publishedAt": "2026-10-01T12:00:32.000Z",
       "collectedAt": "2026-10-05T09:02:35.128Z",
@@ -288,7 +288,7 @@
       "link": "https://www.youtube.com/watch?v=TX6rqbJNRpg",
       "source": "교양수학 김희진",
       "image": "https://i1.ytimg.com/vi/TX6rqbJNRpg/hqdefault.jpg",
-      "views": 81996,
+      "views": 82006,
       "category": "문제·증명",
       "publishedAt": "2026-09-26T21:51:16.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -417,7 +417,7 @@
       "link": "https://www.youtube.com/watch?v=MJyYyAuYjpI",
       "source": "연떠",
       "image": "https://i2.ytimg.com/vi/MJyYyAuYjpI/hqdefault.jpg",
-      "views": 86891,
+      "views": 86894,
       "category": "인기",
       "publishedAt": "2026-09-22T08:00:34.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -530,7 +530,7 @@
       "link": "https://www.youtube.com/watch?v=6RcRIjDXecA",
       "source": "수학하는 땅우",
       "image": "https://i3.ytimg.com/vi/6RcRIjDXecA/hqdefault.jpg",
-      "views": 74591,
+      "views": 74616,
       "category": "인기",
       "publishedAt": "2026-09-18T09:24:16.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -547,7 +547,7 @@
       "link": "https://www.youtube.com/watch?v=-PhNPZJ2AAo",
       "source": "blackpenredpen",
       "image": "https://i2.ytimg.com/vi/-PhNPZJ2AAo/hqdefault.jpg",
-      "views": 80966,
+      "views": 80968,
       "category": "문제·증명",
       "publishedAt": "2026-09-13T22:40:56.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -1263,7 +1263,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg",
+      "thumb": "/thumbs/6d6917e71bf3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
@@ -1281,7 +1281,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg",
+      "thumb": "/thumbs/3c73391d2263.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
@@ -1299,7 +1299,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg",
+      "thumb": "/thumbs/e01539b51fd3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
@@ -1317,7 +1317,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.jpg",
+      "thumb": "/thumbs/d2e592757594.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
@@ -1557,7 +1557,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.jpg"
+      "thumb": "/thumbs/2c62b4c78e9e.png"
     },
     {
       "id": "eb72b30987ed",
@@ -1646,7 +1646,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.jpg"
+      "thumb": "/thumbs/d1d902dfdc13.png"
     },
     {
       "id": "b43bf69f5b09",
@@ -1688,7 +1688,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.png",
+      "thumb": "/thumbs/ab6642bdf4b6.jpg",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…",
       "detail": "A research team at the University of Vienna, led by pharmaceutical chemist Johannes Kirchmair, has developed a statistical method to…",
