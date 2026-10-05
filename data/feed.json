@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-10-05T15:02:30.211Z",
+  "updatedAt": "2026-10-05T15:03:26.867Z",
   "items": [
+    {
+      "id": "d147105346b3",
+      "kind": "news",
+      "lang": "ko",
+      "title": "[박건형의 닥터 사이언스] AI를 이긴 할머니 수학자와 소녀의 협업",
+      "summary": "1913년 영국 케임브리지대 수학자 고드프리 하디에게 편지 한 통이 도착한다",
+      "detail": "1913년 영국 케임브리지대 수학자 고드프리 하디에게 편지 한 통이 도착한다. 발신인은 인도 마드라스 항만청에서 일하는 스물다섯 살 사무원. 편지에는 그가 독학으로 발견했다는 수학 정리 120여 개가 빼곡히 적혀 있었다. 장난이라 여기며 몇 줄 읽어…",
+      "link": "https://www.msn.com/ko-kr/%EA%B3%BC%ED%95%99/%EC%88%98%ED%95%99/%EB%B0%95%EA%B1%B4%ED%98%95%EC%9D%98-%EB%8B%A5%ED%84%B0-%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4-ai%EB%A5%BC-%EC%9D%B4%EA%B8%B4-%ED%95%A0%EB%A8%B8%EB%8B%88-%EC%88%98%ED%95%99%EC%9E%90%EC%99%80-%EC%86%8C%EB%85%80%EC%9D%98-%ED%98%91%EC%97%85/ar-AA2dBNbM",
+      "source": "조선일보",
+      "image": "http://www.bing.com/th?id=ONUT.knLpLkDurDvGkGl4Iu3Kxg&pid=News",
+      "category": "AI·에듀테크",
+      "publishedAt": "2026-10-05T07:34:00.000Z",
+      "collectedAt": "2026-10-05T15:03:26.867Z",
+      "thumb": "/thumbs/d147105346b3.png"
+    },
     {
       "id": "7c0c7cdb6126",
       "kind": "news",
@@ -96,7 +111,7 @@
       "link": "https://www.youtube.com/watch?v=9xwU-ochogk",
       "source": "Stand-up Maths",
       "image": "https://i2.ytimg.com/vi/9xwU-ochogk/hqdefault.jpg",
-      "views": 980347,
+      "views": 980425,
       "category": "인기",
       "publishedAt": "2026-09-30T14:30:51.000Z",
       "collectedAt": "2026-10-05T09:34:53.002Z",
@@ -143,7 +158,7 @@
       "link": "https://www.youtube.com/watch?v=Cfs0Ta62Qn8",
       "source": "bprp calculus basics",
       "image": "https://i4.ytimg.com/vi/Cfs0Ta62Qn8/hqdefault.jpg",
-      "views": 57198,
+      "views": 57237,
       "category": "문제·증명",
       "publishedAt": "2026-10-01T12:00:32.000Z",
       "collectedAt": "2026-10-05T09:02:35.128Z",
@@ -176,7 +191,7 @@
       "link": "https://www.youtube.com/shorts/MEwNEWHpsFM",
       "source": "Math Scribbles",
       "image": "https://i2.ytimg.com/vi/MEwNEWHpsFM/hqdefault.jpg",
-      "views": 174827,
+      "views": 175285,
       "category": "인기",
       "publishedAt": "2026-10-02T23:31:46.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -241,7 +256,7 @@
       "link": "https://www.youtube.com/watch?v=fGObOUNcZk0",
       "source": "MindYourDecisions",
       "image": "https://i3.ytimg.com/vi/fGObOUNcZk0/hqdefault.jpg",
-      "views": 89877,
+      "views": 89887,
       "category": "문제·증명",
       "publishedAt": "2026-09-23T22:35:10.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -390,7 +405,7 @@
       "link": "https://www.youtube.com/watch?v=c79PsbkHw4A",
       "source": "Stand-up Maths",
       "image": "https://i4.ytimg.com/vi/c79PsbkHw4A/hqdefault.jpg",
-      "views": 1267100,
+      "views": 1267146,
       "category": "인기",
       "publishedAt": "2026-09-21T12:00:07.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -485,7 +500,7 @@
       "link": "https://www.youtube.com/watch?v=-PhNPZJ2AAo",
       "source": "blackpenredpen",
       "image": "https://i2.ytimg.com/vi/-PhNPZJ2AAo/hqdefault.jpg",
-      "views": 80877,
+      "views": 80878,
       "category": "문제·증명",
       "publishedAt": "2026-09-13T22:40:56.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -504,7 +519,7 @@
       "link": "https://www.youtube.com/watch?v=pGUgeMfHPKk",
       "source": "MindYourDecisions",
       "image": "https://i1.ytimg.com/vi/pGUgeMfHPKk/hqdefault.jpg",
-      "views": 113053,
+      "views": 113055,
       "category": "문제·증명",
       "publishedAt": "2026-09-13T18:45:32.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -590,7 +605,7 @@
       "link": "https://www.youtube.com/watch?v=gF9p0pF3Rh4",
       "source": "MindYourDecisions",
       "image": "https://i4.ytimg.com/vi/gF9p0pF3Rh4/hqdefault.jpg",
-      "views": 415366,
+      "views": 415371,
       "category": "문제·증명",
       "publishedAt": "2026-09-07T17:38:09.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -1201,7 +1216,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg",
+      "thumb": "/thumbs/6d6917e71bf3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
@@ -1219,7 +1234,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg",
+      "thumb": "/thumbs/3c73391d2263.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
@@ -1237,7 +1252,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg",
+      "thumb": "/thumbs/e01539b51fd3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
@@ -1255,7 +1270,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.jpg",
+      "thumb": "/thumbs/d2e592757594.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
@@ -1495,7 +1510,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.jpg"
+      "thumb": "/thumbs/2c62b4c78e9e.png"
     },
     {
       "id": "eb72b30987ed",
@@ -1584,7 +1599,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.jpg"
+      "thumb": "/thumbs/d1d902dfdc13.png"
     },
     {
       "id": "b43bf69f5b09",
@@ -1626,7 +1641,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.png",
+      "thumb": "/thumbs/ab6642bdf4b6.jpg",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…",
       "detail": "A research team at the University of Vienna, led by pharmaceutical chemist Johannes Kirchmair, has developed a statistical method to…",
