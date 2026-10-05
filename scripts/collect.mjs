@@ -259,8 +259,18 @@ export async function collect() {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  collect().catch((error) => {
-    console.error(error.message)
+  let done = false
+  // 어딘가에서 응답이 영영 오지 않으면 node 가 할 일 없이 '성공(0)'으로 끝나 버림 → 실패로 알려 기존 피드를 쓰지 않게 함
+  process.on('beforeExit', () => {
+    if (done) return
+    console.error('수집이 끝나지 않은 채 멈췄습니다 (feed.json 저장 안 됨).')
     process.exit(1)
   })
+  collect().then(
+    () => (done = true),
+    (error) => {
+      console.error(error.message)
+      process.exit(1)
+    }
+  )
 }

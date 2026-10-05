@@ -58,7 +58,9 @@ jobs:
           age=$(node -e "try{const d=require('./data/youtube-channels.json');console.log(Math.floor((Date.now()-new Date(d.updatedAt))/86400000))}catch{console.log(99)}")
           if [ "$age" -ge 7 ]; then node scripts/discover-youtube.mjs || echo "채널 목록 갱신 건너뜀"; else echo "채널 목록 ${age}일 전 갱신 — 건너뜀"; fi
 
+      # 수집이 실패해도 마지막 피드(집 PC 가 올린 것 포함)로 배포는 계속함
       - name: 수학 뉴스 수집 (번역 · 섬네일 포함)
+        continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TZ: Asia/Seoul

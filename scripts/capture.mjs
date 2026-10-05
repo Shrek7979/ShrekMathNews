@@ -84,7 +84,12 @@ async function withPage(url, settleMs, work) {
   )
 
   let ws
-  const killTimer = setTimeout(() => child.kill(), 45000) // 어떤 경우에도 45초 뒤엔 정리
+  const killTimer = setTimeout(() => {
+    child.kill()
+    try {
+      ws?.close()
+    } catch {}
+  }, 45000) // 어떤 경우에도 45초 뒤엔 정리
   try {
     let target
     for (let i = 0; i < 60 && !target; i++) {
@@ -102,20 +107,39 @@ async function withPage(url, settleMs, work) {
       ws.onerror = () => reject(new Error('DevTools 연결 실패'))
     })
     let nextId = 0
-    const pending = new Map()
+    const pending = new Map() // id → { resolve, reject, timer }
     let loaded = false
     ws.onmessage = (event) => {
       const message = JSON.parse(event.data)
       if (message.method === 'Page.loadEventFired') loaded = true
       if (message.id && pending.has(message.id)) {
-        pending.get(message.id)(message)
+        const { resolve, timer } = pending.get(message.id)
+        clearTimeout(timer)
         pending.delete(message.id)
+        resolve(message)
       }
     }
+    // 브라우저가 죽거나(45초 정리 포함) 연결이 끊기면 기다리던 명령을 모두 실패로 끝냄.
+    // 그냥 두면 응답이 영영 오지 않는 약속만 남아 node 가 아무 말 없이 '성공(0)'으로 끝나 버리고,
+    // 수집 결과(feed.json)가 저장되지 않은 채 배포됨 → 섬네일이 깨지는 원인이었음
+    const failAll = (reason) => {
+      for (const { reject, timer } of pending.values()) {
+        clearTimeout(timer)
+        reject(new Error(reason))
+      }
+      pending.clear()
+    }
+    ws.onclose = () => failAll('브라우저 연결 끊김')
+    ws.onerror = () => failAll('브라우저 연결 오류')
     const send = (method, params = {}) =>
-      new Promise((resolve) => {
+      new Promise((resolve, reject) => {
+        if (ws.readyState !== WebSocket.OPEN) return reject(new Error('브라우저 연결 끊김'))
         const id = ++nextId
-        pending.set(id, resolve)
+        const timer = setTimeout(() => {
+          pending.delete(id)
+          reject(new Error(`브라우저 응답 없음: ${method}`))
+        }, 20000)
+        pending.set(id, { resolve, reject, timer })
         ws.send(JSON.stringify({ id, method, params }))
       })
 
