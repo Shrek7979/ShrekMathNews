@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-import { CATEGORY_ACCENT, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatViews } from '@/lib/feed'
+import { CATEGORY_ACCENT, FeedItem, TOPIC_CATEGORY, Topic, formatDate, formatViews, useThumbSrc } from '@/lib/feed'
 import { saveTopicImage } from '@/lib/topicImage'
 import TopicVisual, { hasTopicVisual } from './TopicVisual'
 
@@ -56,13 +56,14 @@ function ActionButton({
 // 섬네일: 카드 위쪽 42% 를 차지
 function Thumbnail({ item }: { item: FeedItem }) {
   const { basePath } = useRouter()
-  if (!item.thumb) return null
+  const { src, onError, ref } = useThumbSrc(item, basePath)
+  if (!src) return null
   // 사진·섬네일을 잘라 내면 좁은 폰 화면에서 글자나 얼굴이 잘림 → 항상 그림 전체를 보여 줌
   // (남는 자리는 카드와 같은 색이라 띠처럼 보이지 않음)
   return (
     <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0 bg-neutral-900">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={item.thumb.startsWith('http') ? item.thumb : `${basePath}${item.thumb}`} alt="" className="h-full w-full object-contain" loading="lazy" />
+      <img ref={ref} src={src} onError={onError} alt="" className="h-full w-full object-contain" loading="lazy" />
       {item.kind === 'video' && (
         <span className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 pl-1 text-3xl">
           ▶

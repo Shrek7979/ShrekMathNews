@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { CATEGORY_ACCENT, FeedItem, Topic, formatViews, timeAgo } from '@/lib/feed'
+import { CATEGORY_ACCENT, FeedItem, Topic, formatViews, timeAgo, useThumbSrc } from '@/lib/feed'
 
 type BriefingProps = {
   items: FeedItem[]
@@ -12,6 +12,23 @@ type BriefingProps = {
   onSave: (id: string) => void
   onRead: (id: string) => void
   onOpenTopic: () => void
+}
+
+// 목록 왼쪽 작은 섬네일 (섬네일 → 원본 이미지 → 둘 다 없으면 숨김)
+function ListThumb({ item, basePath }: { item: FeedItem; basePath: string }) {
+  const { src, onError, ref } = useThumbSrc(item, basePath)
+  if (!src) return null
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      ref={ref}
+      src={src}
+      onError={onError}
+      alt=""
+      loading="lazy"
+      className="h-16 w-20 shrink-0 rounded-lg bg-white/10 object-cover"
+    />
+  )
 }
 
 // 한눈에 보기: 최신 순으로 제목만 빠르게 훑는 목록
@@ -49,15 +66,7 @@ export default function Briefing(props: BriefingProps) {
                       onClick={() => onRead(item.id)}
                       className={`flex min-w-0 flex-1 gap-3 ${read ? 'opacity-50' : ''}`}
                     >
-                      {item.thumb && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={item.thumb.startsWith('http') ? item.thumb : `${basePath}${item.thumb}`}
-                          alt=""
-                          loading="lazy"
-                          className="h-16 w-20 shrink-0 rounded-lg bg-white/10 object-cover"
-                        />
-                      )}
+                      <ListThumb item={item} basePath={basePath} />
                       <span className="min-w-0 flex-1">
                         <span className="line-clamp-2 break-keep text-[15px] font-semibold leading-snug">
                           {item.collectedAt === latestBatch && !read && (

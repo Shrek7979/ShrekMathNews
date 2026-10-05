@@ -162,3 +162,23 @@ export function matchesLevel(item: FeedItem, level: string) {
   const levels = levelsOf(item)
   return levels.size === 0 || levels.has(level)
 }
+
+// 섬네일 주소: 사이트에 저장한 섬네일 → 원본 이미지 주소 → 둘 다 안 되면 src 가 없음(숨김).
+// 불러오기가 실패하면 다음 후보로 넘어감. 페이지가 준비되기 전에 이미 실패한 그림은 ref 에서 확인
+export function useThumbSrc(item: FeedItem, basePath: string) {
+  const thumb = item.thumb && (item.thumb.startsWith('http') ? item.thumb : `${basePath}${item.thumb}`)
+  const candidates = [thumb || null, item.image || null].filter(
+    (src, i, list): src is string => !!src && list.indexOf(src) === i
+  )
+  const [failed, setFailed] = useState({ id: item.id, count: 0 })
+  const count = failed.id === item.id ? failed.count : 0
+  const src = candidates[count]
+  const onError = useCallback(() => setFailed({ id: item.id, count: count + 1 }), [item.id, count])
+  const ref = useCallback(
+    (img: HTMLImageElement | null) => {
+      if (img?.complete && img.naturalWidth === 0) onError()
+    },
+    [onError]
+  )
+  return { src, onError, ref }
+}

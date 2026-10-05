@@ -136,6 +136,15 @@ async function ensureThumb(item) {
   return `/thumbs/${item.id}.${best.ext}`
 }
 
+const THUMB_TIMEOUT = 90 * 1000
+const withTimeout = (promise, ms) => {
+  let timer
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error('시간 초과')), ms)
+  })
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer))
+}
+
 // 피드 항목마다 섬네일을 채우고, 피드에서 사라진 항목의 파일은 정리
 export async function ensureThumbs(items) {
   await mkdir(THUMB_DIR, { recursive: true })
@@ -148,7 +157,11 @@ export async function ensureThumbs(items) {
       item.thumb = `/thumbs/${found}`
       continue
     }
-    item.thumb = await ensureThumb(item)
+    // 카드 한 장이 멈춰도 수집 전체가 끊기지 않게 제한 시간을 둠 (실패한 카드는 다음 수집 때 다시 시도)
+    item.thumb = await withTimeout(ensureThumb(item), THUMB_TIMEOUT).catch((error) => {
+      console.warn(`  섬네일 실패: ${item.title.slice(0, 40)} (${error.message})`)
+      return null
+    })
     if (item.thumb?.startsWith('/thumbs/')) {
       existing.add(item.thumb.replace('/thumbs/', ''))
       added++
