@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T08:11:54.050Z",
+  "updatedAt": "2026-10-05T09:46:29.372Z",
   "items": [
     {
       "id": "fb-f7f8cb606523",
@@ -85,6 +85,23 @@
       "collectedAt": "2026-10-04T16:05:45.370Z",
       "titleKo": "이 새로운 영상을 공유하게 되어 매우 기쁩니다",
       "summaryKo": "",
+      "translator": "google"
+    },
+    {
+      "id": "fb-4d988ffaeba9",
+      "kind": "news",
+      "lang": "en",
+      "title": "Graham Farmelo's biography of Stephen Hawking has just been published.",
+      "summary": "The title of this Oxford Mathematics Roger Penrose…",
+      "link": "https://www.facebook.com/OxfordMathematics/posts/pfbid0innQatwucEoCRbKwoWWuw4zR1ejn4fuaZqwhdtqHsPTWSaPAHLwdiDne1RQyRCjql",
+      "source": "Facebook Oxford Mathematics",
+      "category": "인기",
+      "publishedAt": "2026-10-02T09:45:25.255Z",
+      "thumb": "/social/fb/fb-4d988ffaeba9.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-05T09:46:29.372Z",
+      "titleKo": "Graham Farmelo의 Stephen Hawking 전기가 방금 출판되었습니다.",
+      "summaryKo": "이번 옥스퍼드 수학의 로저 펜로즈의 제목은…",
       "translator": "google"
     },
     {
