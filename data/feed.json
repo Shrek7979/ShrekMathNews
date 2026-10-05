@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-10-05T11:03:24.002Z",
+  "updatedAt": "2026-10-05T11:04:31.859Z",
   "items": [
     {
-      "id": "792364610e40",
+      "id": "3f3f63a3b436",
       "kind": "video",
       "lang": "en",
-      "title": "What IS the Riemann Hypothesis? #mathematics #calculus #integral_calculus",
+      "title": "Math is just so fascinating and cool!!!!! (x+y)^4=x^4+y^4?",
       "summary": "",
-      "link": "https://www.youtube.com/shorts/--tMBxMv8qM",
-      "source": "Math Scribbles",
-      "image": "https://i2.ytimg.com/vi/--tMBxMv8qM/hqdefault.jpg",
-      "views": 54927,
-      "category": "인기",
-      "publishedAt": "2026-09-17T20:22:13.000Z",
-      "collectedAt": "2026-10-05T11:03:24.002Z",
-      "titleKo": "리만 가설이란 무엇입니까? #수학 #미적분학 #적분_미적분학",
+      "link": "https://www.youtube.com/watch?v=oUZCjrOZVVk",
+      "source": "blackpenredpen",
+      "image": "https://i4.ytimg.com/vi/oUZCjrOZVVk/hqdefault.jpg",
+      "views": 54942,
+      "category": "문제·증명",
+      "publishedAt": "2026-09-26T11:43:09.000Z",
+      "collectedAt": "2026-10-05T11:04:31.859Z",
+      "titleKo": "수학은 정말 매력적이고 멋지네요!!!!! (x+y)^4=x^4+y^4?",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/792364610e40.jpg"
+      "thumb": "/thumbs/3f3f63a3b436.jpg"
     },
     {
       "id": "a80c4943507a",
@@ -41,7 +41,7 @@
       "link": "https://www.youtube.com/watch?v=9xwU-ochogk",
       "source": "Stand-up Maths",
       "image": "https://i2.ytimg.com/vi/9xwU-ochogk/hqdefault.jpg",
-      "views": 976685,
+      "views": 976758,
       "category": "인기",
       "publishedAt": "2026-09-30T14:30:51.000Z",
       "collectedAt": "2026-10-05T09:34:53.002Z",
@@ -150,7 +150,7 @@
       "link": "https://www.youtube.com/watch?v=7J0h8uQzwB8",
       "source": "연떠",
       "image": "https://i4.ytimg.com/vi/7J0h8uQzwB8/hqdefault.jpg",
-      "views": 69727,
+      "views": 69744,
       "category": "인기",
       "publishedAt": "2026-09-30T08:00:39.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -198,7 +198,7 @@
       "link": "https://www.youtube.com/shorts/Ng3m2Dntls0",
       "source": "수학강사 이정환",
       "image": "https://i3.ytimg.com/vi/Ng3m2Dntls0/hqdefault.jpg",
-      "views": 55493,
+      "views": 55497,
       "category": "인기",
       "publishedAt": "2026-09-23T09:20:03.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -214,7 +214,7 @@
       "link": "https://www.youtube.com/watch?v=gxNaNq406P0",
       "source": "Andy Math",
       "image": "https://i4.ytimg.com/vi/gxNaNq406P0/hqdefault.jpg",
-      "views": 355608,
+      "views": 355610,
       "category": "문제·증명",
       "publishedAt": "2026-09-22T20:35:24.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -250,7 +250,7 @@
       "link": "https://www.youtube.com/shorts/mvPylY9Q1yU",
       "source": "MrGee Math",
       "image": "https://i2.ytimg.com/vi/mvPylY9Q1yU/hqdefault.jpg",
-      "views": 1474933,
+      "views": 1474967,
       "category": "인기",
       "publishedAt": "2026-09-22T13:00:31.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -319,7 +319,7 @@
       "link": "https://www.youtube.com/watch?v=c79PsbkHw4A",
       "source": "Stand-up Maths",
       "image": "https://i4.ytimg.com/vi/c79PsbkHw4A/hqdefault.jpg",
-      "views": 1265117,
+      "views": 1265153,
       "category": "인기",
       "publishedAt": "2026-09-21T12:00:07.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -558,7 +558,7 @@
       "link": "https://www.youtube.com/watch?v=Nbwv5wHQoj0",
       "source": "3Blue1Brown",
       "image": "https://i3.ytimg.com/vi/Nbwv5wHQoj0/hqdefault.jpg",
-      "views": 670285,
+      "views": 670277,
       "category": "문제·증명",
       "publishedAt": "2026-09-18T17:12:53.000Z",
       "collectedAt": "2026-10-05T06:09:44.602Z",
@@ -1109,7 +1109,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg"
+      "thumb": "/thumbs/6d6917e71bf3.png"
     },
     {
       "id": "3c73391d2263",
@@ -1125,7 +1125,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg"
+      "thumb": "/thumbs/3c73391d2263.png"
     },
     {
       "id": "e01539b51fd3",
@@ -1141,7 +1141,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg"
+      "thumb": "/thumbs/e01539b51fd3.png"
     },
     {
       "id": "d2e592757594",
@@ -1157,7 +1157,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.jpg"
+      "thumb": "/thumbs/d2e592757594.png"
     },
     {
       "id": "a3c960bc6978",
@@ -1393,7 +1393,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.jpg"
+      "thumb": "/thumbs/2c62b4c78e9e.png"
     },
     {
       "id": "eb72b30987ed",
@@ -1480,7 +1480,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.jpg"
+      "thumb": "/thumbs/d1d902dfdc13.png"
     },
     {
       "id": "b43bf69f5b09",
@@ -1522,7 +1522,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.png",
+      "thumb": "/thumbs/ab6642bdf4b6.jpg",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…"
     },
