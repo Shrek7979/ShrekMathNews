@@ -113,3 +113,22 @@ export async function translateItems(items) {
   }
   return { translated, provider }
 }
+
+// 통합 사이트(Shrek Edu Insight)용 긴 설명 번역: 해외 기사 중 detailKo 가 없는 것만, 한 번에 너무 많이 보내지 않게 나눠서
+export async function translateDetails(items, limit = 40) {
+  const targets = items.filter((item) => item.lang === 'en' && item.detail && !item.detailKo).slice(0, limit)
+  let done = 0
+  for (const item of targets) {
+    try {
+      item.detailKo = await translateWithGoogle(item.detail)
+    } catch {
+      try {
+        item.detailKo = await translateWithMyMemory(item.detail)
+      } catch {
+        break // 한도 초과 등은 다음 수집 때 다시 시도
+      }
+    }
+    done++
+  }
+  return done
+}

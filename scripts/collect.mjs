@@ -6,7 +6,7 @@ import { dirname, resolve } from 'node:path'
 import * as cheerio from 'cheerio'
 import { pathToFileURL } from 'node:url'
 import { ensureThumbs } from './thumbs.mjs'
-import { translateItems } from './translate.mjs'
+import { translateDetails, translateItems } from './translate.mjs'
 import { findDeadLinks } from './linkcheck.mjs'
 import { PROBLEM_CHANNELS, PROBLEM_WORDS, youtubeFeed, SOURCES, KO_REQUIRE, KO_EXCLUDE, EN_REQUIRE, BLOCKED_SOURCES, KO_CATEGORIES } from './sources.mjs'
 
@@ -16,6 +16,7 @@ const KEEP_DAYS = 7
 const MAX_ITEMS = 150
 const TITLE_LENGTH = 90
 const SUMMARY_LENGTH = 56 // 제목 밑 설명은 한 줄(한 문장)만
+const DETAIL_LENGTH = 140 // 통합 사이트(Shrek Edu Insight) 카드용 긴 설명 (2~3줄). 이 사이트 화면에는 쓰지 않음
 const DAY = 24 * 60 * 60 * 1000
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
@@ -32,6 +33,7 @@ export const oneLine = (s, n = SUMMARY_LENGTH) => {
   return truncate(first.replace(/[.]$/, ''), n)
 }
 const truncate = (s, n) => (s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s)
+const detailText = (s) => truncate(clean(s), DETAIL_LENGTH)
 // 유튜브 설명란 첫 줄은 감사 인사·링크·구독 안내인 경우가 많아 카드 설명으로 쓰지 않음
 const isJunkVideoText = (s) => !s || s.length < 25 || /https?:|thanks|감사|patreon|subscribe|구독|podcast|팟캐스트|전체 동영상|full video/i.test(s)
 const titleKey = (title) => title.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '')
@@ -105,6 +107,7 @@ function parseEntry($, el, source) {
     lang: source.lang,
     title: truncate(title, TITLE_LENGTH),
     summary: oneLine(stripByline(summary)),
+    detail: detailText(stripByline(summary)),
     link,
     source: sourceName || new URL(link).hostname,
     image,
@@ -208,6 +211,10 @@ export async function collect() {
     if (latest.category) old.category = latest.category
   }
 
+  // 통합 사이트용 긴 설명: 예전 카드도 원본 피드에 아직 있으면 채워 넣음
+  const freshDetail = new Map(fresh.filter((item) => item.detail).map((item) => [item.id, item.detail]))
+  for (const old of previous) if (!old.detail && freshDetail.has(old.id)) old.detail = freshDetail.get(old.id)
+
   // 이전 수집분이 먼저 오도록 합쳐서, 이미 있던 기사는 처음 수집된 시각(collectedAt)을 유지
   const kept = []
   let items = [...carried,...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
@@ -243,9 +250,20 @@ export async function collect() {
 
   // 번역문은 원문보다 길어질 수 있어 번역 뒤에 한 줄로 다시 맞춤
   for (const item of items) {
-    if (item.kind === 'video' && isJunkVideoText(item.summary)) item.summary = item.summaryKo = ''
+    if (item.kind === 'video' && isJunkVideoText(item.summary)) item.summary = item.summaryKo = item.detail = item.detailKo = ''
     item.summary = oneLine(item.summary)
     if (item.summaryKo) item.summaryKo = oneLine(item.summaryKo)
+    // 긴 설명이 한 줄 설명과 거의 같으면 둘 필요 없음
+    if (item.detail && item.detail.length < (item.summary || '').length + 12) delete item.detail
+    if (!item.detail) delete item.detailKo
+    else if (item.detailKo) item.detailKo = detailText(item.detailKo)
+  }
+
+  try {
+    const details = await translateDetails(items)
+    if (details) console.log(`✓ 긴 설명 ${details}건 번역`)
+  } catch (error) {
+    console.warn(`✗ 긴 설명 번역 실패: ${error.message}`)
   }
 
   console.log('섬네일 확보 중…')
