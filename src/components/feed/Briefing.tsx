@@ -52,7 +52,7 @@ export default function Briefing(props: BriefingProps) {
                       {item.thumb && (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
-                          src={`${basePath}${item.thumb}`}
+                          src={item.thumb.startsWith('http') ? item.thumb : `${basePath}${item.thumb}`}
                           alt=""
                           loading="lazy"
                           className="h-16 w-20 shrink-0 rounded-lg bg-white/10 object-cover"

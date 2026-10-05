@@ -79,6 +79,10 @@ jobs:
           # 그 사이 다른 커밋이 올라왔으면 그 위에 다시 얹어서 올림 (충돌 시 방금 수집한 쪽을 택함)
           git push || (git pull --rebase -X theirs && git push)
 
+      # 섬네일 파일은 저장소에 없으므로, 집 PC 가 수집한 피드라도 빠진 섬네일을 여기서 채운 뒤 배포
+      - name: 빠진 섬네일 채우기
+        run: node scripts/fill-thumbs.mjs || echo "섬네일 채우기 건너뜀 (원문 이미지로 대신 표시)"
+
       - name: 정적 사이트 빌드
         env:
           STATIC_EXPORT: '1'

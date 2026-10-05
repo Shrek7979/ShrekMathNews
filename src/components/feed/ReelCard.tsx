@@ -62,7 +62,7 @@ function Thumbnail({ item }: { item: FeedItem }) {
   return (
     <a href={item.link} target="_blank" rel="noopener noreferrer" className="relative block h-[42%] max-h-[420px] min-h-[140px] shrink-0 bg-neutral-900">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`${basePath}${item.thumb}`} alt="" className="h-full w-full object-contain" loading="lazy" />
+      <img src={item.thumb.startsWith('http') ? item.thumb : `${basePath}${item.thumb}`} alt="" className="h-full w-full object-contain" loading="lazy" />
       {item.kind === 'video' && (
         <span className="absolute inset-0 m-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 pl-1 text-3xl">
           ▶

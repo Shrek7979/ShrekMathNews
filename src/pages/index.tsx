@@ -79,7 +79,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     titles.forEach((t) => seenTitles.add(t))
     return true
   })
-  const dated = [...feed.items, ...uniquePosts].sort(
+  // 섬네일 파일이 이번 배포에 없으면(다른 컴퓨터에서 수집된 경우 등) 깨진 그림 대신 원문 이미지를 보여 줌
+  const withThumb = (item: FeedItem): FeedItem => {
+    if (!item.thumb?.startsWith('/') || existsSync(path.join(process.cwd(), 'public', item.thumb))) return item
+    const videoId = item.link.match(/(?:v=|shorts\/|youtu\.be\/)([\w-]{11})/)?.[1]
+    const fallback = item.image || (videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : null)
+    return { ...item, thumb: fallback }
+  }
+  const dated = [...feed.items, ...uniquePosts].map(withThumb).sort(
     (a, b) => b.collectedAt.localeCompare(a.collectedAt) || b.publishedAt.localeCompare(a.publishedAt)
   )
   return {
