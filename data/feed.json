@@ -1,6 +1,118 @@
 {
-  "updatedAt": "2026-10-05T04:03:29.998Z",
+  "updatedAt": "2026-10-05T05:02:43.752Z",
   "items": [
+    {
+      "id": "f0ad7673cd24",
+      "kind": "news",
+      "lang": "ko",
+      "title": "'온·오프' 중 선택…해법 \"수학·국어 전국 평가\"",
+      "summary": "송연주 기자 = 온라인과 오프라인 시험장 가운데 원하는 응시 방식을 선택할 수 있는 '2026…",
+      "link": "https://www.fnnews.com/news/202610051301239857",
+      "source": "파이낸셜뉴스",
+      "image": "http://www.bing.com/th?id=ONUT.4JqcWflYZ3WJevkGRXMZ5w&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-04T16:01:00.000Z",
+      "collectedAt": "2026-10-05T05:02:43.752Z",
+      "thumb": "/thumbs/f0ad7673cd24.jpg"
+    },
+    {
+      "id": "581ee1e64cd1",
+      "kind": "news",
+      "lang": "ko",
+      "title": "[카드뉴스] 통합형 수능에 내신 5등급제까지... 2028 대입 개편의 핵심과 입시 판도 변화",
+      "summary": "현재 고등학교 2학년 학생부터 적용받는 ‘2028학년도 대학입시제도 개편안’이 연일 화제다",
+      "link": "https://www.sisunnews.co.kr/news/articleView.html?idxno=247142",
+      "source": "시선뉴스",
+      "image": "http://www.bing.com/th?id=ONUT.i4JW85sYfbGWsnigT1-WWg&pid=News",
+      "category": "입시",
+      "publishedAt": "2026-10-04T16:00:00.000Z",
+      "collectedAt": "2026-10-05T05:02:43.752Z",
+      "thumb": "/thumbs/581ee1e64cd1.jpg"
+    },
+    {
+      "id": "4995256b5ab6",
+      "kind": "video",
+      "lang": "ko",
+      "title": "'수학 만점자'들이 반드시 갖추고 있는 능력 !! #수학1등급 #동기부여 #최상위권수학 #초집중수업 #몰입수학",
+      "summary": "",
+      "link": "https://www.youtube.com/shorts/yYZRYeFM6YM",
+      "source": "김필립수학",
+      "image": "https://i2.ytimg.com/vi/yYZRYeFM6YM/hqdefault.jpg",
+      "views": 5533,
+      "category": "인기",
+      "publishedAt": "2026-10-01T11:09:32.000Z",
+      "collectedAt": "2026-10-05T05:02:43.752Z",
+      "summaryKo": "",
+      "thumb": "/thumbs/4995256b5ab6.jpg"
+    },
+    {
+      "id": "1f8bf2d469c7",
+      "kind": "video",
+      "lang": "en",
+      "title": "The Glimmer in our Eye (with Grant Sanderson) - Numberphile Podcast",
+      "summary": "AI has become the biggest talking point in mathematics",
+      "link": "https://www.youtube.com/watch?v=CBYhaKgah5U",
+      "source": "Numberphile2",
+      "image": "https://i4.ytimg.com/vi/CBYhaKgah5U/hqdefault.jpg",
+      "views": 53833,
+      "category": "인기",
+      "publishedAt": "2026-09-28T15:46:09.000Z",
+      "collectedAt": "2026-10-05T05:02:43.752Z",
+      "titleKo": "The Glimmer in Our Eye (Grant Sanderson과 함께) - Numberphile Podcast",
+      "summaryKo": "AI는 수학계의 가장 큰 화두가 됐다",
+      "translator": "google",
+      "thumb": "/thumbs/1f8bf2d469c7.jpg"
+    },
+    {
+      "id": "6946d9d31aab",
+      "kind": "video",
+      "lang": "ko",
+      "title": "세상에 없던 인강 만들기",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=DYvOsDdVpoI",
+      "source": "수학하는 땅우",
+      "image": "https://i1.ytimg.com/vi/DYvOsDdVpoI/hqdefault.jpg",
+      "views": 43585,
+      "category": "인기",
+      "publishedAt": "2026-09-27T09:05:23.000Z",
+      "collectedAt": "2026-10-05T05:02:43.752Z",
+      "summaryKo": "",
+      "thumb": "/thumbs/6946d9d31aab.jpg"
+    },
+    {
+      "id": "99f01cb50e08",
+      "kind": "video",
+      "lang": "en",
+      "title": "Navier-Stokes solved by AI (extra) - Numberphile",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=aom4269UgSM",
+      "source": "Numberphile2",
+      "image": "https://i2.ytimg.com/vi/aom4269UgSM/hqdefault.jpg",
+      "views": 90299,
+      "category": "인기",
+      "publishedAt": "2026-09-18T20:45:13.000Z",
+      "collectedAt": "2026-10-05T05:02:43.752Z",
+      "titleKo": "AI로 해결된 Navier-Stokes(추가) - Numberphile",
+      "summaryKo": "",
+      "translator": "google",
+      "thumb": "/thumbs/99f01cb50e08.jpg"
+    },
+    {
+      "id": "8aa89102a8bd",
+      "kind": "video",
+      "lang": "ko",
+      "title": "수능 D-62, 수학 EBS로 등급 올리는 법",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=6RcRIjDXecA",
+      "source": "수학하는 땅우",
+      "image": "https://i3.ytimg.com/vi/6RcRIjDXecA/hqdefault.jpg",
+      "views": 74210,
+      "category": "인기",
+      "publishedAt": "2026-09-18T09:24:16.000Z",
+      "collectedAt": "2026-10-05T05:02:43.752Z",
+      "summaryKo": "",
+      "thumb": "/thumbs/8aa89102a8bd.jpg"
+    },
     {
       "id": "047884d3ff95",
       "kind": "news",
@@ -515,7 +627,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.png"
+      "thumb": "/thumbs/6d6917e71bf3.jpg"
     },
     {
       "id": "3c73391d2263",
@@ -531,7 +643,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.png"
+      "thumb": "/thumbs/3c73391d2263.jpg"
     },
     {
       "id": "e01539b51fd3",
@@ -547,7 +659,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.png"
+      "thumb": "/thumbs/e01539b51fd3.jpg"
     },
     {
       "id": "d2e592757594",
@@ -563,7 +675,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.png"
+      "thumb": "/thumbs/d2e592757594.jpg"
     },
     {
       "id": "a3c960bc6978",
@@ -729,7 +841,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.jpg"
+      "thumb": "/thumbs/19c65c3c48c8.png"
     },
     {
       "id": "1f9591edea61",
