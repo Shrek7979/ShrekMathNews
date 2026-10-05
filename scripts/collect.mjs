@@ -7,6 +7,7 @@ import * as cheerio from 'cheerio'
 import { pathToFileURL } from 'node:url'
 import { ensureThumbs } from './thumbs.mjs'
 import { translateItems } from './translate.mjs'
+import { findDeadLinks } from './linkcheck.mjs'
 import { PROBLEM_CHANNELS, PROBLEM_WORDS, youtubeFeed, SOURCES, KO_REQUIRE, KO_EXCLUDE, EN_REQUIRE, BLOCKED_SOURCES, KO_CATEGORIES } from './sources.mjs'
 
 // npm 스크립트와 Next.js 서버 모두 프로젝트 루트에서 실행됨
@@ -209,7 +210,7 @@ export async function collect() {
 
   // 이전 수집분이 먼저 오도록 합쳐서, 이미 있던 기사는 처음 수집된 시각(collectedAt)을 유지
   const kept = []
-  const items = [...carried, ...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
+  let items = [...carried,...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
     .filter((item) => now - new Date(item.collectedAt) <= KEEP_DAYS * DAY)
     .filter((item) => !/^Reddit/.test(item.source || '')) // 레딧은 더 이상 싣지 않음
     .filter((item) => !(item.kind === 'video' && !item.views)) // 영상은 조회수 상위로 뽑은 것만 싣기로 함
@@ -221,7 +222,14 @@ export async function collect() {
     })
     // 방금 새로 들어온 카드가 맨 앞, 같은 회차 안에서는 최신 발행순
     .sort((a, b) => b.collectedAt.localeCompare(a.collectedAt) || new Date(b.publishedAt) - new Date(a.publishedAt))
-    .slice(0, MAX_ITEMS)
+    .slice(0, MAX_ITEMS + 20) // 링크가 죽은 카드를 빼고도 MAX_ITEMS 를 채울 여유
+
+  // 원문이 사라진(404 등) 카드는 뺌 — 예전에 실린 기사가 나중에 지워지는 경우도 있어 매번 모두 확인
+  console.log('\n링크 확인 중…')
+  const dead = await findDeadLinks(items)
+  for (const item of items) if (dead.has(item.id)) console.log(`✗ 링크 없음 (${dead.get(item.id)}) ${item.source}: ${item.link}`)
+  items = items.filter((item) => !dead.has(item.id)).slice(0, MAX_ITEMS)
+  console.log(`✓ 링크 ${dead.size}건 사라짐 → 제외`)
 
   const added = items.filter((item) => item.collectedAt === now.toISOString()).length
 
