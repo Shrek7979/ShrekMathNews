@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T12:00:07.074Z",
+  "updatedAt": "2026-10-05T16:00:05.677Z",
   "items": [
     {
       "id": "ig-DdcBG_2xepl",
@@ -84,23 +84,6 @@
       "collectedAt": "2026-10-05T00:27:53.868Z",
       "titleKo": "롤링으로 원을 정사각형으로 만드세요!",
       "summaryKo": "이것은 우리가 할 수 있는 짧은 애니메이션 시각적 증거입니다.",
-      "translator": "google"
-    },
-    {
-      "id": "ig-Dd1vqvwFiDF",
-      "kind": "news",
-      "lang": "en",
-      "title": "The late Ronald Graham wore two hats.",
-      "summary": "He was a renowned mathematician, at one time president…",
-      "link": "https://www.instagram.com/quantamag/p/Dd1vqvwFiDF/",
-      "source": "Instagram @quantamag",
-      "category": "문제·증명",
-      "publishedAt": "2026-09-27T15:00:00.000Z",
-      "likes": "1,159",
-      "thumb": "/social/ig/Dd1vqvwFiDF.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "고 로널드 그레이엄(Ronald Graham)은 두 개의 모자를 썼습니다.",
-      "summaryKo": "그는 한때 대통령이었던 유명한 수학자였습니다.",
       "translator": "google"
     },
     {
@@ -254,6 +237,23 @@
       "collectedAt": "2026-10-05T00:27:53.868Z",
       "titleKo": "mathletters 인스타그램 게시물",
       "summaryKo": "",
+      "translator": "google"
+    },
+    {
+      "id": "ig-DeHkRcjlktK",
+      "kind": "news",
+      "lang": "en",
+      "title": "In this week’s Qualia column, Jordana Cepelewicz writes: In mathematic…",
+      "summary": "s, it’s not a cliché that the journey matters more than…",
+      "link": "https://www.instagram.com/quantamag/p/DeHkRcjlktK/",
+      "source": "Instagram @quantamag",
+      "category": "문제·증명",
+      "publishedAt": "2026-10-04T15:00:00.000Z",
+      "likes": "90",
+      "thumb": "/social/ig/DeHkRcjlktK.jpg",
+      "collectedAt": "2026-10-05T16:00:05.677Z",
+      "titleKo": "이번 주 Qualia 칼럼에서 Jordana Cepelewicz는 다음과 같이 썼습니다. 수학에서…",
+      "summaryKo": "에, 여행이 그보다 더 중요하다는 것은 진부한 표현이 아닙니다…",
       "translator": "google"
     },
     {
@@ -1108,6 +1108,23 @@
       "translator": "google"
     },
     {
+      "id": "ig-DeHkRcjlktK",
+      "kind": "news",
+      "lang": "en",
+      "title": "In this week’s Qualia column, Jordana Cepelewicz writes: In mathematic…",
+      "summary": "s, it’s not a cliché that the journey matters more than…",
+      "link": "https://www.instagram.com/quantamag/p/DeHkRcjlktK/",
+      "source": "Instagram @quantamag",
+      "category": "문제·증명",
+      "publishedAt": "2026-10-04T15:00:00.000Z",
+      "likes": "90",
+      "thumb": "/social/ig/DeHkRcjlktK.jpg",
+      "collectedAt": "2026-10-05T16:00:05.677Z",
+      "titleKo": "이번 주 Qualia 칼럼에서 Jordana Cepelewicz는 다음과 같이 썼습니다. 수학에서…",
+      "summaryKo": "에, 여행이 그보다 더 중요하다는 것은 진부한 표현이 아닙니다…",
+      "translator": "google"
+    },
+    {
       "id": "ig-Dd9VFy1Ka5X",
       "kind": "video",
       "lang": "en",
@@ -1122,23 +1139,6 @@
       "collectedAt": "2026-10-05T00:27:53.868Z",
       "titleKo": "4D 토폴로지가 이상합니다.",
       "summaryKo": "매기 밀러(Maggie Miller)는 그것을 시각화하려고 노력하고 있습니다.",
-      "translator": "google"
-    },
-    {
-      "id": "ig-Dd1vqvwFiDF",
-      "kind": "news",
-      "lang": "en",
-      "title": "The late Ronald Graham wore two hats.",
-      "summary": "He was a renowned mathematician, at one time president…",
-      "link": "https://www.instagram.com/quantamag/p/Dd1vqvwFiDF/",
-      "source": "Instagram @quantamag",
-      "category": "문제·증명",
-      "publishedAt": "2026-09-27T15:00:00.000Z",
-      "likes": "1,159",
-      "thumb": "/social/ig/Dd1vqvwFiDF.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "고 로널드 그레이엄(Ronald Graham)은 두 개의 모자를 썼습니다.",
-      "summaryKo": "그는 한때 대통령이었던 유명한 수학자였습니다.",
       "translator": "google"
     }
   ]
