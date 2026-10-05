@@ -52,6 +52,12 @@ jobs:
 
       - run: npm ci
 
+      # 구독자 1만 명 이상 수학 유튜브 채널 목록을 7일마다 새로 찾음 (실패해도 이전 목록으로 계속)
+      - name: 유튜브 채널 목록 갱신 (7일마다)
+        run: |
+          age=$(node -e "try{const d=require('./data/youtube-channels.json');console.log(Math.floor((Date.now()-new Date(d.updatedAt))/86400000))}catch{console.log(99)}")
+          if [ "$age" -ge 7 ]; then node scripts/discover-youtube.mjs || echo "채널 목록 갱신 건너뜀"; else echo "채널 목록 ${age}일 전 갱신 — 건너뜀"; fi
+
       - name: 수학 뉴스 수집 (번역 · 섬네일 포함)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -68,7 +74,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/feed.json data/instagram.json data/facebook.json public/social/ig public/social/fb
+          git add data/feed.json data/instagram.json data/facebook.json data/youtube-channels.json public/social/ig public/social/fb
           git diff --cached --quiet || git commit -m "chore: 뉴스 수집 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
           # 그 사이 다른 커밋이 올라왔으면 그 위에 다시 얹어서 올림 (충돌 시 방금 수집한 쪽을 택함)
           git push || (git pull --rebase -X theirs && git push)

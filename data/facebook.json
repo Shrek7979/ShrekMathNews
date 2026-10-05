@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-04T23:39:03.797Z",
+  "updatedAt": "2026-10-05T00:33:31.272Z",
   "items": [
+    {
+      "id": "fb-f7f8cb606523",
+      "kind": "video",
+      "lang": "en",
+      "title": "Ramón has just left us for a postdoctoral position in Cambridge (it ha",
+      "summary": "ppens occasionally), but before he departed he…",
+      "link": "https://www.facebook.com/reel/990633010718201/",
+      "source": "Facebook Oxford Mathematics",
+      "category": "인기",
+      "publishedAt": "2026-10-04T15:32:07.022Z",
+      "thumb": "/social/fb/fb-f7f8cb606523.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-05T00:33:31.272Z",
+      "titleKo": "Ramón은 케임브리지의 박사후 연구원 자리를 위해 방금 우리를 떠났습니다.",
+      "summaryKo": "가끔 글을 쓰지만, 떠나기 전에 그는…",
+      "translator": "google"
+    },
     {
       "id": "fb-7a5224532b24",
       "kind": "news",
@@ -15,6 +32,40 @@
       "collectedAt": "2026-10-04T05:44:21.694Z",
       "titleKo": "이것은 Noperthedron입니다.",
       "summaryKo": "\"아니오(nope)\"와 \"루퍼트(Rupert)\"의 합성어입니다.",
+      "translator": "google"
+    },
+    {
+      "id": "fb-aff8170ce283",
+      "kind": "news",
+      "lang": "en",
+      "title": "So long, and thanks for all the fish?",
+      "summary": "A 2025 Wolfram High School Summer Research Program…",
+      "link": "https://www.facebook.com/wolframresearch/posts/pfbid0D84y7fLtDRFF76p13akXNvdUQAJpqAbemmy4HmLvDqV2HUZz2pxE18ECZg1BMHm9l",
+      "source": "Facebook Wolfram Research",
+      "category": "인기",
+      "publishedAt": "2026-10-03T00:33:03.258Z",
+      "thumb": "/social/fb/fb-aff8170ce283.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-05T00:33:31.272Z",
+      "titleKo": "오랜만입니다. 물고기를 주셔서 감사합니다.",
+      "summaryKo": "2025 Wolfram 고등학교 여름 연구 프로그램…",
+      "translator": "google"
+    },
+    {
+      "id": "fb-06ae8a2f9fe4",
+      "kind": "video",
+      "lang": "en",
+      "title": "You can finally get your ducks in a row (and column).",
+      "summary": "Type “matrix” in any Desmos graphing tool to get started",
+      "link": "https://www.facebook.com/reel/1691072662634688/",
+      "source": "Facebook Desmos",
+      "category": "인기",
+      "publishedAt": "2026-10-03T00:32:49.565Z",
+      "thumb": "/social/fb/fb-06ae8a2f9fe4.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-05T00:33:31.272Z",
+      "titleKo": "마침내 오리를 행(및 열)으로 얻을 수 있습니다.",
+      "summaryKo": "시작하려면 Desmos 그래프 도구에 \"matrix\"를 입력하세요.",
       "translator": "google"
     },
     {

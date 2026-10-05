@@ -1,0 +1,558 @@
+{
+  "updatedAt": "2026-10-05T00:14:47.337Z",
+  "minSubscribers": 10000,
+  "channels": [
+    {
+      "id": "UCYO_jab_esuFRV4b17AJtAw",
+      "name": "3Blue1Brown",
+      "lang": "en",
+      "subscribers": 8670000
+    },
+    {
+      "id": "UCoxcjq-8xIDTYp3uz647V5A",
+      "name": "Numberphile",
+      "lang": "en",
+      "subscribers": 4780000
+    },
+    {
+      "id": "UCBuMwlP7kHkNxdPAqtFSJTw",
+      "name": "mathantics",
+      "lang": "en",
+      "subscribers": 3860000
+    },
+    {
+      "id": "UCHnj59g7jezwTy5GeL8EA_g",
+      "name": "MindYourDecisions",
+      "lang": "en",
+      "subscribers": 3280000
+    },
+    {
+      "id": "UCY-ywrKyfsSFF1tILNH1pNA",
+      "name": "Math with Mr. J",
+      "lang": "en",
+      "subscribers": 2009999.9999999998
+    },
+    {
+      "id": "UCSju5G2aFaWMqn-_0YBtq5A",
+      "name": "Stand-up Maths",
+      "lang": "en",
+      "subscribers": 1360000
+    },
+    {
+      "id": "UCoHhuummRZaIVX7bD4t2czg",
+      "name": "Professor Leonard",
+      "lang": "en",
+      "subscribers": 1260000
+    },
+    {
+      "id": "UCglNXzBo6bmKc9otKf-OuGQ",
+      "name": "TabletClass Math",
+      "lang": "en",
+      "subscribers": 1010000
+    },
+    {
+      "id": "UCLnGGRG__uGSPLBLzyhg8dQ",
+      "name": "Oxford Mathematics",
+      "lang": "en",
+      "subscribers": 744000
+    },
+    {
+      "id": "UCt9SZgFExNwWTH5T_JnyF-A",
+      "name": "Numberock",
+      "lang": "en",
+      "subscribers": 739000
+    },
+    {
+      "id": "UCVVBKkqhy3c2L26RrfRB2kw",
+      "name": "MATH TEACHER GON",
+      "lang": "en",
+      "subscribers": 726000
+    },
+    {
+      "id": "UC6KhU3AMLHC-qv7tj0ZJduw",
+      "name": "Andy Math",
+      "lang": "en",
+      "subscribers": 540000
+    },
+    {
+      "id": "UClOR1BiPyOkkIAnv9Cmj4iw",
+      "name": "Mario's Math Tutoring",
+      "lang": "en",
+      "subscribers": 528000
+    },
+    {
+      "id": "UCufMvGtKg2hoTs0h1Ti5cxg",
+      "name": "인공지능수학 깨봉",
+      "lang": "ko",
+      "subscribers": 468000
+    },
+    {
+      "id": "UChVUSXFzV8QCOKNWGfE56YQ",
+      "name": "BriTheMathGuy",
+      "lang": "en",
+      "subscribers": 405000
+    },
+    {
+      "id": "UC6jM0RFkr4eSkzT5Gx0HOAw",
+      "name": "Michael Penn",
+      "lang": "en",
+      "subscribers": 355000
+    },
+    {
+      "id": "UCxfkOonfIpu6XCba7W0LbcQ",
+      "name": "1st Class Maths",
+      "lang": "en",
+      "subscribers": 303000
+    },
+    {
+      "id": "UCz5KKoq3w_50HRs0o8pRdSA",
+      "name": "bprp math basics",
+      "lang": "en",
+      "subscribers": 292000
+    },
+    {
+      "id": "UCdwo4k1RQHTcq_-WS7Cazqg",
+      "name": "The Bright Side of Mathematics",
+      "lang": "en",
+      "subscribers": 267000
+    },
+    {
+      "id": "UCJG3WmULyY_bZftxF00mXsA",
+      "name": "Math Queen",
+      "lang": "en",
+      "subscribers": 260000
+    },
+    {
+      "id": "UCMUu2lQ_ilNsb26oWrc5ENw",
+      "name": "bprp calculus basics",
+      "lang": "en",
+      "subscribers": 239000
+    },
+    {
+      "id": "UCGxHFG7xvttsmfXl-E0SEnw",
+      "name": "MATH EDUCATION CAMP",
+      "lang": "en",
+      "subscribers": 218000
+    },
+    {
+      "id": "UCTr7jsVuqZdRJDe2Nnvnxvw",
+      "name": "Maths Genie",
+      "lang": "en",
+      "subscribers": 179000
+    },
+    {
+      "id": "UCfUpjvXL64juGG48Dzsk3cQ",
+      "name": "MrGee Math",
+      "lang": "en",
+      "subscribers": 169000
+    },
+    {
+      "id": "UCVkMCHP44uMkZg74cljtQxg",
+      "name": "수능수학 어피셜",
+      "lang": "ko",
+      "subscribers": 146000
+    },
+    {
+      "id": "UCAdboa2coX0gLH16auf2Uww",
+      "name": "Math Scribbles",
+      "lang": "en",
+      "subscribers": 135000
+    },
+    {
+      "id": "UCXl0Zbk8_rvjyLwAR-Xh9pQ",
+      "name": "Insights into Mathematics",
+      "lang": "en",
+      "subscribers": 132000
+    },
+    {
+      "id": "UC58b34-W7M-bLEARri1912g",
+      "name": "Bicen Maths",
+      "lang": "en",
+      "subscribers": 125000
+    },
+    {
+      "id": "UCHZwMwa96o5gwBmVaIj_zVA",
+      "name": "Art of Problem Solving",
+      "lang": "en",
+      "subscribers": 114000
+    },
+    {
+      "id": "UCwXRhIYfVLOa2eU_Ux4TrMA",
+      "name": "수학하는 땅우",
+      "lang": "ko",
+      "subscribers": 109000
+    },
+    {
+      "id": "UCOPRpmqL4-JDr-SYF4Qdyuw",
+      "name": "서울대 김보훈 SNUmentor",
+      "lang": "ko",
+      "subscribers": 107000
+    },
+    {
+      "id": "UCP5-lxzqa0WwYUIy9qjmo7w",
+      "name": "달콤수학Dalcom",
+      "lang": "ko",
+      "subscribers": 92300
+    },
+    {
+      "id": "UCO0s78XLuof9HKSMpUsxMsg",
+      "name": "Mathsmerizing",
+      "lang": "en",
+      "subscribers": 84100
+    },
+    {
+      "id": "UCK2CP6HbbQ2V6gn8Xp_vM-Q",
+      "name": "Cheenta Academy for Olympiad & Research",
+      "lang": "en",
+      "subscribers": 81700
+    },
+    {
+      "id": "UC5WziSmG1SyOexoH66kkpxQ",
+      "name": "케익 수학",
+      "lang": "ko",
+      "subscribers": 78100
+    },
+    {
+      "id": "UCokuhoh5N_B0ZxHcEU_EWbQ",
+      "name": "Math with Professor V",
+      "lang": "en",
+      "subscribers": 78100
+    },
+    {
+      "id": "UCmRfRGubtOIeYZljwy_2m0g",
+      "name": "HyperCubist Math",
+      "lang": "en",
+      "subscribers": 76700
+    },
+    {
+      "id": "UCFYcq-QDZg3lHGmdFcnE3Jw",
+      "name": "Math Booster",
+      "lang": "en",
+      "subscribers": 76200
+    },
+    {
+      "id": "UC8S64ijkpe5VhiXNWmGGwVg",
+      "name": "수학혁명 김지석",
+      "lang": "ko",
+      "subscribers": 69600
+    },
+    {
+      "id": "UC8wV76aTz0RnQrwyoHtNHkg",
+      "name": "Calculus with IJ",
+      "lang": "en",
+      "subscribers": 62900
+    },
+    {
+      "id": "UCVZiCC4wRwyntxu7PN5Tx_g",
+      "name": "Calculus Corner",
+      "lang": "en",
+      "subscribers": 62000
+    },
+    {
+      "id": "UCvtq8Yrmr6HqyYbETei4KIQ",
+      "name": "김재하수학",
+      "lang": "ko",
+      "subscribers": 57000
+    },
+    {
+      "id": "UCwvhHIEc1dxYieQ4ru9MAiQ",
+      "name": "Golden Math Education",
+      "lang": "en",
+      "subscribers": 56900
+    },
+    {
+      "id": "UCqlt161BWlWtLz8ImwKy1hg",
+      "name": "수능 수학은 이동준",
+      "lang": "ko",
+      "subscribers": 55800
+    },
+    {
+      "id": "UCzTnh_qLBRZyE22wje9zCxw",
+      "name": "생각루트 Root Thinkers",
+      "lang": "ko",
+      "subscribers": 55199.99999999999
+    },
+    {
+      "id": "UCudGH0bl44LtLfbj-YdTxvA",
+      "name": "수학 맛집",
+      "lang": "ko",
+      "subscribers": 53800
+    },
+    {
+      "id": "UCFRjA43Kt6ohmn9G9glZylQ",
+      "name": "수학통역사_조안호",
+      "lang": "ko",
+      "subscribers": 51000
+    },
+    {
+      "id": "UCnJ-GLzfJdWjs04eQoxfY7g",
+      "name": "조조쌤수학 JoJo Math",
+      "lang": "ko",
+      "subscribers": 49900
+    },
+    {
+      "id": "UCMGWk21eBQZblsVmi15_Cfw",
+      "name": "Puzzle Monster",
+      "lang": "en",
+      "subscribers": 45000
+    },
+    {
+      "id": "UCcF3fLnXRHMuG_zOZgTzfOw",
+      "name": "수학의신수학학원",
+      "lang": "ko",
+      "subscribers": 39900
+    },
+    {
+      "id": "UCvpeDkVz_yBB9D93tic060A",
+      "name": "슈퍼브레인",
+      "lang": "ko",
+      "subscribers": 39700
+    },
+    {
+      "id": "UCOtJLaVAMJ2MqjWRoF8c14w",
+      "name": "김강용: 심화와 응용에 강한 수학",
+      "lang": "ko",
+      "subscribers": 36500
+    },
+    {
+      "id": "UCHKKyP6ezVQq5KunZVa-Mlg",
+      "name": "Math Teacher GOAT",
+      "lang": "en",
+      "subscribers": 36400
+    },
+    {
+      "id": "UCAqUKEpDR5Q3Ch5JOKp4vKA",
+      "name": "수학강사 이정환",
+      "lang": "ko",
+      "subscribers": 34100
+    },
+    {
+      "id": "UCw9sJjJgxy-zQOwWMMMNpHw",
+      "name": "Math Beast",
+      "lang": "en",
+      "subscribers": 33300
+    },
+    {
+      "id": "UCWqHm4u7junEcXkNKy6WEgw",
+      "name": "쪄니쌤의 수학교실",
+      "lang": "ko",
+      "subscribers": 33200
+    },
+    {
+      "id": "UCevFAWjnE1uv_zKxDTLpMlw",
+      "name": "권태원큐스터디_mathlatte",
+      "lang": "ko",
+      "subscribers": 31900
+    },
+    {
+      "id": "UCB_AbuIVIG8I3K3_T_j0FSw",
+      "name": "수학의 즐거움, Enjoying Math",
+      "lang": "ko",
+      "subscribers": 29800
+    },
+    {
+      "id": "UC0reYAb8nRkuvIc0BrehMzA",
+      "name": "김필립수학",
+      "lang": "ko",
+      "subscribers": 28400
+    },
+    {
+      "id": "UCDMP0s-HpSYf6ey7rQ1EN5Q",
+      "name": "만만한 수학TV [이상준 경희대 수학과 교수]",
+      "lang": "ko",
+      "subscribers": 26800
+    },
+    {
+      "id": "UC6PA3JV0sOaptk7E_XNc1-Q",
+      "name": "재민네 수학",
+      "lang": "ko",
+      "subscribers": 26800
+    },
+    {
+      "id": "UCPqEENsAFF_1QoN6iuhICng",
+      "name": "수학한수",
+      "lang": "ko",
+      "subscribers": 25400
+    },
+    {
+      "id": "UCjiWB-CZUY8FRclg07i91jg",
+      "name": "Math Teacher Ash (Sir Ash)",
+      "lang": "en",
+      "subscribers": 25200
+    },
+    {
+      "id": "UCpN7WfW-BIc7DFDnd0cd6Pw",
+      "name": "성장수학",
+      "lang": "ko",
+      "subscribers": 25000
+    },
+    {
+      "id": "UCVrs4KiLQz_gvVWWK1pKR1g",
+      "name": "통계의 본질 EOStatistics",
+      "lang": "ko",
+      "subscribers": 23700
+    },
+    {
+      "id": "UCp6r5-YfW3i5_mF1Y2dJIVw",
+      "name": "수학GOAT🐐",
+      "lang": "ko",
+      "subscribers": 22200.000000000004
+    },
+    {
+      "id": "UCFldbd2m9h9gYyWUwGwUNuw",
+      "name": "진쌤수학 ",
+      "lang": "ko",
+      "subscribers": 21100
+    },
+    {
+      "id": "UCXIDUg5PXPGwcTUde4huOHw",
+      "name": "다정수학",
+      "lang": "ko",
+      "subscribers": 20200
+    },
+    {
+      "id": "UCULDzMxtsGBRBg2EGYwGKhw",
+      "name": "The Problem Solver ",
+      "lang": "en",
+      "subscribers": 20100
+    },
+    {
+      "id": "UCcdTyFwYNsQIpTicSDA7xSw",
+      "name": "연떠",
+      "lang": "ko",
+      "subscribers": 20099.999999999996
+    },
+    {
+      "id": "UCiyPIBAwt_ldRHsQp_5SjpQ",
+      "name": "수학 취미로 하는 직장인",
+      "lang": "ko",
+      "subscribers": 20099.999999999996
+    },
+    {
+      "id": "UCSEiXIgA9gJ61Hfud-M5sHA",
+      "name": "[정병훈T ] 요리조리 수학",
+      "lang": "ko",
+      "subscribers": 20000
+    },
+    {
+      "id": "UC1jZ7bGGynBNTTZnsA53cnA",
+      "name": "매일수학💯",
+      "lang": "ko",
+      "subscribers": 18800
+    },
+    {
+      "id": "UCmPHrR0nypa_5b9OZjA_dOQ",
+      "name": "한석만TV",
+      "lang": "ko",
+      "subscribers": 18400
+    },
+    {
+      "id": "UCnAugdsnagKl3FrAkMkrCLA",
+      "name": "러셀 신성규T",
+      "lang": "ko",
+      "subscribers": 17200
+    },
+    {
+      "id": "UC2VuCzJx_9luS0y-WDfL3Tg",
+      "name": "Beard Meets Calculus",
+      "lang": "en",
+      "subscribers": 16700
+    },
+    {
+      "id": "UC9lCIoFJxBwzoN6L57Z7zhQ",
+      "name": "Mathematics Learning",
+      "lang": "en",
+      "subscribers": 16200
+    },
+    {
+      "id": "UC_nWpH6DH5vmmhd0R8dTzYQ",
+      "name": "돼지쌤 수학정주행",
+      "lang": "ko",
+      "subscribers": 14600
+    },
+    {
+      "id": "UCDYuZXOYG79LLM6aV9UTOyw",
+      "name": "수학쌤Zio",
+      "lang": "ko",
+      "subscribers": 14500
+    },
+    {
+      "id": "UCpXV8Uc7_p6ZIddixS5Gbsg",
+      "name": "Mathematics for Data Science II",
+      "lang": "en",
+      "subscribers": 14000
+    },
+    {
+      "id": "UCx4VfPZoN1DGJFGwXPxa4bQ",
+      "name": "대은이대은",
+      "lang": "ko",
+      "subscribers": 13300
+    },
+    {
+      "id": "UCeMNPZhRIdJjgfdowbrnXiA",
+      "name": "필박수학",
+      "lang": "ko",
+      "subscribers": 13000
+    },
+    {
+      "id": "UCFTYM7lJxnB6foV6TxgFbzg",
+      "name": "Math Gold Medalist",
+      "lang": "en",
+      "subscribers": 13000
+    },
+    {
+      "id": "UCf4hAInWdgHi8CH7EyruIXQ",
+      "name": "수학해커_송재혁",
+      "lang": "ko",
+      "subscribers": 12900
+    },
+    {
+      "id": "UC8f9bYFaaVZLXK-naQxcd5A",
+      "name": "Dr. Bevin Maultsby",
+      "lang": "en",
+      "subscribers": 12800
+    },
+    {
+      "id": "UCBm_gdGw8uLcwFwP5RxxNtQ",
+      "name": "천쌤에게물어보셈",
+      "lang": "ko",
+      "subscribers": 12700
+    },
+    {
+      "id": "UCjLjFio25uAeMP8RRI5qRcg",
+      "name": "The Phantom of the Math",
+      "lang": "en",
+      "subscribers": 12300
+    },
+    {
+      "id": "UClzr_hd4-6GEJvu2sISjNIA",
+      "name": "교양수학 김희진",
+      "lang": "ko",
+      "subscribers": 12100
+    },
+    {
+      "id": "UC2r67h-FMkgvkUu0leCiYwQ",
+      "name": "Calculus Booster",
+      "lang": "en",
+      "subscribers": 12000
+    },
+    {
+      "id": "UCY5PrJMcb_KO6SdJ-5_0R_Q",
+      "name": "Art of Olympiad Mathematics",
+      "lang": "en",
+      "subscribers": 11600
+    },
+    {
+      "id": "UConGJZsQtxe1zpgtre4ShPw",
+      "name": "서운대 수학과",
+      "lang": "ko",
+      "subscribers": 11399.999999999998
+    },
+    {
+      "id": "UC3Dvz4FfjuB6VtTPJjQKrFg",
+      "name": "대치동 진우쌤 / 정진우 수학",
+      "lang": "ko",
+      "subscribers": 10100
+    }
+  ]
+}

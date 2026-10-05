@@ -6,7 +6,7 @@ import { mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { evalOnPage } from './capture.mjs'
 import { oneLine } from './collect.mjs'
-import { FACEBOOK_PAGES } from './sources.mjs'
+import { EN_REQUIRE, FACEBOOK_PAGES, MIN_FOLLOWERS } from './sources.mjs'
 import { imageSize } from './thumbs.mjs'
 import { translateItems } from './translate.mjs'
 
@@ -68,14 +68,31 @@ function parseWhen(when) {
 
 await mkdir(IMG_DIR, { recursive: true })
 const items = []
-for (const [slug, name, lang] of FACEBOOK_PAGES) {
+// 페이지 좋아요 수 (링크 미리보기 정보: 'Numberphile. 좋아요 110,538개 · …' / '110,538 likes · …')
+async function pageLikes(slug) {
+  const res = await fetch(`https://www.facebook.com/${slug}`, {
+    headers: { 'User-Agent': 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)' },
+    signal: AbortSignal.timeout(20000),
+  })
+  const description = (await res.text()).match(/<meta property="og:description" content="([^"]*)"/)?.[1] || ''
+  const match = description.match(/좋아요\s*([\d,]+)/) || description.match(/([\d,]+)\s*likes/i)
+  return match ? Number(match[1].replace(/,/g, '')) : null
+}
+
+for (const [slug, name, lang, options = {}] of FACEBOOK_PAGES) {
   try {
+    const likes = await pageLikes(slug).catch(() => null)
+    if (likes !== null && likes < MIN_FOLLOWERS) {
+      console.log(`- ${name}: 좋아요 ${likes}개 (${MIN_FOLLOWERS} 미만) — 건너뜀`)
+      continue
+    }
     const post = await evalOnPage(`https://www.facebook.com/${slug}`, `(${readLatestPost.toString()})()`, { settleMs: 6000 })
     if (!post?.link) throw new Error('게시물을 읽지 못함 (로그인 화면일 수 있음)')
     const published = parseWhen(post.when)
     if (!published) throw new Error(`게시 시각을 알 수 없음: ${post.when}`)
     if (Date.now() - published > MAX_AGE_DAYS * DAY) throw new Error('최근 게시물 없음')
     if (!post.image) throw new Error('이미지 없는 게시물')
+    if (options.filter && !EN_REQUIRE.test(post.text)) throw new Error('수학과 무관한 게시물')
 
     const id = `fb-${createHash('sha1').update(post.link).digest('hex').slice(0, 12)}`
     const img = await fetch(post.image, { signal: AbortSignal.timeout(20000) })

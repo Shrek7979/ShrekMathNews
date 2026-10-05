@@ -153,10 +153,13 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     }
     if (category === ALL) return inLevel
     if (category === SAVED) return inLevel.filter((item) => saved.ids.has(item.id))
-    const inCategory = inLevel.filter((item) => item.category === category)
-    // 인기: 조회수·좋아요가 많은 순 (숫자가 없는 카드는 뒤로)
-    if (category === '인기') return [...inCategory].sort((a, b) => popularity(b) - popularity(a))
-    return inCategory
+    // 인기: 카테고리와 상관없이 조회수·좋아요가 있는 카드 전부를 많은 순으로 (숫자가 없는 SNS 카드는 뒤로)
+    if (category === '인기') {
+      return inLevel
+        .filter((item) => item.category === '인기' || popularity(item) > 0)
+        .sort((a, b) => popularity(b) - popularity(a))
+    }
+    return inLevel.filter((item) => item.category === category)
   }, [feed.items, category, saved.ids, keyword, level])
 
   const cards = useMemo<Card[]>(() => {
@@ -189,6 +192,7 @@ export default function ReelsPage({ feed, topics, dayIndex }: Props) {
     const present = CATEGORY_ORDER.filter((c) => feed.items.some((item) => item.category === c))
     const popular = present.filter((c) => c === '인기')
     const rest = present.filter((c) => c !== '인기')
+    // 전체 · 인기 · 수학 · 문제·증명 · … (문제·증명은 수학 주제 바로 뒤)
     return [ALL, ...popular, TOPIC_CATEGORY, ...rest, SAVED]
   }, [feed.items])
 

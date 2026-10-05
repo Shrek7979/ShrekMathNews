@@ -45,7 +45,7 @@ export type Topic = {
 
 export const SITE_NAME = 'Shrek Math News'
 export const TOPIC_CATEGORY = '수학'
-export const CATEGORY_ORDER = ['인기', '교육', '입시', 'AI·에듀테크', '연구', '대회·행사', '해외', '영상']
+export const CATEGORY_ORDER = ['인기', '문제·증명', '교육', '입시', 'AI·에듀테크', '연구', '학회·기관', '대회·행사', '해외', '영상']
 
 // 카테고리는 글자 색 하나로만 구분 (Tailwind 가 인식하도록 전체 클래스명을 그대로 적음)
 export const CATEGORY_ACCENT: Record<string, string> = {
@@ -57,6 +57,8 @@ export const CATEGORY_ACCENT: Record<string, string> = {
   해외: 'text-cyan-400',
   영상: 'text-neutral-300',
   인기: 'text-orange-400',
+  '문제·증명': 'text-lime-400',
+  '학회·기관': 'text-indigo-300',
   [TOPIC_CATEGORY]: 'text-fuchsia-400',
 }
 

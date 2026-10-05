@@ -7,7 +7,7 @@ import * as cheerio from 'cheerio'
 import { pathToFileURL } from 'node:url'
 import { ensureThumbs } from './thumbs.mjs'
 import { translateItems } from './translate.mjs'
-import { youtubeFeed, SOURCES, KO_REQUIRE, KO_EXCLUDE, EN_REQUIRE, BLOCKED_SOURCES, KO_CATEGORIES } from './sources.mjs'
+import { PROBLEM_CHANNELS, PROBLEM_WORDS, youtubeFeed, SOURCES, KO_REQUIRE, KO_EXCLUDE, EN_REQUIRE, BLOCKED_SOURCES, KO_CATEGORIES } from './sources.mjs'
 
 // npm 스크립트와 Next.js 서버 모두 프로젝트 루트에서 실행됨
 export const FEED_PATH = resolve(process.cwd(), 'data/feed.json')
@@ -124,9 +124,19 @@ async function collectYoutubeTop(source, now) {
   return feeds
     .flatMap((r) => (r.status === 'fulfilled' ? r.value : []))
     .filter((item) => item.views >= (source.minViews || 1))
+    .filter((item) => !/[぀-ヿऀ-ॿঀ-৿؀-ۿ]/.test(item.title)) // 번역이 안 되는 언어 제외
     .sort((a, b) => b.views - a.views)
+    .filter((item, _, list) => {
+      // 한 채널이 인기 카드를 독차지하지 않게 채널당 maxPerChannel 건까지
+      const sameChannelBefore = list.slice(0, list.indexOf(item)).filter((other) => other.source === item.source).length
+      return sameChannelBefore < (source.maxPerChannel || Infinity)
+    })
     .slice(0, source.limit)
-    .map((item) => ({ ...item, category: source.category }))
+    .map((item) => ({
+      ...item,
+      // 문제 풀이·증명 채널이거나 제목이 그런 내용이면 '문제·증명' 칩으로 (인기 칩에는 조회수 순으로 함께 나옴)
+      category: PROBLEM_CHANNELS.test(item.source) || PROBLEM_WORDS.test(item.title) ? '문제·증명' : source.category,
+    }))
 }
 
 async function collectSource(source, now) {
@@ -145,6 +155,7 @@ async function collectSource(source, now) {
     .filter((item) => now - new Date(item.publishedAt) <= source.maxAgeDays * DAY)
     .filter((item) => !source.requireCategory || item.feedCategories.includes(source.requireCategory))
     .filter((item) => !BLOCKED_SOURCES.includes(item.source))
+    .filter((item) => !source.requireTitle || source.requireTitle.test(item.title))
     .filter((item) => !source.requireImage || item.image)
     .filter((item) => {
       if (source.type === 'youtube' || source.requireCategory || source.trusted) return true
@@ -183,12 +194,25 @@ export async function collect() {
     throw new Error('모든 소스 수집에 실패했습니다. 기존 feed.json 을 유지합니다.')
   }
 
+  // 유튜브 인기 영상은 '지금의 순위'라서 쌓아 두지 않고 매번 새로 고름 (이번에 뽑히지 않은 예전 영상은 내림)
+  const topOk = results.some((result, i) => SOURCES[i].type === 'youtube-top' && result.status === 'fulfilled')
+  const freshIds = new Set(fresh.map((item) => item.id))
+  const carried = previous.filter((old) => !(topOk && old.kind === 'video' && old.views && !freshIds.has(old.id)))
+  // 계속 남는 카드는 조회수와 칩(카테고리)을 이번 값으로 갱신
+  const freshById = new Map(fresh.map((item) => [item.id, item]))
+  for (const old of carried) {
+    const latest = freshById.get(old.id)
+    if (!latest) continue
+    if (latest.views) old.views = latest.views
+    if (latest.category) old.category = latest.category
+  }
+
   // 이전 수집분이 먼저 오도록 합쳐서, 이미 있던 기사는 처음 수집된 시각(collectedAt)을 유지
   const kept = []
-  const items = [...previous, ...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
+  const items = [...carried, ...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
     .filter((item) => now - new Date(item.collectedAt) <= KEEP_DAYS * DAY)
     .filter((item) => !/^Reddit/.test(item.source || '')) // 레딧은 더 이상 싣지 않음
-    .filter((item) => !(item.kind === 'video' && item.category !== '인기')) // 영상은 조회수 상위(인기)만 싣기로 함
+    .filter((item) => !(item.kind === 'video' && !item.views)) // 영상은 조회수 상위로 뽑은 것만 싣기로 함
     .filter((item) => {
       const grams = bigrams(item.title)
       if (kept.some((other) => similarity(grams, other) >= SIMILAR_THRESHOLD)) return false

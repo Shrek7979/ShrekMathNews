@@ -7,12 +7,12 @@ import { evalOnPage } from './capture.mjs'
 import { imageSize } from './thumbs.mjs'
 import { oneLine } from './collect.mjs'
 import { translateItems } from './translate.mjs'
-import { INSTAGRAM_ACCOUNTS } from './sources.mjs'
+import { EN_REQUIRE, INSTAGRAM_ACCOUNTS, MIN_FOLLOWERS, PROBLEM_WORDS } from './sources.mjs'
 
 const OUT_JSON = resolve(process.cwd(), 'data/instagram.json')
 const IMG_DIR = resolve(process.cwd(), 'public/social/ig')
-const PER_ACCOUNT = 3 // 계정마다 싣는 게시물 수 (좋아요 많은 순)
-const CANDIDATES = 9 // 계정마다 살펴보는 최근 게시물 수
+const PER_ACCOUNT = 2 // 계정마다 싣는 게시물 수 (좋아요 많은 순)
+const CANDIDATES = 6 // 계정마다 살펴보는 최근 게시물 수
 const MAX_AGE_DAYS = 45
 const DAY = 24 * 60 * 60 * 1000
 // 게시물의 캡션·대표 이미지는 링크 미리보기용 정보(og 태그)에서 읽음
@@ -75,7 +75,7 @@ async function readPost(post, account, lang) {
     summary: oneLine(text.slice(firstSentence.length).trim()), // 캡션이 한 문장뿐이면 설명은 비움
     link: post.href,
     source: `Instagram @${account}`,
-    category: '인기',
+    category: account === 'mathvisualproofs' || PROBLEM_WORDS.test(caption) ? '문제·증명' : '인기',
     publishedAt: date.toISOString(),
     likes,
     thumb: `/social/ig/${code}.jpg`,
@@ -101,8 +101,20 @@ const now = new Date().toISOString()
 const items = [] // 화면에 싣는 것: 계정별 좋아요 상위
 const pool = [] // 후보 전체 (다음 실행 때 재사용)
 const failedSources = new Set()
-for (const [account, lang] of INSTAGRAM_ACCOUNTS) {
+// 팔로워 수 (링크 미리보기 정보: '906K Followers, 40 Following, …')
+async function followers(account) {
+  const res = await fetch(`https://www.instagram.com/${account}/`, { headers: { 'User-Agent': PREVIEW_UA }, signal: AbortSignal.timeout(20000) })
+  const match = meta(await res.text(), 'og:description').match(/^([\d.,]+)([KM]?) Followers/)
+  return match ? Number(match[1].replace(/,/g, '')) * ({ K: 1e3, M: 1e6 }[match[2]] || 1) : null
+}
+
+for (const [account, lang, options = {}] of INSTAGRAM_ACCOUNTS) {
   try {
+    const count = await followers(account).catch(() => null)
+    if (count !== null && count < MIN_FOLLOWERS) {
+      console.log(`-  건너뜀  @${account}: 팔로워 ${count}명 (${MIN_FOLLOWERS} 미만)`)
+      continue
+    }
     const grid = await evalOnPage(`https://www.instagram.com/${account}/`, READ_GRID)
     if (!grid?.length) throw new Error('게시물을 읽지 못함 (로그인 화면일 수 있음)')
     const candidates = []
@@ -110,7 +122,9 @@ for (const [account, lang] of INSTAGRAM_ACCOUNTS) {
       const code = post.href.match(/\/(?:p|reel)\/([^/]+)/)?.[1]
       try {
         const item = known.get(`ig-${code}`) || (await readPost(post, account, lang))
-        if (item && Date.now() - new Date(item.publishedAt) <= MAX_AGE_DAYS * DAY) candidates.push(item)
+        if (!item || Date.now() - new Date(item.publishedAt) > MAX_AGE_DAYS * DAY) continue
+        if (options.filter && !EN_REQUIRE.test(`${item.title} ${item.summary}`)) continue // 수학과 무관한 글
+        candidates.push(item)
       } catch (error) {
         console.warn(`  건너뜀 ${post.href}: ${error.message}`)
       }
