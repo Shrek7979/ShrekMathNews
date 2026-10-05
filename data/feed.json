@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T12:03:41.232Z",
+  "updatedAt": "2026-10-05T12:17:34.568Z",
   "items": [
     {
       "id": "792364610e40",
@@ -10,14 +10,15 @@
       "link": "https://www.youtube.com/shorts/--tMBxMv8qM",
       "source": "Math Scribbles",
       "image": "https://i2.ytimg.com/vi/--tMBxMv8qM/hqdefault.jpg",
-      "views": 55026,
+      "views": 55040,
       "category": "인기",
       "publishedAt": "2026-09-17T20:22:13.000Z",
       "collectedAt": "2026-10-05T12:02:40.857Z",
       "titleKo": "리만 가설이란 무엇입니까? #수학 #미적분학 #적분_미적분학",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/792364610e40.jpg"
+      "thumb": "/thumbs/792364610e40.jpg",
+      "detail": ""
     },
     {
       "id": "3f3f63a3b436",
@@ -28,14 +29,15 @@
       "link": "https://www.youtube.com/watch?v=oUZCjrOZVVk",
       "source": "blackpenredpen",
       "image": "https://i4.ytimg.com/vi/oUZCjrOZVVk/hqdefault.jpg",
-      "views": 54981,
+      "views": 54989,
       "category": "문제·증명",
       "publishedAt": "2026-09-26T11:43:09.000Z",
       "collectedAt": "2026-10-05T11:04:31.859Z",
       "titleKo": "수학은 정말 매력적이고 멋지네요!!!!! (x+y)^4=x^4+y^4?",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/3f3f63a3b436.jpg"
+      "thumb": "/thumbs/3f3f63a3b436.jpg",
+      "detail": ""
     },
     {
       "id": "a80c4943507a",
@@ -48,7 +50,8 @@
       "category": "입시",
       "publishedAt": "2026-10-05T01:12:26.000Z",
       "collectedAt": "2026-10-05T09:34:53.002Z",
-      "thumb": "/thumbs/a80c4943507a.png"
+      "thumb": "/thumbs/a80c4943507a.png",
+      "detail": "2025.11 2026학년도 대학수학능력시험이 치러진 가운데, 이과생들이 과탐 대신 사탐을 선택하는 이른바 '사탐런' 현상이 역대 최대 규모로 발생했어요. 📉 난이도 상승과 과목별 유불리 심화로 인해 수험생들의 입시 예측 불확실성이 최고조에…"
     },
     {
       "id": "54ece73965a1",
@@ -59,14 +62,15 @@
       "link": "https://www.youtube.com/watch?v=9xwU-ochogk",
       "source": "Stand-up Maths",
       "image": "https://i2.ytimg.com/vi/9xwU-ochogk/hqdefault.jpg",
-      "views": 977632,
+      "views": 977840,
       "category": "인기",
       "publishedAt": "2026-09-30T14:30:51.000Z",
       "collectedAt": "2026-10-05T09:34:53.002Z",
       "titleKo": "Babish의 15,000% 주장을 테스트했습니다!",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/54ece73965a1.jpg"
+      "thumb": "/thumbs/54ece73965a1.jpg",
+      "detail": ""
     },
     {
       "id": "59ad17e41836",
@@ -80,7 +84,7 @@
       "category": "입시",
       "publishedAt": "2026-10-05T01:24:20.000Z",
       "collectedAt": "2026-10-05T09:02:35.128Z",
-      "thumb": "/thumbs/59ad17e41836.jpg"
+      "thumb": "/thumbs/59ad17e41836.png"
     },
     {
       "id": "f3449156c978",
@@ -93,7 +97,8 @@
       "category": "입시",
       "publishedAt": "2026-10-04T20:01:00.000Z",
       "collectedAt": "2026-10-05T09:02:35.128Z",
-      "thumb": "/thumbs/f3449156c978.jpg"
+      "thumb": "/thumbs/f3449156c978.jpg",
+      "detail": "2027학년도 대학수학능력시험을 앞두고 제주지역 시험장에 대한 화재안전조사가 실시된다.제주도소방안전본부는 오는 19일까지 도내 수능 시험장 16개교를 대상으로 화재안전조사를 실시한다고 5일 밝혔다.이번 조사는 제주시와 서귀포시 지역 관할 소방관서가…"
     },
     {
       "id": "310e86d139a3",
@@ -104,14 +109,15 @@
       "link": "https://www.youtube.com/watch?v=Cfs0Ta62Qn8",
       "source": "bprp calculus basics",
       "image": "https://i4.ytimg.com/vi/Cfs0Ta62Qn8/hqdefault.jpg",
-      "views": 55996,
+      "views": 56046,
       "category": "문제·증명",
       "publishedAt": "2026-10-01T12:00:32.000Z",
       "collectedAt": "2026-10-05T09:02:35.128Z",
       "titleKo": "e^sqrt(x)에서 파생되었지만 한계 정의를 사용해야 합니다(HKDSE 2024).",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/310e86d139a3.jpg"
+      "thumb": "/thumbs/310e86d139a3.jpg",
+      "detail": ""
     },
     {
       "id": "333c7f28a720",
@@ -124,7 +130,8 @@
       "category": "AI·에듀테크",
       "publishedAt": "2026-10-04T18:01:00.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
-      "thumb": "/thumbs/333c7f28a720.png"
+      "thumb": "/thumbs/333c7f28a720.png",
+      "detail": "희망이라는 씨앗을 심고 목표라는 열매를 가꾸어 가는 사람들. 현재의 작은 도전이 내일의 큰 기회가 되고, 그 여정 속에서 빛나는 이야기를 써 내려가는 이들을 만나는 시간, 이번 시간은 ‘와이즈퓨처랩 과학실험 수학 AI학원’ 김아름 대표를 만나…"
     },
     {
       "id": "ee6f7a3548f2",
@@ -135,14 +142,15 @@
       "link": "https://www.youtube.com/shorts/MEwNEWHpsFM",
       "source": "Math Scribbles",
       "image": "https://i2.ytimg.com/vi/MEwNEWHpsFM/hqdefault.jpg",
-      "views": 166621,
+      "views": 167146,
       "category": "인기",
       "publishedAt": "2026-10-02T23:31:46.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "오래된 수학책 #수학 #수학",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/ee6f7a3548f2.jpg"
+      "thumb": "/thumbs/ee6f7a3548f2.jpg",
+      "detail": ""
     },
     {
       "id": "1e170a122e8e",
@@ -153,7 +161,7 @@
       "link": "https://www.youtube.com/watch?v=-LyfBNelfqM",
       "source": "수능 수학은 이동준",
       "image": "https://i2.ytimg.com/vi/-LyfBNelfqM/hqdefault.jpg",
-      "views": 110588,
+      "views": 110661,
       "category": "인기",
       "publishedAt": "2026-10-01T11:00:28.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -168,11 +176,12 @@
       "link": "https://www.youtube.com/watch?v=7J0h8uQzwB8",
       "source": "연떠",
       "image": "https://i4.ytimg.com/vi/7J0h8uQzwB8/hqdefault.jpg",
-      "views": 69910,
+      "views": 69941,
       "category": "인기",
       "publishedAt": "2026-09-30T08:00:39.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
-      "thumb": "/thumbs/e2a84280b7ba.jpg"
+      "thumb": "/thumbs/e2a84280b7ba.jpg",
+      "detail": "#버츄얼선생님 #버츄얼수학 #연떠 #버츄얼강의 #수학선생님 #수학교육과 #수능 #수능수학 #확통 #확률과통계 #마르코프체인 #고등수학 #중등수학"
     },
     {
       "id": "e0e1550ec9cb",
@@ -183,7 +192,7 @@
       "link": "https://www.youtube.com/watch?v=TX6rqbJNRpg",
       "source": "교양수학 김희진",
       "image": "https://i1.ytimg.com/vi/TX6rqbJNRpg/hqdefault.jpg",
-      "views": 80584,
+      "views": 80649,
       "category": "문제·증명",
       "publishedAt": "2026-09-26T21:51:16.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -198,14 +207,16 @@
       "link": "https://www.youtube.com/watch?v=fGObOUNcZk0",
       "source": "MindYourDecisions",
       "image": "https://i3.ytimg.com/vi/fGObOUNcZk0/hqdefault.jpg",
-      "views": 89486,
+      "views": 89512,
       "category": "문제·증명",
       "publishedAt": "2026-09-23T22:35:10.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "처음에는 불가능해 보이는 기하학 퍼즐",
       "summaryKo": "재미있는 논리 퍼즐로 두뇌력을 테스트해보세요",
       "translator": "google",
-      "thumb": "/thumbs/869a9a83ecb7.jpg"
+      "thumb": "/thumbs/869a9a83ecb7.jpg",
+      "detail": "Test your brain power with this fun logical puzzle. A square is divided into 8 rectangles of equal areas. One rectangle's height is 8 cm,…",
+      "detailKo": "재미있는 논리 퍼즐로 두뇌력을 테스트해보세요. 정사각형은 면적이 동일한 8개의 직사각형으로 나뉩니다. 직사각형 하나의 높이는 8cm입니다."
     },
     {
       "id": "2d4d8deeb2d3",
@@ -216,12 +227,13 @@
       "link": "https://www.youtube.com/shorts/Ng3m2Dntls0",
       "source": "수학강사 이정환",
       "image": "https://i3.ytimg.com/vi/Ng3m2Dntls0/hqdefault.jpg",
-      "views": 55556,
+      "views": 55575,
       "category": "인기",
       "publishedAt": "2026-09-23T09:20:03.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "summaryKo": "",
-      "thumb": "/thumbs/2d4d8deeb2d3.jpg"
+      "thumb": "/thumbs/2d4d8deeb2d3.jpg",
+      "detail": ""
     },
     {
       "id": "161b4184e368",
@@ -232,14 +244,16 @@
       "link": "https://www.youtube.com/watch?v=gxNaNq406P0",
       "source": "Andy Math",
       "image": "https://i4.ytimg.com/vi/gxNaNq406P0/hqdefault.jpg",
-      "views": 355696,
+      "views": 355717,
       "category": "문제·증명",
       "publishedAt": "2026-09-22T20:35:24.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "복권 일시불과 월별 지불액",
       "summaryKo": "더 높은 수익률을 얻을 수 있다고 생각한다면…",
       "translator": "google",
-      "thumb": "/thumbs/161b4184e368.jpg"
+      "thumb": "/thumbs/161b4184e368.jpg",
+      "detail": "If you think you can get a higher rate of return, you can raise the rate we use. But all other calculations would be the same as the video!",
+      "detailKo": "더 높은 수익률을 얻을 수 있다고 생각하면 우리가 사용하는 수익률을 높일 수 있습니다. 하지만 다른 계산은 모두 영상과 같을거에요!"
     },
     {
       "id": "1c91caf604c3",
@@ -268,14 +282,15 @@
       "link": "https://www.youtube.com/shorts/mvPylY9Q1yU",
       "source": "MrGee Math",
       "image": "https://i2.ytimg.com/vi/mvPylY9Q1yU/hqdefault.jpg",
-      "views": 1475304,
+      "views": 1475453,
       "category": "인기",
       "publishedAt": "2026-09-22T13:00:31.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "최적의 폴리곤 패킹에 대한 수학 밈 설명",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/f087db872e87.jpg"
+      "thumb": "/thumbs/f087db872e87.jpg",
+      "detail": ""
     },
     {
       "id": "530f8ffbb583",
@@ -286,14 +301,16 @@
       "link": "https://www.youtube.com/shorts/UmuMgA_RxnU",
       "source": "Numberphile",
       "image": "https://i2.ytimg.com/vi/UmuMgA_RxnU/hqdefault.jpg",
-      "views": 463337,
+      "views": 463346,
       "category": "인기",
       "publishedAt": "2026-09-22T12:34:02.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "블라인드 순위 번호(James Grime)",
       "summaryKo": "James Grime blind가 5개의 숫자와 상수 순위를 매겼습니다",
       "translator": "google",
-      "thumb": "/thumbs/530f8ffbb583.jpg"
+      "thumb": "/thumbs/530f8ffbb583.jpg",
+      "detail": "James Grime blind ranks five numbers and constants. More links & stuff in full description below ↓↓↓",
+      "detailKo": "James Grime blind는 5개의 숫자와 상수의 순위를 매겼습니다. 자세한 설명은 아래에 더 많은 링크와 내용이 있습니다 ↓↓↓"
     },
     {
       "id": "31adca1f488e",
@@ -308,7 +325,8 @@
       "category": "인기",
       "publishedAt": "2026-09-22T08:00:34.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
-      "thumb": "/thumbs/31adca1f488e.jpg"
+      "thumb": "/thumbs/31adca1f488e.jpg",
+      "detail": "#버츄얼선생님 #버츄얼수학 #연떠 #버츄얼강의 #수학선생님 #수학교육과 #수능 #수능수학 #수1 #대수 #지수함수 #로그함수 #삼각함수 #수학I #고등수학 #중등수학"
     },
     {
       "id": "4454c00c8826",
@@ -326,7 +344,8 @@
       "titleKo": "재미있는 복소수 챌린지",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/4454c00c8826.jpg"
+      "thumb": "/thumbs/4454c00c8826.jpg",
+      "detail": ""
     },
     {
       "id": "25a6523880a1",
@@ -337,14 +356,16 @@
       "link": "https://www.youtube.com/watch?v=c79PsbkHw4A",
       "source": "Stand-up Maths",
       "image": "https://i4.ytimg.com/vi/c79PsbkHw4A/hqdefault.jpg",
-      "views": 1265616,
+      "views": 1265720,
       "category": "인기",
       "publishedAt": "2026-09-21T12:00:07.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "밀레니엄상 문제는 AI로 해결됐나?",
       "summaryKo": "Matt가 휴가 여행을 떠나려고 시도하는 것을 더 원하십니까?",
       "translator": "google",
-      "thumb": "/thumbs/25a6523880a1.jpg"
+      "thumb": "/thumbs/25a6523880a1.jpg",
+      "detail": "Want more of the Matt tries to go on vacation saga, come right this way:",
+      "detailKo": "Matt의 휴가 여행 이야기를 더 보려면 이쪽으로 오세요."
     },
     {
       "id": "1d3ce4e46410",
@@ -362,7 +383,9 @@
       "titleKo": "이 숫자를 분수로 바꿀 수 있나요?",
       "summaryKo": "이 수학 비디오에서 나(Susanne)는 변환 방법을 설명합니다…",
       "translator": "google",
-      "thumb": "/thumbs/1d3ce4e46410.jpg"
+      "thumb": "/thumbs/1d3ce4e46410.jpg",
+      "detail": "In this math video I (Susanne) explain how to convert the repeating decimal 1.4666… into a fraction step by step. Learn how to convert…",
+      "detailKo": "이 수학 비디오에서는 나(Susanne)가 순환소수 1.4666을 분수로 변환하는 방법을 단계별로 설명합니다. 변환하는 방법을 알아보세요…"
     },
     {
       "id": "f3577f666960",
@@ -373,14 +396,15 @@
       "link": "https://www.youtube.com/shorts/9XacHAorjDo",
       "source": "MrGee Math",
       "image": "https://i2.ytimg.com/vi/9XacHAorjDo/hqdefault.jpg",
-      "views": 3735599,
+      "views": 3735717,
       "category": "인기",
       "publishedAt": "2026-09-20T13:00:20.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "20달러 지폐를 무한히 많이 갖고 싶나요, 1달러 지폐를 무한히 많이 갖고 싶나요?",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/f3577f666960.jpg"
+      "thumb": "/thumbs/f3577f666960.jpg",
+      "detail": ""
     },
     {
       "id": "131b5b47a419",
@@ -391,14 +415,15 @@
       "link": "https://www.youtube.com/watch?v=3geDF-DAwpg",
       "source": "Numberphile",
       "image": "https://i4.ytimg.com/vi/3geDF-DAwpg/hqdefault.jpg",
-      "views": 1007939,
+      "views": 1007974,
       "category": "인기",
       "publishedAt": "2026-09-18T15:33:48.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "titleKo": "해결됨: Navier-Stokes가 AI에 의해 크랙됨",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/131b5b47a419.jpg"
+      "thumb": "/thumbs/131b5b47a419.jpg",
+      "detail": ""
     },
     {
       "id": "8aa89102a8bd",
@@ -414,7 +439,8 @@
       "publishedAt": "2026-09-18T09:24:16.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "summaryKo": "",
-      "thumb": "/thumbs/8aa89102a8bd.jpg"
+      "thumb": "/thumbs/8aa89102a8bd.jpg",
+      "detail": ""
     },
     {
       "id": "e4676e3e6f46",
@@ -432,7 +458,8 @@
       "titleKo": "100가지 삼각 항등식: 최고의 5시간 수학 마라톤",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/e4676e3e6f46.jpg"
+      "thumb": "/thumbs/e4676e3e6f46.jpg",
+      "detail": ""
     },
     {
       "id": "fccce115e27c",
@@ -450,7 +477,9 @@
       "titleKo": "광장의 면적은 얼마입니까?",
       "summaryKo": "그림에 표시된 내접 사각형의 면적은 얼마입니까?",
       "translator": "google",
-      "thumb": "/thumbs/fccce115e27c.jpg"
+      "thumb": "/thumbs/fccce115e27c.jpg",
+      "detail": "What's the area of the inscribed square shown in the 3-4-5 triangle?",
+      "detailKo": "3-4-5 삼각형에 표시된 내접 사각형의 면적은 얼마입니까?"
     },
     {
       "id": "c1b6854d099b",
@@ -461,7 +490,7 @@
       "link": "https://www.youtube.com/shorts/Vphq8bF3VWw",
       "source": "[정병훈T ] 요리조리 수학",
       "image": "https://i3.ytimg.com/vi/Vphq8bF3VWw/hqdefault.jpg",
-      "views": 97280,
+      "views": 97324,
       "category": "인기",
       "publishedAt": "2026-09-12T13:00:24.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -498,7 +527,8 @@
       "titleKo": "전문가와 초보자를 구분하는 10가지 인수분해 문제",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/482b7a3f5358.jpg"
+      "thumb": "/thumbs/482b7a3f5358.jpg",
+      "detail": ""
     },
     {
       "id": "19806c6ba9d4",
@@ -509,7 +539,7 @@
       "link": "https://www.youtube.com/shorts/sXnb550L64A",
       "source": "수능 수학은 이동준",
       "image": "https://i4.ytimg.com/vi/sXnb550L64A/hqdefault.jpg",
-      "views": 251883,
+      "views": 251921,
       "category": "인기",
       "publishedAt": "2026-09-09T10:05:02.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
@@ -524,12 +554,13 @@
       "link": "https://www.youtube.com/watch?v=ai8N0LAuBjM",
       "source": "수학강사 이정환",
       "image": "https://i2.ytimg.com/vi/ai8N0LAuBjM/hqdefault.jpg",
-      "views": 72378,
+      "views": 72385,
       "category": "인기",
       "publishedAt": "2026-09-09T09:36:20.000Z",
       "collectedAt": "2026-10-05T07:02:27.167Z",
       "summaryKo": "",
-      "thumb": "/thumbs/9b06b27d9a25.jpg"
+      "thumb": "/thumbs/9b06b27d9a25.jpg",
+      "detail": ""
     },
     {
       "id": "f0b135f109f8",
@@ -547,7 +578,8 @@
       "titleKo": "이 Quant 인터뷰 질문을 해결할 수 있나요?",
       "summaryKo": "",
       "translator": "google",
-      "thumb": "/thumbs/f0b135f109f8.jpg"
+      "thumb": "/thumbs/f0b135f109f8.jpg",
+      "detail": ""
     },
     {
       "id": "8f18232c6ac4",
@@ -558,7 +590,7 @@
       "link": "https://www.youtube.com/watch?v=Nbwv5wHQoj0",
       "source": "3Blue1Brown",
       "image": "https://i3.ytimg.com/vi/Nbwv5wHQoj0/hqdefault.jpg",
-      "views": 670309,
+      "views": 670343,
       "category": "문제·증명",
       "publishedAt": "2026-09-18T17:12:53.000Z",
       "collectedAt": "2026-10-05T06:09:44.602Z",
@@ -579,7 +611,8 @@
       "category": "교육",
       "publishedAt": "2026-10-04T16:01:00.000Z",
       "collectedAt": "2026-10-05T05:02:43.752Z",
-      "thumb": "/thumbs/f0ad7673cd24.jpg"
+      "thumb": "/thumbs/f0ad7673cd24.jpg",
+      "detail": "송연주 기자 = 온라인과 오프라인 시험장 가운데 원하는 응시 방식을 선택할 수 있는 '2026 하반기 HME 전국 해법수학·해법국어 학력평가'가 진행된다. 5일 천재교육에 따르면 오는 11월 14일 하반기 HME 전국 해법수학·해법국어 학력평가를…"
     },
     {
       "id": "581ee1e64cd1",
@@ -593,7 +626,8 @@
       "category": "입시",
       "publishedAt": "2026-10-04T16:00:00.000Z",
       "collectedAt": "2026-10-05T05:02:43.752Z",
-      "thumb": "/thumbs/581ee1e64cd1.jpg"
+      "thumb": "/thumbs/581ee1e64cd1.jpg",
+      "detail": "현재 고등학교 2학년 학생부터 적용받는 ‘2028학년도 대학입시제도 개편안’이 연일 화제다. 문·이과 선택과목 폐지를 통한 통합형 수능 도입과 고교 내신 5등급제 전환이 맞물리면서, 진학 전략은 물론 올해 치러지는 2027학년도 입시 시장까지…"
     },
     {
       "id": "047884d3ff95",
@@ -623,7 +657,9 @@
       "titleKo": "3차원 낙하 액막 제어: 가중치 잔여 모델부터…",
       "summaryKo": "3차원 낙하 액막 제어:…",
       "translator": "google",
-      "thumb": "/thumbs/579c4758cea7.png"
+      "thumb": "/thumbs/579c4758cea7.png",
+      "detail": "Controlling three-dimensional falling liquid films: from weighted-residual models to direct numerical simulation 04 Oct 2026 17:52 Author…",
+      "detailKo": "3차원 낙하 액체막 제어: 가중 잔차 모델에서 직접 수치 시뮬레이션까지 2026년 10월 4일 17:52 작성자…"
     },
     {
       "id": "74a9570d64be",
@@ -637,7 +673,8 @@
       "category": "입시",
       "publishedAt": "2026-10-04T14:51:00.000Z",
       "collectedAt": "2026-10-05T03:03:06.344Z",
-      "thumb": "/thumbs/74a9570d64be.png"
+      "thumb": "/thumbs/74a9570d64be.png",
+      "detail": "제주특별자치도 소방안전본부가 2027학년도 대학수학능력시험을 앞두고 도내 시험장에 대한 화재안전조사에 나선다.제주소방안전본부는 오는 11월 19일 치러지는 2027학년도 대학수학능력시험에 대비해 도내 시험장 16개교를 대상으로 오는 19일까지…"
     },
     {
       "id": "0c32d8082e6c",
@@ -651,7 +688,8 @@
       "category": "입시",
       "publishedAt": "2026-10-04T14:25:00.000Z",
       "collectedAt": "2026-10-05T03:03:06.344Z",
-      "thumb": "/thumbs/0c32d8082e6c.jpg"
+      "thumb": "/thumbs/0c32d8082e6c.jpg",
+      "detail": "2027학년도 대학수학능력시험을 한 달여 앞두고 군산지역 고3 수험생들을 위한 교육지원청의 현장 행보가 시작됐다. 단순한 수능 격려에 그치지 않고 학교 현장에서 학생들의 진학·진로 상황을 직접 살피고, 향후 대입 지원 방향까지 함께 모색하는…"
     },
     {
       "id": "5d0c941437db",
@@ -665,7 +703,8 @@
       "category": "교육",
       "publishedAt": "2026-10-04T11:06:00.000Z",
       "collectedAt": "2026-10-05T02:02:41.811Z",
-      "thumb": "/thumbs/5d0c941437db.png"
+      "thumb": "/thumbs/5d0c941437db.png",
+      "detail": "최근 캘리포니아대학교(UC)에서는 신입생들의 수학 준비도를 둘러싼 논쟁이 커지고 있다. 기초 수학 과목에서 어려움을 겪는 학생들이 늘어나면서 UC 교수 3000명 이상이 SAT·ACT와 같은 표준화 시험을 다시 ..."
     },
     {
       "id": "31c78c6307d7",
@@ -678,7 +717,8 @@
       "category": "AI·에듀테크",
       "publishedAt": "2026-10-04T17:22:00.000Z",
       "collectedAt": "2026-10-05T00:34:48.348Z",
-      "thumb": "/thumbs/31c78c6307d7.png"
+      "thumb": "/thumbs/31c78c6307d7.png",
+      "detail": "안녕하세요. 노라입니다.2026년 10월 5일, 월요일.편집 측에서 오늘 아침 해외 뉴스를 정리해 보니 재미있는 변화가 있었습니다.지난 며칠간은 'AI 에이전트를 어디까지 작동시켜도 되는가'라는 안전에 관한 이야기가 이어졌습니다. 오늘은 조금 관점을…"
     },
     {
       "id": "e3ba95c5226a",
@@ -695,7 +735,9 @@
       "titleKo": "비압축성 유체의 고전적 해와 특이점 형성에 대하여",
       "summaryKo": "[디에고 코르도바(Diego Córdoba)와 루이스(Luis)의 게스트 포스트입니다…",
       "translator": "google",
-      "thumb": "/thumbs/e3ba95c5226a.png"
+      "thumb": "/thumbs/e3ba95c5226a.png",
+      "detail": "[This is a guest post by Diego Córdoba and Luis Martínez-Zoroa. This blog post was initially written in a different file format and…",
+      "detailKo": "[이 글은 Diego Córdoba와 Luis Martínez-Zoroa의 게스트 포스트입니다. 이 블로그 게시물은 처음에 다른 파일 형식으로 작성되었으며…"
     },
     {
       "id": "0c234f94699b",
@@ -711,7 +753,9 @@
       "titleKo": "뇌터",
       "summaryKo": "Noether Dyrol Lumbard 2026년 10월 4일 16:22 여러분",
       "translator": "google",
-      "thumb": "/thumbs/0c234f94699b.png"
+      "thumb": "/thumbs/0c234f94699b.png",
+      "detail": "Noether Dyrol Lumbard 04 Oct 2026 16:22 Those of you who were here last academeic year may remember us hosting Noether, a play about the…",
+      "detailKo": "Noether Dyrol Lumbard 2026년 10월 4일 16:22 지난 학년도에 이곳에 오신 분들은 우리가 Noether를 주최한 것을 기억하실 것입니다."
     },
     {
       "id": "60872fdf6d1e",
@@ -744,7 +788,9 @@
       "titleKo": "브라운 대학교의 양자 컴퓨터 및 응용 수학",
       "summaryKo": "Brown University의 나의 호스트는 매혹적인 Basilis였습니다…",
       "translator": "google",
-      "thumb": "/thumbs/384d13a18089.jpg"
+      "thumb": "/thumbs/384d13a18089.jpg",
+      "detail": "My host at Brown University was the fascinating Basilis Gidas whom I first met in Rio in 2018. Basilis has had a remarkable career, taking…",
+      "detailKo": "Brown University의 저의 호스트는 2018년 Rio에서 처음 만난 매력적인 Basilis Gidas였습니다. Basilis는 놀라운 경력을 가지고 있습니다."
     },
     {
       "id": "d3b5d670174d",
@@ -760,7 +806,9 @@
       "titleKo": "LMS 조기 경력 펠로우십 2027-28",
       "summaryKo": "LMS 조기 경력 펠로우십 2027-28 Elizabeth Fisher…",
       "translator": "google",
-      "thumb": "/thumbs/d3b5d670174d.png"
+      "thumb": "/thumbs/d3b5d670174d.png",
+      "detail": "LMS Early Career Fellowships 2027-28 Elizabeth Fisher 02 October 2026 - 10:38 Show On Homepage Show on front page Show On Homepage Show on…",
+      "detailKo": "LMS Early Career Fellowships 2027-28 Elizabeth Fisher 2026년 10월 2일 - 10:38 홈페이지에 표시 첫 페이지에 표시 홈페이지에 표시…"
     },
     {
       "id": "92e82b6ded49",
@@ -776,7 +824,9 @@
       "titleKo": "고등 교육 교육 및 학습 워크숍 시리즈: 2026/27 제안 요청",
       "summaryKo": "IMA, LMS 및 RSS는 다음에 대한 제안을 초대합니다…",
       "translator": "google",
-      "thumb": "/thumbs/92e82b6ded49.png"
+      "thumb": "/thumbs/92e82b6ded49.png",
+      "detail": "The IMA, LMS and RSS are inviting proposals for the 2026/27 Higher Education Teaching and Learning Workshop Series. Up to […] The post…",
+      "detailKo": "IMA, LMS 및 RSS는 2026/27 고등 교육 교육 및 학습 워크숍 시리즈에 대한 제안을 초대합니다. 최대 […] 게시물…"
     },
     {
       "id": "c5827bd492e2",
@@ -789,7 +839,8 @@
       "category": "학회·기관",
       "publishedAt": "2026-10-02T06:39:00.000Z",
       "collectedAt": "2026-10-05T00:22:44.916Z",
-      "thumb": "/thumbs/c5827bd492e2.jpg"
+      "thumb": "/thumbs/c5827bd492e2.jpg",
+      "detail": "박대로 기자 = 최동민 동대문구청장은 지난달 30일 기초과학 연구기관인 고등과학원 개원 30주년 기념식에 참석했다고 2일 동대문구청이 밝혔다.1996년 이론기초과학 터전을 마련하고자 문을 연 고등과학원은 수학·물리학·계산과학 분야에서 국내외 석학과…"
     },
     {
       "id": "272a77d3c922",
@@ -805,7 +856,9 @@
       "titleKo": "2026년 11월 6일 회원 선거 신청",
       "summaryKo": "11월 6일 회원 선거 신청…",
       "translator": "google",
-      "thumb": "/thumbs/272a77d3c922.png"
+      "thumb": "/thumbs/272a77d3c922.png",
+      "detail": "Applications for Election to Membership on 6 November 2026 Elizabeth Fisher 01 October 2026 - 10:58 Show On Homepage No Show On Homepage No…",
+      "detailKo": "2026년 11월 6일 회원 선거 신청 Elizabeth Fisher 2026년 10월 1일 - 10:58 홈페이지에 표시 홈페이지에 표시 안 됨…"
     },
     {
       "id": "3a4cd4ced82b",
@@ -821,7 +874,9 @@
       "titleKo": "IMA John Blake University Teaching Medal 2027 – 후보 모집",
       "summaryKo": "IMA 존 블레이크상 후보…",
       "translator": "google",
-      "thumb": "/thumbs/3a4cd4ced82b.jpg"
+      "thumb": "/thumbs/3a4cd4ced82b.jpg",
+      "detail": "Nominations for the award of the IMA John Blake University Teaching Medal are invited from 1 October 2026 until the […] The post IMA John…",
+      "detailKo": "IMA John Blake University Teaching Medal 수상 후보는 2026년 10월 1일부터 [...] 포스트 IMA John…"
     },
     {
       "id": "7f6c020fe0f6",
@@ -850,7 +905,9 @@
       "titleKo": "해결하셨나요? 아이작 뉴턴의 탑 드롭 퍼즐",
       "summaryKo": "17세기 문제에 대한 해결책은 앞서…",
       "translator": "google",
-      "thumb": "/thumbs/3e6d64c9144c.jpg"
+      "thumb": "/thumbs/3e6d64c9144c.jpg",
+      "detail": "The solution to the seventeenth century stumperEarlier today I set you a puzzle that Isaac Newton posed in 1679 in a latter to Robert…",
+      "detailKo": "17세기 문제에 대한 해결책 오늘 일찍 나는 아이작 뉴턴이 1679년에 로버트에게 제시한 퍼즐을 제시했습니다…"
     },
     {
       "id": "b56d2f1fca6d",
@@ -958,7 +1015,8 @@
       "category": "교육",
       "publishedAt": "2026-10-04T02:34:08.000Z",
       "collectedAt": "2026-10-04T05:40:04.242Z",
-      "thumb": "/thumbs/e4e99c7c2a7d.jpg"
+      "thumb": "/thumbs/e4e99c7c2a7d.jpg",
+      "detail": "수학은 풀어야 할 문제가 아니라, 놀아볼 세계다마틴 가드너 『수학의 유희』, 퍼즐과 역설로 만나는 수학의 아름다움기하학·확률·게임이론부터 AI까지…“가장 즐거운 길로 깊은 사유에 이르는” 수학수학은 어렵고 딱딱한 공식의 세계라는 생각이 많지만, 마틴…"
     },
     {
       "id": "bc87fc9d7eb7",
@@ -972,7 +1030,8 @@
       "category": "교육",
       "publishedAt": "2026-10-03T14:05:00.000Z",
       "collectedAt": "2026-10-04T05:40:04.242Z",
-      "thumb": "/thumbs/bc87fc9d7eb7.jpg"
+      "thumb": "/thumbs/bc87fc9d7eb7.jpg",
+      "detail": "고등학생 성취수준 분석 결과 상위권 집단은 수학 성적을 축으로 형성되고, 하위권 집단은 국어와 영어가 동시에 하락하는 구조를 보이는 등 교과 간 성적 양극화가 점차 심화되고 있는 것으로 나타났다.4일 한국교육과정평가원이 발표한 '2019~2024년…"
     },
     {
       "id": "dce4698df6e9",
@@ -1014,7 +1073,8 @@
       "category": "입시",
       "publishedAt": "2026-10-03T11:00:00.000Z",
       "collectedAt": "2026-10-04T00:38:43.463Z",
-      "thumb": "/thumbs/0496434b2efb.png"
+      "thumb": "/thumbs/0496434b2efb.jpg",
+      "detail": "2027학년도 대학수학능력시험(수능)이 50일도 채 남지 않으면서 수험생들의 막판 준비도 본격화하고 있다. 남은 기간 실력을 끌어올리는 것만큼 중요한 것이 이미 알고 있는 문제에서 실수로 점수를 잃지 않는 것이다. 4일 김병진 이투스…"
     },
     {
       "id": "56e538c482e1",
@@ -1044,7 +1104,9 @@
       "titleKo": "타원 곡선이 디지털 세계를 보호하는 방법",
       "summaryKo": "오늘날 타원곡선 암호화는 모든 분야에서 사용됩니다",
       "translator": "google",
-      "thumb": "/thumbs/59786d5d52cc.png"
+      "thumb": "/thumbs/59786d5d52cc.png",
+      "detail": "Today, elliptic curve cryptography is used throughout the internet... How Elliptic Curves Secure the Digital World Alexis Newton High Point…",
+      "detailKo": "오늘날 타원 곡선 암호화는 인터넷 전반에 걸쳐 사용됩니다... 타원 곡선이 디지털 세계를 보호하는 방법 Alexis Newton High Point..."
     },
     {
       "id": "5754e969858f",
@@ -1060,7 +1122,9 @@
       "titleKo": "장 피에르 세르 탄생 100주년 기념",
       "summaryKo": "장 피에르 세르 미국수학회…",
       "translator": "google",
-      "thumb": "/thumbs/5754e969858f.png"
+      "thumb": "/thumbs/5754e969858f.png",
+      "detail": "Jean-Pierre Serre The American Mathematical Society (AMS) joins mathematicians around the world in celebrating esteemed mathematician…",
+      "detailKo": "장 피에르 세르(Jean-Pierre Serre) 미국수학회(AMS)는 존경받는 수학자를 기념하기 위해 전 세계 수학자들과 함께합니다…"
     },
     {
       "id": "ddcadfd42261",
@@ -1076,7 +1140,9 @@
       "titleKo": "Navier-Stokes 문제에 대한 AMS 리더십의 성명",
       "summaryKo": "Navier-Stokes의 획기적인 발표에 대한 응답으로…",
       "translator": "google",
-      "thumb": "/thumbs/ddcadfd42261.png"
+      "thumb": "/thumbs/ddcadfd42261.png",
+      "detail": "In response to the Navier–Stokes breakthrough announced by OpenAI today, American Mathematical Society leadership has issued a statement…",
+      "detailKo": "오늘 OpenAI가 발표한 Navier-Stokes의 혁신에 대응하여 American Mathematical Society 지도부는 성명을 발표했습니다."
     },
     {
       "id": "d5843ccc329a",
@@ -1093,7 +1159,9 @@
       "titleKo": "골든 포멀 파워 시리즈",
       "summaryKo": "다행히도 그러한 공식이 존재하며, 많은…",
       "translator": "google",
-      "thumb": "/thumbs/d5843ccc329a.png"
+      "thumb": "/thumbs/d5843ccc329a.png",
+      "detail": "Luckily, such a formula exists, and there are lots of ways to find it. In this post, we’ll find it using power series. Read on, brave bunny…",
+      "detailKo": "다행히도 그러한 공식이 존재하며 이를 찾을 수 있는 방법이 많이 있습니다. 이번 포스팅에서는 멱급수를 사용하여 알아보겠습니다. 계속 읽어보세요, 용감한 토끼…"
     },
     {
       "id": "6d6917e71bf3",
@@ -1109,7 +1177,9 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.png"
+      "thumb": "/thumbs/6d6917e71bf3.png",
+      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
+      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
     {
       "id": "3c73391d2263",
@@ -1125,7 +1195,9 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.png"
+      "thumb": "/thumbs/3c73391d2263.png",
+      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
+      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
     {
       "id": "e01539b51fd3",
@@ -1141,7 +1213,9 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.png"
+      "thumb": "/thumbs/e01539b51fd3.png",
+      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
+      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
     {
       "id": "d2e592757594",
@@ -1157,7 +1231,9 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.png"
+      "thumb": "/thumbs/d2e592757594.png",
+      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
+      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
     {
       "id": "a3c960bc6978",
@@ -1227,7 +1303,8 @@
       "category": "AI·에듀테크",
       "publishedAt": "2026-10-02T21:58:00.000Z",
       "collectedAt": "2026-10-03T07:32:29.862Z",
-      "thumb": "/thumbs/a6d660ae0441.jpg"
+      "thumb": "/thumbs/a6d660ae0441.jpg",
+      "detail": "「AI가 수학의 미해결 문제를 풀었다」——그런 뉴스를 접할 기회가 최근 몇 년 사이 급격히 늘었습니다.2025년 국제 수학 올림피아드에서는 구글 딥마인드와 오픈AI의 AI가 금메달에 상당하는 성적을 거두었습니다. 헝가리의 수학자 폴 에르되시가 남긴…"
     },
     {
       "id": "7a02811b771b",
@@ -1240,7 +1317,8 @@
       "category": "입시",
       "publishedAt": "2026-10-02T16:44:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/7a02811b771b.jpg"
+      "thumb": "/thumbs/7a02811b771b.jpg",
+      "detail": "2027학년도 대학수학능력시험 9월 모의평가는 2026학년도 수능과 비교해 국어를 제외한 수학과 영어 등 주요 과목이 매우 쉽게 출제되면서 전체적으로 변별력이 크게 떨어진 것으로 나타났습니다. 입시 전문 기관 학문당학원이 2027학년도 9월 모의평가…"
     },
     {
       "id": "1d39d3424101",
@@ -1438,7 +1516,9 @@
       "titleKo": "4차원은 실제로 어떤 모습일까요?",
       "thumb": "/thumbs/ab0451c9824a.jpg",
       "translator": "google",
-      "summaryKo": "매기 밀러(Maggie Miller)가 세 가지에 대한 우리의 직관을 설명합니다…"
+      "summaryKo": "매기 밀러(Maggie Miller)가 세 가지에 대한 우리의 직관을 설명합니다…",
+      "detail": "Maggie Miller explains why our intuition about three dimensions breaks down in four, and how she visualizes 4D spaces as a reel of…",
+      "detailKo": "Maggie Miller는 3차원에 대한 우리의 직관이 4차원으로 나뉘는 이유와 4D 공간을 하나의 릴로 시각화하는 방법을 설명합니다."
     },
     {
       "id": "bf751846afb9",
@@ -1508,7 +1588,7 @@
       "publishedAt": "2026-09-30T08:53:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/87fc97cffe58.jpg"
+      "thumb": "/thumbs/87fc97cffe58.png"
     },
     {
       "id": "ab6642bdf4b6",
@@ -1524,7 +1604,9 @@
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
       "thumb": "/thumbs/ab6642bdf4b6.png",
       "translator": "google",
-      "summaryKo": "비엔나 대학교 연구팀이 이끄는…"
+      "summaryKo": "비엔나 대학교 연구팀이 이끄는…",
+      "detail": "A research team at the University of Vienna, led by pharmaceutical chemist Johannes Kirchmair, has developed a statistical method to…",
+      "detailKo": "제약 화학자인 요하네스 키르히마이어(Johannes Kirchmair)가 이끄는 비엔나 대학교 연구팀은 다음과 같은 통계적 방법을 개발했습니다."
     },
     {
       "id": "e523a6fd7011",
@@ -1541,7 +1623,9 @@
       "titleKo": "수학자들은 무작위성을 활용하여 55년 된 추측을 풀었습니다.",
       "thumb": "/thumbs/e523a6fd7011.jpg",
       "translator": "google",
-      "summaryKo": "오랜 공백 끝에 발생한 문제는…"
+      "summaryKo": "오랜 공백 끝에 발생한 문제는…",
+      "detail": "After a long hiatus, the problem, which was likely inspired by juggling, has finally been resolved by a group of young mathematicians.",
+      "detailKo": "오랜 공백 끝에 저글링에서 영감을 얻은 문제가 마침내 젊은 수학자 그룹에 의해 해결되었습니다."
     }
   ]
 }
