@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T22:13:46.278Z",
+  "updatedAt": "2026-10-05T23:14:16.851Z",
   "items": [
     {
       "id": "fb-324ab6d36b09",
@@ -31,7 +31,7 @@
       "thumb": "/social/fb/fb-f7f8cb606523.jpg",
       "refs": [],
       "collectedAt": "2026-10-05T00:33:31.272Z",
-      "titleKo": "Ramón은 케임브리지에서 박사후 과정을 밟기 위해 방금 우리를 떠났습니다.",
+      "titleKo": "Ramón은 케임브리지의 박사후 연구원 자리를 위해 방금 우리를 떠났습니다.",
       "summaryKo": "가끔 글을 쓰지만, 떠나기 전에 그는…",
       "translator": "google"
     },
@@ -139,18 +139,18 @@
       "translator": "google"
     },
     {
-      "id": "fb-c2df72fb1272",
+      "id": "fb-ca15231f9d66",
       "kind": "news",
       "lang": "en",
       "title": "Introducing SketchMath, the easiest way to truly see mathematics, powe",
       "summary": "red by the dynamic geometry of GeoGebra®",
-      "link": "https://www.facebook.com/geogebra/posts/pfbid0afm4YnmwYpSo3aH8XYFTTcGSGtXQ8BeChfDh36HHzqvmFKY1tLmfQwnK3P33Swoal",
+      "link": "https://www.facebook.com/geogebra/posts/pfbid02e3FFAp8ZaZJT6bjD3BQcvPXJtqj3qBHHN1xVw7C3zi48j2p9FBFp6V6pDrxHHWgrl",
       "source": "Facebook GeoGebra",
       "category": "인기",
-      "publishedAt": "2026-09-14T03:00:00.000Z",
-      "thumb": "/social/fb/fb-c2df72fb1272.jpg",
+      "publishedAt": "2026-09-14T12:00:00.000Z",
+      "thumb": "/social/fb/fb-ca15231f9d66.jpg",
       "refs": [],
-      "collectedAt": "2026-10-04T23:19:28.069Z",
+      "collectedAt": "2026-10-05T23:14:16.851Z",
       "titleKo": "수학을 진정으로 보는 가장 쉬운 방법, SketchMath를 소개합니다.",
       "summaryKo": "GeoGebra®의 동적 기하학으로 빨간색",
       "translator": "google"
