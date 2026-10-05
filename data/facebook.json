@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-05T16:12:51.773Z",
+  "updatedAt": "2026-10-05T17:13:25.126Z",
   "items": [
+    {
+      "id": "fb-324ab6d36b09",
+      "kind": "news",
+      "lang": "en",
+      "title": "\"Given a location on the Earth, what eclipses will be seen there?",
+      "summary": "It's a challenging problem of both astronomical…",
+      "link": "https://www.facebook.com/wolframresearch/posts/pfbid02Yyua5ydiJP5CAmUrZ8vJrF5beszbWmbwGkZ5qtxkTfoQDDzpwZWhKUmHHfuekTTnl",
+      "source": "Facebook Wolfram Research",
+      "category": "인기",
+      "publishedAt": "2026-10-05T17:11:01.868Z",
+      "thumb": "/social/fb/fb-324ab6d36b09.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-05T17:13:25.126Z",
+      "titleKo": "\"지구상의 위치가 주어지면 그곳에서는 어떤 일식이 나타날까요?",
+      "summaryKo": "…",
+      "translator": "google"
+    },
     {
       "id": "fb-f7f8cb606523",
       "kind": "video",
