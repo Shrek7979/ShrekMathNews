@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T00:27:53.868Z",
+  "updatedAt": "2026-10-05T12:00:07.074Z",
   "items": [
     {
       "id": "ig-DdcBG_2xepl",
@@ -67,23 +67,6 @@
       "collectedAt": "2026-10-05T00:27:53.868Z",
       "titleKo": "4D 토폴로지가 이상합니다.",
       "summaryKo": "매기 밀러(Maggie Miller)는 그것을 시각화하려고 노력하고 있습니다.",
-      "translator": "google"
-    },
-    {
-      "id": "ig-DdlsNdPSlrK",
-      "kind": "video",
-      "lang": "en",
-      "title": "Eight Perfect Shuffles Permutation Diagram This short animation shows …",
-      "summary": "that if you perform eight consecutive perfect riffle…",
-      "link": "https://www.instagram.com/mathvisualproofs/reel/DdlsNdPSlrK/",
-      "source": "Instagram @mathvisualproofs",
-      "category": "문제·증명",
-      "publishedAt": "2026-09-21T15:00:00.000Z",
-      "likes": "4,755",
-      "thumb": "/social/ig/DdlsNdPSlrK.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "8개의 완벽한 셔플 순열 다이어그램 이 짧은 애니메이션은 다음을 보여줍니다.",
-      "summaryKo": "8연속 완벽한 리플을 한다면...",
       "translator": "google"
     },
     {
@@ -204,6 +187,23 @@
       "titleKo": "나는 말하고 싶지 않습니다.",
       "summaryKo": "🫪",
       "translator": "google"
+    },
+    {
+      "id": "ig-Dd1IIzZPxVU",
+      "kind": "video",
+      "lang": "en",
+      "title": "26 Perfect In-Shuffles This short animation shows that if you perform …",
+      "summary": "26 consecutive perfect faro in-shuffles on a 52 card…",
+      "link": "https://www.instagram.com/mathvisualproofs/reel/Dd1IIzZPxVU/",
+      "source": "Instagram @mathvisualproofs",
+      "category": "문제·증명",
+      "publishedAt": "2026-09-27T15:00:00.000Z",
+      "likes": "399",
+      "thumb": "/social/ig/Dd1IIzZPxVU.jpg",
+      "titleKo": "26 완벽한 In-Shuffles 이 짧은 애니메이션은 다음을 보여줍니다.",
+      "summaryKo": "52개 카드에 26연속 완벽한 파로 인 셔플…",
+      "translator": "google",
+      "collectedAt": "2026-10-05T12:00:07.074Z"
     },
     {
       "id": "ig-DeC4uH-jO1H",
@@ -534,6 +534,22 @@
       "translator": "google"
     },
     {
+      "id": "ig-DeHJAM0vcWH",
+      "kind": "video",
+      "lang": "en",
+      "title": "A 4D Sphere Visits Our 3D Universe This short animation shows what it …",
+      "summary": "would look like if a 4D sphere passed through our 3D…",
+      "link": "https://www.instagram.com/mathvisualproofs/reel/DeHJAM0vcWH/",
+      "source": "Instagram @mathvisualproofs",
+      "category": "문제·증명",
+      "publishedAt": "2026-10-04T15:00:00.000Z",
+      "likes": "3",
+      "thumb": "/social/ig/DeHJAM0vcWH.jpg",
+      "titleKo": "4D 구체가 우리의 3D 우주를 방문합니다. 이 짧은 애니메이션은 그것이 무엇인지 보여줍니다…",
+      "summaryKo": "4D 구체가 3D를 통과한 것처럼 보일 것입니다…",
+      "translator": "google"
+    },
+    {
       "id": "ig-Dd6cZnSvzHB",
       "kind": "video",
       "lang": "en",
@@ -563,7 +579,8 @@
       "thumb": "/social/ig/Dd1IIzZPxVU.jpg",
       "titleKo": "26 완벽한 In-Shuffles 이 짧은 애니메이션은 다음을 보여줍니다.",
       "summaryKo": "52개 카드에 26연속 완벽한 파로 인 셔플…",
-      "translator": "google"
+      "translator": "google",
+      "collectedAt": "2026-10-05T12:00:07.074Z"
     },
     {
       "id": "ig-DdtZR3yvzcd",
@@ -612,23 +629,6 @@
       "thumb": "/social/ig/Ddo_A8sPPih.jpg",
       "titleKo": "수학에서 영감을 받은 장식을 갖춘 새로운 매장입니다.",
       "summaryKo": "확인해 보시고 또 무엇을 원하시는지 알려주세요...",
-      "translator": "google"
-    },
-    {
-      "id": "ig-DdlsNdPSlrK",
-      "kind": "video",
-      "lang": "en",
-      "title": "Eight Perfect Shuffles Permutation Diagram This short animation shows …",
-      "summary": "that if you perform eight consecutive perfect riffle…",
-      "link": "https://www.instagram.com/mathvisualproofs/reel/DdlsNdPSlrK/",
-      "source": "Instagram @mathvisualproofs",
-      "category": "문제·증명",
-      "publishedAt": "2026-09-21T15:00:00.000Z",
-      "likes": "4,755",
-      "thumb": "/social/ig/DdlsNdPSlrK.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "8개의 완벽한 셔플 순열 다이어그램 이 짧은 애니메이션은 다음을 보여줍니다.",
-      "summaryKo": "8연속 완벽한 리플을 한다면...",
       "translator": "google"
     },
     {
