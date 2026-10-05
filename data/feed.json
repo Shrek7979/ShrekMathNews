@@ -1,6 +1,144 @@
 {
-  "updatedAt": "2026-10-05T05:03:21.557Z",
+  "updatedAt": "2026-10-05T06:02:19.203Z",
   "items": [
+    {
+      "id": "310e86d139a3",
+      "kind": "video",
+      "lang": "en",
+      "title": "Derivative of e^sqrt(x) but you have to use the limit definition (HKDSE 2024)",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=Cfs0Ta62Qn8",
+      "source": "bprp calculus basics",
+      "image": "https://i4.ytimg.com/vi/Cfs0Ta62Qn8/hqdefault.jpg",
+      "views": 53402,
+      "category": "문제·증명",
+      "publishedAt": "2026-10-01T12:00:32.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "titleKo": "e^sqrt(x)에서 파생되었지만 한계 정의를 사용해야 합니다(HKDSE 2024).",
+      "summaryKo": "",
+      "translator": "google",
+      "thumb": "/thumbs/310e86d139a3.jpg"
+    },
+    {
+      "id": "0280d2458f83",
+      "kind": "video",
+      "lang": "ko",
+      "title": "수능까지 이것만 푸셔도 충분합니다. (ft. 모의고사 22회분)",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=H9XPPAB0pbo",
+      "source": "다정수학",
+      "image": "https://i1.ytimg.com/vi/H9XPPAB0pbo/hqdefault.jpg",
+      "views": 50050,
+      "category": "인기",
+      "publishedAt": "2026-09-29T13:00:00.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "summaryKo": "",
+      "thumb": "/thumbs/0280d2458f83.jpg"
+    },
+    {
+      "id": "3f3f63a3b436",
+      "kind": "video",
+      "lang": "en",
+      "title": "Math is just so fascinating and cool!!!!! (x+y)^4=x^4+y^4?",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=oUZCjrOZVVk",
+      "source": "blackpenredpen",
+      "image": "https://i4.ytimg.com/vi/oUZCjrOZVVk/hqdefault.jpg",
+      "views": 54741,
+      "category": "문제·증명",
+      "publishedAt": "2026-09-26T11:43:09.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "titleKo": "수학은 정말 매력적이고 멋지네요!!!!! (x+y)^4=x^4+y^4?",
+      "summaryKo": "",
+      "translator": "google",
+      "thumb": "/thumbs/3f3f63a3b436.jpg"
+    },
+    {
+      "id": "0fc37208dc3b",
+      "kind": "video",
+      "lang": "en",
+      "title": "Physics Book With Solutions for Self Study",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=b2BQ2rMEgqQ",
+      "source": "The Math Sorcerer",
+      "image": "https://i3.ytimg.com/vi/b2BQ2rMEgqQ/hqdefault.jpg",
+      "views": 52207,
+      "category": "인기",
+      "publishedAt": "2026-09-25T22:35:56.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "titleKo": "자습을 위한 솔루션이 포함된 물리학 도서",
+      "summaryKo": "",
+      "translator": "google",
+      "thumb": "/thumbs/0fc37208dc3b.jpg"
+    },
+    {
+      "id": "c67330f25979",
+      "kind": "video",
+      "lang": "en",
+      "title": "When (ln(x))^x = 2 has NO closed-form solution...",
+      "summary": "We will see how to use Newton's method to approximate…",
+      "link": "https://www.youtube.com/watch?v=bVNHCNOkBZk",
+      "source": "blackpenredpen",
+      "image": "https://i3.ytimg.com/vi/bVNHCNOkBZk/hqdefault.jpg",
+      "views": 49088,
+      "category": "문제·증명",
+      "publishedAt": "2026-09-19T07:17:32.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "titleKo": "(ln(x))^x = 2에 폐쇄형 해가 없을 때...",
+      "summaryKo": "뉴턴의 방법을 사용하여 근사치를 계산하는 방법을 살펴보겠습니다",
+      "translator": "google",
+      "thumb": "/thumbs/c67330f25979.jpg"
+    },
+    {
+      "id": "d1a892a8cbbf",
+      "kind": "video",
+      "lang": "en",
+      "title": "129/1000, integral of 0",
+      "summary": "",
+      "link": "https://www.youtube.com/shorts/gCETELTbMO4",
+      "source": "bprp calculus basics",
+      "image": "https://i4.ytimg.com/vi/gCETELTbMO4/hqdefault.jpg",
+      "views": 29076,
+      "category": "문제·증명",
+      "publishedAt": "2026-09-13T07:00:07.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "titleKo": "129/1000, 0의 적분",
+      "summaryKo": "",
+      "translator": "google",
+      "thumb": "/thumbs/d1a892a8cbbf.jpg"
+    },
+    {
+      "id": "56c696c80ae9",
+      "kind": "video",
+      "lang": "ko",
+      "title": "선행학습, 6개월 넘기면 오히려 독입니다",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=U9E9s4qeEB4",
+      "source": "성장수학",
+      "image": "https://i2.ytimg.com/vi/U9E9s4qeEB4/hqdefault.jpg",
+      "views": 6095,
+      "category": "인기",
+      "publishedAt": "2026-09-10T14:41:14.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "summaryKo": "",
+      "thumb": "/thumbs/56c696c80ae9.jpg"
+    },
+    {
+      "id": "c991c07f8db0",
+      "kind": "video",
+      "lang": "ko",
+      "title": "할 말이 정말 많습니다.",
+      "summary": "",
+      "link": "https://www.youtube.com/watch?v=j3D97rbjLcg",
+      "source": "다정수학",
+      "image": "https://i3.ytimg.com/vi/j3D97rbjLcg/hqdefault.jpg",
+      "views": 20077,
+      "category": "인기",
+      "publishedAt": "2026-09-05T14:15:07.000Z",
+      "collectedAt": "2026-10-05T06:02:19.203Z",
+      "summaryKo": "",
+      "thumb": "/thumbs/c991c07f8db0.jpg"
+    },
     {
       "id": "f0ad7673cd24",
       "kind": "news",
@@ -543,7 +681,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.png"
+      "thumb": "/thumbs/6d6917e71bf3.jpg"
     },
     {
       "id": "3c73391d2263",
@@ -559,7 +697,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.png"
+      "thumb": "/thumbs/3c73391d2263.jpg"
     },
     {
       "id": "e01539b51fd3",
@@ -575,7 +713,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.png"
+      "thumb": "/thumbs/e01539b51fd3.jpg"
     },
     {
       "id": "d2e592757594",
@@ -591,7 +729,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.png"
+      "thumb": "/thumbs/d2e592757594.jpg"
     },
     {
       "id": "a3c960bc6978",
@@ -757,7 +895,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.jpg"
+      "thumb": "/thumbs/19c65c3c48c8.png"
     },
     {
       "id": "1f9591edea61",
