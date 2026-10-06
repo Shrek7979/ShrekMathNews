@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T13:00:07.957Z",
+  "updatedAt": "2026-10-06T18:00:07.237Z",
   "items": [
     {
       "id": "ig-DdcBG_2xepl",
@@ -291,23 +291,6 @@
       "translator": "google"
     },
     {
-      "id": "ig-DceISmJCpft",
-      "kind": "video",
-      "lang": "en",
-      "title": "Project spotlight of the week ✨ \"Modeling and Visualizing of Microscop…",
-      "summary": "ic Precipitation Reactions with the Wolfram Language\"…",
-      "link": "https://www.instagram.com/wolframresearch/reel/DceISmJCpft/",
-      "source": "Instagram @wolframresearch",
-      "category": "인기",
-      "publishedAt": "2026-08-24T15:00:00.000Z",
-      "likes": "51",
-      "thumb": "/social/ig/DceISmJCpft.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "금주의 프로젝트 스포트라이트 ✨ \"현미경 모델링 및 시각화…",
-      "summaryKo": "Wolfram 언어를 사용한 ic 강수 반응\"…",
-      "translator": "google"
-    },
-    {
       "id": "ig-Dd1lATuF5pH",
       "kind": "news",
       "lang": "en",
@@ -340,6 +323,23 @@
       "titleKo": "이번주 특집 학생 프로젝트 🌟 확장된 Schellin 분석…",
       "summaryKo": "g 분리 모델 Theo Archer가 만든 곳…",
       "translator": "google"
+    },
+    {
+      "id": "ig-DcyvFqZiWAD",
+      "kind": "news",
+      "lang": "en",
+      "title": "This week's featured high school student project 🌟 The topology of pe…",
+      "summary": "ntagon aggregation and resultant void shapes by James…",
+      "link": "https://www.instagram.com/wolframresearch/p/DcyvFqZiWAD/",
+      "source": "Instagram @wolframresearch",
+      "category": "인기",
+      "publishedAt": "2026-09-01T15:00:00.000Z",
+      "likes": "24",
+      "thumb": "/social/ig/DcyvFqZiWAD.jpg",
+      "titleKo": "이번주 특집 고등학생 프로젝트 🌟 체육의 토폴로지…",
+      "summaryKo": "James의 ntagon 응집 및 결과적인 공극 모양…",
+      "translator": "google",
+      "collectedAt": "2026-10-06T18:00:07.237Z"
     },
     {
       "id": "ig-Dd7kp6qk54S",
@@ -434,6 +434,22 @@
       "translator": "google"
     },
     {
+      "id": "ig-DeKS44QFxTx",
+      "kind": "news",
+      "lang": "en",
+      "title": "Why can equally talented artists become so unequally famous?",
+      "summary": "Talking about art helps us enjoy it more",
+      "link": "https://www.instagram.com/fermatslibrary/p/DeKS44QFxTx/",
+      "source": "Instagram @fermatslibrary",
+      "category": "인기",
+      "publishedAt": "2026-10-05T15:00:00.000Z",
+      "likes": "153",
+      "thumb": "/social/ig/DeKS44QFxTx.jpg",
+      "titleKo": "똑같이 재능 있는 예술가들이 왜 그렇게 불평등하게 유명해질 수 있습니까?",
+      "summaryKo": "예술에 대해 이야기하면 예술을 더 즐길 수 있습니다.",
+      "translator": "google"
+    },
+    {
       "id": "ig-DeIKHsKDO26",
       "kind": "news",
       "lang": "en",
@@ -515,22 +531,6 @@
       "collectedAt": "2026-10-03T20:37:26.037Z",
       "titleKo": "바르샤바, 1962.",
       "summaryKo": "정원을 산책하며 아무렇지도 않게…",
-      "translator": "google"
-    },
-    {
-      "id": "ig-Dd3neTnl5Nt",
-      "kind": "news",
-      "lang": "en",
-      "title": "Terry Tao on trying to solve the Riemann Hypothesis (2015)",
-      "summary": "",
-      "link": "https://www.instagram.com/fermatslibrary/p/Dd3neTnl5Nt/",
-      "source": "Instagram @fermatslibrary",
-      "category": "인기",
-      "publishedAt": "2026-09-28T15:00:00.000Z",
-      "likes": "730",
-      "thumb": "/social/ig/Dd3neTnl5Nt.jpg",
-      "titleKo": "리만 가설을 풀려고 노력하는 테리 타오(2015)",
-      "summaryKo": "",
       "translator": "google"
     },
     {
@@ -1058,6 +1058,22 @@
       "translator": "google"
     },
     {
+      "id": "ig-DeKS1PMFL9z",
+      "kind": "video",
+      "lang": "en",
+      "title": "🚨This year at the What happens when quantum models meet real hardware?",
+      "summary": "Register today:…",
+      "link": "https://www.instagram.com/wolframresearch/reel/DeKS1PMFL9z/",
+      "source": "Instagram @wolframresearch",
+      "category": "인기",
+      "publishedAt": "2026-10-05T15:00:00.000Z",
+      "likes": "2",
+      "thumb": "/social/ig/DeKS1PMFL9z.jpg",
+      "titleKo": "🚨올해 양자 모델이 실제 하드웨어를 만나면 무슨 일이 일어날까요?",
+      "summaryKo": "지금 등록하세요:…",
+      "translator": "google"
+    },
+    {
       "id": "ig-DcyvFqZiWAD",
       "kind": "news",
       "lang": "en",
@@ -1071,7 +1087,8 @@
       "thumb": "/social/ig/DcyvFqZiWAD.jpg",
       "titleKo": "이번주 특집 고등학생 프로젝트 🌟 체육의 토폴로지…",
       "summaryKo": "James의 ntagon 응집 및 결과적인 공극 모양…",
-      "translator": "google"
+      "translator": "google",
+      "collectedAt": "2026-10-06T18:00:07.237Z"
     },
     {
       "id": "ig-Dcgv5CYCZXy",
@@ -1088,23 +1105,6 @@
       "collectedAt": "2026-10-05T00:27:53.868Z",
       "titleKo": "이번주 특집 학생 프로젝트 🌟 확장된 Schellin 분석…",
       "summaryKo": "g 분리 모델 Theo Archer가 만든 곳…",
-      "translator": "google"
-    },
-    {
-      "id": "ig-DceISmJCpft",
-      "kind": "video",
-      "lang": "en",
-      "title": "Project spotlight of the week ✨ \"Modeling and Visualizing of Microscop…",
-      "summary": "ic Precipitation Reactions with the Wolfram Language\"…",
-      "link": "https://www.instagram.com/wolframresearch/reel/DceISmJCpft/",
-      "source": "Instagram @wolframresearch",
-      "category": "인기",
-      "publishedAt": "2026-08-24T15:00:00.000Z",
-      "likes": "51",
-      "thumb": "/social/ig/DceISmJCpft.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "금주의 프로젝트 스포트라이트 ✨ \"현미경 모델링 및 시각화…",
-      "summaryKo": "Wolfram 언어를 사용한 ic 강수 반응\"…",
       "translator": "google"
     },
     {
