@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-06T10:15:09.029Z",
+  "updatedAt": "2026-10-06T11:16:47.341Z",
   "items": [
+    {
+      "id": "fb-c0773464bcbe",
+      "kind": "news",
+      "lang": "en",
+      "title": "Come see Matt Parker’s excellent show in Bristol tomorrow night.",
+      "summary": "I’ll be the guy in a Parker Square t-shirt and carrying…",
+      "link": "https://www.facebook.com/numberphile/posts/pfbid036LFpesFTL8xzTwxeZ5qeM9fFyDxS6JY91rXfnkwe6DqyVkPbob27X8QENKtp4cMtl",
+      "source": "Facebook Numberphile",
+      "category": "인기",
+      "publishedAt": "2026-10-06T10:15:18.626Z",
+      "thumb": "/social/fb/fb-c0773464bcbe.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-06T11:16:47.341Z",
+      "titleKo": "내일 밤 브리스톨에서 열리는 Matt Parker의 훌륭한 쇼를 보러 오세요.",
+      "summaryKo": "나는 Parker Square 티셔츠를 입고…",
+      "translator": "google"
+    },
     {
       "id": "fb-a959d3d766da",
       "kind": "news",
@@ -31,7 +48,7 @@
       "thumb": "/social/fb/fb-f7f8cb606523.jpg",
       "refs": [],
       "collectedAt": "2026-10-05T00:33:31.272Z",
-      "titleKo": "Ramón은 케임브리지에서 박사후 과정을 밟기 위해 방금 우리를 떠났습니다.",
+      "titleKo": "Ramón은 케임브리지의 박사후 연구원 자리를 위해 방금 우리를 떠났습니다.",
       "summaryKo": "가끔 글을 쓰지만, 떠나기 전에 그는…",
       "translator": "google"
     },
