@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T18:02:32.113Z",
+  "updatedAt": "2026-10-06T18:03:52.772Z",
   "items": [
     {
       "id": "f098989d51eb",
@@ -287,7 +287,7 @@
       "category": "입시",
       "publishedAt": "2026-10-05T20:36:00.000Z",
       "collectedAt": "2026-10-06T10:02:40.981Z",
-      "thumb": "/thumbs/0b9bd5d3d8bc.jpg"
+      "thumb": null
     },
     {
       "id": "199169a78b30",
@@ -362,7 +362,7 @@
       "link": "https://www.youtube.com/shorts/MEwNEWHpsFM",
       "source": "Math Scribbles",
       "image": "https://i2.ytimg.com/vi/MEwNEWHpsFM/hqdefault.jpg",
-      "views": 272258,
+      "views": 272487,
       "category": "인기",
       "publishedAt": "2026-10-02T23:31:46.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -381,7 +381,7 @@
       "link": "https://www.youtube.com/watch?v=Cfs0Ta62Qn8",
       "source": "bprp calculus basics",
       "image": "https://i4.ytimg.com/vi/Cfs0Ta62Qn8/hqdefault.jpg",
-      "views": 68820,
+      "views": 68847,
       "category": "문제·증명",
       "publishedAt": "2026-10-01T12:00:32.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -415,7 +415,7 @@
       "link": "https://www.youtube.com/watch?v=9xwU-ochogk",
       "source": "Stand-up Maths",
       "image": "https://i2.ytimg.com/vi/9xwU-ochogk/hqdefault.jpg",
-      "views": 1013087,
+      "views": 1013139,
       "category": "인기",
       "publishedAt": "2026-09-30T14:30:51.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -502,7 +502,7 @@
       "link": "https://www.youtube.com/shorts/Ng3m2Dntls0",
       "source": "수학강사 이정환",
       "image": "https://i3.ytimg.com/vi/Ng3m2Dntls0/hqdefault.jpg",
-      "views": 59382,
+      "views": 59387,
       "category": "인기",
       "publishedAt": "2026-09-23T09:20:03.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -519,7 +519,7 @@
       "link": "https://www.youtube.com/watch?v=gxNaNq406P0",
       "source": "Andy Math",
       "image": "https://i4.ytimg.com/vi/gxNaNq406P0/hqdefault.jpg",
-      "views": 360401,
+      "views": 360404,
       "category": "문제·증명",
       "publishedAt": "2026-09-22T20:35:24.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -576,7 +576,7 @@
       "link": "https://www.youtube.com/shorts/UmuMgA_RxnU",
       "source": "Numberphile",
       "image": "https://i2.ytimg.com/vi/UmuMgA_RxnU/hqdefault.jpg",
-      "views": 464617,
+      "views": 464614,
       "category": "인기",
       "publishedAt": "2026-09-22T12:34:02.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -596,7 +596,7 @@
       "link": "https://www.youtube.com/watch?v=MJyYyAuYjpI",
       "source": "연떠",
       "image": "https://i2.ytimg.com/vi/MJyYyAuYjpI/hqdefault.jpg",
-      "views": 87092,
+      "views": 87088,
       "category": "인기",
       "publishedAt": "2026-09-22T08:00:34.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -612,7 +612,7 @@
       "link": "https://www.youtube.com/watch?v=u4qLs9ngtAo",
       "source": "Andy Math",
       "image": "https://i2.ytimg.com/vi/u4qLs9ngtAo/hqdefault.jpg",
-      "views": 57159,
+      "views": 57164,
       "category": "문제·증명",
       "publishedAt": "2026-09-21T18:40:32.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -690,7 +690,7 @@
       "link": "https://www.youtube.com/watch?v=3geDF-DAwpg",
       "source": "Numberphile",
       "image": "https://i4.ytimg.com/vi/3geDF-DAwpg/hqdefault.jpg",
-      "views": 1012180,
+      "views": 1012162,
       "category": "인기",
       "publishedAt": "2026-09-18T15:33:48.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -709,7 +709,7 @@
       "link": "https://www.youtube.com/watch?v=6RcRIjDXecA",
       "source": "수학하는 땅우",
       "image": "https://i3.ytimg.com/vi/6RcRIjDXecA/hqdefault.jpg",
-      "views": 75077,
+      "views": 75082,
       "category": "인기",
       "publishedAt": "2026-09-18T09:24:16.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -745,7 +745,7 @@
       "link": "https://www.youtube.com/watch?v=pGUgeMfHPKk",
       "source": "MindYourDecisions",
       "image": "https://i1.ytimg.com/vi/pGUgeMfHPKk/hqdefault.jpg",
-      "views": 113702,
+      "views": 113745,
       "category": "문제·증명",
       "publishedAt": "2026-09-13T18:45:32.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -765,7 +765,7 @@
       "link": "https://www.youtube.com/watch?v=xyZS1hRS40U",
       "source": "blackpenredpen",
       "image": "https://i1.ytimg.com/vi/xyZS1hRS40U/hqdefault.jpg",
-      "views": 69610,
+      "views": 69626,
       "category": "문제·증명",
       "publishedAt": "2026-09-09T12:00:04.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -816,7 +816,7 @@
       "link": "https://www.youtube.com/watch?v=gF9p0pF3Rh4",
       "source": "MindYourDecisions",
       "image": "https://i4.ytimg.com/vi/gF9p0pF3Rh4/hqdefault.jpg",
-      "views": 416503,
+      "views": 416625,
       "category": "문제·증명",
       "publishedAt": "2026-09-07T17:38:09.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -835,7 +835,7 @@
       "link": "https://www.youtube.com/watch?v=fGObOUNcZk0",
       "source": "MindYourDecisions",
       "image": "https://i3.ytimg.com/vi/fGObOUNcZk0/hqdefault.jpg",
-      "views": 93329,
+      "views": 93336,
       "category": "문제·증명",
       "publishedAt": "2026-09-23T22:35:10.000Z",
       "collectedAt": "2026-10-06T06:04:31.353Z",
@@ -1110,7 +1110,7 @@
       "summaryKo": "\"풍선 타워 디펜스\"의 목표는 풍선을 막는 것인데",
       "translator": "google",
       "detailKo": "\"Bloons Tower Defense\"의 목표는 경로를 따라 타워를 전략적으로 배치하여 풍선이 트랙 끝에 도달하는 것을 막는 것입니다.…",
-      "thumb": "/thumbs/244a26c8ac93.png"
+      "thumb": "/thumbs/244a26c8ac93.jpg"
     },
     {
       "id": "c4813264fb16",
@@ -1899,7 +1899,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg",
+      "thumb": "/thumbs/6d6917e71bf3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
@@ -1917,7 +1917,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg",
+      "thumb": "/thumbs/3c73391d2263.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
@@ -1935,7 +1935,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg",
+      "thumb": "/thumbs/e01539b51fd3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
@@ -1953,7 +1953,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.jpg",
+      "thumb": "/thumbs/d2e592757594.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
@@ -2193,7 +2193,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.jpg"
+      "thumb": "/thumbs/2c62b4c78e9e.png"
     },
     {
       "id": "eb72b30987ed",
@@ -2282,7 +2282,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.jpg"
+      "thumb": "/thumbs/d1d902dfdc13.png"
     },
     {
       "id": "b43bf69f5b09",
@@ -2324,7 +2324,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.png",
+      "thumb": "/thumbs/ab6642bdf4b6.jpg",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…",
       "detail": "A research team at the University of Vienna, led by pharmaceutical chemist Johannes Kirchmair, has developed a statistical method to…",

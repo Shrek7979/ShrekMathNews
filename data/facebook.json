@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-06T17:19:13.385Z",
+  "updatedAt": "2026-10-06T18:17:42.210Z",
   "items": [
+    {
+      "id": "fb-2a295c9c6a9b",
+      "kind": "news",
+      "lang": "en",
+      "title": "New on Transformation: Read our deep dive on how mathematicians are re",
+      "summary": "sponding to AI",
+      "link": "https://www.facebook.com/QuantaNews/posts/pfbid037xwZYac4EEyjXkc3aayENV1ueLAXuLipvaZ2xSfQkzWp6trXxnszgTjyHPbhsvrFl",
+      "source": "Facebook Quanta Magazine",
+      "category": "인기",
+      "publishedAt": "2026-10-06T17:17:30.920Z",
+      "thumb": "/social/fb/fb-2a295c9c6a9b.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-06T18:17:42.210Z",
+      "titleKo": "혁신에 관한 새로운 소식: 수학자들이 어떻게 혁신을 이루는지에 대한 심층 분석을 읽어보세요.",
+      "summaryKo": "AI에 보답하다",
+      "translator": "google"
+    },
     {
       "id": "fb-2d07c9ae3903",
       "kind": "news",
