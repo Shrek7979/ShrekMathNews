@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T10:02:40.981Z",
+  "updatedAt": "2026-10-06T10:03:49.216Z",
   "items": [
     {
       "id": "0b9bd5d3d8bc",
@@ -28,7 +28,7 @@
       "category": "입시",
       "publishedAt": "2026-10-06T01:03:38.000Z",
       "collectedAt": "2026-10-06T09:02:29.896Z",
-      "thumb": "/thumbs/199169a78b30.png"
+      "thumb": "/thumbs/199169a78b30.jpg"
     },
     {
       "id": "3f3f63a3b436",
@@ -40,7 +40,7 @@
       "link": "https://www.youtube.com/watch?v=oUZCjrOZVVk",
       "source": "blackpenredpen",
       "image": "https://i4.ytimg.com/vi/oUZCjrOZVVk/hqdefault.jpg",
-      "views": 56010,
+      "views": 56008,
       "category": "문제·증명",
       "publishedAt": "2026-09-26T11:43:09.000Z",
       "collectedAt": "2026-10-06T09:02:29.896Z",
@@ -107,7 +107,7 @@
       "link": "https://www.youtube.com/shorts/MEwNEWHpsFM",
       "source": "Math Scribbles",
       "image": "https://i2.ytimg.com/vi/MEwNEWHpsFM/hqdefault.jpg",
-      "views": 243362,
+      "views": 243368,
       "category": "인기",
       "publishedAt": "2026-10-02T23:31:46.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -126,7 +126,7 @@
       "link": "https://www.youtube.com/watch?v=Cfs0Ta62Qn8",
       "source": "bprp calculus basics",
       "image": "https://i4.ytimg.com/vi/Cfs0Ta62Qn8/hqdefault.jpg",
-      "views": 65626,
+      "views": 65629,
       "category": "문제·증명",
       "publishedAt": "2026-10-01T12:00:32.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -264,7 +264,7 @@
       "link": "https://www.youtube.com/watch?v=gxNaNq406P0",
       "source": "Andy Math",
       "image": "https://i4.ytimg.com/vi/gxNaNq406P0/hqdefault.jpg",
-      "views": 359647,
+      "views": 359383,
       "category": "문제·증명",
       "publishedAt": "2026-09-22T20:35:24.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -283,7 +283,7 @@
       "link": "https://www.youtube.com/watch?v=2U_34Rs0X-c",
       "source": "Dr. Trefor Bazett",
       "image": "https://i3.ytimg.com/vi/2U_34Rs0X-c/hqdefault.jpg",
-      "views": 104078,
+      "views": 104126,
       "category": "인기",
       "publishedAt": "2026-09-22T15:18:53.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -341,7 +341,7 @@
       "link": "https://www.youtube.com/watch?v=MJyYyAuYjpI",
       "source": "연떠",
       "image": "https://i2.ytimg.com/vi/MJyYyAuYjpI/hqdefault.jpg",
-      "views": 87030,
+      "views": 87019,
       "category": "인기",
       "publishedAt": "2026-09-22T08:00:34.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -396,7 +396,7 @@
       "link": "https://www.youtube.com/watch?v=SNZ0-cd6Y2c",
       "source": "Math Queen",
       "image": "https://i4.ytimg.com/vi/SNZ0-cd6Y2c/hqdefault.jpg",
-      "views": 72586,
+      "views": 72581,
       "category": "인기",
       "publishedAt": "2026-09-20T17:37:16.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -490,7 +490,7 @@
       "link": "https://www.youtube.com/watch?v=pGUgeMfHPKk",
       "source": "MindYourDecisions",
       "image": "https://i1.ytimg.com/vi/pGUgeMfHPKk/hqdefault.jpg",
-      "views": 113556,
+      "views": 113514,
       "category": "문제·증명",
       "publishedAt": "2026-09-13T18:45:32.000Z",
       "collectedAt": "2026-10-06T07:02:36.447Z",
@@ -595,7 +595,7 @@
       "link": "https://www.youtube.com/watch?v=fGObOUNcZk0",
       "source": "MindYourDecisions",
       "image": "https://i3.ytimg.com/vi/fGObOUNcZk0/hqdefault.jpg",
-      "views": 92390,
+      "views": 92383,
       "category": "문제·증명",
       "publishedAt": "2026-09-23T22:35:10.000Z",
       "collectedAt": "2026-10-06T06:04:31.353Z",
@@ -999,7 +999,7 @@
       "category": "AI·에듀테크",
       "publishedAt": "2026-10-05T07:34:00.000Z",
       "collectedAt": "2026-10-05T15:03:26.867Z",
-      "thumb": "/thumbs/d147105346b3.png"
+      "thumb": "/thumbs/d147105346b3.jpg"
     },
     {
       "id": "7c0c7cdb6126",
@@ -1659,7 +1659,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg",
+      "thumb": "/thumbs/6d6917e71bf3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
@@ -1677,7 +1677,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg",
+      "thumb": "/thumbs/3c73391d2263.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
@@ -1695,7 +1695,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg",
+      "thumb": "/thumbs/e01539b51fd3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
@@ -1713,7 +1713,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.jpg",
+      "thumb": "/thumbs/d2e592757594.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
@@ -1883,7 +1883,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.png"
+      "thumb": "/thumbs/19c65c3c48c8.jpg"
     },
     {
       "id": "1f9591edea61",
