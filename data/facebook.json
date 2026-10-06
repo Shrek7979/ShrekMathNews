@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-06T14:16:49.837Z",
+  "updatedAt": "2026-10-06T15:18:05.539Z",
   "items": [
+    {
+      "id": "fb-2d07c9ae3903",
+      "kind": "news",
+      "lang": "en",
+      "title": "Our new undergraduates are arriving in Oxford this week in preparation",
+      "summary": "for the start of term next week",
+      "link": "https://www.facebook.com/OxfordMathematics/posts/pfbid02opp1c5VJKDziTiRV9Z7pNDdgW2GEceGxNdiLkd8qVUGq1zCWtQJtcB9nmtk7tgPJl",
+      "source": "Facebook Oxford Mathematics",
+      "category": "인기",
+      "publishedAt": "2026-10-06T14:47:02.946Z",
+      "thumb": "/social/fb/fb-2d07c9ae3903.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-06T15:18:05.539Z",
+      "titleKo": "이번 주에 새로운 학부생들이 준비를 위해 옥스퍼드에 도착합니다.",
+      "summaryKo": "다음주 학기 시작을 위해",
+      "translator": "google"
+    },
     {
       "id": "fb-c0773464bcbe",
       "kind": "news",
