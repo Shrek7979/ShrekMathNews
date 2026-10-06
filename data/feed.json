@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T04:02:33.864Z",
+  "updatedAt": "2026-10-06T04:04:04.922Z",
   "items": [
     {
       "id": "d64663267e8d",
@@ -161,7 +161,7 @@
       "summaryKo": "\"풍선 타워 디펜스\"의 목표는 풍선을 막는 것인데",
       "translator": "google",
       "detailKo": "\"Bloons Tower Defense\"의 목표는 경로를 따라 타워를 전략적으로 배치하여 풍선이 트랙 끝에 도달하는 것을 막는 것입니다.…",
-      "thumb": "/thumbs/244a26c8ac93.png"
+      "thumb": "/thumbs/244a26c8ac93.jpg"
     },
     {
       "id": "c4813264fb16",
@@ -950,7 +950,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg",
+      "thumb": "/thumbs/6d6917e71bf3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
@@ -968,7 +968,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg",
+      "thumb": "/thumbs/3c73391d2263.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
@@ -986,7 +986,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg",
+      "thumb": "/thumbs/e01539b51fd3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
@@ -1004,7 +1004,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.jpg",
+      "thumb": "/thumbs/d2e592757594.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
@@ -1244,7 +1244,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.jpg"
+      "thumb": "/thumbs/2c62b4c78e9e.png"
     },
     {
       "id": "eb72b30987ed",
@@ -1333,7 +1333,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.jpg"
+      "thumb": "/thumbs/d1d902dfdc13.png"
     },
     {
       "id": "b43bf69f5b09",
@@ -1375,7 +1375,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.png",
+      "thumb": "/thumbs/ab6642bdf4b6.jpg",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…",
       "detail": "A research team at the University of Vienna, led by pharmaceutical chemist Johannes Kirchmair, has developed a statistical method to…",
