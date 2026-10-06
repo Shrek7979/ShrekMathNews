@@ -1,6 +1,65 @@
 {
-  "updatedAt": "2026-10-06T04:04:04.922Z",
+  "updatedAt": "2026-10-06T05:02:49.075Z",
   "items": [
+    {
+      "id": "64ec6d759b7e",
+      "kind": "news",
+      "lang": "ko",
+      "title": "韓 과학 국가대표 “또 해냈다”…‘국제천문및천체물리올림피아드’ 5명 금메달 싹쓸이",
+      "summary": "과학기술정보통신부와 한국과학창의재단은 제19회 국제천문및천체물리올림피아드에서 한국대표단 5명 전원이…",
+      "detail": "과학기술정보통신부와 한국과학창의재단은 제19회 국제천문및천체물리올림피아드에서 한국대표단 5명 전원이 금메달을 획득했다고 6일 밝혔다. 총 64개국 312명의 학생이 참가한 이번 대회에서 한국대표단은 김건호(서울과학고 3), 김형건(서울과학고 3),…",
+      "link": "https://biz.heraldcorp.com/article/10894262",
+      "source": "헤럴드경제",
+      "image": "http://www.bing.com/th?id=ONUT.NrqQLv-MXM3-nUuP4sTvfA&pid=News",
+      "category": "대회·행사",
+      "publishedAt": "2026-10-05T16:51:00.000Z",
+      "collectedAt": "2026-10-06T05:02:49.075Z",
+      "thumb": "/thumbs/64ec6d759b7e.jpg"
+    },
+    {
+      "id": "f21b9f5bfd9e",
+      "kind": "news",
+      "lang": "ko",
+      "title": "구몬, 초등생 수학 연산력·문해력 위한 온라인 강연 개최",
+      "summary": "구몬학습이 초등학생들의 연산력과 문해력을 주제로 온라인 토크 콘서트를 개최한다.구몬학습은 오는 8일…",
+      "detail": "구몬학습이 초등학생들의 연산력과 문해력을 주제로 온라인 토크 콘서트를 개최한다.구몬학습은 오는 8일 공식 유튜브 채널에서 '수학 잘 하는 아이들의 공통점'이라는 주제로 90분간 온라인 생방송을 진행한다고 6일 밝혔다. 이번 토크 콘서트에는 수학…",
+      "link": "https://kpinews.kr/newsView/1065579276633740",
+      "source": "kpinews.kr",
+      "image": "http://www.bing.com/th?id=ONUT.Tk3O--yrKhq8h-Qs1zTu_Q&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-05T16:50:00.000Z",
+      "collectedAt": "2026-10-06T05:02:49.075Z",
+      "thumb": "/thumbs/f21b9f5bfd9e.jpg"
+    },
+    {
+      "id": "699d2cd93af2",
+      "kind": "news",
+      "lang": "ko",
+      "title": "2026년 국제천문-천체물리올림피아드 한국대표단 5명 전원 금메달 획득",
+      "summary": "과학기술정보통신부와 한국과학창의재단은 올해 열린 제19회 국제천문-천체물리올림피아드에서 한국대표단…",
+      "detail": "과학기술정보통신부와 한국과학창의재단은 올해 열린 제19회 국제천문-천체물리올림피아드에서 한국대표단 5명 전원이 금메달을 획득했다고 밝혔습니다. 총 64개국 312명의 학생이 참가한 이번 대회에서 한국대표단은 김건호(서울과학고 3), 김형건(서울과학고…",
+      "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4110513",
+      "source": "BBS NEWS",
+      "category": "대회·행사",
+      "publishedAt": "2026-10-05T16:38:00.000Z",
+      "collectedAt": "2026-10-06T05:02:49.075Z",
+      "thumb": "/thumbs/699d2cd93af2.png"
+    },
+    {
+      "id": "d62fab29f47a",
+      "kind": "news",
+      "lang": "ko",
+      "title": "구몬학습, 김설훈 강사 초청…초등 수학 ‘연산력·읽는 힘’ 짚는다",
+      "summary": "임세희 기자 = 초등학생의 수학 기초를 좌우하는 연산력과 문해력을 어떻게 길러야 할지 살펴보는…",
+      "detail": "임세희 기자 = 초등학생의 수학 기초를 좌우하는 연산력과 문해력을 어떻게 길러야 할지 살펴보는 온라인 강연이 열린다.구몬학습은 오는 8일 오전 10시 공식 유튜브 채널을 통해 초등 수학 학습을 주제로 한 온라인 토크 콘서트를 개최한다고 6일…",
+      "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=89851",
+      "source": "더페어뉴스",
+      "image": "http://www.bing.com/th?id=ONUT.whlsAibiQxo6GOIjanwCog&pid=News",
+      "category": "교육",
+      "publishedAt": "2026-10-05T16:00:00.000Z",
+      "collectedAt": "2026-10-06T05:02:49.075Z",
+      "thumb": "/thumbs/d62fab29f47a.jpg"
+    },
     {
       "id": "d64663267e8d",
       "kind": "news",
@@ -161,7 +220,7 @@
       "summaryKo": "\"풍선 타워 디펜스\"의 목표는 풍선을 막는 것인데",
       "translator": "google",
       "detailKo": "\"Bloons Tower Defense\"의 목표는 경로를 따라 타워를 전략적으로 배치하여 풍선이 트랙 끝에 도달하는 것을 막는 것입니다.…",
-      "thumb": "/thumbs/244a26c8ac93.jpg"
+      "thumb": "/thumbs/244a26c8ac93.png"
     },
     {
       "id": "c4813264fb16",
@@ -950,7 +1009,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.png",
+      "thumb": "/thumbs/6d6917e71bf3.jpg",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
@@ -968,7 +1027,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.png",
+      "thumb": "/thumbs/3c73391d2263.jpg",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
@@ -986,7 +1045,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.png",
+      "thumb": "/thumbs/e01539b51fd3.jpg",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
@@ -1004,7 +1063,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.png",
+      "thumb": "/thumbs/d2e592757594.jpg",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
@@ -1244,7 +1303,7 @@
       "publishedAt": "2026-10-02T13:59:00.000Z",
       "category": "교육",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/2c62b4c78e9e.png"
+      "thumb": "/thumbs/2c62b4c78e9e.jpg"
     },
     {
       "id": "eb72b30987ed",
@@ -1333,7 +1392,7 @@
       "publishedAt": "2026-09-30T17:00:00.000Z",
       "category": "입시",
       "collectedAt": "2026-10-02T23:42:21.906Z",
-      "thumb": "/thumbs/d1d902dfdc13.png"
+      "thumb": "/thumbs/d1d902dfdc13.jpg"
     },
     {
       "id": "b43bf69f5b09",
@@ -1375,7 +1434,7 @@
       "category": "해외",
       "collectedAt": "2026-10-02T23:42:21.906Z",
       "titleKo": "새로운 통계 방법을 사용하면 과학 데이터 세트에 숨겨진 이상 현상을 표시할 수 있습니다.",
-      "thumb": "/thumbs/ab6642bdf4b6.jpg",
+      "thumb": "/thumbs/ab6642bdf4b6.png",
       "translator": "google",
       "summaryKo": "비엔나 대학교 연구팀이 이끄는…",
       "detail": "A research team at the University of Vienna, led by pharmaceutical chemist Johannes Kirchmair, has developed a statistical method to…",
