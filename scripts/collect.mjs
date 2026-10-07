@@ -16,6 +16,8 @@ const KEEP_DAYS = 7
 const MAX_ITEMS = 150
 const TITLE_LENGTH = 90
 const SUMMARY_LENGTH = 56 // 제목 밑 설명은 한 줄(한 문장)만
+// 개인 소식(부고, 임명·위촉, 취임·퇴임, 인사 발령 등)은 싣지 않음. '선임연구원' 같은 직급은 남김
+export const PERSONAL_NEWS = /부고|별세|타계|영면|빈소|발인|장례|추도식|추모식|조문|부음|訃|임명|위촉|임용장|수여식|취임|이임식|퇴임|승진|인사\s?발령|인사이동|전보\s?발령|\[인사\]|\[동정\]|내정|화촉|결혼식|선임(?!연구|기자|병|원)|obituar|in memoriam|passed away|\b(dies|died|dead) at \d|funeral|\bappointed\b|\bnamed (new |as )?(president|director|dean|chair|head|editor|ceo)\b|\bretire(s|ment)\b|steps down/i
 // 저널 피드의 기사 아닌 글 (표지 소개, 목차, 정정 공고 등)
 const JOURNAL_JUNK = /^(inside |outside )?(front|back) cover|frontispiece|cover picture|table of contents|issue information|masthead|^(correction|erratum|corrigendum|publisher correction|author correction)\b/i
 const DETAIL_LENGTH = 140 // 카드에 보여 주는 긴 설명 (2~3줄). 통합 사이트(Shrek Edu Insight)도 씀
@@ -234,6 +236,7 @@ export async function collect() {
   let items = [...carried,...fresh.map((item) => ({ ...item, collectedAt: now.toISOString() }))]
     .filter((item) => now - new Date(item.collectedAt) <= KEEP_DAYS * DAY)
     .filter((item) => !/^Reddit/.test(item.source || '')) // 레딧은 더 이상 싣지 않음
+    .filter((item) => !PERSONAL_NEWS.test(`${item.title} ${item.titleKo || ''}`)) // 부고·임명 같은 개인 소식 (예전 카드도 함께 정리)
     .filter((item) => !(item.kind === 'video' && !item.views)) // 영상은 조회수 상위로 뽑은 것만 싣기로 함
     .filter((item) => {
       const grams = bigrams(item.title)
