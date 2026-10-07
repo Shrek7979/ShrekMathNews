@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-07T03:20:30.213Z",
+  "updatedAt": "2026-10-07T04:20:16.222Z",
   "items": [
+    {
+      "id": "fb-b0381cc2f34a",
+      "kind": "video",
+      "lang": "en",
+      "title": "This year at the What happens when quantum models meet real hardware?",
+      "summary": "",
+      "link": "https://www.facebook.com/reel/1627249745480262/",
+      "source": "Facebook Wolfram Research",
+      "category": "인기",
+      "publishedAt": "2026-10-06T17:19:54.779Z",
+      "thumb": "/social/fb/fb-b0381cc2f34a.jpg",
+      "refs": [],
+      "collectedAt": "2026-10-07T04:20:16.222Z",
+      "titleKo": "올해 양자 모델이 실제 하드웨어를 만나면 무슨 일이 일어날까요?",
+      "summaryKo": "",
+      "translator": "google"
+    },
     {
       "id": "fb-2a295c9c6a9b",
       "kind": "news",

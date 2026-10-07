@@ -1,6 +1,55 @@
 {
-  "updatedAt": "2026-10-07T04:03:02.557Z",
+  "updatedAt": "2026-10-07T04:05:05.772Z",
   "items": [
+    {
+      "id": "e2a84280b7ba",
+      "kind": "video",
+      "lang": "ko",
+      "title": "9모 확통으로 핫한 마르코프 체인이 대체 뭐길래??",
+      "summary": "#버츄얼선생님 #버츄얼수학 #연떠 #버츄얼강의 #수학선생님 #수학교육과 #수능 #수능수학 #확통…",
+      "detail": "#버츄얼선생님 #버츄얼수학 #연떠 #버츄얼강의 #수학선생님 #수학교육과 #수능 #수능수학 #확통 #확률과통계 #마르코프체인 #고등수학 #중등수학",
+      "link": "https://www.youtube.com/watch?v=7J0h8uQzwB8",
+      "source": "연떠",
+      "image": "https://i4.ytimg.com/vi/7J0h8uQzwB8/hqdefault.jpg",
+      "views": 75723,
+      "category": "인기",
+      "publishedAt": "2026-09-30T08:00:39.000Z",
+      "collectedAt": "2026-10-07T04:05:05.772Z",
+      "thumb": "/thumbs/e2a84280b7ba.jpg"
+    },
+    {
+      "id": "f6f90155e051",
+      "kind": "video",
+      "lang": "ko",
+      "title": "지필로 하는 연산연습이 최선일까? | 연산채점이 늦으면 오답을 키우고, 자칫 자동화가 안되면 중고등은 고사하고 당장 분수부터 인지 과부하가 일어날 수 있습니다",
+      "summary": "",
+      "detail": "",
+      "link": "https://www.youtube.com/watch?v=jf3UjRLhGAc",
+      "source": "수학통역사_조안호",
+      "image": "https://i3.ytimg.com/vi/jf3UjRLhGAc/hqdefault.jpg",
+      "views": 8241,
+      "category": "인기",
+      "publishedAt": "2026-09-28T00:45:10.000Z",
+      "collectedAt": "2026-10-07T04:05:05.772Z",
+      "summaryKo": "",
+      "thumb": "/thumbs/f6f90155e051.jpg"
+    },
+    {
+      "id": "31adca1f488e",
+      "kind": "video",
+      "lang": "ko",
+      "title": "'수학I'이 '대수'가 된 이유! 지수·로그·삼각함수도 대수다?",
+      "summary": "#버츄얼선생님 #버츄얼수학 #연떠 #버츄얼강의 #수학선생님 #수학교육과 #수능 #수능수학 #수1…",
+      "detail": "#버츄얼선생님 #버츄얼수학 #연떠 #버츄얼강의 #수학선생님 #수학교육과 #수능 #수능수학 #수1 #대수 #지수함수 #로그함수 #삼각함수 #수학I #고등수학 #중등수학",
+      "link": "https://www.youtube.com/watch?v=MJyYyAuYjpI",
+      "source": "연떠",
+      "image": "https://i2.ytimg.com/vi/MJyYyAuYjpI/hqdefault.jpg",
+      "views": 87130,
+      "category": "인기",
+      "publishedAt": "2026-09-22T08:00:34.000Z",
+      "collectedAt": "2026-10-07T04:05:05.772Z",
+      "thumb": "/thumbs/31adca1f488e.jpg"
+    },
     {
       "id": "17c241df94e0",
       "kind": "news",
@@ -13,7 +62,7 @@
       "category": "입시",
       "publishedAt": "2026-10-06T20:02:48.000Z",
       "collectedAt": "2026-10-07T04:03:02.557Z",
-      "thumb": "/thumbs/17c241df94e0.png"
+      "thumb": null
     },
     {
       "id": "cc230be5c30e",
@@ -56,82 +105,6 @@
       "publishedAt": "2026-10-06T15:36:00.000Z",
       "collectedAt": "2026-10-07T04:03:02.557Z",
       "thumb": "/thumbs/ed04b9b67a38.jpg"
-    },
-    {
-      "id": "54ece73965a1",
-      "kind": "video",
-      "lang": "en",
-      "title": "We tested Babish's 15,000% claim!",
-      "summary": "",
-      "detail": "",
-      "link": "https://www.youtube.com/watch?v=9xwU-ochogk",
-      "source": "Stand-up Maths",
-      "image": "https://i2.ytimg.com/vi/9xwU-ochogk/hqdefault.jpg",
-      "views": 1022256,
-      "category": "인기",
-      "publishedAt": "2026-09-30T14:30:51.000Z",
-      "collectedAt": "2026-10-07T04:03:02.557Z",
-      "titleKo": "Babish의 15,000% 주장을 테스트했습니다!",
-      "summaryKo": "",
-      "translator": "google",
-      "thumb": "/thumbs/54ece73965a1.jpg"
-    },
-    {
-      "id": "2feda691aa20",
-      "kind": "video",
-      "lang": "en",
-      "title": "The Braid Group",
-      "summary": "",
-      "detail": "",
-      "link": "https://www.youtube.com/shorts/lzolOM6fUnU",
-      "source": "Dr. Trefor Bazett",
-      "image": "https://i1.ytimg.com/vi/lzolOM6fUnU/hqdefault.jpg",
-      "views": 55428,
-      "category": "인기",
-      "publishedAt": "2026-09-27T23:33:21.000Z",
-      "collectedAt": "2026-10-07T04:03:02.557Z",
-      "titleKo": "브레이드 그룹",
-      "summaryKo": "",
-      "translator": "google",
-      "thumb": "/thumbs/2feda691aa20.jpg"
-    },
-    {
-      "id": "1c91caf604c3",
-      "kind": "video",
-      "lang": "en",
-      "title": "99 year old mathematician solves this Braid Theory mystery",
-      "summary": "Don’t miss FlexiSpot’s Mega Sale!",
-      "link": "https://www.youtube.com/watch?v=2U_34Rs0X-c",
-      "source": "Dr. Trefor Bazett",
-      "image": "https://i3.ytimg.com/vi/2U_34Rs0X-c/hqdefault.jpg",
-      "views": 104551,
-      "category": "인기",
-      "publishedAt": "2026-09-22T15:18:53.000Z",
-      "collectedAt": "2026-10-07T04:03:02.557Z",
-      "titleKo": "99세 수학자, 브레이드 이론 미스터리 풀다",
-      "summaryKo": "FlexiSpot의 메가 세일을 놓치지 마세요!",
-      "translator": "google",
-      "thumb": "/thumbs/1c91caf604c3.jpg"
-    },
-    {
-      "id": "25a6523880a1",
-      "kind": "video",
-      "lang": "en",
-      "title": "Has a Millennium Prize Problem been solved by AI?",
-      "summary": "Want more of the Matt tries to go on vacation saga,…",
-      "detail": "Want more of the Matt tries to go on vacation saga, come right this way:",
-      "link": "https://www.youtube.com/watch?v=c79PsbkHw4A",
-      "source": "Stand-up Maths",
-      "image": "https://i4.ytimg.com/vi/c79PsbkHw4A/hqdefault.jpg",
-      "views": 1284447,
-      "category": "인기",
-      "publishedAt": "2026-09-21T12:00:07.000Z",
-      "collectedAt": "2026-10-07T04:03:02.557Z",
-      "titleKo": "밀레니엄상 문제는 AI로 해결됐나?",
-      "summaryKo": "Matt가 휴가 여행을 떠나려고 시도하는 것을 더 원하십니까?",
-      "translator": "google",
-      "detailKo": "Matt의 휴가 여행 이야기를 더 보려면 이쪽으로 오세요.",
-      "thumb": "/thumbs/25a6523880a1.jpg"
     },
     {
       "id": "ea60ed4ba443",
@@ -275,7 +248,7 @@
       "summaryKo": "위: 프랙탈 아프리카, 이란 수학 예술가의 작품…",
       "translator": "google",
       "detailKo": "위: 이란의 수학 예술가 Naderi Yeganeh가 그린 프랙탈 아프리카. 인접한 층의 팔각형 영역은 황금색…",
-      "thumb": "/thumbs/03eef874eb24.png"
+      "thumb": null
     },
     {
       "id": "fcf7911ccc6b",
@@ -1159,7 +1132,7 @@
       "category": "AI·에듀테크",
       "publishedAt": "2026-10-05T07:34:00.000Z",
       "collectedAt": "2026-10-05T15:03:26.867Z",
-      "thumb": "/thumbs/d147105346b3.png"
+      "thumb": "/thumbs/d147105346b3.jpg"
     },
     {
       "id": "7c0c7cdb6126",
@@ -1805,7 +1778,7 @@
       "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg",
+      "thumb": "/thumbs/6d6917e71bf3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
     },
@@ -1823,7 +1796,7 @@
       "titleKo": "수학 스토리텔링 중 연결 만들기",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg",
+      "thumb": "/thumbs/3c73391d2263.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
     },
@@ -1841,7 +1814,7 @@
       "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg",
+      "thumb": "/thumbs/e01539b51fd3.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     },
@@ -1859,7 +1832,7 @@
       "titleKo": "표현의 여유도 평가",
       "summaryKo": "저널 이름: 수학 교사: 학습 및…",
       "translator": "google",
-      "thumb": "/thumbs/d2e592757594.jpg",
+      "thumb": "/thumbs/d2e592757594.png",
       "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
       "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731"
     },
@@ -2029,7 +2002,7 @@
       "category": "대회·행사",
       "publishedAt": "2026-10-01T21:51:00.000Z",
       "collectedAt": "2026-10-03T05:45:18.091Z",
-      "thumb": "/thumbs/19c65c3c48c8.png"
+      "thumb": "/thumbs/19c65c3c48c8.jpg"
     },
     {
       "id": "1f9591edea61",
