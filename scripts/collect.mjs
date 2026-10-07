@@ -98,7 +98,8 @@ function parseEntry($, el, source) {
     if (media.attr('url') && (!width || width >= 200)) image = media.attr('url')
   }
 
-  const published = new Date(text('pubDate') || text('published') || text('updated'))
+  // Nature 등 RSS 1.0(RDF) 피드는 날짜를 dc:date 로 적음
+  const published = new Date(text('pubDate') || text('published') || text('updated') || text('dc\\:date'))
   const categories = $el.children('category').map((_, c) => clean($(c).text())).get()
 
   return {
