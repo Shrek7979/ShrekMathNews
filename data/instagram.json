@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T03:00:08.707Z",
+  "updatedAt": "2026-10-07T04:00:08.981Z",
   "items": [
     {
       "id": "ig-DdcBG_2xepl",
@@ -135,23 +135,6 @@
       "collectedAt": "2026-10-05T00:27:53.868Z",
       "titleKo": "열려있습니다!",
       "summaryKo": "수학과 M.C의 예술",
-      "translator": "google"
-    },
-    {
-      "id": "ig-Dd4GfM1tnJc",
-      "kind": "video",
-      "lang": "en",
-      "title": "FIRST LOOK 👀 You won’t believe this is math!",
-      "summary": "We got a first look at Mathematics and the Art of M.C",
-      "link": "https://www.instagram.com/nyc_super_mom/reel/Dd4GfM1tnJc/",
-      "source": "Instagram @momath1",
-      "category": "문제·증명",
-      "publishedAt": "2026-09-28T15:00:00.000Z",
-      "likes": "504",
-      "thumb": "/social/ig/Dd4GfM1tnJc.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "첫 번째 모습 🙌 이것이 수학이라는 사실이 믿기지 않을 것입니다!",
-      "summaryKo": "우리는 수학과 M.C의 예술을 처음으로 살펴보았습니다.",
       "translator": "google"
     },
     {
@@ -306,6 +289,23 @@
       "titleKo": "📍⛰️ 한 달 전 Den에서 여러분을 기다리고 있는 일을 살짝 엿보세요…",
       "summaryKo": "ver: ✔️ 영감을 줄 기조연설 ✔️ 650개 이상의 세션…",
       "translator": "google"
+    },
+    {
+      "id": "ig-Dd4g5jyl5lF",
+      "kind": "news",
+      "lang": "en",
+      "title": "What mathematical ideas lie beneath M.C.",
+      "summary": "Escher's celebrated images of impossible architecture,…",
+      "link": "https://www.instagram.com/panart.connections/p/Dd4g5jyl5lF/",
+      "source": "Instagram @momath1",
+      "category": "인기",
+      "publishedAt": "2026-09-28T15:00:00.000Z",
+      "likes": "36",
+      "thumb": "/social/ig/Dd4g5jyl5lF.jpg",
+      "titleKo": "M.C. 아래에는 어떤 수학적 아이디어가 놓여 있나요?",
+      "summaryKo": "불가능한 건축에 대한 에셔의 유명한 이미지,…",
+      "translator": "google",
+      "collectedAt": "2026-10-07T04:00:08.981Z"
     },
     {
       "id": "ig-Dcgv5CYCZXy",
@@ -796,6 +796,22 @@
       "translator": "google"
     },
     {
+      "id": "ig-DeLXE9JKW1D",
+      "kind": "news",
+      "lang": "en",
+      "title": "How big is BIG?",
+      "summary": "The observable universe contains an estimated 10⁸⁰ atoms",
+      "link": "https://www.instagram.com/momath1/p/DeLXE9JKW1D/",
+      "source": "Instagram @momath1",
+      "category": "문제·증명",
+      "publishedAt": "2026-10-05T15:00:00.000Z",
+      "likes": "3",
+      "thumb": "/social/ig/DeLXE9JKW1D.jpg",
+      "titleKo": "빅은 얼마나 큽니까?",
+      "summaryKo": "관측 가능한 우주에는 대략 10⁸⁰ 원자가 포함되어 있습니다.",
+      "translator": "google"
+    },
+    {
       "id": "ig-DeLVjKcqIZ5",
       "kind": "news",
       "lang": "en",
@@ -842,24 +858,8 @@
       "thumb": "/social/ig/Dd4g5jyl5lF.jpg",
       "titleKo": "M.C. 아래에는 어떤 수학적 아이디어가 놓여 있나요?",
       "summaryKo": "불가능한 건축에 대한 에셔의 유명한 이미지,…",
-      "translator": "google"
-    },
-    {
-      "id": "ig-Dd4GfM1tnJc",
-      "kind": "video",
-      "lang": "en",
-      "title": "FIRST LOOK 👀 You won’t believe this is math!",
-      "summary": "We got a first look at Mathematics and the Art of M.C",
-      "link": "https://www.instagram.com/nyc_super_mom/reel/Dd4GfM1tnJc/",
-      "source": "Instagram @momath1",
-      "category": "문제·증명",
-      "publishedAt": "2026-09-28T15:00:00.000Z",
-      "likes": "504",
-      "thumb": "/social/ig/Dd4GfM1tnJc.jpg",
-      "collectedAt": "2026-10-05T00:27:53.868Z",
-      "titleKo": "첫 번째 모습 🙌 이것이 수학이라는 사실이 믿기지 않을 것입니다!",
-      "summaryKo": "우리는 수학과 M.C의 예술을 처음으로 살펴보았습니다.",
-      "translator": "google"
+      "translator": "google",
+      "collectedAt": "2026-10-07T04:00:08.981Z"
     },
     {
       "id": "ig-DeC4uH-jO1H",
