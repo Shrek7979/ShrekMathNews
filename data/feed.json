@@ -1,6 +1,53 @@
 {
-  "updatedAt": "2026-10-07T07:02:30.128Z",
+  "updatedAt": "2026-10-07T07:04:35.361Z",
   "items": [
+    {
+      "id": "ec55e202e242",
+      "kind": "news",
+      "lang": "ko",
+      "title": "강원교육청, 수능 시험관리본부장 임명장 교부식 열어",
+      "summary": "7일 강원 춘천시 강원특별자치도교육청에서 열린 2027학년도 대학수학능력시험 (수능) 시험관리본부장…",
+      "detail": "7일 강원 춘천시 강원특별자치도교육청에서 열린 2027학년도 대학수학능력시험 (수능) 시험관리본부장 임명장 교부식에서 강삼영 교육감이 인사말을 하고 있다. 2026.10.7 [강원특별자치도교육청 제공. 재판매 및 DB 금지] ...",
+      "link": "https://www.yna.co.kr/view/PYH20261007220300062",
+      "source": "연합뉴스",
+      "image": "http://www.bing.com/th?id=ONUT.hqUhbfbi_EOafNNtLYGZNg&pid=News",
+      "category": "입시",
+      "publishedAt": "2026-10-06T18:20:00.000Z",
+      "collectedAt": "2026-10-07T07:04:35.361Z",
+      "thumb": "/thumbs/ec55e202e242.jpg"
+    },
+    {
+      "id": "8a0b5c16e326",
+      "kind": "news",
+      "lang": "ko",
+      "title": "거류초, 부산교대 수학교육과와 함께하는 ‘수학탐구 BRIDGE DAY’ 개최",
+      "summary": "거류초등학교(교장 최병국)는 9월 30일 부산교육대학교 수학교육학과와 협력하여 「2026 수학 탐구…",
+      "detail": "거류초등학교(교장 최병국)는 9월 30일 부산교육대학교 수학교육학과와 협력하여 「2026 수학 탐구 BRIDGE DAY」를 개최했다. 이번 행사는 학생들이 다양한 체험을 통해 수학에 흥미를 느끼고, 스스로 탐구하며 수학적 사고력과 자신감을 기를 수…",
+      "link": "https://www.ynamnews.co.kr/news/articleView.html?idxno=143893",
+      "source": "ynamnews",
+      "category": "교육",
+      "publishedAt": "2026-10-06T13:24:00.000Z",
+      "collectedAt": "2026-10-07T07:04:35.361Z",
+      "thumb": "/thumbs/8a0b5c16e326.jpg"
+    },
+    {
+      "id": "d2e592757594",
+      "kind": "news",
+      "lang": "en",
+      "title": "Evaluating Affordances of Representations",
+      "summary": "Journal Name: Mathematics Teacher: Learning and…",
+      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 724-731",
+      "link": "https://pubs.nctm.org/view/journals/mtlt/119/9/article-p724.xml",
+      "source": "NCTM",
+      "category": "학회·기관",
+      "publishedAt": "2026-09-01T00:00:00.000Z",
+      "collectedAt": "2026-10-07T07:04:35.361Z",
+      "titleKo": "표현의 여유도 평가",
+      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
+      "translator": "google",
+      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 724-731",
+      "thumb": null
+    },
     {
       "id": "a0482b0b667d",
       "kind": "news",
@@ -14,7 +61,7 @@
       "category": "입시",
       "publishedAt": "2026-10-06T23:10:29.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
-      "thumb": "/thumbs/a0482b0b667d.jpg"
+      "thumb": "/thumbs/a0482b0b667d.png"
     },
     {
       "id": "d76e9e628a50",
@@ -73,7 +120,7 @@
       "link": "https://www.youtube.com/shorts/MEwNEWHpsFM",
       "source": "Math Scribbles",
       "image": "https://i2.ytimg.com/vi/MEwNEWHpsFM/hqdefault.jpg",
-      "views": 303404,
+      "views": 303533,
       "category": "인기",
       "publishedAt": "2026-10-02T23:31:46.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -92,7 +139,7 @@
       "link": "https://www.youtube.com/watch?v=Cfs0Ta62Qn8",
       "source": "bprp calculus basics",
       "image": "https://i4.ytimg.com/vi/Cfs0Ta62Qn8/hqdefault.jpg",
-      "views": 73837,
+      "views": 73869,
       "category": "문제·증명",
       "publishedAt": "2026-10-01T12:00:32.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -145,7 +192,7 @@
       "link": "https://www.youtube.com/watch?v=7J0h8uQzwB8",
       "source": "연떠",
       "image": "https://i4.ytimg.com/vi/7J0h8uQzwB8/hqdefault.jpg",
-      "views": 76112,
+      "views": 76123,
       "category": "인기",
       "publishedAt": "2026-09-30T08:00:39.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -213,7 +260,7 @@
       "link": "https://www.youtube.com/watch?v=fGObOUNcZk0",
       "source": "MindYourDecisions",
       "image": "https://i3.ytimg.com/vi/fGObOUNcZk0/hqdefault.jpg",
-      "views": 95172,
+      "views": 95174,
       "category": "문제·증명",
       "publishedAt": "2026-09-23T22:35:10.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -233,7 +280,7 @@
       "link": "https://www.youtube.com/watch?v=gxNaNq406P0",
       "source": "Andy Math",
       "image": "https://i4.ytimg.com/vi/gxNaNq406P0/hqdefault.jpg",
-      "views": 362255,
+      "views": 362261,
       "category": "문제·증명",
       "publishedAt": "2026-09-22T20:35:24.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -271,7 +318,7 @@
       "link": "https://www.youtube.com/shorts/mvPylY9Q1yU",
       "source": "MrGee Math",
       "image": "https://i2.ytimg.com/vi/mvPylY9Q1yU/hqdefault.jpg",
-      "views": 1503860,
+      "views": 1503907,
       "category": "인기",
       "publishedAt": "2026-09-22T13:00:31.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -310,7 +357,7 @@
       "link": "https://www.youtube.com/watch?v=MJyYyAuYjpI",
       "source": "연떠",
       "image": "https://i2.ytimg.com/vi/MJyYyAuYjpI/hqdefault.jpg",
-      "views": 87152,
+      "views": 87155,
       "category": "인기",
       "publishedAt": "2026-09-22T08:00:34.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -326,7 +373,7 @@
       "link": "https://www.youtube.com/watch?v=u4qLs9ngtAo",
       "source": "Andy Math",
       "image": "https://i2.ytimg.com/vi/u4qLs9ngtAo/hqdefault.jpg",
-      "views": 57477,
+      "views": 57464,
       "category": "문제·증명",
       "publishedAt": "2026-09-21T18:40:32.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -365,7 +412,7 @@
       "link": "https://www.youtube.com/watch?v=SNZ0-cd6Y2c",
       "source": "Math Queen",
       "image": "https://i4.ytimg.com/vi/SNZ0-cd6Y2c/hqdefault.jpg",
-      "views": 72713,
+      "views": 72735,
       "category": "인기",
       "publishedAt": "2026-09-20T17:37:16.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -403,7 +450,7 @@
       "link": "https://www.youtube.com/watch?v=Nbwv5wHQoj0",
       "source": "3Blue1Brown",
       "image": "https://i3.ytimg.com/vi/Nbwv5wHQoj0/hqdefault.jpg",
-      "views": 2861778,
+      "views": 674954,
       "category": "문제·증명",
       "publishedAt": "2026-09-18T17:12:53.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -441,7 +488,7 @@
       "link": "https://www.youtube.com/watch?v=6RcRIjDXecA",
       "source": "수학하는 땅우",
       "image": "https://i3.ytimg.com/vi/6RcRIjDXecA/hqdefault.jpg",
-      "views": 75252,
+      "views": 75225,
       "category": "인기",
       "publishedAt": "2026-09-18T09:24:16.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -496,7 +543,7 @@
       "link": "https://www.youtube.com/watch?v=pGUgeMfHPKk",
       "source": "MindYourDecisions",
       "image": "https://i1.ytimg.com/vi/pGUgeMfHPKk/hqdefault.jpg",
-      "views": 114266,
+      "views": 114275,
       "category": "문제·증명",
       "publishedAt": "2026-09-13T18:45:32.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -531,7 +578,7 @@
       "link": "https://www.youtube.com/watch?v=xyZS1hRS40U",
       "source": "blackpenredpen",
       "image": "https://i1.ytimg.com/vi/xyZS1hRS40U/hqdefault.jpg",
-      "views": 69681,
+      "views": 69683,
       "category": "문제·증명",
       "publishedAt": "2026-09-09T12:00:04.000Z",
       "collectedAt": "2026-10-07T07:02:30.128Z",
@@ -604,7 +651,7 @@
       "category": "AI·에듀테크",
       "publishedAt": "2026-10-06T22:26:50.000Z",
       "collectedAt": "2026-10-07T06:02:43.445Z",
-      "thumb": "/thumbs/6eddf9a68d06.jpg"
+      "thumb": "/thumbs/6eddf9a68d06.png"
     },
     {
       "id": "16f8cd4369bc",
@@ -751,7 +798,7 @@
       "category": "AI·에듀테크",
       "publishedAt": "2026-10-06T18:41:24.000Z",
       "collectedAt": "2026-10-07T03:04:47.932Z",
-      "thumb": "/thumbs/edd8de9b67da.jpg"
+      "thumb": "/thumbs/edd8de9b67da.png"
     },
     {
       "id": "59ad17e41836",
@@ -1035,7 +1082,7 @@
       "summaryKo": "오늘날의 디지털 세상에서는 의료부터 모든 것이…",
       "translator": "google",
       "detailKo": "오늘날의 디지털 세계에서는 의료 이미지, 금융 기록부터 개인 사진, 보안 통신에 이르기까지 모든 것이…",
-      "thumb": "/thumbs/d8dc47caef2f.png"
+      "thumb": "/thumbs/d8dc47caef2f.jpg"
     },
     {
       "id": "bdbfb364b553",
@@ -1290,7 +1337,7 @@
       "category": "입시",
       "publishedAt": "2026-10-05T19:59:00.000Z",
       "collectedAt": "2026-10-06T11:02:40.406Z",
-      "thumb": "/thumbs/a811311d209b.png"
+      "thumb": "/thumbs/a811311d209b.jpg"
     },
     {
       "id": "0b9bd5d3d8bc",
@@ -1616,7 +1663,7 @@
       "summaryKo": "\"풍선 타워 디펜스\"의 목표는 풍선을 막는 것인데",
       "translator": "google",
       "detailKo": "\"Bloons Tower Defense\"의 목표는 경로를 따라 타워를 전략적으로 배치하여 풍선이 트랙 끝에 도달하는 것을 막는 것입니다.…",
-      "thumb": "/thumbs/244a26c8ac93.png"
+      "thumb": "/thumbs/244a26c8ac93.jpg"
     },
     {
       "id": "c4813264fb16",
@@ -2376,60 +2423,6 @@
       "thumb": "/thumbs/d5843ccc329a.png",
       "detail": "Luckily, such a formula exists, and there are lots of ways to find it. In this post, we’ll find it using power series. Read on, brave bunny…",
       "detailKo": "다행히도 그러한 공식이 존재하며 이를 찾을 수 있는 방법이 많이 있습니다. 이번 포스팅에서는 멱급수를 사용하여 알아보겠습니다. 계속 읽어보세요, 용감한 토끼…"
-    },
-    {
-      "id": "6d6917e71bf3",
-      "kind": "news",
-      "lang": "en",
-      "title": "Amplifying Student Voice for Authentic Belonging",
-      "summary": "Journal Name: Mathematics Teacher: Learning and…",
-      "link": "https://pubs.nctm.org/view/journals/mtlt/119/9/article-p694.xml",
-      "source": "NCTM",
-      "category": "학회·기관",
-      "publishedAt": "2026-09-01T00:00:00.000Z",
-      "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "진정한 소속감을 위한 학생 목소리 증폭",
-      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
-      "translator": "google",
-      "thumb": "/thumbs/6d6917e71bf3.jpg",
-      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 694-706",
-      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 694-706"
-    },
-    {
-      "id": "3c73391d2263",
-      "kind": "news",
-      "lang": "en",
-      "title": "Making Connections During Math Storytelling",
-      "summary": "Journal Name: Mathematics Teacher: Learning and…",
-      "link": "https://pubs.nctm.org/view/journals/mtlt/119/9/article-p707.xml",
-      "source": "NCTM",
-      "category": "학회·기관",
-      "publishedAt": "2026-09-01T00:00:00.000Z",
-      "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "수학 스토리텔링 중 연결 만들기",
-      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
-      "translator": "google",
-      "thumb": "/thumbs/3c73391d2263.jpg",
-      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 707-715",
-      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 707-715"
-    },
-    {
-      "id": "e01539b51fd3",
-      "kind": "news",
-      "lang": "en",
-      "title": "Teaching Math Through a Critical Literacy Lens",
-      "summary": "Journal Name: Mathematics Teacher: Learning and…",
-      "link": "https://pubs.nctm.org/view/journals/mtlt/119/9/article-p716.xml",
-      "source": "NCTM",
-      "category": "학회·기관",
-      "publishedAt": "2026-09-01T00:00:00.000Z",
-      "collectedAt": "2026-10-03T20:53:01.598Z",
-      "titleKo": "비판적 문해력 렌즈를 통해 수학 교육",
-      "summaryKo": "저널 이름: 수학 교사: 학습 및…",
-      "translator": "google",
-      "thumb": "/thumbs/e01539b51fd3.jpg",
-      "detail": "Journal Name: Mathematics Teacher: Learning and Teaching PK-12Volume: 119Issue: 9Pages: 716-723",
-      "detailKo": "저널명: Mathematics Teacher: Learning and Teaching PK-12권: 119호: 9페이지: 716-723"
     }
   ]
 }
