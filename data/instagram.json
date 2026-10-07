@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T18:00:07.237Z",
+  "updatedAt": "2026-10-07T03:00:08.707Z",
   "items": [
     {
       "id": "ig-DdcBG_2xepl",
@@ -796,6 +796,22 @@
       "translator": "google"
     },
     {
+      "id": "ig-DeLVjKcqIZ5",
+      "kind": "news",
+      "lang": "en",
+      "title": "How did M.C.",
+      "summary": "Escher use symmetry to transform chaos into order?",
+      "link": "https://www.instagram.com/momath1/p/DeLVjKcqIZ5/",
+      "source": "Instagram @momath1",
+      "category": "인기",
+      "publishedAt": "2026-10-05T15:00:00.000Z",
+      "likes": "4",
+      "thumb": "/social/ig/DeLVjKcqIZ5.jpg",
+      "titleKo": "M.C는 어떻게 됐나요?",
+      "summaryKo": "Escher는 대칭을 사용하여 혼돈을 질서로 전환합니까?",
+      "translator": "google"
+    },
+    {
       "id": "ig-DeCgwVuqeNJ",
       "kind": "news",
       "lang": "en",
@@ -843,22 +859,6 @@
       "collectedAt": "2026-10-05T00:27:53.868Z",
       "titleKo": "첫 번째 모습 🙌 이것이 수학이라는 사실이 믿기지 않을 것입니다!",
       "summaryKo": "우리는 수학과 M.C의 예술을 처음으로 살펴보았습니다.",
-      "translator": "google"
-    },
-    {
-      "id": "ig-Dd2_6v6KqW_",
-      "kind": "news",
-      "lang": "en",
-      "title": "Join renowned Escher expert Doris Schattschneider and internationally …",
-      "summary": "acclaimed mathematician and visualization expert Jürgen…",
-      "link": "https://www.instagram.com/momath1/p/Dd2_6v6KqW_/",
-      "source": "Instagram @momath1",
-      "category": "인기",
-      "publishedAt": "2026-09-27T15:00:00.000Z",
-      "likes": "19",
-      "thumb": "/social/ig/Dd2_6v6KqW_.jpg",
-      "titleKo": "저명한 Escher 전문가 Doris Schattschneider와 함께 국제적으로…",
-      "summaryKo": "저명한 수학자이자 시각화 전문가인 Jurgen…",
       "translator": "google"
     },
     {
