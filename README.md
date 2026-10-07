@@ -1,3 +1,6 @@
+> **이 사이트는 [Shrek Edu Insight](https://shrek7979.github.io/ShrekEduInsight/) 로 통합되었습니다.** 예전 주소(Shrek Math News)로 들어오면 수학 화면으로 자동 이동합니다.
+> 뉴스 수집·코드는 Shrek Edu Insight 저장소의 `subjects/math` 로 옮겼습니다.
+
 # Shrek Math News
 
 수학 교사를 위한 수학 뉴스 릴스. 1시간마다 수학 뉴스·영상·SNS 게시물을 모아 카드로 보여 줍니다.

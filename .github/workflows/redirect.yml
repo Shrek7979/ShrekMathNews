@@ -1,0 +1,34 @@
+# 이 사이트(Shrek Math News)는 Shrek Edu Insight 로 통합되었습니다.
+# 예전 주소로 들어오면 https://shrek7979.github.io/ShrekEduInsight/?s=math 로 자동 이동하는 안내 페이지만 배포합니다 (뉴스 수집은 하지 않음).
+name: Redirect to Shrek Edu Insight
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      # 어느 하위 주소로 들어와도(카드 공유 링크 등) 이동하도록 404 페이지도 같은 내용
+      - run: mkdir -p out && cp redirect/index.html out/index.html && cp redirect/index.html out/404.html && touch out/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - id: deploy
+        uses: actions/deploy-pages@v4
