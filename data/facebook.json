@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T22:17:12.205Z",
+  "updatedAt": "2026-10-07T00:17:12.476Z",
   "items": [
     {
       "id": "fb-2a295c9c6a9b",
@@ -190,18 +190,18 @@
       "translator": "google"
     },
     {
-      "id": "fb-ca15231f9d66",
+      "id": "fb-9592659a083b",
       "kind": "news",
       "lang": "en",
       "title": "Introducing SketchMath, the easiest way to truly see mathematics, powe",
       "summary": "red by the dynamic geometry of GeoGebra®",
-      "link": "https://www.facebook.com/geogebra/posts/pfbid02e3FFAp8ZaZJT6bjD3BQcvPXJtqj3qBHHN1xVw7C3zi48j2p9FBFp6V6pDrxHHWgrl",
+      "link": "https://www.facebook.com/geogebra/posts/pfbid0aVc4FeWCjDstBic4H6g8ezPu9HeMKaRnVNPwoTWRAUwBSX3QsU4XXGpUQrmQfv9Pl",
       "source": "Facebook GeoGebra",
       "category": "인기",
       "publishedAt": "2026-09-14T12:00:00.000Z",
-      "thumb": "/social/fb/fb-ca15231f9d66.jpg",
+      "thumb": "/social/fb/fb-9592659a083b.jpg",
       "refs": [],
-      "collectedAt": "2026-10-05T23:14:16.851Z",
+      "collectedAt": "2026-10-07T00:17:12.476Z",
       "titleKo": "수학을 진정으로 보는 가장 쉬운 방법, SketchMath를 소개합니다.",
       "summaryKo": "GeoGebra®의 동적 기하학으로 빨간색",
       "translator": "google"
