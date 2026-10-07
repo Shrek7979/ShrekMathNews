@@ -16,6 +16,8 @@ const KEEP_DAYS = 7
 const MAX_ITEMS = 150
 const TITLE_LENGTH = 90
 const SUMMARY_LENGTH = 56 // 제목 밑 설명은 한 줄(한 문장)만
+// 저널 피드의 기사 아닌 글 (표지 소개, 목차, 정정 공고 등)
+const JOURNAL_JUNK = /^(inside |outside )?(front|back) cover|frontispiece|cover picture|table of contents|issue information|masthead|^(correction|erratum|corrigendum|publisher correction|author correction)\b/i
 const DETAIL_LENGTH = 140 // 카드에 보여 주는 긴 설명 (2~3줄). 통합 사이트(Shrek Edu Insight)도 씀
 const DAY = 24 * 60 * 60 * 1000
 const UA =
@@ -96,6 +98,14 @@ function parseEntry($, el, source) {
     const media = $el.children('media\\:content, media\\:thumbnail, enclosure').first()
     const width = Number(media.attr('width') || 0)
     if (media.attr('url') && (!width || width >= 200)) image = media.attr('url')
+    // 설명 칸이 저널 안내 문구뿐이면(Angewandte 'EarlyView.' 등) 본문 칸(content:encoded)의 초록과 그림을 씀
+    const encoded = $el.children('content\\:encoded').first().text()
+    if (encoded && (summary.length < 60 || /EarlyView|Published online/i.test(summary))) {
+      // Nature 계열은 이 칸에 '발행일; doi + 제목'만 있으므로 그 부분을 떼고, 남는 게 제목뿐이면 쓰지 않음
+      const body = stripHtml(encoded.replace(/<\/p>/g, '</p> ')).replace(/^[^;]{0,80}Published online:[^;]*;\s*doi:\S+\s*/i, '').trim()
+      if (body.length >= 30 && body !== clean(title)) summary = body
+      image = image || encoded.match(/<img[^>]+src="([^"]+)"/)?.[1]
+    }
   }
 
   // Nature 등 RSS 1.0(RDF) 피드는 날짜를 dc:date 로 적음
@@ -163,6 +173,9 @@ async function collectSource(source, now) {
     .filter((item) => !source.requireTitle || source.requireTitle.test(item.title))
     .filter((item) => !source.requireImage || item.image)
     .filter((item) => {
+      if (JOURNAL_JUNK.test(item.title)) return false
+      // 여러 과목이 섞인 피드(Science 뉴스 등)는 제목에 과목 낱말이 있을 때만
+      if (source.require) return source.require.test(item.title)
       if (source.type === 'youtube' || source.requireCategory || source.trusted) return true
       if (source.lang !== 'ko') return EN_REQUIRE.test(`${item.title} ${item.summary}`)
       return KO_REQUIRE.test(item.title) && !KO_EXCLUDE.test(item.title)

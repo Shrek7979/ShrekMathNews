@@ -63,6 +63,7 @@ export const SOURCES = [
   // 해외 수학 매체
   { type: 'rss', lang: 'en', name: 'Quanta Magazine', trusted: true, url: 'https://www.quantamagazine.org/mathematics/feed/', limit: 3, maxAgeDays: 14 },
   { type: 'rss', lang: 'en', name: 'Phys.org', url: 'https://phys.org/rss-feed/science-news/mathematics/', limit: 3, maxAgeDays: 7 },
+  { type: 'rss', lang: 'en', name: 'Science', url: 'https://www.science.org/rss/news_current.xml', require: /\bmath|equation|theorem|proof|conjecture|prime|geometr|algebra|statistic|probabilit|algorithm|calculus/i, limit: 2, maxAgeDays: 7 }, // Science(AAAS) 뉴스 — 제목에 과목 낱말이 있는 기사만
   { type: 'rss', lang: 'en', name: 'ScienceDaily', url: 'https://www.sciencedaily.com/rss/computers_math/mathematics.xml', limit: 3, maxAgeDays: 7 },
   { type: 'rss', lang: 'en', name: 'Plus Magazine', url: 'https://plus.maths.org/content/rss.xml', limit: 2, maxAgeDays: 30 },
 
